@@ -19,6 +19,10 @@ import {
   LocationOn,
   Download,
 } from '@mui/icons-material';
+import HighlightedText, {
+  highlightFirstLetters,
+  highlightFirstLettersAndSymbols,
+} from './HighlightedText';
 
 export default function Hero() {
   const theme = useTheme();
@@ -48,7 +52,8 @@ export default function Hero() {
             sx={{
               backgroundColor: theme.palette.terminal.header,
               color: theme.palette.terminal.text,
-              fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+              fontFamily:
+                'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
               p: 2,
               borderBottom: `1px solid ${theme.palette.terminal.border}`,
               display: 'flex',
@@ -104,7 +109,8 @@ export default function Hero() {
           >
             <Box
               sx={{
-                fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+                fontFamily:
+                  'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
                 mb: 3,
                 textAlign: 'left',
               }}
@@ -175,7 +181,13 @@ export default function Hero() {
                   gutterBottom
                   sx={{ color: theme.palette.terminal.text }}
                 >
-                  Nemanja Radulovic
+                  <HighlightedText
+                    text="Nemanja Radulovic"
+                    highlightIndices={highlightFirstLetters(
+                      'Nemanja Radulovic'
+                    )}
+                    highlightColor={theme.palette.terminal.magenta}
+                  />
                 </Typography>
 
                 <Typography
@@ -184,7 +196,13 @@ export default function Hero() {
                   className="terminal-title"
                   sx={{ color: theme.palette.terminal.textSecondary }}
                 >
-                  Seasoned Developer && Creative Problem Solver
+                  <HighlightedText
+                    text="Seasoned Developer && Creative Problem Solver"
+                    highlightIndices={highlightFirstLettersAndSymbols(
+                      'Seasoned Developer && Creative Problem Solver'
+                    )}
+                    highlightColor={theme.palette.terminal.green}
+                  />
                 </Typography>
               </Box>
 
@@ -318,6 +336,173 @@ export default function Hero() {
             </Box>
           </CardContent>
         </Card>
+
+        {/* Additional Sections */}
+        <Box sx={{ mt: 4 }}>
+          <Card
+            sx={{
+              maxWidth: '1200px',
+              mx: 'auto',
+              backgroundColor: theme.palette.terminal.background,
+              border: `1px solid ${theme.palette.terminal.border}`,
+              mb: 3,
+            }}
+          >
+            <CardContent
+              sx={{
+                backgroundColor: theme.palette.terminal.background,
+                color: theme.palette.terminal.text,
+              }}
+            >
+              <Typography
+                variant="h3"
+                component="h2"
+                sx={{
+                  mb: 3,
+                  color: theme.palette.terminal.text,
+                }}
+              >
+                <HighlightedText
+                  text="CONSULTING"
+                  highlightIndices={highlightFirstLetters('CONSULTING')}
+                  highlightColor={theme.palette.terminal.cyan}
+                />
+              </Typography>
+
+              <Typography
+                variant="body1"
+                sx={{
+                  color: theme.palette.terminal.textSecondary,
+                  mb: 2,
+                  lineHeight: 1.6,
+                }}
+              >
+                Senior-level technical consulting with a focus on web
+                applications, architecture design, and team leadership.
+                Passionate about creating scalable solutions and fostering
+                collaborative development environments.
+              </Typography>
+            </CardContent>
+          </Card>
+
+          <Card
+            sx={{
+              maxWidth: '1200px',
+              mx: 'auto',
+              backgroundColor: theme.palette.terminal.background,
+              border: `1px solid ${theme.palette.terminal.border}`,
+              mb: 3,
+            }}
+          >
+            <CardContent
+              sx={{
+                backgroundColor: theme.palette.terminal.background,
+                color: theme.palette.terminal.text,
+              }}
+            >
+              <Typography
+                variant="h3"
+                component="h2"
+                sx={{
+                  mb: 3,
+                  color: theme.palette.terminal.text,
+                }}
+              >
+                <HighlightedText
+                  text="EXPERIENCE"
+                  highlightIndices={highlightFirstLetters('EXPERIENCE')}
+                  highlightColor={theme.palette.terminal.green}
+                />
+              </Typography>
+
+              <Typography
+                variant="body1"
+                sx={{
+                  color: theme.palette.terminal.textSecondary,
+                  mb: 2,
+                  lineHeight: 1.6,
+                }}
+              >
+                Full-stack development across multiple industries with expertise
+                in modern JavaScript frameworks, cloud platforms, and agile
+                methodologies. Background in social work brings unique
+                perspective to user experience design.
+              </Typography>
+            </CardContent>
+          </Card>
+
+          <Card
+            sx={{
+              maxWidth: '1200px',
+              mx: 'auto',
+              backgroundColor: theme.palette.terminal.background,
+              border: `1px solid ${theme.palette.terminal.border}`,
+            }}
+          >
+            <CardContent
+              sx={{
+                backgroundColor: theme.palette.terminal.background,
+                color: theme.palette.terminal.text,
+              }}
+            >
+              <Typography
+                variant="h3"
+                component="h2"
+                sx={{
+                  mb: 3,
+                  color: theme.palette.terminal.text,
+                }}
+              >
+                <HighlightedText
+                  text="SKILLS && TECHNOLOGIES"
+                  highlightIndices={highlightFirstLettersAndSymbols(
+                    'SKILLS && TECHNOLOGIES'
+                  )}
+                  highlightColor={theme.palette.terminal.magenta}
+                />
+              </Typography>
+
+              <Stack
+                direction="row"
+                spacing={2}
+                sx={{ flexWrap: 'wrap', gap: 1 }}
+              >
+                {[
+                  'React',
+                  'Next.js',
+                  'TypeScript',
+                  'Node.js',
+                  'Python',
+                  'AWS',
+                  'Docker',
+                  'PostgreSQL',
+                ].map((skill) => (
+                  <Box
+                    key={skill}
+                    sx={{
+                      px: 2,
+                      py: 1,
+                      border: `1px solid ${theme.palette.terminal.border}`,
+                      borderRadius: 1,
+                      backgroundColor: theme.palette.terminal.header,
+                    }}
+                  >
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        color: theme.palette.terminal.cyan,
+                        fontFamily:
+                          'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+                      }}
+                    >
+                      {skill}
+                    </Typography>
+                  </Box>
+                ))}
+              </Stack>
+            </CardContent>
+          </Card>
+        </Box>
       </Container>
     </Box>
   );

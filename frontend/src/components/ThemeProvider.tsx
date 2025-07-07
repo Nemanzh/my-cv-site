@@ -20,6 +20,7 @@ declare module '@mui/material/styles' {
       greenDark: string;
       red: string;
       yellow: string;
+      magenta: string;
     };
   }
 
@@ -35,6 +36,7 @@ declare module '@mui/material/styles' {
       greenDark?: string;
       red?: string;
       yellow?: string;
+      magenta?: string;
     };
   }
 }
@@ -67,34 +69,62 @@ const theme = createTheme({
       greenDark: '#059669',
       red: '#ef4444',
       yellow: '#f59e0b',
+      magenta: '#f0abfc',
     },
   },
   typography: {
-    fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+    fontFamily:
+      'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
     h1: {
       fontSize: '2.5rem',
       fontWeight: 700,
       lineHeight: 1.2,
-      fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+      fontFamily:
+        'var(--font-major-mono-display), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
     },
     h2: {
       fontSize: '2rem',
       fontWeight: 700,
       lineHeight: 1.1,
-      fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+      fontFamily:
+        'var(--font-major-mono-display), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+    },
+    h3: {
+      fontSize: '1.5rem',
+      fontWeight: 700,
+      lineHeight: 1.3,
+      fontFamily:
+        'var(--font-major-mono-display), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+    },
+    h4: {
+      fontSize: '1.25rem',
+      fontWeight: 700,
+      lineHeight: 1.3,
+      fontFamily:
+        'var(--font-major-mono-display), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
     },
     h5: {
       fontWeight: 400,
       lineHeight: 1.4,
-      fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+      fontFamily:
+        'var(--font-major-mono-display), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+    },
+    h6: {
+      fontSize: '1rem',
+      fontWeight: 700,
+      lineHeight: 1.4,
+      fontFamily:
+        'var(--font-major-mono-display), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
     },
     body1: {
       fontSize: '1rem',
       lineHeight: 1.6,
-      fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+      fontFamily:
+        'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
     },
     caption: {
-      fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+      fontFamily:
+        'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
     },
   },
   components: {
@@ -104,7 +134,8 @@ const theme = createTheme({
           textTransform: 'none',
           borderRadius: '8px',
           fontWeight: 600,
-          fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+          fontFamily:
+            'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
           transition: 'all 0.2s ease-in-out',
         },
         contained: {
@@ -115,7 +146,8 @@ const theme = createTheme({
           '&.terminal-download': {
             fontWeight: 600,
             textTransform: 'none',
-            fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+            fontFamily:
+              'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
             maxWidth: 'fit-content',
             transition: 'all 0.2s ease-in-out',
           },
@@ -149,7 +181,8 @@ const theme = createTheme({
             fontWeight: 700,
             lineHeight: 1.1,
             textAlign: 'left',
-            fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+            fontFamily:
+              'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
           },
         },
         h5: {
@@ -157,12 +190,14 @@ const theme = createTheme({
             fontWeight: 400,
             lineHeight: 1.4,
             textAlign: 'left',
-            fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+            fontFamily:
+              'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
           },
         },
         body1: {
           '&.terminal-header-text': {
-            fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+            fontFamily:
+              'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
           },
         },
         body2: {

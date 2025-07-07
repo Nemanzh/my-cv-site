@@ -5,7 +5,15 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import ThemeProvider from '@/components/ThemeProvider';
+import { Major_Mono_Display } from 'next/font/google';
 // import LanguageSwitcher from '@/components/LanguageSwitcher';
+
+const majorMonoDisplay = Major_Mono_Display({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-major-mono-display',
+});
 
 export async function generateMetadata({
   params,
@@ -41,7 +49,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body>
+      <body className={majorMonoDisplay.variable}>
         <ThemeProvider>
           <NextIntlClientProvider>
             {/* <div
