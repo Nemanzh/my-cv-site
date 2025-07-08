@@ -5,24 +5,18 @@ import {
   Box,
   Container,
   Typography,
-  Button,
   Stack,
   useTheme,
   Link as MuiLink,
   Card,
   CardContent,
 } from '@mui/material';
-import {
-  Email,
-  GitHub,
-  LinkedIn,
-  LocationOn,
-  Download,
-} from '@mui/icons-material';
+import { Email, GitHub, LinkedIn, LocationOn } from '@mui/icons-material';
 import HighlightedText, {
   highlightFirstLetters,
   highlightFirstLettersAndSymbols,
 } from './HighlightedText';
+import CVDownload from './CVDownload';
 
 export default function Hero() {
   const theme = useTheme();
@@ -202,24 +196,8 @@ export default function Hero() {
                 </Typography>
               </Box>
 
-              <Box>
-                <Button
-                  variant="contained"
-                  className="terminal-download"
-                  startIcon={<Download />}
-                  href="#"
-                  sx={{
-                    backgroundColor: theme.palette.terminal.green,
-                    color: theme.palette.terminal.background,
-                    border: `1px solid ${theme.palette.terminal.greenDark}`,
-                    '&:hover': {
-                      backgroundColor: theme.palette.terminal.greenDark,
-                      boxShadow: `0 0 20px ${theme.palette.terminal.green}33`,
-                    },
-                  }}
-                >
-                  ./download_resume.sh
-                </Button>
+              <Box sx={{ mt: 3 }}>
+                <CVDownload />
               </Box>
             </Stack>
 
