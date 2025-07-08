@@ -1,11 +1,11 @@
 'use client';
 
-import React from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import {
   ThemeProvider as MuiThemeProvider,
   createTheme,
 } from '@mui/material/styles';
-import { CssBaseline } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
 
 declare module '@mui/material/styles' {
   interface Palette {
@@ -41,209 +41,173 @@ declare module '@mui/material/styles' {
   }
 }
 
-const theme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#2563eb',
-    },
-    secondary: {
-      main: '#64748b',
-    },
-    background: {
-      default: '#ffffff',
-      paper: '#f8fafc',
-    },
-    text: {
-      primary: '#1e293b',
-      secondary: '#64748b',
-    },
-    terminal: {
-      background: '#0f172a',
-      header: '#1e293b',
-      border: '#334155',
-      text: '#e2e8f0',
-      textSecondary: '#94a3b8',
-      cyan: '#22d3ee',
-      green: '#10b981',
-      greenDark: '#059669',
-      red: '#ef4444',
-      yellow: '#f59e0b',
-      magenta: '#f0abfc',
-    },
-  },
-  typography: {
-    fontFamily:
-      'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-    h1: {
-      fontSize: '2.5rem',
-      fontWeight: 700,
-      lineHeight: 1.2,
-      fontFamily:
-        'var(--font-major-mono-display), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-    },
-    h2: {
-      fontSize: '2rem',
-      fontWeight: 700,
-      lineHeight: 1.1,
-      fontFamily:
-        'var(--font-major-mono-display), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-    },
-    h3: {
-      fontSize: '1.5rem',
-      fontWeight: 700,
-      lineHeight: 1.3,
-      fontFamily:
-        'var(--font-major-mono-display), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-    },
-    h4: {
-      fontSize: '1.25rem',
-      fontWeight: 700,
-      lineHeight: 1.3,
-      fontFamily:
-        'var(--font-major-mono-display), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-    },
-    h5: {
-      fontWeight: 400,
-      lineHeight: 1.4,
-      fontFamily:
-        'var(--font-major-mono-display), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-    },
-    h6: {
-      fontSize: '1rem',
-      fontWeight: 700,
-      lineHeight: 1.4,
-      fontFamily:
-        'var(--font-major-mono-display), ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-    },
-    body1: {
-      fontSize: '1rem',
-      lineHeight: 1.6,
-      fontFamily:
-        'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-    },
-    caption: {
-      fontFamily:
-        'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-    },
-  },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          textTransform: 'none',
-          borderRadius: '8px',
-          fontWeight: 600,
-          fontFamily:
-            'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-          transition: 'all 0.2s ease-in-out',
-        },
-        contained: {
-          '&:hover': {
-            boxShadow: '0 0 20px rgba(16, 185, 129, 0.3)',
-            transform: 'translateY(-2px)',
-          },
-          '&.terminal-download': {
-            fontWeight: 600,
-            textTransform: 'none',
-            fontFamily:
-              'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-            maxWidth: 'fit-content',
-            transition: 'all 0.2s ease-in-out',
-          },
-        },
-      },
-    },
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          borderRadius: '12px',
-          overflow: 'hidden',
-          '&.terminal-window': {
-            boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)',
-          },
-        },
-      },
-    },
-    MuiCardContent: {
-      styleOverrides: {
-        root: {
-          '&:last-child': {
-            paddingBottom: 24,
-          },
-        },
-      },
-    },
-    MuiTypography: {
-      styleOverrides: {
-        h2: {
-          '&.terminal-name': {
-            fontWeight: 700,
-            lineHeight: 1.1,
-            textAlign: 'left',
-            fontFamily:
-              'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-          },
-        },
-        h5: {
-          '&.terminal-title': {
-            fontWeight: 400,
-            lineHeight: 1.4,
-            textAlign: 'left',
-            fontFamily:
-              'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-          },
-        },
-        body1: {
-          '&.terminal-header-text': {
-            fontFamily:
-              'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-          },
-        },
-        body2: {
-          '&.terminal-contact-text': {
-            whiteSpace: 'nowrap',
-          },
-          '&.terminal-contact-social': {
-            fontWeight: 500,
-            whiteSpace: 'nowrap',
-          },
-        },
-        caption: {
-          '&.terminal-contact-email': {
-            fontWeight: 500,
-            whiteSpace: 'nowrap',
-          },
-        },
-      },
-    },
-    MuiLink: {
-      styleOverrides: {
-        root: {
-          textDecoration: 'none',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          fontWeight: 500,
-          whiteSpace: 'nowrap',
-          '&:hover': {
-            textDecoration: 'underline',
-          },
-        },
-      },
-    },
-  },
-});
+// Step 1: Define types
+type ThemeMode = 'light' | 'dark';
 
-interface ThemeProviderProps {
-  children: React.ReactNode;
+interface ThemeContextType {
+  mode: ThemeMode;
+  toggleTheme: () => void;
 }
 
-export default function ThemeProvider({ children }: ThemeProviderProps) {
+// Step 2: Create context
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+
+// Step 3: Custom hook to use theme
+export const useThemeMode = () => {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error('useThemeMode must be used within a ThemeProvider');
+  }
+  return context;
+};
+
+// Step 4: Extend MUI theme interface
+declare module '@mui/material/styles' {
+  interface Palette {
+    terminal: {
+      background: string;
+      header: string;
+      border: string;
+      text: string;
+      textSecondary: string;
+      cyan: string;
+      green: string;
+      greenDark: string;
+      red: string;
+      yellow: string;
+      magenta: string;
+    };
+  }
+
+  interface PaletteOptions {
+    terminal?: {
+      background?: string;
+      header?: string;
+      border?: string;
+      text?: string;
+      textSecondary?: string;
+      cyan?: string;
+      green?: string;
+      greenDark?: string;
+      red?: string;
+      yellow?: string;
+      magenta?: string;
+    };
+  }
+}
+
+// Step 5: Define color palettes
+const getColors = (mode: ThemeMode) => {
+  if (mode === 'dark') {
+    return {
+      background: {
+        default: '#0d1117',
+        paper: '#161b22',
+      },
+      terminal: {
+        background: '#0d1117',
+        header: '#161b22',
+        border: '#30363d',
+        text: '#f0f6fc',
+        textSecondary: '#8b949e',
+        cyan: '#00d8ff',
+        green: '#7c3aed',
+        greenDark: '#6d28d9',
+        red: '#ff6b6b',
+        yellow: '#ffd700',
+        magenta: '#ff6ac1',
+      },
+    };
+  } else {
+    return {
+      background: {
+        default: '#ffffff',
+        paper: '#f8fafc',
+      },
+      terminal: {
+        background: '#ffffff',
+        header: '#f8fafc',
+        border: '#e2e8f0',
+        text: '#1e293b',
+        textSecondary: '#64748b',
+        cyan: '#0ea5e9',
+        green: '#7c3aed',
+        greenDark: '#6d28d9',
+        red: '#ef4444',
+        yellow: '#f59e0b',
+        magenta: '#ec4899',
+      },
+    };
+  }
+};
+
+// Step 6: Theme Provider Component
+export default function ThemeProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const [mode, setMode] = useState<ThemeMode>('dark');
+
+  // Step 7: Load saved theme on mount
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as ThemeMode;
+    if (savedTheme) {
+      setMode(savedTheme);
+    } else {
+      // Check system preference
+      const systemPrefersDark = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches;
+      setMode(systemPrefersDark ? 'dark' : 'light');
+    }
+  }, []);
+
+  // Step 8: Toggle function
+  const toggleTheme = () => {
+    const newMode = mode === 'dark' ? 'light' : 'dark';
+    setMode(newMode);
+    localStorage.setItem('theme', newMode);
+  };
+
+  // Step 9: Create theme
+  const colors = getColors(mode);
+  const theme = createTheme({
+    palette: {
+      mode,
+      ...colors,
+    },
+    typography: {
+      fontFamily: '"Inter", "Segoe UI", "Roboto", sans-serif',
+      h1: {
+        fontFamily: '"Major Mono Display", monospace',
+        fontWeight: 400,
+      },
+      h2: {
+        fontFamily: '"Major Mono Display", monospace',
+        fontWeight: 400,
+      },
+      h3: {
+        fontFamily: '"Major Mono Display", monospace',
+        fontWeight: 400,
+      },
+      h4: {
+        fontFamily: '"Major Mono Display", monospace',
+        fontWeight: 400,
+      },
+      h5: {
+        fontFamily: '"Major Mono Display", monospace',
+        fontWeight: 400,
+      },
+    },
+  });
+
   return (
-    <MuiThemeProvider theme={theme}>
-      <CssBaseline />
-      {children}
-    </MuiThemeProvider>
+    <ThemeContext.Provider value={{ mode, toggleTheme }}>
+      <MuiThemeProvider theme={theme}>
+        <CssBaseline />
+        {children}
+      </MuiThemeProvider>
+    </ThemeContext.Provider>
   );
 }
