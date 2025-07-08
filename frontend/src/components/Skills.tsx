@@ -149,7 +149,7 @@ export default function Skills() {
     <Box
       component="section"
       sx={{
-        py: 4,
+        pb: 4,
       }}
     >
       <Container maxWidth="xl">

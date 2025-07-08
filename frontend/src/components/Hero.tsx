@@ -31,7 +31,7 @@ export default function Hero() {
     <Box
       component="section"
       sx={{
-        pt: 2,
+        py: 4,
       }}
     >
       <Container maxWidth="xl">

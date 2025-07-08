@@ -114,7 +114,7 @@ export default function WorkExperience() {
     <Box
       component="section"
       sx={{
-        pt: 2,
+        pb: 4,
       }}
     >
       <Container maxWidth="xl">
