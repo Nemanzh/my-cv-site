@@ -30,7 +30,11 @@ export default function CVDownload() {
           'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
         textTransform: 'none',
         px: 3,
-        py: 1,
+        py: 1.5,
+        fontWeight: 'bold',
+        width: 'fit-content',
+        minWidth: 'auto',
+        whiteSpace: 'nowrap',
         '&:hover': {
           backgroundColor: theme.palette.terminal.cyan,
           color: theme.palette.terminal.background,

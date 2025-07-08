@@ -149,7 +149,7 @@ export default function Skills() {
     <Box
       component="section"
       sx={{
-        pb: 4,
+        py: { xs: 2, sm: 3, md: 4 },
       }}
     >
       <Container maxWidth="xl">
@@ -160,21 +160,31 @@ export default function Skills() {
             mx: 'auto',
             backgroundColor: theme.palette.terminal.background,
             border: `1px solid ${theme.palette.terminal.border}`,
+            overflow: 'hidden',
           }}
         >
           <CardContent
             sx={{
               backgroundColor: theme.palette.terminal.background,
               color: theme.palette.terminal.text,
-              p: 4,
+              p: { xs: 2, sm: 3, md: 4 },
             }}
           >
             <Typography
               variant="h3"
               component="h2"
               sx={{
-                mb: 4,
+                mb: { xs: 3, sm: 4 },
                 color: theme.palette.terminal.text,
+                fontSize: {
+                  xs: '1.5rem',
+                  sm: '2rem',
+                  md: '2.5rem',
+                  lg: '3rem',
+                },
+                textAlign: 'center',
+                wordBreak: 'break-word',
+                lineHeight: { xs: 1.2, md: 1.167 },
               }}
             >
               <HighlightedText
@@ -184,21 +194,19 @@ export default function Skills() {
               />
             </Typography>
 
-            {/* Two-column layout using flexbox */}
             <Box
               sx={{
                 display: 'flex',
                 flexDirection: { xs: 'column', lg: 'row' },
-                gap: 3,
+                gap: { xs: 2, sm: 3 },
               }}
             >
-              {/* Left Column */}
               <Box
                 sx={{
                   flex: 1,
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: 3,
+                  gap: { xs: 2, sm: 3 },
                 }}
               >
                 {skillCategories
@@ -207,7 +215,7 @@ export default function Skills() {
                     <Box
                       key={index * 2}
                       sx={{
-                        p: 3,
+                        p: { xs: 2, sm: 3 },
                         backgroundColor: theme.palette.terminal.header,
                         border: `1px solid ${theme.palette.terminal.border}`,
                         borderRadius: 1,
@@ -217,8 +225,10 @@ export default function Skills() {
                         variant="h5"
                         component="h3"
                         sx={{
-                          mb: 2,
+                          mb: { xs: 1.5, sm: 2 },
                           color: theme.palette.terminal.text,
+                          fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
+                          wordBreak: 'break-word',
                         }}
                       >
                         <HighlightedText
@@ -230,12 +240,11 @@ export default function Skills() {
                         />
                       </Typography>
 
-                      {/* Terminal-style skill list */}
                       <Box
                         sx={{
                           fontFamily:
                             'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                          fontSize: '0.875rem',
+                          fontSize: { xs: '0.75rem', sm: '0.875rem' },
                         }}
                       >
                         {category.skills.map((skill, skillIndex) => (
@@ -244,12 +253,13 @@ export default function Skills() {
                             sx={{
                               display: 'flex',
                               alignItems: 'center',
-                              mb: 0.5,
+                              mb: { xs: 0.25, sm: 0.5 },
+                              py: { xs: 0.25, sm: 0.5 },
                               '&:hover': {
                                 backgroundColor: theme.palette.terminal.border,
                                 borderRadius: '4px',
-                                px: 1,
-                                mx: -1,
+                                px: { xs: 0.5, sm: 1 },
+                                mx: { xs: -0.5, sm: -1 },
                                 transition: 'all 0.2s ease-in-out',
                               },
                             }}
@@ -258,8 +268,8 @@ export default function Skills() {
                               component="span"
                               sx={{
                                 color: category.color,
-                                mr: 1,
-                                fontSize: '0.75rem',
+                                mr: { xs: 0.5, sm: 1 },
+                                fontSize: { xs: '0.625rem', sm: '0.75rem' },
                               }}
                             >
                               ▸
@@ -268,7 +278,8 @@ export default function Skills() {
                               component="span"
                               sx={{
                                 color: theme.palette.terminal.textSecondary,
-                                fontSize: '0.875rem',
+                                fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                                wordBreak: 'break-word',
                               }}
                             >
                               {skill}
@@ -280,13 +291,12 @@ export default function Skills() {
                   ))}
               </Box>
 
-              {/* Right Column */}
               <Box
                 sx={{
                   flex: 1,
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: 3,
+                  gap: { xs: 2, sm: 3 },
                 }}
               >
                 {skillCategories
@@ -295,7 +305,7 @@ export default function Skills() {
                     <Box
                       key={index * 2 + 1}
                       sx={{
-                        p: 3,
+                        p: { xs: 2, sm: 3 },
                         backgroundColor: theme.palette.terminal.header,
                         border: `1px solid ${theme.palette.terminal.border}`,
                         borderRadius: 1,
@@ -305,8 +315,10 @@ export default function Skills() {
                         variant="h5"
                         component="h3"
                         sx={{
-                          mb: 2,
+                          mb: { xs: 1.5, sm: 2 },
                           color: theme.palette.terminal.text,
+                          fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
+                          wordBreak: 'break-word',
                         }}
                       >
                         <HighlightedText
@@ -318,12 +330,11 @@ export default function Skills() {
                         />
                       </Typography>
 
-                      {/* Terminal-style skill list */}
                       <Box
                         sx={{
                           fontFamily:
                             'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                          fontSize: '0.875rem',
+                          fontSize: { xs: '0.75rem', sm: '0.875rem' },
                         }}
                       >
                         {category.skills.map((skill, skillIndex) => (
@@ -332,12 +343,13 @@ export default function Skills() {
                             sx={{
                               display: 'flex',
                               alignItems: 'center',
-                              mb: 0.5,
+                              mb: { xs: 0.25, sm: 0.5 },
+                              py: { xs: 0.25, sm: 0.5 },
                               '&:hover': {
                                 backgroundColor: theme.palette.terminal.border,
                                 borderRadius: '4px',
-                                px: 1,
-                                mx: -1,
+                                px: { xs: 0.5, sm: 1 },
+                                mx: { xs: -0.5, sm: -1 },
                                 transition: 'all 0.2s ease-in-out',
                               },
                             }}
@@ -346,8 +358,8 @@ export default function Skills() {
                               component="span"
                               sx={{
                                 color: category.color,
-                                mr: 1,
-                                fontSize: '0.75rem',
+                                mr: { xs: 0.5, sm: 1 },
+                                fontSize: { xs: '0.625rem', sm: '0.75rem' },
                               }}
                             >
                               ▸
@@ -356,7 +368,8 @@ export default function Skills() {
                               component="span"
                               sx={{
                                 color: theme.palette.terminal.textSecondary,
-                                fontSize: '0.875rem',
+                                fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                                wordBreak: 'break-word',
                               }}
                             >
                               {skill}
@@ -369,11 +382,10 @@ export default function Skills() {
               </Box>
             </Box>
 
-            {/* Terminal Command Line */}
             <Box
               sx={{
-                mt: 4,
-                p: 2,
+                mt: { xs: 3, sm: 4 },
+                p: { xs: 1.5, sm: 2 },
                 backgroundColor: theme.palette.terminal.header,
                 border: `1px solid ${theme.palette.terminal.border}`,
                 borderRadius: 1,
@@ -383,14 +395,21 @@ export default function Skills() {
             >
               <Typography
                 variant="body2"
-                sx={{ color: theme.palette.terminal.cyan }}
+                sx={{
+                  color: theme.palette.terminal.cyan,
+                  fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                  mb: { xs: 0.5, sm: 1 },
+                }}
               >
                 $ echo &quot;Continuously learning and adapting to emerging
                 technologies&quot;
               </Typography>
               <Typography
                 variant="body2"
-                sx={{ color: theme.palette.terminal.green }}
+                sx={{
+                  color: theme.palette.terminal.green,
+                  fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                }}
               >
                 &gt; Building scalable solutions from web2 to web3 ecosystems
               </Typography>

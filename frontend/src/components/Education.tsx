@@ -37,6 +37,16 @@ export default function Education() {
     },
   ];
 
+  const certifications = [
+    {
+      title: 'Microsoft Certified: Azure Fundamentals',
+      issuer: 'Microsoft',
+      date: 'Feb 2021',
+      description:
+        'Foundational level understanding of cloud services and how those services are provided with Microsoft Azure.',
+    },
+  ];
+
   const publications = [
     {
       title:
@@ -73,7 +83,7 @@ export default function Education() {
     <Box
       component="section"
       sx={{
-        pb: 4,
+        py: { xs: 2, sm: 3, md: 4 },
       }}
     >
       <Container maxWidth="xl">
@@ -84,21 +94,31 @@ export default function Education() {
             mx: 'auto',
             backgroundColor: theme.palette.terminal.background,
             border: `1px solid ${theme.palette.terminal.border}`,
+            overflow: 'hidden',
           }}
         >
           <CardContent
             sx={{
               backgroundColor: theme.palette.terminal.background,
               color: theme.palette.terminal.text,
-              p: 4,
+              p: { xs: 2, sm: 3, md: 4 },
             }}
           >
             <Typography
               variant="h3"
               component="h2"
               sx={{
-                mb: 4,
+                mb: { xs: 3, sm: 4 },
                 color: theme.palette.terminal.text,
+                fontSize: {
+                  xs: '1.5rem',
+                  sm: '2rem',
+                  md: '2.5rem',
+                  lg: '3rem',
+                },
+                textAlign: 'center',
+                wordBreak: 'break-word',
+                lineHeight: { xs: 1.2, md: 1.167 },
               }}
             >
               <HighlightedText
@@ -107,76 +127,196 @@ export default function Education() {
                 highlightColor={theme.palette.terminal.cyan}
               />
             </Typography>
-
-            {/* Education Section */}
-            <Stack spacing={3} sx={{ mb: 5 }}>
+            <Stack spacing={{ xs: 2, sm: 3 }} sx={{ mb: { xs: 4, sm: 5 } }}>
               {educationList.map((edu, index) => (
-                <Box key={index}>
-                  <Box sx={{ mb: 2 }}>
-                    <Typography
-                      variant="h5"
-                      component="h3"
+                <Box
+                  key={index}
+                  sx={{
+                    p: { xs: 2, sm: 3 },
+                    backgroundColor: theme.palette.terminal.header,
+                    border: `1px solid ${theme.palette.terminal.border}`,
+                    borderRadius: 1,
+                  }}
+                >
+                  <Typography
+                    variant="h5"
+                    component="h3"
+                    sx={{
+                      color: theme.palette.terminal.text,
+                      mb: { xs: 1, sm: 1.5 },
+                      lineHeight: 1.3,
+                      fontSize: { xs: '1.1rem', sm: '1.25rem', md: '1.5rem' },
+                      wordBreak: 'break-word',
+                    }}
+                  >
+                    <HighlightedText
+                      text={edu.degree}
+                      highlightIndices={highlightFirstLetters(edu.degree)}
+                      highlightColor={theme.palette.terminal.magenta}
+                    />
+                  </Typography>
+
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      color: theme.palette.terminal.green,
+                      mb: { xs: 0.5, sm: 1 },
+                      fontSize: { xs: '0.875rem', sm: '1rem' },
+                      wordBreak: 'break-word',
+                    }}
+                  >
+                    {edu.institution}
+                    {', '}
+                    <Box
+                      component="span"
                       sx={{
-                        color: theme.palette.terminal.text,
-                        mb: 0.5,
-                        lineHeight: 1.3,
+                        color: theme.palette.terminal.textSecondary,
                       }}
                     >
-                      <HighlightedText
-                        text={edu.degree}
-                        highlightIndices={highlightFirstLetters(edu.degree)}
-                        highlightColor={theme.palette.terminal.magenta}
+                      {edu.location}
+                    </Box>
+                  </Typography>
+
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: theme.palette.terminal.cyan,
+                      fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                    }}
+                  >
+                    {edu.period}
+                  </Typography>
+                </Box>
+              ))}
+            </Stack>
+            <Box
+              sx={{
+                mt: { xs: 3, sm: 4 },
+                pt: { xs: 3, sm: 4 },
+                borderTop: `2px solid ${theme.palette.terminal.border}`,
+                mb: { xs: 4, sm: 5 },
+              }}
+            >
+              <Typography
+                variant="h4"
+                component="h3"
+                sx={{
+                  mb: { xs: 2, sm: 3 },
+                  color: theme.palette.terminal.text,
+                  fontSize: { xs: '1.25rem', sm: '1.5rem', md: '2rem' },
+                  textAlign: 'center',
+                  wordBreak: 'break-word',
+                  lineHeight: { xs: 1.2, md: 1.167 },
+                }}
+              >
+                <HighlightedText
+                  text="CERTIFICATIONS"
+                  highlightIndices={highlightFirstLetters('CERTIFICATIONS')}
+                  highlightColor={theme.palette.terminal.green}
+                />
+              </Typography>
+
+              <Stack spacing={{ xs: 2, sm: 3 }}>
+                {certifications.map((cert, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      p: { xs: 2, sm: 3 },
+                      backgroundColor: theme.palette.terminal.header,
+                      border: `1px solid ${theme.palette.terminal.border}`,
+                      borderRadius: 1,
+                      position: 'relative',
+                      '&::before': {
+                        content: '""',
+                        position: 'absolute',
+                        left: { xs: -2, sm: -3 },
+                        top: 0,
+                        bottom: 0,
+                        width: { xs: '3px', sm: '4px' },
+                        backgroundColor: theme.palette.terminal.green,
+                        borderRadius: '2px',
+                      },
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        flexDirection: { xs: 'column', sm: 'row' },
+                        justifyContent: 'space-between',
+                        alignItems: { xs: 'flex-start', sm: 'flex-start' },
+                        mb: { xs: 1, sm: 1.5 },
+                        gap: { xs: 1, sm: 2 },
+                      }}
+                    >
+                      <Typography
+                        variant="h6"
+                        component="h4"
+                        sx={{
+                          color: theme.palette.terminal.cyan,
+                          fontSize: {
+                            xs: '1rem',
+                            sm: '1.125rem',
+                            md: '1.25rem',
+                          },
+                          fontWeight: 'bold',
+                          wordBreak: 'break-word',
+                          flex: 1,
+                        }}
+                      >
+                        <HighlightedText
+                          text={cert.title}
+                          highlightIndices={highlightFirstLetters(cert.title)}
+                          highlightColor={theme.palette.terminal.magenta}
+                        />
+                      </Typography>
+
+                      <Chip
+                        label={cert.date}
+                        sx={{
+                          backgroundColor: theme.palette.terminal.background,
+                          color: theme.palette.terminal.yellow,
+                          border: `1px solid ${theme.palette.terminal.border}`,
+                          fontFamily:
+                            'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+                          fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                          fontWeight: 'bold',
+                          height: { xs: 28, sm: 32 },
+                        }}
                       />
-                    </Typography>
+                    </Box>
 
                     <Typography
                       variant="body1"
                       sx={{
                         color: theme.palette.terminal.green,
-                        mb: 0.5,
+                        mb: { xs: 1, sm: 1.5 },
+                        fontSize: { xs: '0.875rem', sm: '1rem' },
+                        fontWeight: 'bold',
                       }}
                     >
-                      {edu.institution}
-                      {', '}
-                      <Box
-                        component="span"
-                        sx={{
-                          color: theme.palette.terminal.textSecondary,
-                        }}
-                      >
-                        {edu.location}
-                      </Box>
+                      {cert.issuer}
                     </Typography>
 
                     <Typography
                       variant="body2"
                       sx={{
-                        color: theme.palette.terminal.cyan,
-                        mb: 1,
+                        color: theme.palette.terminal.textSecondary,
+                        fontSize: { xs: '0.875rem', sm: '1rem' },
+                        lineHeight: 1.6,
+                        fontStyle: 'italic',
                       }}
                     >
-                      {edu.period}
+                      {cert.description}
                     </Typography>
                   </Box>
+                ))}
+              </Stack>
+            </Box>
 
-                  {index < educationList.length - 1 && (
-                    <Box
-                      sx={{
-                        mt: 3,
-                        height: '1px',
-                        backgroundColor: theme.palette.terminal.border,
-                      }}
-                    />
-                  )}
-                </Box>
-              ))}
-            </Stack>
-
-            {/* Publications Section */}
             <Box
               sx={{
-                mt: 4,
-                pt: 4,
+                mt: { xs: 3, sm: 4 },
+                pt: { xs: 3, sm: 4 },
                 borderTop: `2px solid ${theme.palette.terminal.border}`,
               }}
             >
@@ -184,8 +324,12 @@ export default function Education() {
                 variant="h4"
                 component="h3"
                 sx={{
-                  mb: 3,
+                  mb: { xs: 2, sm: 3 },
                   color: theme.palette.terminal.text,
+                  fontSize: { xs: '1.25rem', sm: '1.5rem', md: '2rem' },
+                  textAlign: 'center',
+                  wordBreak: 'break-word',
+                  lineHeight: { xs: 1.2, md: 1.167 },
                 }}
               >
                 <HighlightedText
@@ -195,16 +339,26 @@ export default function Education() {
                 />
               </Typography>
 
-              <Stack spacing={4}>
+              <Stack spacing={{ xs: 3, sm: 4 }}>
                 {publications.map((pub, index) => (
-                  <Box key={index}>
+                  <Box
+                    key={index}
+                    sx={{
+                      p: { xs: 2, sm: 3 },
+                      backgroundColor: theme.palette.terminal.header,
+                      border: `1px solid ${theme.palette.terminal.border}`,
+                      borderRadius: 1,
+                    }}
+                  >
                     <Typography
                       variant="h6"
                       component="h4"
                       sx={{
                         color: theme.palette.terminal.text,
-                        mb: 1,
+                        mb: { xs: 1, sm: 1.5 },
                         lineHeight: 1.3,
+                        fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem' },
+                        wordBreak: 'break-word',
                       }}
                     >
                       <HighlightedText
@@ -218,7 +372,9 @@ export default function Education() {
                       variant="body1"
                       sx={{
                         color: theme.palette.terminal.green,
-                        mb: 0.5,
+                        mb: { xs: 0.5, sm: 1 },
+                        fontSize: { xs: '0.875rem', sm: '1rem' },
+                        wordBreak: 'break-word',
                       }}
                     >
                       {pub.conference}
@@ -228,7 +384,8 @@ export default function Education() {
                       variant="body2"
                       sx={{
                         color: theme.palette.terminal.cyan,
-                        mb: 2,
+                        mb: { xs: 1, sm: 2 },
+                        fontSize: { xs: '0.75rem', sm: '0.875rem' },
                       }}
                     >
                       {pub.date}
@@ -238,27 +395,35 @@ export default function Education() {
                       variant="body2"
                       sx={{
                         color: theme.palette.terminal.textSecondary,
-                        mb: 2,
+                        mb: { xs: 1.5, sm: 2 },
                         lineHeight: 1.6,
                         fontStyle: 'italic',
+                        fontSize: { xs: '0.875rem', sm: '1rem' },
                       }}
                     >
                       {pub.abstract}
                     </Typography>
 
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        gap: { xs: 0.5, sm: 1 },
+                      }}
+                    >
                       {pub.keywords.map((keyword, keyIndex) => (
                         <Chip
                           key={keyIndex}
                           label={keyword}
                           size="small"
                           sx={{
-                            backgroundColor: theme.palette.terminal.header,
+                            backgroundColor: theme.palette.terminal.background,
                             color: theme.palette.terminal.yellow,
                             border: `1px solid ${theme.palette.terminal.border}`,
                             fontFamily:
                               'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                            fontSize: '0.75rem',
+                            fontSize: { xs: '0.625rem', sm: '0.75rem' },
+                            height: { xs: 24, sm: 32 },
                             '&:hover': {
                               backgroundColor: theme.palette.terminal.border,
                             },
@@ -266,16 +431,6 @@ export default function Education() {
                         />
                       ))}
                     </Box>
-
-                    {index < publications.length - 1 && (
-                      <Box
-                        sx={{
-                          mt: 3,
-                          height: '1px',
-                          backgroundColor: theme.palette.terminal.border,
-                        }}
-                      />
-                    )}
                   </Box>
                 ))}
               </Stack>
