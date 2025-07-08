@@ -23,7 +23,7 @@ export default function Hero() {
     <Box
       component="section"
       sx={{
-        py: { xs: 2, sm: 3, md: 4 }, // Responsive padding
+        py: { xs: 2, sm: 3, md: 4 },
       }}
     >
       <Container maxWidth="xl">
@@ -36,14 +36,13 @@ export default function Hero() {
             border: `1px solid ${theme.palette.terminal.border}`,
           }}
         >
-          {/* Terminal Header */}
           <Box
             sx={{
               backgroundColor: theme.palette.terminal.header,
               color: theme.palette.terminal.text,
               fontFamily:
                 'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-              p: { xs: 1.5, sm: 2 }, // Responsive padding
+              p: { xs: 1.5, sm: 2 },
               borderBottom: `1px solid ${theme.palette.terminal.border}`,
               display: 'flex',
               alignItems: 'center',
@@ -54,7 +53,7 @@ export default function Hero() {
             <Stack direction="row" spacing={1}>
               <Box
                 sx={{
-                  width: { xs: 10, sm: 12 }, // Responsive size
+                  width: { xs: 10, sm: 12 },
                   height: { xs: 10, sm: 12 },
                   borderRadius: '50%',
                   backgroundColor: theme.palette.terminal.red,
@@ -85,8 +84,8 @@ export default function Hero() {
                 color: theme.palette.terminal.textSecondary,
                 fontFamily:
                   'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                fontSize: { xs: '0.75rem', sm: '0.875rem' }, // Responsive font size
-                display: { xs: 'none', sm: 'block' }, // Hide on mobile
+                fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                display: { xs: 'none', sm: 'block' },
               }}
             >
               nemanja@portfolio:~
@@ -99,30 +98,29 @@ export default function Hero() {
             sx={{
               backgroundColor: theme.palette.terminal.background,
               color: theme.palette.terminal.text,
-              p: { xs: 2, sm: 3, md: 4 }, // Responsive padding
+              p: { xs: 2, sm: 3, md: 4 },
             }}
           >
             <Box
               sx={{
                 fontFamily:
                   'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                mb: { xs: 2, sm: 3 }, // Responsive margin
+                mb: { xs: 2, sm: 3 },
                 textAlign: 'left',
               }}
             >
-              {/* Main Title */}
               <Typography
                 variant="h1"
                 component="h1"
                 sx={{
-                  mb: { xs: 1.5, sm: 2 }, // Responsive margin
+                  mb: { xs: 1.5, sm: 2 },
                   color: theme.palette.terminal.text,
                   fontSize: {
                     xs: '1.75rem',
                     sm: '2.5rem',
                     md: '3rem',
                     lg: '3.5rem',
-                  }, // Responsive font size
+                  },
                 }}
               >
                 <HighlightedText
@@ -132,22 +130,20 @@ export default function Hero() {
                 />
               </Typography>
 
-              {/* Subtitle */}
               <Typography
                 variant="h4"
                 component="h2"
                 sx={{
-                  mb: { xs: 3, sm: 4 }, // Responsive margin
+                  mb: { xs: 3, sm: 4 },
                   color: theme.palette.terminal.cyan,
                   fontFamily:
                     'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                  fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' }, // Responsive font size
+                  fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
                 }}
               >
                 $ echo &quot;Full Stack Developer | Blockchain Enthusiast&quot;
               </Typography>
 
-              {/* Description and CV Download */}
               <Stack
                 direction={{ xs: 'column', md: 'row' }}
                 spacing={{ xs: 2, md: 4 }}
@@ -162,8 +158,8 @@ export default function Hero() {
                   variant="body1"
                   sx={{
                     color: theme.palette.terminal.textSecondary,
-                    fontSize: { xs: '0.875rem', sm: '1rem', md: '1.1rem' }, // Responsive font size
-                    lineHeight: { xs: 1.5, sm: 1.6 }, // Responsive line height
+                    fontSize: { xs: '0.875rem', sm: '1rem', md: '1.1rem' },
+                    lineHeight: { xs: 1.5, sm: 1.6 },
                     maxWidth: { xs: '100%', md: '800px' },
                     flex: { md: '1 1 auto' },
                   }}
@@ -186,13 +182,12 @@ export default function Hero() {
                 </Box>
               </Stack>
 
-              {/* Contact Information */}
               <Box
                 sx={{
                   backgroundColor: theme.palette.terminal.header,
-                  mx: { xs: -2, sm: -3, md: -4 }, // Responsive negative margin
-                  px: { xs: 2, sm: 3, md: 4 }, // Responsive padding
-                  py: { xs: 1.5, sm: 2 }, // Responsive padding
+                  mx: { xs: -2, sm: -3, md: -4 },
+                  px: { xs: 2, sm: 3, md: 4 },
+                  py: { xs: 1.5, sm: 2 },
                   borderTop: `1px solid ${theme.palette.terminal.border}`,
                   borderBottom: `1px solid ${theme.palette.terminal.border}`,
                 }}
@@ -202,12 +197,11 @@ export default function Hero() {
                   spacing={{ xs: 1.5, sm: 2, lg: 4 }}
                   alignItems={{ xs: 'flex-start', lg: 'center' }}
                 >
-                  {/* Location */}
                   <Stack direction="row" spacing={1} alignItems="center">
                     <LocationOn
                       sx={{
                         color: theme.palette.terminal.cyan,
-                        fontSize: { xs: '1.25rem', sm: '1.5rem' }, // Responsive icon size
+                        fontSize: { xs: '1.25rem', sm: '1.5rem' },
                       }}
                     />
                     <Typography
@@ -215,14 +209,13 @@ export default function Hero() {
                       className="terminal-contact-text"
                       sx={{
                         color: theme.palette.terminal.text,
-                        fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' }, // Responsive font size
+                        fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' },
                       }}
                     >
                       BELGRADE, SERBIA
                     </Typography>
                   </Stack>
 
-                  {/* Email */}
                   <MuiLink
                     href="mailto:jobs@nemanjaradulovic.dev"
                     sx={{
@@ -240,7 +233,7 @@ export default function Hero() {
                   >
                     <Email
                       sx={{
-                        fontSize: { xs: '1.25rem', sm: '1.5rem' }, // Responsive icon size
+                        fontSize: { xs: '1.25rem', sm: '1.5rem' },
                       }}
                     />
                     <Typography
@@ -251,14 +244,13 @@ export default function Hero() {
                           xs: '0.625rem',
                           sm: '0.75rem',
                           md: '0.875rem',
-                        }, // Responsive font size
+                        },
                       }}
                     >
                       JOBS@NEMANJARADULOVIC.DEV
                     </Typography>
                   </MuiLink>
 
-                  {/* GitHub */}
                   <MuiLink
                     href="https://github.com/nemanjaradulovic"
                     target="_blank"
@@ -277,21 +269,20 @@ export default function Hero() {
                   >
                     <GitHub
                       sx={{
-                        fontSize: { xs: '1.25rem', sm: '1.5rem' }, // Responsive icon size
+                        fontSize: { xs: '1.25rem', sm: '1.5rem' },
                       }}
                     />
                     <Typography
                       variant="body2"
                       className="terminal-contact-social"
                       sx={{
-                        fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' }, // Responsive font size
+                        fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' },
                       }}
                     >
                       NEMANJARADULOVIC
                     </Typography>
                   </MuiLink>
 
-                  {/* LinkedIn */}
                   <MuiLink
                     href="https://linkedin.com/in/nemanjaradulovic"
                     target="_blank"
@@ -310,14 +301,14 @@ export default function Hero() {
                   >
                     <LinkedIn
                       sx={{
-                        fontSize: { xs: '1.25rem', sm: '1.5rem' }, // Responsive icon size
+                        fontSize: { xs: '1.25rem', sm: '1.5rem' },
                       }}
                     />
                     <Typography
                       variant="body2"
                       className="terminal-contact-social"
                       sx={{
-                        fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' }, // Responsive font size
+                        fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' },
                       }}
                     >
                       LINKEDIN
@@ -327,13 +318,12 @@ export default function Hero() {
               </Box>
             </Box>
 
-            {/* Interactive Terminal Section */}
             <Box sx={{ mt: { xs: 4, sm: 5, md: 6 } }}>
               <Typography
                 variant="h4"
                 component="h3"
                 sx={{
-                  mb: { xs: 2, sm: 3 }, // Responsive margin
+                  mb: { xs: 2, sm: 3 },
                   color: theme.palette.terminal.text,
                   textAlign: 'center',
                   fontSize: {
@@ -341,7 +331,7 @@ export default function Hero() {
                     sm: '1.75rem',
                     md: '2rem',
                     lg: '2.125rem',
-                  }, // Responsive font size
+                  },
                   wordBreak: 'break-word',
                 }}
               >
@@ -355,13 +345,13 @@ export default function Hero() {
               <Typography
                 variant="body1"
                 sx={{
-                  mb: { xs: 2, sm: 3 }, // Responsive margin
+                  mb: { xs: 2, sm: 3 },
                   color: theme.palette.terminal.textSecondary,
                   textAlign: 'center',
                   fontFamily:
                     'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                  fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' }, // Responsive font size
-                  px: { xs: 1, sm: 2, md: 0 }, // Responsive padding
+                  fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' },
+                  px: { xs: 1, sm: 2, md: 0 },
                 }}
               >
                 💡 Try typing commands like{' '}
@@ -399,11 +389,10 @@ export default function Hero() {
               <InteractiveTerminal />
             </Box>
 
-            {/* Call to Action */}
             <Box
               sx={{
-                mt: { xs: 4, sm: 5, md: 6 }, // Responsive margin
-                p: { xs: 2, sm: 3 }, // Responsive padding
+                mt: { xs: 4, sm: 5, md: 6 },
+                p: { xs: 2, sm: 3 },
                 backgroundColor: theme.palette.terminal.header,
                 border: `1px solid ${theme.palette.terminal.border}`,
                 borderRadius: 1,
@@ -416,8 +405,8 @@ export default function Hero() {
                   color: theme.palette.terminal.text,
                   fontFamily:
                     'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                  mb: { xs: 1.5, sm: 2 }, // Responsive margin
-                  fontSize: { xs: '0.875rem', sm: '1rem' }, // Responsive font size
+                  mb: { xs: 1.5, sm: 2 },
+                  fontSize: { xs: '0.875rem', sm: '1rem' },
                 }}
               >
                 <span style={{ color: theme.palette.terminal.green }}>$</span>{' '}
@@ -427,7 +416,7 @@ export default function Hero() {
                 variant="body2"
                 sx={{
                   color: theme.palette.terminal.textSecondary,
-                  fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' }, // Responsive font size
+                  fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' },
                 }}
               >
                 Available for freelance projects and full-time opportunities •

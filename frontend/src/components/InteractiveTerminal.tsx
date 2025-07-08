@@ -192,16 +192,16 @@ export default function InteractiveTerminal() {
         backgroundColor: theme.palette.terminal.background,
         border: `1px solid ${theme.palette.terminal.border}`,
         borderRadius: 1,
-        p: { xs: 2, sm: 3 }, // Responsive padding
-        maxHeight: { xs: '300px', sm: '400px' }, // Responsive max height
-        minHeight: { xs: '200px', sm: '250px' }, // Responsive min height
+        p: { xs: 2, sm: 3 },
+        maxHeight: { xs: '300px', sm: '400px' },
+        minHeight: { xs: '200px', sm: '250px' },
         overflowY: 'auto',
         fontFamily:
           'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-        fontSize: { xs: '0.75rem', sm: '0.875rem' }, // Responsive font size
+        fontSize: { xs: '0.75rem', sm: '0.875rem' },
         cursor: 'text',
         '&::-webkit-scrollbar': {
-          width: { xs: '6px', sm: '8px' }, // Responsive scrollbar width
+          width: { xs: '6px', sm: '8px' },
         },
         '&::-webkit-scrollbar-track': {
           backgroundColor: theme.palette.terminal.header,
@@ -212,27 +212,24 @@ export default function InteractiveTerminal() {
         },
       }}
     >
-      {/* Command History */}
       {history.map((entry, index) => (
         <Box key={index} sx={{ mb: { xs: 0.5, sm: 1 } }}>
-          {' '}
-          {/* Responsive margin */}
           {entry.input && (
             <Box
               sx={{
                 display: 'flex',
-                alignItems: 'flex-start', // Changed from 'center' to 'flex-start'
-                flexWrap: { xs: 'wrap', sm: 'nowrap' }, // Wrap on mobile
-                mb: { xs: 0.25, sm: 0.5 }, // Responsive margin
-                gap: { xs: 0.5, sm: 1 }, // Responsive gap
+                alignItems: 'flex-start',
+                flexWrap: { xs: 'wrap', sm: 'nowrap' },
+                mb: { xs: 0.25, sm: 0.5 },
+                gap: { xs: 0.5, sm: 1 },
               }}
             >
               <Typography
                 component="span"
                 sx={{
                   color: theme.palette.terminal.green,
-                  flexShrink: 0, // Prevent shrinking
-                  fontSize: { xs: '0.75rem', sm: '0.875rem' }, // Responsive font size
+                  flexShrink: 0,
+                  fontSize: { xs: '0.75rem', sm: '0.875rem' },
                 }}
               >
                 nemanja@portfolio:~$
@@ -241,8 +238,8 @@ export default function InteractiveTerminal() {
                 component="span"
                 sx={{
                   color: theme.palette.terminal.text,
-                  wordBreak: 'break-word', // Allow word breaking
-                  fontSize: { xs: '0.75rem', sm: '0.875rem' }, // Responsive font size
+                  wordBreak: 'break-word',
+                  fontSize: { xs: '0.75rem', sm: '0.875rem' },
                 }}
               >
                 {entry.input}
@@ -256,10 +253,10 @@ export default function InteractiveTerminal() {
               sx={{
                 color: theme.palette.terminal.textSecondary,
                 whiteSpace: 'pre-wrap',
-                wordBreak: 'break-word', // Allow word breaking
-                minHeight: { xs: '1em', sm: '1.2em' }, // Responsive min height
-                fontSize: { xs: '0.75rem', sm: '0.875rem' }, // Responsive font size
-                lineHeight: { xs: 1.3, sm: 1.4 }, // Responsive line height
+                wordBreak: 'break-word',
+                minHeight: { xs: '1em', sm: '1.2em' },
+                fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                lineHeight: { xs: 1.3, sm: 1.4 },
               }}
             >
               {line}
@@ -268,21 +265,20 @@ export default function InteractiveTerminal() {
         </Box>
       ))}
 
-      {/* Current Input Line */}
       <Box
         sx={{
           display: 'flex',
-          alignItems: 'flex-start', // Changed from 'center' to 'flex-start'
-          flexWrap: { xs: 'wrap', sm: 'nowrap' }, // Wrap on mobile
-          gap: { xs: 0.5, sm: 1 }, // Responsive gap
+          alignItems: 'flex-start',
+          flexWrap: { xs: 'wrap', sm: 'nowrap' },
+          gap: { xs: 0.5, sm: 1 },
         }}
       >
         <Typography
           component="span"
           sx={{
             color: theme.palette.terminal.green,
-            flexShrink: 0, // Prevent shrinking
-            fontSize: { xs: '0.75rem', sm: '0.875rem' }, // Responsive font size
+            flexShrink: 0,
+            fontSize: { xs: '0.75rem', sm: '0.875rem' },
           }}
         >
           nemanja@portfolio:~$
@@ -293,7 +289,7 @@ export default function InteractiveTerminal() {
             display: 'flex',
             alignItems: 'center',
             flex: 1,
-            minWidth: { xs: '100%', sm: 'auto' }, // Full width on mobile
+            minWidth: { xs: '100%', sm: 'auto' },
           }}
         >
           <input
@@ -311,7 +307,7 @@ export default function InteractiveTerminal() {
               fontSize: 'inherit',
               flex: 1,
               caretColor: theme.palette.terminal.cyan,
-              minWidth: 0, // Allow input to shrink
+              minWidth: 0,
             }}
             placeholder="Type a command..."
           />
@@ -320,7 +316,7 @@ export default function InteractiveTerminal() {
             sx={{
               color: theme.palette.terminal.cyan,
               animation: 'blink 1s infinite',
-              fontSize: { xs: '0.75rem', sm: '0.875rem' }, // Responsive font size
+              fontSize: { xs: '0.75rem', sm: '0.875rem' },
               '@keyframes blink': {
                 '0%, 50%': { opacity: 1 },
                 '51%, 100%': { opacity: 0 },
