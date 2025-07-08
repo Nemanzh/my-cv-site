@@ -41,7 +41,6 @@ declare module '@mui/material/styles' {
   }
 }
 
-// Step 1: Define types
 type ThemeMode = 'light' | 'dark';
 
 interface ThemeContextType {
@@ -49,10 +48,8 @@ interface ThemeContextType {
   toggleTheme: () => void;
 }
 
-// Step 2: Create context
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-// Step 3: Custom hook to use theme
 export const useThemeMode = () => {
   const context = useContext(ThemeContext);
   if (!context) {
@@ -61,87 +58,52 @@ export const useThemeMode = () => {
   return context;
 };
 
-// Step 4: Extend MUI theme interface
-declare module '@mui/material/styles' {
-  interface Palette {
-    terminal: {
-      background: string;
-      header: string;
-      border: string;
-      text: string;
-      textSecondary: string;
-      cyan: string;
-      green: string;
-      greenDark: string;
-      red: string;
-      yellow: string;
-      magenta: string;
-    };
-  }
-
-  interface PaletteOptions {
-    terminal?: {
-      background?: string;
-      header?: string;
-      border?: string;
-      text?: string;
-      textSecondary?: string;
-      cyan?: string;
-      green?: string;
-      greenDark?: string;
-      red?: string;
-      yellow?: string;
-      magenta?: string;
-    };
-  }
-}
-
-// Step 5: Define color palettes
 const getColors = (mode: ThemeMode) => {
   if (mode === 'dark') {
+    // VS Code Dark Theme Colors
     return {
       background: {
-        default: '#0d1117',
-        paper: '#161b22',
+        default: '#1e1e1e', // VS Code main background
+        paper: '#252526', // VS Code sidebar/panel background
       },
       terminal: {
-        background: '#0d1117',
-        header: '#161b22',
-        border: '#30363d',
-        text: '#f0f6fc',
-        textSecondary: '#8b949e',
-        cyan: '#00d8ff',
-        green: '#7c3aed',
-        greenDark: '#6d28d9',
-        red: '#ff6b6b',
-        yellow: '#ffd700',
-        magenta: '#ff6ac1',
+        background: '#1e1e1e', // VS Code editor background
+        header: '#2d2d30', // VS Code tab/header background
+        border: '#3e3e42', // VS Code border color
+        text: '#cccccc', // VS Code main text (light gray)
+        textSecondary: '#969696', // VS Code muted text
+        cyan: '#9cdcfe', // VS Code light blue (types, properties)
+        green: '#6a9955', // VS Code green (comments, strings)
+        greenDark: '#4ec9b0', // VS Code teal (interfaces, classes)
+        red: '#f44747', // VS Code red (errors, keywords)
+        yellow: '#dcdcaa', // VS Code yellow (functions, methods)
+        magenta: '#c586c0', // VS Code purple (keywords, control flow)
       },
     };
   } else {
+    // VS Code Light Theme Colors
     return {
       background: {
-        default: '#ffffff',
-        paper: '#f8fafc',
+        default: '#ffffff', // VS Code light background
+        paper: '#f3f3f3', // VS Code light sidebar
       },
       terminal: {
-        background: '#ffffff',
-        header: '#f8fafc',
-        border: '#e2e8f0',
-        text: '#1e293b',
-        textSecondary: '#64748b',
-        cyan: '#0ea5e9',
-        green: '#7c3aed',
-        greenDark: '#6d28d9',
-        red: '#ef4444',
-        yellow: '#f59e0b',
-        magenta: '#ec4899',
+        background: '#ffffff', // VS Code light editor background
+        header: '#f3f3f3', // VS Code light tab background
+        border: '#e5e5e5', // VS Code light border
+        text: '#383a42', // VS Code dark text
+        textSecondary: '#7f848e', // VS Code muted text
+        cyan: '#0184bc', // VS Code light blue
+        green: '#50a14f', // VS Code light green
+        greenDark: '#0997b3', // VS Code light teal
+        red: '#e45649', // VS Code light red
+        yellow: '#c18401', // VS Code light yellow/orange
+        magenta: '#a626a4', // VS Code light purple
       },
     };
   }
 };
 
-// Step 6: Theme Provider Component
 export default function ThemeProvider({
   children,
 }: {
@@ -149,13 +111,11 @@ export default function ThemeProvider({
 }) {
   const [mode, setMode] = useState<ThemeMode>('dark');
 
-  // Step 7: Load saved theme on mount
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as ThemeMode;
     if (savedTheme) {
       setMode(savedTheme);
     } else {
-      // Check system preference
       const systemPrefersDark = window.matchMedia(
         '(prefers-color-scheme: dark)'
       ).matches;
@@ -163,14 +123,12 @@ export default function ThemeProvider({
     }
   }, []);
 
-  // Step 8: Toggle function
   const toggleTheme = () => {
     const newMode = mode === 'dark' ? 'light' : 'dark';
     setMode(newMode);
     localStorage.setItem('theme', newMode);
   };
 
-  // Step 9: Create theme
   const colors = getColors(mode);
   const theme = createTheme({
     palette: {
