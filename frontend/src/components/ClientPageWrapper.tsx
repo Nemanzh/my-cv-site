@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Box, useTheme } from '@mui/material';
-import ThemeToggle from './ThemeToggle';
 
 interface ClientPageWrapperProps {
   children: React.ReactNode;
@@ -90,7 +89,6 @@ export default function ClientPageWrapper({
         },
       }}
     >
-      <ThemeToggle />
       {children}
     </Box>
   );

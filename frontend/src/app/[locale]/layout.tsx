@@ -5,8 +5,8 @@ import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import ThemeProvider from '@/components/ThemeProvider';
+import Header from '@/components/Header';
 import { Major_Mono_Display } from 'next/font/google';
-// import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const majorMonoDisplay = Major_Mono_Display({
   weight: '400',
@@ -52,16 +52,7 @@ export default async function RootLayout({
       <body className={majorMonoDisplay.variable}>
         <ThemeProvider>
           <NextIntlClientProvider>
-            {/* <div
-              style={{
-                position: 'fixed',
-                top: '20px',
-                right: '20px',
-                zIndex: 1000,
-              }}
-            >
-              <LanguageSwitcher />
-            </div> */}
+            <Header />
             {children}
           </NextIntlClientProvider>
         </ThemeProvider>
