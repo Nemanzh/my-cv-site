@@ -232,7 +232,7 @@ export default function InteractiveTerminal() {
                   fontSize: { xs: '0.75rem', sm: '0.875rem' },
                 }}
               >
-                nemanja@portfolio:~$
+                nemanja@cv:~$
               </Typography>
               <Typography
                 component="span"
@@ -281,7 +281,7 @@ export default function InteractiveTerminal() {
             fontSize: { xs: '0.75rem', sm: '0.875rem' },
           }}
         >
-          nemanja@portfolio:~$
+          nemanzh@cv:~$
         </Typography>
 
         <Box

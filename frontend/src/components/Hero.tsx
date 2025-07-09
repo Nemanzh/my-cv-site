@@ -46,7 +46,7 @@ export default function Hero() {
               borderBottom: `1px solid ${theme.palette.terminal.border}`,
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'space-between',
+              justifyContent: 'flex-start',
               gap: 1,
             }}
           >
@@ -76,22 +76,6 @@ export default function Hero() {
                 }}
               />
             </Stack>
-
-            <Typography
-              variant="body2"
-              sx={{
-                ml: 2,
-                color: theme.palette.terminal.textSecondary,
-                fontFamily:
-                  'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                display: { xs: 'none', sm: 'block' },
-              }}
-            >
-              nemanja@portfolio:~
-            </Typography>
-
-            <Box sx={{ width: { xs: 30, sm: 60 } }} />
           </Box>
 
           <CardContent
