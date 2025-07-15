@@ -12,49 +12,48 @@ import {
   Chip,
 } from '@mui/material';
 import HighlightedText, { highlightFirstLetters } from './HighlightedText';
+import { useTranslations } from 'next-intl';
 
 export default function Education() {
   const theme = useTheme();
+  const t = useTranslations('Education');
 
   const educationList = [
     {
-      degree: 'Master of Science in Software Engineering and Computer Science',
-      institution: 'Faculty of Organizational Sciences, University of Belgrade',
-      location: 'Serbia',
-      period: '2021 - 2022',
+      degree: t('educationList.masters.degree'),
+      institution: t('educationList.masters.institution'),
+      location: t('educationList.masters.location'),
+      period: t('educationList.masters.period'),
     },
     {
-      degree: 'Bachelor of Science in Information Systems and Technology',
-      institution: 'Faculty of Organizational Sciences, University of Belgrade',
-      location: 'Serbia',
-      period: '2009 - 2018',
+      degree: t('educationList.bachelor.degree'),
+      institution: t('educationList.bachelor.institution'),
+      location: t('educationList.bachelor.location'),
+      period: t('educationList.bachelor.period'),
     },
     {
-      degree: 'Secondary Education Degree, Mathematics',
-      institution: 'Grammar school Kruševac',
-      location: 'Serbia',
-      period: '2005 - 2009',
+      degree: t('educationList.secondary.degree'),
+      institution: t('educationList.secondary.institution'),
+      location: t('educationList.secondary.location'),
+      period: t('educationList.secondary.period'),
     },
   ];
 
   const certifications = [
     {
-      title: 'Microsoft Certified: Azure Fundamentals',
-      issuer: 'Microsoft',
-      date: 'Feb 2021',
-      description:
-        'Foundational level understanding of cloud services and how those services are provided with Microsoft Azure.',
+      title: t('certificationsList.azure.title'),
+      issuer: t('certificationsList.azure.issuer'),
+      date: t('certificationsList.azure.date'),
+      description: t('certificationsList.azure.description'),
     },
   ];
 
   const publications = [
     {
-      title:
-        'TRANSFORMACIJA LOGIČKE SHEME BAZE PODATAKA: OD RELACIONOG (T-SQL) MODELA DO DOKUMENTACIONO-ORIJENTISANOG MONGODB',
-      conference: 'Zborniku radova SYM-OP-IS 2022 Vrnjačka banja',
-      date: 'Sep 22, 2022',
-      abstract:
-        'Kako ne postoji jedinstven način da se deo podataka predstavi korisniku, tako ne postoji jedan način za modeliranje baza podataka. Potrebno je da se razume problem koji rešava aplikacija i kako će ona proizvoditi, konzumirati i obraditi podatke. U ovom radu biće predstavljena transformacija logičkih shema iz relacionih baza podataka u dokument-orjentisane baze podataka bez sheme.',
+      title: t('publicationsList.mongodb.title'),
+      conference: t('publicationsList.mongodb.conference'),
+      date: t('publicationsList.mongodb.date'),
+      abstract: t('publicationsList.mongodb.abstract'),
       keywords: [
         'Database Transformation',
         'T-SQL',
@@ -64,11 +63,10 @@ export default function Education() {
       ],
     },
     {
-      title: 'NAJBOLJE PRAKSE U PISANJU UNIT TESTOVA ZA .NET OKVIR',
-      conference: 'SYM-OP-IS Banja Koviljača',
-      date: 'Sep 23, 2021',
-      abstract:
-        'Unit testovi su osnovni alat za svakog programera, a cilj unit testiranja je da se izoluje svaki deo programa i pokaže da su pojedinačni delovi tačni. Unit test pruža pismeni ugovor koji deo koda mora da zadovolji, pored toga pruža još nekoliko prednosti.',
+      title: t('publicationsList.unittesting.title'),
+      conference: t('publicationsList.unittesting.conference'),
+      date: t('publicationsList.unittesting.date'),
+      abstract: t('publicationsList.unittesting.abstract'),
       keywords: [
         'Unit Testing',
         '.NET',
@@ -122,8 +120,8 @@ export default function Education() {
               }}
             >
               <HighlightedText
-                text="EDUCATION"
-                highlightIndices={highlightFirstLetters('EDUCATION')}
+                text={t('education')}
+                highlightIndices={highlightFirstLetters(t('education'))}
                 highlightColor={theme.palette.terminal.cyan}
               />
             </Typography>
@@ -210,8 +208,8 @@ export default function Education() {
                 }}
               >
                 <HighlightedText
-                  text="CERTIFICATIONS"
-                  highlightIndices={highlightFirstLetters('CERTIFICATIONS')}
+                  text={t('certifications')}
+                  highlightIndices={highlightFirstLetters(t('certifications'))}
                   highlightColor={theme.palette.terminal.green}
                 />
               </Typography>
@@ -333,8 +331,8 @@ export default function Education() {
                 }}
               >
                 <HighlightedText
-                  text="PUBLICATIONS"
-                  highlightIndices={highlightFirstLetters('PUBLICATIONS')}
+                  text={t('publications')}
+                  highlightIndices={highlightFirstLetters(t('publications'))}
                   highlightColor={theme.palette.terminal.yellow}
                 />
               </Typography>

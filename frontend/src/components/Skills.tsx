@@ -10,13 +10,15 @@ import {
   useTheme,
 } from '@mui/material';
 import HighlightedText, { highlightFirstLetters } from './HighlightedText';
+import { useTranslations } from 'next-intl';
 
 export default function Skills() {
   const theme = useTheme();
+  const t = useTranslations('Skills');
 
   const skillCategories = [
     {
-      category: 'FRONTEND DEVELOPMENT',
+      category: t('categories.frontend.title'),
       color: theme.palette.terminal.cyan,
       skills: [
         'Next.js',
@@ -27,79 +29,70 @@ export default function Skills() {
         'HTML5',
         'CSS3',
         'Material-UI',
-        'Responsive Design',
-        'SPA Development',
+        t('categories.frontend.skills.responsiveDesign'),
+        t('categories.frontend.skills.spaDeployment'),
       ],
     },
     {
-      category: 'BACKEND DEVELOPMENT',
+      category: t('categories.backend.title'),
       color: theme.palette.terminal.green,
       skills: [
-        'Node.js',
         'C# .NET',
         'ASP.NET',
         'RESTful APIs',
+        'Node.js',
         'Strapi CMS',
-        'T-SQL',
-        'Entity Framework',
-        'Microservices',
-        'API Design',
-        'Server Architecture',
+        t('categories.backend.skills.monolithicArchitecture'),
+        t('categories.backend.skills.apiDesign'),
       ],
     },
     {
-      category: 'DATABASES & STORAGE',
+      category: t('categories.databases.title'),
       color: theme.palette.terminal.magenta,
       skills: [
+        'MSSQL Server',
         'PostgreSQL',
-        'SQL Server',
         'MongoDB',
-        'T-SQL',
-        'Database Design',
-        'Schema Migration',
+        t('categories.databases.skills.databaseDesign'),
+        t('categories.databases.skills.schemaMigration'),
         'Redis Cache',
         'NoSQL',
-        'Data Modeling',
-        'Query Optimization',
+        t('categories.databases.skills.dataModeling'),
+        t('categories.databases.skills.queryOptimization'),
       ],
     },
     {
-      category: 'BLOCKCHAIN & WEB3',
+      category: t('categories.blockchain.title'),
       color: theme.palette.terminal.yellow,
       skills: [
         'Web3Auth',
         'Cardano',
-        'NFT Development',
+        t('categories.blockchain.skills.nftMinting'),
         'CIP-68 Standard',
-        'Crypto Wallets',
-        'Blockchain Integration',
-        'Decentralized Voting',
-        'Smart Contracts',
-        'DeFi',
-        'Cryptocurrency',
+        t('categories.blockchain.skills.cryptoWallets'),
+        t('categories.blockchain.skills.blockchainIntegration'),
+        t('categories.blockchain.skills.decentralizedVoting'),
       ],
     },
     {
-      category: 'CLOUD & DEVOPS',
+      category: t('categories.cloud.title'),
       color: theme.palette.terminal.cyan,
       skills: [
         'Microsoft Azure',
         'AWS',
-        'Docker',
+        'Docker/Docker Compose',
         'Azure DevOps',
         'CI/CD',
         'Qovery',
         'Azure Key Vault',
-        'Cloud Architecture',
-        'Deployment Automation',
-        'Infrastructure as Code',
+        'Kafka',
+        t('categories.cloud.skills.deploymentAutomation'),
       ],
     },
     {
-      category: 'INTEGRATION & MESSAGING',
+      category: t('categories.integration.title'),
       color: theme.palette.terminal.green,
       skills: [
-        'Kafka',
         'Hubspot CMS',
         'Stripe Payments',
         'SharePoint',
@@ -107,40 +100,38 @@ export default function Skills() {
         'Power Automate',
         'Microsoft Identity Manager',
         'Azure AD',
-        'Event-Driven Architecture',
-        'API Integration',
+        t('categories.integration.skills.eventDrivenArchitecture'),
+        t('categories.integration.skills.apiIntegration'),
       ],
     },
     {
-      category: 'DEVELOPMENT PRACTICES',
+      category: t('categories.practices.title'),
       color: theme.palette.terminal.magenta,
       skills: [
-        'Unit Testing',
-        'Test-Driven Development',
-        'Agile Methodologies',
-        'Code Reviews',
-        'Git Version Control',
-        'Clean Code',
-        'SOLID Principles',
-        'Design Patterns',
-        'Documentation',
-        'Performance Optimization',
+        t('categories.practices.skills.unitTesting'),
+        t('categories.practices.skills.testDrivenDevelopment'),
+        t('categories.practices.skills.agileMethodologies'),
+        t('categories.practices.skills.codeReviews'),
+        t('categories.practices.skills.gitVersionControl'),
+        t('categories.practices.skills.cleanCode'),
+        t('categories.practices.skills.solidPrinciples'),
+        t('categories.practices.skills.designPatterns'),
+        t('categories.practices.skills.documentation'),
+        t('categories.practices.skills.performanceOptimization'),
       ],
     },
     {
-      category: 'SPECIALIZED DOMAINS',
+      category: t('categories.specialized.title'),
       color: theme.palette.terminal.yellow,
       skills: [
-        'Government Applications',
-        'Insurance Systems',
-        'Nordic Markets',
-        'Multi-tenant Architecture',
-        'Social Insurance',
-        'Identity Management',
-        'Enterprise Solutions',
-        'Regulatory Compliance',
-        'Data Security',
-        'Legacy System Migration',
+        t('categories.specialized.skills.enterpriseSolutions'),
+        t('categories.specialized.skills.governmentApplications'),
+        t('categories.specialized.skills.insuranceSystems'),
+        t('categories.specialized.skills.multiTenantArchitecture'),
+        t('categories.specialized.skills.identityManagement'),
+        t('categories.specialized.skills.regulatoryCompliance'),
+        t('categories.specialized.skills.dataSecurity'),
+        t('categories.specialized.skills.legacySystemMigration'),
       ],
     },
   ];
@@ -188,203 +179,106 @@ export default function Skills() {
               }}
             >
               <HighlightedText
-                text="SKILLS && EXPERTISE"
-                highlightIndices={highlightFirstLetters('SKILLS && EXPERTISE')}
+                text={t('skillsAndExpertise')}
+                highlightIndices={highlightFirstLetters(
+                  t('skillsAndExpertise')
+                )}
                 highlightColor={theme.palette.terminal.green}
               />
             </Typography>
-
             <Box
               sx={{
-                display: 'flex',
-                flexDirection: { xs: 'column', lg: 'row' },
+                display: 'grid',
+                gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' },
                 gap: { xs: 2, sm: 3 },
+                gridAutoRows: 'minmax(auto, 1fr)', // Make rows equal height
               }}
             >
-              <Box
-                sx={{
-                  flex: 1,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: { xs: 2, sm: 3 },
-                }}
-              >
-                {skillCategories
-                  .filter((_, index) => index % 2 === 0)
-                  .map((category, index) => (
-                    <Box
-                      key={index * 2}
-                      sx={{
-                        p: { xs: 2, sm: 3 },
-                        backgroundColor: theme.palette.terminal.header,
-                        border: `1px solid ${theme.palette.terminal.border}`,
-                        borderRadius: 1,
-                      }}
-                    >
-                      <Typography
-                        variant="h5"
-                        component="h3"
-                        sx={{
-                          mb: { xs: 1.5, sm: 2 },
-                          color: theme.palette.terminal.text,
-                          fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
-                          wordBreak: 'break-word',
-                        }}
-                      >
-                        <HighlightedText
-                          text={category.category}
-                          highlightIndices={highlightFirstLetters(
-                            category.category
-                          )}
-                          highlightColor={category.color}
-                        />
-                      </Typography>
+              {skillCategories.map((category, index) => (
+                <Box
+                  key={index}
+                  sx={{
+                    p: { xs: 2, sm: 3 },
+                    backgroundColor: theme.palette.terminal.header,
+                    border: `1px solid ${theme.palette.terminal.border}`,
+                    borderRadius: 1,
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <Typography
+                    variant="h5"
+                    component="h3"
+                    sx={{
+                      mb: { xs: 1.5, sm: 2 },
+                      color: theme.palette.terminal.text,
+                      fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
+                      wordBreak: 'break-word',
+                    }}
+                  >
+                    <HighlightedText
+                      text={category.category}
+                      highlightIndices={highlightFirstLetters(
+                        category.category
+                      )}
+                      highlightColor={category.color}
+                    />
+                  </Typography>
 
+                  <Box
+                    sx={{
+                      fontFamily:
+                        'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+                      fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                      flex: 1,
+                    }}
+                  >
+                    {category.skills.map((skill, skillIndex) => (
                       <Box
+                        key={skillIndex}
                         sx={{
-                          fontFamily:
-                            'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                          fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                          display: 'flex',
+                          alignItems: 'center',
+                          mb: { xs: 0.25, sm: 0.5 },
+                          py: { xs: 0.25, sm: 0.5 },
+                          '&:hover': {
+                            backgroundColor: theme.palette.terminal.border,
+                            borderRadius: '4px',
+                            px: { xs: 0.5, sm: 1 },
+                            mx: { xs: -0.5, sm: -1 },
+                            transition: 'all 0.2s ease-in-out',
+                          },
                         }}
                       >
-                        {category.skills.map((skill, skillIndex) => (
-                          <Box
-                            key={skillIndex}
-                            sx={{
-                              display: 'flex',
-                              alignItems: 'center',
-                              mb: { xs: 0.25, sm: 0.5 },
-                              py: { xs: 0.25, sm: 0.5 },
-                              '&:hover': {
-                                backgroundColor: theme.palette.terminal.border,
-                                borderRadius: '4px',
-                                px: { xs: 0.5, sm: 1 },
-                                mx: { xs: -0.5, sm: -1 },
-                                transition: 'all 0.2s ease-in-out',
-                              },
-                            }}
-                          >
-                            <Typography
-                              component="span"
-                              sx={{
-                                color: category.color,
-                                mr: { xs: 0.5, sm: 1 },
-                                fontSize: { xs: '0.625rem', sm: '0.75rem' },
-                              }}
-                            >
-                              ▸
-                            </Typography>
-                            <Typography
-                              component="span"
-                              sx={{
-                                color: theme.palette.terminal.textSecondary,
-                                fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                                wordBreak: 'break-word',
-                              }}
-                            >
-                              {skill}
-                            </Typography>
-                          </Box>
-                        ))}
+                        <Typography
+                          component="span"
+                          sx={{
+                            color: category.color,
+                            mr: { xs: 0.5, sm: 1 },
+                            fontSize: { xs: '0.625rem', sm: '0.75rem' },
+                          }}
+                        >
+                          ▸
+                        </Typography>
+                        <Typography
+                          component="span"
+                          sx={{
+                            color: theme.palette.terminal.textSecondary,
+                            fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                            wordBreak: 'break-word',
+                          }}
+                        >
+                          {skill}
+                        </Typography>
                       </Box>
-                    </Box>
-                  ))}
-              </Box>
-
-              <Box
-                sx={{
-                  flex: 1,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: { xs: 2, sm: 3 },
-                }}
-              >
-                {skillCategories
-                  .filter((_, index) => index % 2 === 1)
-                  .map((category, index) => (
-                    <Box
-                      key={index * 2 + 1}
-                      sx={{
-                        p: { xs: 2, sm: 3 },
-                        backgroundColor: theme.palette.terminal.header,
-                        border: `1px solid ${theme.palette.terminal.border}`,
-                        borderRadius: 1,
-                      }}
-                    >
-                      <Typography
-                        variant="h5"
-                        component="h3"
-                        sx={{
-                          mb: { xs: 1.5, sm: 2 },
-                          color: theme.palette.terminal.text,
-                          fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
-                          wordBreak: 'break-word',
-                        }}
-                      >
-                        <HighlightedText
-                          text={category.category}
-                          highlightIndices={highlightFirstLetters(
-                            category.category
-                          )}
-                          highlightColor={category.color}
-                        />
-                      </Typography>
-
-                      <Box
-                        sx={{
-                          fontFamily:
-                            'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                          fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                        }}
-                      >
-                        {category.skills.map((skill, skillIndex) => (
-                          <Box
-                            key={skillIndex}
-                            sx={{
-                              display: 'flex',
-                              alignItems: 'center',
-                              mb: { xs: 0.25, sm: 0.5 },
-                              py: { xs: 0.25, sm: 0.5 },
-                              '&:hover': {
-                                backgroundColor: theme.palette.terminal.border,
-                                borderRadius: '4px',
-                                px: { xs: 0.5, sm: 1 },
-                                mx: { xs: -0.5, sm: -1 },
-                                transition: 'all 0.2s ease-in-out',
-                              },
-                            }}
-                          >
-                            <Typography
-                              component="span"
-                              sx={{
-                                color: category.color,
-                                mr: { xs: 0.5, sm: 1 },
-                                fontSize: { xs: '0.625rem', sm: '0.75rem' },
-                              }}
-                            >
-                              ▸
-                            </Typography>
-                            <Typography
-                              component="span"
-                              sx={{
-                                color: theme.palette.terminal.textSecondary,
-                                fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                                wordBreak: 'break-word',
-                              }}
-                            >
-                              {skill}
-                            </Typography>
-                          </Box>
-                        ))}
-                      </Box>
-                    </Box>
-                  ))}
-              </Box>
+                    ))}
+                  </Box>
+                </Box>
+              ))}
             </Box>
-
             <Box
               sx={{
-                mt: { xs: 3, sm: 4 },
+                mt: { xs: 2, sm: 3 },
                 p: { xs: 1.5, sm: 2 },
                 backgroundColor: theme.palette.terminal.header,
                 border: `1px solid ${theme.palette.terminal.border}`,

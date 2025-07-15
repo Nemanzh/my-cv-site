@@ -131,7 +131,7 @@ export default function InteractiveTerminal() {
       {
         input: '',
         output: [
-          "Welcome to Nemanja's Portfolio Terminal! 💻",
+          "Welcome to Nemanzh's Terminal! 💻",
           '',
           'Type "help" to see available commands.',
           'Try "whoami" or "ls skills" to get started!',
@@ -141,14 +141,12 @@ export default function InteractiveTerminal() {
     ]);
   }, []);
 
-  // Auto-scroll to bottom
   useEffect(() => {
     if (terminalRef.current) {
       terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
     }
   }, [history]);
 
-  // Focus input when clicking anywhere in terminal
   const handleTerminalClick = () => {
     inputRef.current?.focus();
   };

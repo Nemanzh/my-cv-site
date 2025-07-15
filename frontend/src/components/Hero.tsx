@@ -15,9 +15,11 @@ import HighlightedText, { highlightFirstLetters } from './HighlightedText';
 import InteractiveTerminal from './InteractiveTerminal';
 import CVDownload from './CVDownload';
 import { Email, GitHub, LinkedIn, LocationOn } from '@mui/icons-material';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
   const theme = useTheme();
+  const t = useTranslations('Hero');
 
   return (
     <Box
@@ -108,8 +110,8 @@ export default function Hero() {
                 }}
               >
                 <HighlightedText
-                  text="NEMANJA RADULOVIC"
-                  highlightIndices={highlightFirstLetters('NEMANJA RADULOVIC')}
+                  text={t('name')}
+                  highlightIndices={highlightFirstLetters(t('name'))}
                   highlightColor={theme.palette.terminal.green}
                 />
               </Typography>
@@ -125,7 +127,7 @@ export default function Hero() {
                   fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
                 }}
               >
-                $ echo &quot;Full Stack Developer | Blockchain Enthusiast&quot;
+                {t('echo')}
               </Typography>
 
               <Stack
@@ -148,10 +150,7 @@ export default function Hero() {
                     flex: { md: '1 1 auto' },
                   }}
                 >
-                  Passionate developer with 8+ years of experience building
-                  scalable solutions from traditional enterprise applications to
-                  cutting-edge blockchain platforms. Currently crafting the
-                  future of NFT ecosystems at Chainapp Technologies.
+                  {t('bio')}
                 </Typography>
 
                 <Box
@@ -196,7 +195,7 @@ export default function Hero() {
                         fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' },
                       }}
                     >
-                      BELGRADE, SERBIA
+                      {t('location')}
                     </Typography>
                   </Stack>
 
@@ -231,7 +230,7 @@ export default function Hero() {
                         },
                       }}
                     >
-                      JOBS@NEMANJARADULOVIC.DEV
+                      {t('email')}
                     </Typography>
                   </MuiLink>
 
@@ -263,7 +262,7 @@ export default function Hero() {
                         fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' },
                       }}
                     >
-                      NEMANJARADULOVIC
+                      {t('github')}
                     </Typography>
                   </MuiLink>
 
@@ -295,7 +294,7 @@ export default function Hero() {
                         fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' },
                       }}
                     >
-                      LINKEDIN
+                      {t('linkedin')}
                     </Typography>
                   </MuiLink>
                 </Stack>
@@ -320,7 +319,7 @@ export default function Hero() {
                 }}
               >
                 <HighlightedText
-                  text="EXPLORE_MY_PORTFOLIO"
+                  text={t('explorePortfolio')}
                   highlightIndices={[0, 8, 11]}
                   highlightColor={theme.palette.terminal.cyan}
                 />
@@ -338,7 +337,7 @@ export default function Hero() {
                   px: { xs: 1, sm: 2, md: 0 },
                 }}
               >
-                💡 Try typing commands like{' '}
+                {t('tryTyping')}{' '}
                 <code
                   style={{
                     color: theme.palette.terminal.cyan,
@@ -358,7 +357,7 @@ export default function Hero() {
                 >
                   ls skills
                 </code>
-                , or{' '}
+                , {t('or')}{' '}
                 <code
                   style={{
                     color: theme.palette.terminal.cyan,
@@ -394,7 +393,7 @@ export default function Hero() {
                 }}
               >
                 <span style={{ color: theme.palette.terminal.green }}>$</span>{' '}
-                Ready to collaborate?
+                {t('readyToCollaborate')}
               </Typography>
               <Typography
                 variant="body2"
@@ -403,8 +402,7 @@ export default function Hero() {
                   fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' },
                 }}
               >
-                Available for freelance projects and full-time opportunities •
-                Let&apos;s build something amazing together! 🚀
+                {t('availableForFreelance')}
               </Typography>
             </Box>
           </CardContent>

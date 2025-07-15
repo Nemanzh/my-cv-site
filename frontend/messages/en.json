@@ -1,9 +1,207 @@
 {
-  "HomePage": {
-    "title": "Seasoned Developer && Creative Problem Solver"
-  },
   "Metadata": {
     "title": "Nemanzh - Developer Portfolio",
     "description": "Seasoned Developer and Creative Problem Solver specializing in modern web technologies"
+  },
+  "Hero": {
+    "name": "NEMANJA RADULOVIC",
+    "echo": "$ echo 'Modernizing enterprise monoliths & building robust web apps'",
+    "bio": "I’m a full‑stack developer with 6+ years of experience turning complex problems into clean, maintainable code—whether that’s crafting rock‑solid APIs or polished front‑ends. When I’m not coding, you’ll catch me on the martial arts mat, shooting hoops, or diving into the latest game. I bring that same balance and focus to every project.",
+    "location": "BELGRADE, SERBIA",
+    "email": "NEMANJA.RADULOVIC1990@GMAIL.COM",
+    "github": "NEMANZH",
+    "linkedin": "NEMANJA-RADULOVIĆ",
+    "explorePortfolio": "DISCOVER MY WORK",
+    "readyToCollaborate": "Let’s build something great.",
+    "availableForFreelance": "Open to freelance and full‑time roles • Let’s connect! 🚀",
+    "tryTyping": "💡 Try commands like",
+    "or": "or"
+  },
+  "WorkExperience": {
+    "workExperience": "WORK_EXPERIENCE",
+    "technologies": "Technologies:",
+    "keyAchievements": "Key Achievements:",
+    "experiences": {
+      "chainapp": {
+        "position": "Full Stack Developer",
+        "company": "Chainapp Technologies",
+        "location": "Belgrade, Serbia",
+        "period": "Apr 2024 - Present",
+        "type": "Full-time",
+        "description": "Leading development of cutting-edge NFT marketplace and blockchain solutions. Architecting scalable microservices using Node.js and implementing smart contracts on Cardano blockchain.",
+        "achievements": [
+          "Designed and implemented NFT marketplace handling 10K+ transactions",
+          "Reduced API response time by 40% through optimization",
+          "Led team of 4 developers in agile environment"
+        ]
+      },
+      "insicon": {
+        "position": "Full Stack Developer",
+        "company": "Insicon AB",
+        "location": "Stockholm, Sweden",
+        "period": "2022 - 2024",
+        "type": "Full-time",
+        "description": "Developed enterprise applications and digital solutions for clients across various industries. Specialized in React/Next.js frontend development and .NET backend services.",
+        "achievements": [
+          "Delivered 15+ client projects on time and within budget",
+          "Implemented automated testing reducing bugs by 60%",
+          "Mentored junior developers and conducted code reviews"
+        ]
+      },
+      "saga": {
+        "position": "Software Developer",
+        "company": "Saga Länsförsäkringar",
+        "location": "Stockholm, Sweden",
+        "period": "2020 - 2022",
+        "type": "Full-time",
+        "description": "Developed and maintained insurance management systems. Worked on both legacy system modernization and new feature development using modern web technologies.",
+        "achievements": [
+          "Modernized legacy insurance calculation engine",
+          "Improved system performance by 35%",
+          "Implemented comprehensive unit testing strategy"
+        ]
+      },
+      "lansforsakringar": {
+        "position": "System Developer",
+        "company": "Länsförsäkringar Göteborg",
+        "location": "Gothenburg, Sweden",
+        "period": "2017 - 2020",
+        "type": "Full-time",
+        "description": "Entry-level position developing internal tools and maintaining existing systems. Gained experience in enterprise software development and agile methodologies.",
+        "achievements": [
+          "Developed internal reporting tools used by 100+ employees",
+          "Reduced manual data processing time by 50%",
+          "Successfully completed .NET certification program"
+        ]
+      }
+    }
+  },
+  "Education": {
+    "education": "EDUCATION",
+    "certifications": "CERTIFICATIONS",
+    "publications": "PUBLICATIONS",
+    "educationList": {
+      "masters": {
+        "degree": "Master of Science in Software Engineering and Computer Science",
+        "institution": "Faculty of Organizational Sciences, University of Belgrade",
+        "location": "Serbia",
+        "period": "2021 - 2022"
+      },
+      "bachelor": {
+        "degree": "Bachelor of Science in Information Systems and Technology",
+        "institution": "Faculty of Organizational Sciences, University of Belgrade",
+        "location": "Serbia",
+        "period": "2009 - 2018"
+      },
+      "secondary": {
+        "degree": "Secondary Education Degree, Mathematics",
+        "institution": "Grammar school Kruševac",
+        "location": "Serbia",
+        "period": "2005 - 2009"
+      }
+    },
+    "certificationsList": {
+      "azure": {
+        "title": "Microsoft Certified: Azure Fundamentals",
+        "issuer": "Microsoft",
+        "date": "Feb 2021",
+        "description": "Foundational level understanding of cloud services and how those services are provided with Microsoft Azure."
+      }
+    },
+    "publicationsList": {
+      "mongodb": {
+        "title": "DATABASE LOGICAL SCHEMA TRANSFORMATION: FROM RELATIONAL (T-SQL) MODEL TO DOCUMENT-ORIENTED MONGODB",
+        "conference": "Proceedings of SYM-OP-IS 2022 Vrnjačka Banja",
+        "date": "Sep 22, 2022",
+        "abstract": "Since there is no unique way to present part of the data to the user, there is no one way to model databases. It is necessary to understand the problem that the application solves and how it will produce, consume and process data. This paper will present the transformation of logical schemas from relational databases to schema-less document-oriented databases."
+      },
+      "unittesting": {
+        "title": "BEST PRACTICES IN WRITING UNIT TESTS FOR .NET FRAMEWORK",
+        "conference": "SYM-OP-IS Banja Koviljača",
+        "date": "Sep 23, 2021",
+        "abstract": "Unit tests are a basic tool for every programmer, and the goal of unit testing is to isolate each part of the program and show that individual parts are correct. A unit test provides a written contract that a piece of code must satisfy, in addition to providing several other benefits."
+      }
+    }
+  },
+  "Skills": {
+    "skillsAndExpertise": "SKILLS && EXPERTISE",
+    "echo": "$ echo Continuously learning and adapting to emerging technologies",
+    "buildingScalableSolutions": "< Building scalable solutions from web2 to web3 ecosystems",
+    "categories": {
+      "frontend": {
+        "title": "FRONTEND DEVELOPMENT",
+        "skills": {
+          "responsiveDesign": "Responsive Design",
+          "spaDeployment": "SPA Development"
+        }
+      },
+      "backend": {
+        "title": "BACKEND DEVELOPMENT",
+        "skills": {
+          "monolithicArchitecture": "Monolithic Architecture",
+          "apiDesign": "API Design"
+        }
+      },
+      "databases": {
+        "title": "DATABASES & STORAGE",
+        "skills": {
+          "databaseDesign": "Database Design",
+          "schemaMigration": "Schema Migration",
+          "dataModeling": "Data Modeling",
+          "queryOptimization": "Query Optimization"
+        }
+      },
+      "blockchain": {
+        "title": "BLOCKCHAIN & WEB3",
+        "skills": {
+          "nftMinting": "NFT minting",
+          "cryptoWallets": "Crypto Wallets",
+          "blockchainIntegration": "Blockchain Integration",
+          "decentralizedVoting": "Decentralized Voting"
+        }
+      },
+      "cloud": {
+        "title": "CLOUD & DEVOPS",
+        "skills": {
+          "deploymentAutomation": "Deployment Automation"
+        }
+      },
+      "integration": {
+        "title": "INTEGRATION & MESSAGING",
+        "skills": {
+          "eventDrivenArchitecture": "Event-Driven Architecture",
+          "apiIntegration": "API Integration"
+        }
+      },
+      "practices": {
+        "title": "DEVELOPMENT PRACTICES",
+        "skills": {
+          "unitTesting": "Unit Testing",
+          "testDrivenDevelopment": "Test-Driven Development",
+          "agileMethodologies": "Agile Methodologies",
+          "codeReviews": "Code Reviews",
+          "gitVersionControl": "Git Version Control",
+          "cleanCode": "Clean Code",
+          "solidPrinciples": "SOLID Principles",
+          "designPatterns": "Design Patterns",
+          "documentation": "Documentation",
+          "performanceOptimization": "Performance Optimization"
+        }
+      },
+      "specialized": {
+        "title": "SPECIALIZED DOMAINS",
+        "skills": {
+          "governmentApplications": "Government Applications",
+          "insuranceSystems": "Insurance Systems",
+          "multiTenantArchitecture": "Multi-tenant Architecture",
+          "socialInsurance": "Social Insurance",
+          "identityManagement": "Identity Management",
+          "enterpriseSolutions": "Enterprise Solutions",
+          "regulatoryCompliance": "Regulatory Compliance",
+          "dataSecurity": "Data Security",
+          "legacySystemMigration": "Legacy System Migration"
+        }
+      }
+    }
   }
 }

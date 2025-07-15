@@ -12,19 +12,20 @@ import {
   Chip,
 } from '@mui/material';
 import HighlightedText, { highlightFirstLetters } from './HighlightedText';
+import { useTranslations } from 'next-intl';
 
 export default function WorkExperience() {
   const theme = useTheme();
+  const t = useTranslations('WorkExperience');
 
   const experienceList = [
     {
-      position: 'Senior Developer',
-      company: 'Chainapp Technologies',
-      location: 'Stockholm, Sweden',
-      period: '2024 - Present',
-      type: 'Full-time',
-      description:
-        'Leading development of cutting-edge NFT marketplace and blockchain solutions. Architecting scalable microservices using Node.js and implementing smart contracts on Cardano blockchain.',
+      position: t('experiences.chainapp.position'),
+      company: t('experiences.chainapp.company'),
+      location: t('experiences.chainapp.location'),
+      period: t('experiences.chainapp.period'),
+      type: t('experiences.chainapp.type'),
+      description: t('experiences.chainapp.description'),
       technologies: [
         'Node.js',
         'TypeScript',
@@ -36,19 +37,18 @@ export default function WorkExperience() {
         'Docker',
       ],
       achievements: [
-        'Designed and implemented NFT marketplace handling 10K+ transactions',
-        'Reduced API response time by 40% through optimization',
-        'Led team of 4 developers in agile environment',
+        t('experiences.chainapp.achievements.0'),
+        t('experiences.chainapp.achievements.1'),
+        t('experiences.chainapp.achievements.2'),
       ],
     },
     {
-      position: 'Full Stack Developer',
-      company: 'Insicon AB',
-      location: 'Stockholm, Sweden',
-      period: '2022 - 2024',
-      type: 'Full-time',
-      description:
-        'Developed enterprise applications and digital solutions for clients across various industries. Specialized in React/Next.js frontend development and .NET backend services.',
+      position: t('experiences.insicon.position'),
+      company: t('experiences.insicon.company'),
+      location: t('experiences.insicon.location'),
+      period: t('experiences.insicon.period'),
+      type: t('experiences.insicon.type'),
+      description: t('experiences.insicon.description'),
       technologies: [
         'React',
         'Next.js',
@@ -60,19 +60,18 @@ export default function WorkExperience() {
         'Git',
       ],
       achievements: [
-        'Delivered 15+ client projects on time and within budget',
-        'Implemented automated testing reducing bugs by 60%',
-        'Mentored junior developers and conducted code reviews',
+        t('experiences.insicon.achievements.0'),
+        t('experiences.insicon.achievements.1'),
+        t('experiences.insicon.achievements.2'),
       ],
     },
     {
-      position: 'Software Developer',
-      company: 'Saga Länsförsäkringar',
-      location: 'Stockholm, Sweden',
-      period: '2020 - 2022',
-      type: 'Full-time',
-      description:
-        'Developed and maintained insurance management systems. Worked on both legacy system modernization and new feature development using modern web technologies.',
+      position: t('experiences.saga.position'),
+      company: t('experiences.saga.company'),
+      location: t('experiences.saga.location'),
+      period: t('experiences.saga.period'),
+      type: t('experiences.saga.type'),
+      description: t('experiences.saga.description'),
       technologies: [
         'C# .NET',
         'Angular',
@@ -83,19 +82,18 @@ export default function WorkExperience() {
         'SCRUM',
       ],
       achievements: [
-        'Modernized legacy insurance calculation engine',
-        'Improved system performance by 35%',
-        'Implemented comprehensive unit testing strategy',
+        t('experiences.saga.achievements.0'),
+        t('experiences.saga.achievements.1'),
+        t('experiences.saga.achievements.2'),
       ],
     },
     {
-      position: 'System Developer',
-      company: 'Länsförsäkringar Göteborg',
-      location: 'Gothenburg, Sweden',
-      period: '2017 - 2020',
-      type: 'Full-time',
-      description:
-        'Entry-level position developing internal tools and maintaining existing systems. Gained experience in enterprise software development and agile methodologies.',
+      position: t('experiences.lansforsakringar.position'),
+      company: t('experiences.lansforsakringar.company'),
+      location: t('experiences.lansforsakringar.location'),
+      period: t('experiences.lansforsakringar.period'),
+      type: t('experiences.lansforsakringar.type'),
+      description: t('experiences.lansforsakringar.description'),
       technologies: [
         'C# .NET',
         'JavaScript',
@@ -105,9 +103,9 @@ export default function WorkExperience() {
         'Visual Studio',
       ],
       achievements: [
-        'Developed internal reporting tools used by 100+ employees',
-        'Reduced manual data processing time by 50%',
-        'Successfully completed .NET certification program',
+        t('experiences.lansforsakringar.achievements.0'),
+        t('experiences.lansforsakringar.achievements.1'),
+        t('experiences.lansforsakringar.achievements.2'),
       ],
     },
   ];
@@ -154,8 +152,8 @@ export default function WorkExperience() {
               }}
             >
               <HighlightedText
-                text="WORK_EXPERIENCE"
-                highlightIndices={highlightFirstLetters('WORK_EXPERIENCE')}
+                text={t('workExperience')}
+                highlightIndices={highlightFirstLetters(t('workExperience'))}
                 highlightColor={theme.palette.terminal.green}
               />
             </Typography>
@@ -283,7 +281,7 @@ export default function WorkExperience() {
                         fontWeight: 'bold',
                       }}
                     >
-                      Technologies:
+                      {t('technologies')}
                     </Typography>
                     <Box
                       sx={{
@@ -324,7 +322,7 @@ export default function WorkExperience() {
                         fontWeight: 'bold',
                       }}
                     >
-                      Key Achievements:
+                      {t('keyAchievements')}
                     </Typography>
                     <Box
                       component="ul"
