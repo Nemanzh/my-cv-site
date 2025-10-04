@@ -1,9 +1,2 @@
-# Handle language redirects
-/en/* /en/:splat 200
-/sr/* /sr/:splat 200
-
-# Default to English for root
-/ /en/ 302
-
-# Fallback for SPA
+# Rewrite all routes to handle next-intl routing
 /* /index.html 200
