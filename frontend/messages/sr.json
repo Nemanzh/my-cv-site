@@ -1,102 +1,102 @@
 {
   "Metadata": {
-    "title": "Nemanzh - Developer Portfolio",
-    "description": "Seasoned Developer and Creative Problem Solver specializing in modern web technologies"
+    "title": "Nemanzh - Portfolio programera",
+    "description": "Iskusan programer i kreativni rešavač problema specijalizovan za moderne web tehnologije"
   },
   "Hero": {
-    "name": "NEMANJA RADULOVIC",
-    "echo": "$ echo 'Modernizing enterprise monoliths & building robust web apps'",
-    "bio": "I’m a full‑stack developer with 6+ years of experience turning complex problems into clean, maintainable code—whether that’s crafting rock‑solid APIs or polished front‑ends. When I’m not coding, you’ll catch me on the martial arts mat, shooting hoops, or diving into the latest game. I bring that same balance and focus to every project.",
-    "location": "BELGRADE, SERBIA",
+    "name": "NEMANJA RADULOVIĆ",
+    "echo": "$ echo 'Modernizujem enterprise monolite i gradim robusne web aplikacije'",
+    "bio": "Full‑stack sam programer sa preko 6 godina iskustva u pretvaranju složenih problema u čist, održiv kod—bilo da se radi o pravljenju čvrstih API‑ja ili uglađenih front‑end‑ova. Kada ne kodiram, možete me naći na podlozi za borilačke veštine, dok bacam loptu u koš, ili igram najnovije igre. Tu istu ravnotežu i fokus unosim u svaki projekat.",
+    "location": "BEOGRAD, SRBIJA",
     "email": "NEMANJA.RADULOVIC1990@GMAIL.COM",
     "github": "NEMANZH",
     "linkedin": "NEMANJA-RADULOVIĆ",
-    "explorePortfolio": "DISCOVER MY WORK",
-    "readyToCollaborate": "Let’s build something great.",
-    "availableForFreelance": "Open to freelance and full‑time roles • Let’s connect! 🚀",
-    "tryTyping": "💡 Try commands like",
-    "or": "or"
+    "explorePortfolio": "ISTRAŽITE MOJ RAD",
+    "readyToCollaborate": "Hajde da napravimo nešto sjajno.",
+    "availableForFreelance": "Otvoren za fridens i full‑time poslove • Povežimo se! 🚀",
+    "tryTyping": "💡 Probajte komande kao što su",
+    "or": "ili"
   },
   "WorkExperience": {
-    "workExperience": "WORK_EXPERIENCE",
-    "technologies": "Technologies:",
-    "keyAchievements": "Key Achievements:",
+    "workExperience": "RADNO ISKUSTVO",
+    "technologies": "Tehnologije:",
+    "keyAchievements": "Ključna dostignuća:",
     "experiences": {
       "chainapp": {
-        "position": "Full Stack Developer",
+        "position": "Full Stack programer",
         "company": "Chainapp Technologies",
-        "location": "Belgrade, Serbia",
-        "period": "Apr 2024 - Present",
-        "type": "Full-time",
-        "description": "Leading development of cutting-edge NFT marketplace and blockchain solutions. Architecting scalable microservices using Node.js and implementing smart contracts on Cardano blockchain.",
+        "location": "Beograd, Srbija",
+        "period": "Apr 2024 - Sadašnje",
+        "type": "Puno radno vreme",
+        "description": "Vodim razvoj najsavremenijih NFT marketplace-a i blockchain rešenja. Arhitektiram skalabilne mikroservise koristeći Node.js i implementiram pametne ugovore na Cardano blockchain-u.",
         "achievements": [
-          "Designed and implemented NFT marketplace handling 10K+ transactions",
-          "Reduced API response time by 40% through optimization",
-          "Led team of 4 developers in agile environment"
+          "Dizajnirao i implementirao NFT marketplace koji obrađuje 10K+ transakcija",
+          "Skratio vreme odgovora API-ja za 40% kroz optimizaciju",
+          "Vodio tim od 4 programera u agile okruženju"
         ]
       },
       "insicon": {
-        "position": "Full Stack Developer",
+        "position": "Full Stack programer",
         "company": "Insicon AB",
-        "location": "Stockholm, Sweden",
+        "location": "Stokholm, Švedska",
         "period": "2022 - 2024",
-        "type": "Full-time",
-        "description": "Developed enterprise applications and digital solutions for clients across various industries. Specialized in React/Next.js frontend development and .NET backend services.",
+        "type": "Puno radno vreme",
+        "description": "Razvijao enterprise aplikacije i digitalna rešenja za klijente iz različitih industrija. Specijalizovao sam se za React/Next.js frontend razvoj i .NET backend servise.",
         "achievements": [
-          "Delivered 15+ client projects on time and within budget",
-          "Implemented automated testing reducing bugs by 60%",
-          "Mentored junior developers and conducted code reviews"
+          "Isporučio 15+ klijentskih projekata na vreme i u okviru budžeta",
+          "Implementirao automatsko testiranje smanjevši broj grešaka za 60%",
+          "Mentorisao junior programere i vodio code review-e"
         ]
       },
       "saga": {
-        "position": "Software Developer",
+        "position": "Software programer",
         "company": "Saga Länsförsäkringar",
-        "location": "Stockholm, Sweden",
+        "location": "Stokholm, Švedska",
         "period": "2020 - 2022",
-        "type": "Full-time",
-        "description": "Developed and maintained insurance management systems. Worked on both legacy system modernization and new feature development using modern web technologies.",
+        "type": "Puno radno vreme",
+        "description": "Razvijao i održavao sisteme za upravljanje osiguranjem. Radio na modernizaciji legacy sistema i razvoju novih funkcionalnosti koristeći moderne web tehnologije.",
         "achievements": [
-          "Modernized legacy insurance calculation engine",
-          "Improved system performance by 35%",
-          "Implemented comprehensive unit testing strategy"
+          "Modernizovao legacy engine za kalkulaciju osiguranja",
+          "Poboljšao performanse sistema za 35%",
+          "Implementirao sveobuhvatnu strategiju unit testiranja"
         ]
       },
       "lansforsakringar": {
-        "position": "System Developer",
+        "position": "Sistem programer",
         "company": "Länsförsäkringar Göteborg",
-        "location": "Gothenburg, Sweden",
+        "location": "Göteborg, Švedska",
         "period": "2017 - 2020",
-        "type": "Full-time",
-        "description": "Entry-level position developing internal tools and maintaining existing systems. Gained experience in enterprise software development and agile methodologies.",
+        "type": "Puno radno vreme",
+        "description": "Početna pozicija gde sam razvijao interne alate i održavao postojeće sisteme. Stekao iskustvo u enterprise software razvoju i agile metodologijama.",
         "achievements": [
-          "Developed internal reporting tools used by 100+ employees",
-          "Reduced manual data processing time by 50%",
-          "Successfully completed .NET certification program"
+          "Razvio interne reporting alate koje koristi 100+ zaposlenih",
+          "Skratio vreme manuelne obrade podataka za 50%",
+          "Uspešno završio .NET sertifikacioni program"
         ]
       }
     }
   },
   "Education": {
-    "education": "EDUCATION",
-    "certifications": "CERTIFICATIONS",
-    "publications": "PUBLICATIONS",
+    "education": "OBRAZOVANJE",
+    "certifications": "SERTIFIKATI",
+    "publications": "PUBLIKACIJE",
     "educationList": {
       "masters": {
-        "degree": "Master of Science in Software Engineering and Computer Science",
-        "institution": "Faculty of Organizational Sciences, University of Belgrade",
-        "location": "Serbia",
+        "degree": "Master nauka u oblasti Softverskog inženjerstva i Računarskih nauka",
+        "institution": "Fakultet organizacionih nauka, Univerzitet u Beogradu",
+        "location": "Srbija",
         "period": "2021 - 2022"
       },
       "bachelor": {
-        "degree": "Bachelor of Science in Information Systems and Technology",
-        "institution": "Faculty of Organizational Sciences, University of Belgrade",
-        "location": "Serbia",
+        "degree": "Diplomirani inženjer Informacionih sistema i tehnologija",
+        "institution": "Fakultet organizacionih nauka, Univerzitet u Beogradu",
+        "location": "Srbija",
         "period": "2009 - 2018"
       },
       "secondary": {
-        "degree": "Secondary Education Degree, Mathematics",
-        "institution": "Grammar school Kruševac",
-        "location": "Serbia",
+        "degree": "Diploma srednje škole, Matematika",
+        "institution": "Gimnazija Kruševac",
+        "location": "Srbija",
         "period": "2005 - 2009"
       }
     },
@@ -105,101 +105,101 @@
         "title": "Microsoft Certified: Azure Fundamentals",
         "issuer": "Microsoft",
         "date": "Feb 2021",
-        "description": "Foundational level understanding of cloud services and how those services are provided with Microsoft Azure."
+        "description": "Osnovno razumevanje cloud servisa i kako se ti servisi pružaju preko Microsoft Azure platforme."
       }
     },
     "publicationsList": {
       "mongodb": {
-        "title": "DATABASE LOGICAL SCHEMA TRANSFORMATION: FROM RELATIONAL (T-SQL) MODEL TO DOCUMENT-ORIENTED MONGODB",
+        "title": "TRANSFORMACIJA LOGIČKE ŠEME BAZE PODATAKA: OD RELACIONOG (T-SQL) MODELA DO DOKUMENT-ORIJENTISANE MONGODB",
         "conference": "Proceedings of SYM-OP-IS 2022 Vrnjačka Banja",
         "date": "Sep 22, 2022",
-        "abstract": "Since there is no unique way to present part of the data to the user, there is no one way to model databases. It is necessary to understand the problem that the application solves and how it will produce, consume and process data. This paper will present the transformation of logical schemas from relational databases to schema-less document-oriented databases."
+        "abstract": "Pošto ne postoji jedinstven način predstavljanja dela podataka korisniku, ne postoji ni jedan način modelovanja baza podataka. Potrebno je razumeti problem koji aplikacija rešava i kako će proizvoditi, konzumirati i obrađivati podatke. Ovaj rad će predstaviti transformaciju logičkih šema iz relacionih baza podataka u schema-less dokument-orijentisane baze podataka."
       },
       "unittesting": {
-        "title": "BEST PRACTICES IN WRITING UNIT TESTS FOR .NET FRAMEWORK",
+        "title": "NAJBOLJE PRAKSE U PISANJU UNIT TESTOVA ZA .NET FRAMEWORK",
         "conference": "SYM-OP-IS Banja Koviljača",
         "date": "Sep 23, 2021",
-        "abstract": "Unit tests are a basic tool for every programmer, and the goal of unit testing is to isolate each part of the program and show that individual parts are correct. A unit test provides a written contract that a piece of code must satisfy, in addition to providing several other benefits."
+        "abstract": "Unit testovi su osnovni alat za svakog programera, a cilj unit testiranja je da izoluje svaki deo programa i pokaže da su pojedinačni delovi ispravni. Unit test pruža pisani ugovor koji deo koda mora da ispuni, pored pružanja nekoliko drugih benefita."
       }
     }
   },
   "Skills": {
-    "skillsAndExpertise": "SKILLS && EXPERTISE",
-    "echo": "$ echo Continuously learning and adapting to emerging technologies",
-    "buildingScalableSolutions": "< Building scalable solutions from web2 to web3 ecosystems",
+    "skillsAndExpertise": "VEŠTINE && EKSPERTIZA",
+    "echo": "$ echo Kontinuirano učim i prilagođavam se novim tehnologijama",
+    "buildingScalableSolutions": "< Gradim skalabilna rešenja od web2 do web3 ekosistema",
     "categories": {
       "frontend": {
-        "title": "FRONTEND DEVELOPMENT",
+        "title": "FRONTEND RAZVOJ",
         "skills": {
-          "responsiveDesign": "Responsive Design",
-          "spaDeployment": "SPA Development"
+          "responsiveDesign": "Responzivni dizajn",
+          "spaDeployment": "SPA razvoj"
         }
       },
       "backend": {
-        "title": "BACKEND DEVELOPMENT",
+        "title": "BACKEND RAZVOJ",
         "skills": {
-          "monolithicArchitecture": "Monolithic Architecture",
-          "apiDesign": "API Design"
+          "monolithicArchitecture": "Monolitna arhitektura",
+          "apiDesign": "API dizajn"
         }
       },
       "databases": {
-        "title": "DATABASES & STORAGE",
+        "title": "BAZE PODATAKA I SKLADIŠTENJE",
         "skills": {
-          "databaseDesign": "Database Design",
-          "schemaMigration": "Schema Migration",
-          "dataModeling": "Data Modeling",
-          "queryOptimization": "Query Optimization"
+          "databaseDesign": "Dizajn baza podataka",
+          "schemaMigration": "Migracija šema",
+          "dataModeling": "Modelovanje podataka",
+          "queryOptimization": "Optimizacija upita"
         }
       },
       "blockchain": {
-        "title": "BLOCKCHAIN & WEB3",
+        "title": "BLOCKCHAIN I WEB3",
         "skills": {
-          "nftMinting": "NFT minting",
-          "cryptoWallets": "Crypto Wallets",
-          "blockchainIntegration": "Blockchain Integration",
-          "decentralizedVoting": "Decentralized Voting"
+          "nftMinting": "NFT kreiranje",
+          "cryptoWallets": "Kripto novčanici",
+          "blockchainIntegration": "Blockchain integracija",
+          "decentralizedVoting": "Decentralizovano glasanje"
         }
       },
       "cloud": {
-        "title": "CLOUD & DEVOPS",
+        "title": "CLOUD I DEVOPS",
         "skills": {
-          "deploymentAutomation": "Deployment Automation"
+          "deploymentAutomation": "Automatizacija deployment-a"
         }
       },
       "integration": {
-        "title": "INTEGRATION & MESSAGING",
+        "title": "INTEGRACIJA I MESSAGING",
         "skills": {
-          "eventDrivenArchitecture": "Event-Driven Architecture",
-          "apiIntegration": "API Integration"
+          "eventDrivenArchitecture": "Event-Driven arhitektura",
+          "apiIntegration": "API integracija"
         }
       },
       "practices": {
-        "title": "DEVELOPMENT PRACTICES",
+        "title": "RAZVOJNE PRAKSE",
         "skills": {
-          "unitTesting": "Unit Testing",
-          "testDrivenDevelopment": "Test-Driven Development",
-          "agileMethodologies": "Agile Methodologies",
-          "codeReviews": "Code Reviews",
-          "gitVersionControl": "Git Version Control",
-          "cleanCode": "Clean Code",
-          "solidPrinciples": "SOLID Principles",
-          "designPatterns": "Design Patterns",
-          "documentation": "Documentation",
-          "performanceOptimization": "Performance Optimization"
+          "unitTesting": "Unit testiranje",
+          "testDrivenDevelopment": "Test-Driven razvoj",
+          "agileMethodologies": "Agile metodologije",
+          "codeReviews": "Code review-i",
+          "gitVersionControl": "Git verzioniranje",
+          "cleanCode": "Čist kod",
+          "solidPrinciples": "SOLID principi",
+          "designPatterns": "Dizajn paterni",
+          "documentation": "Dokumentacija",
+          "performanceOptimization": "Optimizacija performansi"
         }
       },
       "specialized": {
-        "title": "SPECIALIZED DOMAINS",
+        "title": "SPECIJALIZOVANE OBLASTI",
         "skills": {
-          "governmentApplications": "Government Applications",
-          "insuranceSystems": "Insurance Systems",
-          "multiTenantArchitecture": "Multi-tenant Architecture",
-          "socialInsurance": "Social Insurance",
-          "identityManagement": "Identity Management",
-          "enterpriseSolutions": "Enterprise Solutions",
-          "regulatoryCompliance": "Regulatory Compliance",
-          "dataSecurity": "Data Security",
-          "legacySystemMigration": "Legacy System Migration"
+          "governmentApplications": "Vladine aplikacije",
+          "insuranceSystems": "Sistemi osiguranja",
+          "multiTenantArchitecture": "Multi-tenant arhitektura",
+          "socialInsurance": "Socijalno osiguranje",
+          "identityManagement": "Upravljanje identitetom",
+          "enterpriseSolutions": "Enterprise rešenja",
+          "regulatoryCompliance": "Regulatorna usklađenost",
+          "dataSecurity": "Bezbednost podataka",
+          "legacySystemMigration": "Migracija legacy sistema"
         }
       }
     }

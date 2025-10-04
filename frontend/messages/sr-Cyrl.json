@@ -1,102 +1,102 @@
 {
   "Metadata": {
-    "title": "Nemanzh - Developer Portfolio",
-    "description": "Seasoned Developer and Creative Problem Solver specializing in modern web technologies"
+    "title": "Немањх - Портфолио програмера",
+    "description": "Искусан програмер и креативни решавач проблема специјализован за модерне веб технологије"
   },
   "Hero": {
-    "name": "NEMANJA RADULOVIC",
-    "echo": "$ echo 'Modernizing enterprise monoliths & building robust web apps'",
-    "bio": "I’m a full‑stack developer with 6+ years of experience turning complex problems into clean, maintainable code—whether that’s crafting rock‑solid APIs or polished front‑ends. When I’m not coding, you’ll catch me on the martial arts mat, shooting hoops, or diving into the latest game. I bring that same balance and focus to every project.",
-    "location": "BELGRADE, SERBIA",
+    "name": "НЕМАЊА РАДУЛОВИЋ",
+    "echo": "$ echo 'Модернизујем ентерпрајз монолите и градим робусне веб апликације'",
+    "bio": "Фулл‑стак сам програмер са преко 6 година искуства у претварању сложених проблема у чист, одржив код—било да се ради о прављењу чврстих АПИ‑јева или углађених фронт‑енд‑ова. Када не кодирам, можете ме наћи на подлози за борилачке вештине, док бацам лопту у кош, или играм најновије игре. Ту исту равнотежу и фокус уносим у сваки пројекат.",
+    "location": "БЕОГРАД, СРБИЈА",
     "email": "NEMANJA.RADULOVIC1990@GMAIL.COM",
     "github": "NEMANZH",
-    "linkedin": "NEMANJA-RADULOVIĆ",
-    "explorePortfolio": "DISCOVER MY WORK",
-    "readyToCollaborate": "Let’s build something great.",
-    "availableForFreelance": "Open to freelance and full‑time roles • Let’s connect! 🚀",
-    "tryTyping": "💡 Try commands like",
-    "or": "or"
+    "linkedin": "НЕМАЊА-РАДУЛОВИЋ",
+    "explorePortfolio": "ИСТРАЖИТЕ МОЈ РАД",
+    "readyToCollaborate": "Хајде да направимо нешто сјајно.",
+    "availableForFreelance": "Отворен за фриденс и фулл‑тајм послове • Повежимо се! 🚀",
+    "tryTyping": "💡 Пробајте команде као што су",
+    "or": "или"
   },
   "WorkExperience": {
-    "workExperience": "WORK_EXPERIENCE",
-    "technologies": "Technologies:",
-    "keyAchievements": "Key Achievements:",
+    "workExperience": "РАДНО ИСКУСТВО",
+    "technologies": "Технологије:",
+    "keyAchievements": "Кључна достигнућа:",
     "experiences": {
       "chainapp": {
-        "position": "Full Stack Developer",
+        "position": "Фулл Стак програмер",
         "company": "Chainapp Technologies",
-        "location": "Belgrade, Serbia",
-        "period": "Apr 2024 - Present",
-        "type": "Full-time",
-        "description": "Leading development of cutting-edge NFT marketplace and blockchain solutions. Architecting scalable microservices using Node.js and implementing smart contracts on Cardano blockchain.",
+        "location": "Београд, Србија",
+        "period": "Апр 2024 - Садашње",
+        "type": "Пуно радно време",
+        "description": "Водим развој најсавременијих НФТ маркетплејс-а и блокчејн решења. Архитектирам скалабилне микросервисе користећи Node.js и имплементирам паметне уговоре на Кардано блокчејн-у.",
         "achievements": [
-          "Designed and implemented NFT marketplace handling 10K+ transactions",
-          "Reduced API response time by 40% through optimization",
-          "Led team of 4 developers in agile environment"
+          "Дизајнирао и имплементирао НФТ маркетплејс који обрађује 10К+ трансакција",
+          "Скратио време одговора АПИ-ја за 40% кроз оптимизацију",
+          "Водио тим од 4 програмера у агајл окружењу"
         ]
       },
       "insicon": {
-        "position": "Full Stack Developer",
+        "position": "Фулл Стак програмер",
         "company": "Insicon AB",
-        "location": "Stockholm, Sweden",
+        "location": "Стокхолм, Шведска",
         "period": "2022 - 2024",
-        "type": "Full-time",
-        "description": "Developed enterprise applications and digital solutions for clients across various industries. Specialized in React/Next.js frontend development and .NET backend services.",
+        "type": "Пуно радно време",
+        "description": "Развијао ентерпрајз апликације и дигитална решења за клијенте из различитих индустрија. Специјализовао сам се за React/Next.js фронтенд развој и .NET бекенд сервисе.",
         "achievements": [
-          "Delivered 15+ client projects on time and within budget",
-          "Implemented automated testing reducing bugs by 60%",
-          "Mentored junior developers and conducted code reviews"
+          "Испоручио 15+ клијентских пројеката на време и у оквиру буџета",
+          "Имплементирао аутоматско тестирање смањевши број грешака за 60%",
+          "Менторисао јуниор програмере и водио коде ревију-е"
         ]
       },
       "saga": {
-        "position": "Software Developer",
+        "position": "Софтвер програмер",
         "company": "Saga Länsförsäkringar",
-        "location": "Stockholm, Sweden",
+        "location": "Стокхолм, Шведска",
         "period": "2020 - 2022",
-        "type": "Full-time",
-        "description": "Developed and maintained insurance management systems. Worked on both legacy system modernization and new feature development using modern web technologies.",
+        "type": "Пуно радно време",
+        "description": "Развијао и одржавао системе за управљање осигурањем. Радио на модернизацији легаси система и развоју нових функционалности користећи модерне веб технологије.",
         "achievements": [
-          "Modernized legacy insurance calculation engine",
-          "Improved system performance by 35%",
-          "Implemented comprehensive unit testing strategy"
+          "Модернизовао легаси енгине за калкулацију осигурања",
+          "Побољшао перформансе система за 35%",
+          "Имплементирао свеобухватну стратегију јунит тестирања"
         ]
       },
       "lansforsakringar": {
-        "position": "System Developer",
+        "position": "Систем програмер",
         "company": "Länsförsäkringar Göteborg",
-        "location": "Gothenburg, Sweden",
+        "location": "Гетеборг, Шведска",
         "period": "2017 - 2020",
-        "type": "Full-time",
-        "description": "Entry-level position developing internal tools and maintaining existing systems. Gained experience in enterprise software development and agile methodologies.",
+        "type": "Пуно радно време",
+        "description": "Почетна позиција где сам развијао интерне алате и одржавао постојеће системе. Стекао искуство у ентерпрајз софтвер развоју и агајл методологијама.",
         "achievements": [
-          "Developed internal reporting tools used by 100+ employees",
-          "Reduced manual data processing time by 50%",
-          "Successfully completed .NET certification program"
+          "Развио интерне репортинг алате које користи 100+ запослених",
+          "Скратио време мануелне обраде података за 50%",
+          "Успешно завршио .NET сертификациони програм"
         ]
       }
     }
   },
   "Education": {
-    "education": "EDUCATION",
-    "certifications": "CERTIFICATIONS",
-    "publications": "PUBLICATIONS",
+    "education": "ОБРАЗОВАЊЕ",
+    "certifications": "СЕРТИФИКАТИ",
+    "publications": "ПУБЛИКАЦИЈЕ",
     "educationList": {
       "masters": {
-        "degree": "Master of Science in Software Engineering and Computer Science",
-        "institution": "Faculty of Organizational Sciences, University of Belgrade",
-        "location": "Serbia",
+        "degree": "Мастер наука у области Софтверског инжењерства и Рачунарских наука",
+        "institution": "Факултет организационих наука, Универзитет у Београду",
+        "location": "Србија",
         "period": "2021 - 2022"
       },
       "bachelor": {
-        "degree": "Bachelor of Science in Information Systems and Technology",
-        "institution": "Faculty of Organizational Sciences, University of Belgrade",
-        "location": "Serbia",
+        "degree": "Дипломирани инжењер Информационих система и технологија",
+        "institution": "Факултет организационих наука, Универзитет у Београду",
+        "location": "Србија",
         "period": "2009 - 2018"
       },
       "secondary": {
-        "degree": "Secondary Education Degree, Mathematics",
-        "institution": "Grammar school Kruševac",
-        "location": "Serbia",
+        "degree": "Диплома средње школе, Математика",
+        "institution": "Гимназија Крушевац",
+        "location": "Србија",
         "period": "2005 - 2009"
       }
     },
@@ -104,102 +104,102 @@
       "azure": {
         "title": "Microsoft Certified: Azure Fundamentals",
         "issuer": "Microsoft",
-        "date": "Feb 2021",
-        "description": "Foundational level understanding of cloud services and how those services are provided with Microsoft Azure."
+        "date": "Феб 2021",
+        "description": "Основно разумевање клауд сервиса и како се ти сервиси пружају преко Microsoft Azure платформе."
       }
     },
     "publicationsList": {
       "mongodb": {
-        "title": "DATABASE LOGICAL SCHEMA TRANSFORMATION: FROM RELATIONAL (T-SQL) MODEL TO DOCUMENT-ORIENTED MONGODB",
-        "conference": "Proceedings of SYM-OP-IS 2022 Vrnjačka Banja",
-        "date": "Sep 22, 2022",
-        "abstract": "Since there is no unique way to present part of the data to the user, there is no one way to model databases. It is necessary to understand the problem that the application solves and how it will produce, consume and process data. This paper will present the transformation of logical schemas from relational databases to schema-less document-oriented databases."
+        "title": "ТРАНСФОРМАЦИЈА ЛОГИЧКЕ ШЕМЕ БАЗЕ ПОДАТАКА: ОД РЕЛАЦИОНОГ (Т-СКЛ) МОДЕЛА ДО ДОКУМЕНТ-ОРЈЕНТИСАНЕ МОНГОДБ",
+        "conference": "Proceedings of SYM-OP-IS 2022 Врњачка Бања",
+        "date": "Сеп 22, 2022",
+        "abstract": "Пошто не постоји јединствен начин представљања дела података кориснику, не постоји ни један начин моделовања база података. Потребно је разумети проблем који апликација решава и како ће производити, конзумирати и обрађивати податке. Овај рад ће представити трансформацију логичких шема из релационих база података у схема-лесс документ-оријентисане базе података."
       },
       "unittesting": {
-        "title": "BEST PRACTICES IN WRITING UNIT TESTS FOR .NET FRAMEWORK",
-        "conference": "SYM-OP-IS Banja Koviljača",
-        "date": "Sep 23, 2021",
-        "abstract": "Unit tests are a basic tool for every programmer, and the goal of unit testing is to isolate each part of the program and show that individual parts are correct. A unit test provides a written contract that a piece of code must satisfy, in addition to providing several other benefits."
+        "title": "НАЈБОЉЕ ПРАКСЕ У ПИСАЊУ ЈУНИТ ТЕСТОВА ЗА .НЕТ ФРАМЕВОРК",
+        "conference": "SYM-OP-IS Бања Ковиљача",
+        "date": "Сеп 23, 2021",
+        "abstract": "Јунит тестови су основни алат за сваког програмера, а циљ јунит тестирања је да изолује сваки део програма и покаже да су појединачни делови исправни. Јунит тест пружа писани уговор који део кода мора да испуни, поред пружања неколико других бенефита."
       }
     }
   },
   "Skills": {
-    "skillsAndExpertise": "SKILLS && EXPERTISE",
-    "echo": "$ echo Continuously learning and adapting to emerging technologies",
-    "buildingScalableSolutions": "< Building scalable solutions from web2 to web3 ecosystems",
+    "skillsAndExpertise": "ВЕШТИНЕ && ЕКСПЕРТИЗА",
+    "echo": "$ echo Континуирано учим и прилагођавам се новим технологијама",
+    "buildingScalableSolutions": "< Градим скалабилна решења од веб2 до веб3 екосистема",
     "categories": {
       "frontend": {
-        "title": "FRONTEND DEVELOPMENT",
+        "title": "ФРОНТЕНД РАЗВОЈ",
         "skills": {
-          "responsiveDesign": "Responsive Design",
-          "spaDeployment": "SPA Development"
+          "responsiveDesign": "Респонзивни дизајн",
+          "spaDeployment": "СПА развој"
         }
       },
       "backend": {
-        "title": "BACKEND DEVELOPMENT",
+        "title": "БЕКЕНД РАЗВОЈ",
         "skills": {
-          "monolithicArchitecture": "Monolithic Architecture",
-          "apiDesign": "API Design"
+          "monolithicArchitecture": "Монолитна архитектура",
+          "apiDesign": "АПИ дизајн"
         }
       },
       "databases": {
-        "title": "DATABASES & STORAGE",
+        "title": "БАЗЕ ПОДАТАКА И СКЛАДИШТЕЊЕ",
         "skills": {
-          "databaseDesign": "Database Design",
-          "schemaMigration": "Schema Migration",
-          "dataModeling": "Data Modeling",
-          "queryOptimization": "Query Optimization"
+          "databaseDesign": "Дизајн база података",
+          "schemaMigration": "Миграција шема",
+          "dataModeling": "Моделовање података",
+          "queryOptimization": "Оптимизација упита"
         }
       },
       "blockchain": {
-        "title": "BLOCKCHAIN & WEB3",
+        "title": "БЛОКЧЕЈН И ВЕБ3",
         "skills": {
-          "nftMinting": "NFT minting",
-          "cryptoWallets": "Crypto Wallets",
-          "blockchainIntegration": "Blockchain Integration",
-          "decentralizedVoting": "Decentralized Voting"
+          "nftMinting": "НФТ креирање",
+          "cryptoWallets": "Крипто новчаници",
+          "blockchainIntegration": "Блокчејн интеграција",
+          "decentralizedVoting": "Децентрализовано гласање"
         }
       },
       "cloud": {
-        "title": "CLOUD & DEVOPS",
+        "title": "КЛАУД И ДЕВОПС",
         "skills": {
-          "deploymentAutomation": "Deployment Automation"
+          "deploymentAutomation": "Аутоматизација деплојмент-а"
         }
       },
       "integration": {
-        "title": "INTEGRATION & MESSAGING",
+        "title": "ИНТЕГРАЦИЈА И МЕССАГИНГ",
         "skills": {
-          "eventDrivenArchitecture": "Event-Driven Architecture",
-          "apiIntegration": "API Integration"
+          "eventDrivenArchitecture": "Евент-Дривен архитектура",
+          "apiIntegration": "АПИ интеграција"
         }
       },
       "practices": {
-        "title": "DEVELOPMENT PRACTICES",
+        "title": "РАЗВОЈНЕ ПРАКСЕ",
         "skills": {
-          "unitTesting": "Unit Testing",
-          "testDrivenDevelopment": "Test-Driven Development",
-          "agileMethodologies": "Agile Methodologies",
-          "codeReviews": "Code Reviews",
-          "gitVersionControl": "Git Version Control",
-          "cleanCode": "Clean Code",
-          "solidPrinciples": "SOLID Principles",
-          "designPatterns": "Design Patterns",
-          "documentation": "Documentation",
-          "performanceOptimization": "Performance Optimization"
+          "unitTesting": "Јунит тестирање",
+          "testDrivenDevelopment": "Тест-Дривен развој",
+          "agileMethodologies": "Агајл методологије",
+          "codeReviews": "Коде ревију-и",
+          "gitVersionControl": "Гит верзионирање",
+          "cleanCode": "Чист код",
+          "solidPrinciples": "СОЛИД принципи",
+          "designPatterns": "Дизајн патерни",
+          "documentation": "Документација",
+          "performanceOptimization": "Оптимизација перформанси"
         }
       },
       "specialized": {
-        "title": "SPECIALIZED DOMAINS",
+        "title": "СПЕЦИЈАЛИЗОВАНЕ ОБЛАСТИ",
         "skills": {
-          "governmentApplications": "Government Applications",
-          "insuranceSystems": "Insurance Systems",
-          "multiTenantArchitecture": "Multi-tenant Architecture",
-          "socialInsurance": "Social Insurance",
-          "identityManagement": "Identity Management",
-          "enterpriseSolutions": "Enterprise Solutions",
-          "regulatoryCompliance": "Regulatory Compliance",
-          "dataSecurity": "Data Security",
-          "legacySystemMigration": "Legacy System Migration"
+          "governmentApplications": "Владине апликације",
+          "insuranceSystems": "Системи осигурања",
+          "multiTenantArchitecture": "Мулти-тенант архитектура",
+          "socialInsurance": "Социјално осигурање",
+          "identityManagement": "Управљање идентитетом",
+          "enterpriseSolutions": "Ентерпрајз решења",
+          "regulatoryCompliance": "Регулаторна усклађеност",
+          "dataSecurity": "Безбедност података",
+          "legacySystemMigration": "Миграција легаси система"
         }
       }
     }
