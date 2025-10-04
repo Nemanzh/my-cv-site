@@ -1,0 +1,9 @@
+# Handle language redirects
+/en/* /en/:splat 200
+/sr/* /sr/:splat 200
+
+# Default to English for root
+/ /en/ 302
+
+# Fallback for SPA
+/* /index.html 200
