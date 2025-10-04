@@ -1,0 +1,36 @@
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = "frontend/.next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_VERSION = "9"
+
+# Optional: Configure redirects for internationalization
+[[redirects]]
+  from = "/"
+  to = "/en"
+  status = 302
+  conditions = {Language = ["en"]}
+
+[[redirects]]
+  from = "/"
+  to = "/sr"
+  status = 302
+  conditions = {Language = ["sr"]}
+
+[[redirects]]
+  from = "/"
+  to = "/sr-Cyrl"
+  status = 302
+  conditions = {Language = ["sr-Cyrl"]}
+
+# Fallback for any unmatched routes
+[[redirects]]
+  from = "/*"
+  to = "/en/:splat"
+  status = 302
