@@ -61,26 +61,7 @@ export default function Education() {
               : 'Pustanje u rad, monitoring i kontinuirano poboljsanje.',
           },
         ],
-        collabTitle: isSrCyrl ? 'МОДЕЛИ САРАДЊЕ' : 'MODELI SARADNJE',
         processLabel: isSrCyrl ? 'ТОК РАДА' : 'TOK RADA',
-        deliveryLabel: isSrCyrl ? 'САРАДЊА И ИСПОРУКА' : 'SARADNJA I ISPORUKA',
-        collab: [
-          isSrCyrl
-            ? 'Фиксни scope: за јасно дефинисане пројекте.'
-            : 'Fiksni scope: za jasno definisane projekte.',
-          isSrCyrl
-            ? 'Месечни retainer: за тимове којима треба континуирани развој.'
-            : 'Mesecni retainer: za timove kojima treba kontinuirani razvoj.',
-          isSrCyrl
-            ? 'Технички партнер: ownership над архитектуром и delivery-јем.'
-            : 'Tehnicki partner: ownership nad arhitekturom i delivery-jem.',
-        ],
-        qualityTitle: isSrCyrl ? 'КВАЛИТЕТ И ИСПОРУКА' : 'KVALITET I ISPORUKA',
-        quality: [
-          isSrCyrl ? 'Чист и документован код' : 'Cist i dokumentovan kod',
-          isSrCyrl ? 'Тестирање критичних токова (.NET и frontend)' : 'Testiranje kriticnih tokova (.NET i frontend)',
-          isSrCyrl ? 'Предвидива и транспарентна комуникација' : 'Predvidiva i transparentna komunikacija',
-        ],
       }
       : {
         title: 'HOW WE WORK',
@@ -108,20 +89,7 @@ export default function Education() {
             text: 'We release, monitor, and continuously improve.',
           },
         ],
-        collabTitle: 'ENGAGEMENT MODELS',
         processLabel: 'PROCESS FLOW',
-        deliveryLabel: 'ENGAGEMENT & DELIVERY',
-        collab: [
-          'Fixed scope: for clearly defined projects.',
-          'Monthly retainer: for continuous product development.',
-          'Technical partner: full ownership of architecture and delivery.',
-        ],
-        qualityTitle: 'QUALITY STANDARDS',
-        quality: [
-          'Clean and documented codebase',
-          'Critical path testing (.NET and frontend)',
-          'Predictable and transparent communication',
-        ],
       };
 
   return (
@@ -226,70 +194,6 @@ export default function Education() {
                   </Typography>
                 </Box>
               ))}
-            </Box>
-
-            <Typography
-              variant="overline"
-              sx={{
-                display: 'block',
-                color: theme.palette.terminal.textSecondary,
-                letterSpacing: '0.08em',
-                mb: { xs: 1.5, sm: 2 },
-                borderTop: `1px solid ${theme.palette.terminal.border}`,
-                pt: { xs: 2, sm: 2.5 },
-              }}
-            >
-              {content.deliveryLabel}
-            </Typography>
-
-            <Box
-              sx={{
-                display: 'grid',
-                gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' },
-                gap: { xs: 2, sm: 3 },
-              }}
-            >
-              <Box
-                sx={{
-                  p: { xs: 2, sm: 3 },
-                  background: `linear-gradient(180deg, ${theme.palette.terminal.header} 0%, ${theme.palette.terminal.background} 100%)`,
-                  border: `1px solid ${theme.palette.terminal.border}`,
-                  borderLeft: `3px solid ${theme.palette.terminal.cyan}`,
-                  borderRadius: 1,
-                }}
-              >
-                <Typography variant="h6" sx={{ color: theme.palette.terminal.cyan, mb: 1.5 }}>
-                  {content.collabTitle}
-                </Typography>
-                <Box component="ul" sx={{ m: 0, pl: 2 }}>
-                  {content.collab.map((item) => (
-                    <Typography key={item} component="li" variant="body2" sx={{ mb: 1 }}>
-                      {item}
-                    </Typography>
-                  ))}
-                </Box>
-              </Box>
-
-              <Box
-                sx={{
-                  p: { xs: 2, sm: 3 },
-                  background: `linear-gradient(180deg, ${theme.palette.terminal.header} 0%, ${theme.palette.terminal.background} 100%)`,
-                  border: `1px solid ${theme.palette.terminal.border}`,
-                  borderLeft: `3px solid ${theme.palette.terminal.magenta}`,
-                  borderRadius: 1,
-                }}
-              >
-                <Typography variant="h6" sx={{ color: theme.palette.terminal.magenta, mb: 1.5 }}>
-                  {content.qualityTitle}
-                </Typography>
-                <Box component="ul" sx={{ m: 0, pl: 2 }}>
-                  {content.quality.map((item) => (
-                    <Typography key={item} component="li" variant="body2" sx={{ mb: 1 }}>
-                      {item}
-                    </Typography>
-                  ))}
-                </Box>
-              </Box>
             </Box>
 
             <Box sx={{ textAlign: 'center', mt: { xs: 3, sm: 4 } }}>

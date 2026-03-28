@@ -5,7 +5,7 @@ import WorkExperience from '@/components/WorkExperience';
 import Education from '@/components/Education';
 import Skills from '@/components/Skills';
 import CaseStudies from '@/components/CaseStudies';
-import Testimonials from '@/components/Testimonials';
+import TestimonialsClient from '@/components/TestimonialsClient';
 import EngagementModels from '@/components/EngagementModels';
 import FaqClient from '@/components/FaqClient';
 import ContactUs from '@/components/ContactUs';
@@ -148,7 +148,7 @@ export default async function Home({
         <Education />
         <EngagementModels />
         <Skills />
-        <Testimonials />
+        <TestimonialsClient />
         <FaqClient />
         <ContactUs />
       </ClientPageWrapper>
