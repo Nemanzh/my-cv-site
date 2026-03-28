@@ -46,7 +46,8 @@ export default function ContactUs() {
           budget: 'Budzet (opseg)',
           timeline: 'Rok / zeljeni start',
         },
-        success: 'Upit je pripremljen. Otvoren je vas email klijent sa popunjenim podacima.',
+        success:
+          'Upit je pripremljen. Otvoren je vas email klijent sa popunjenim podacima.',
       }
     : {
         title: 'CONTACT US',
@@ -88,13 +89,16 @@ export default function ContactUs() {
   };
 
   const handleChange =
-    (key: keyof typeof form) => (event: React.ChangeEvent<HTMLInputElement>) => {
+    (key: keyof typeof form) =>
+    (event: React.ChangeEvent<HTMLInputElement>) => {
       setForm((prev) => ({ ...prev, [key]: event.target.value }));
     };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const subject = encodeURIComponent(`[Project Inquiry] ${form.company || form.name || 'New lead'}`);
+    const subject = encodeURIComponent(
+      `[Project Inquiry] ${form.company || form.name || 'New lead'}`,
+    );
     const body = encodeURIComponent(
       [
         `Name: ${form.name}`,
@@ -105,7 +109,7 @@ export default function ContactUs() {
         '',
         'Project brief:',
         form.project,
-      ].join('\n')
+      ].join('\n'),
     );
 
     window.location.href = `mailto:contact@nemanzh.dev?subject=${subject}&body=${body}`;
@@ -185,7 +189,11 @@ export default function ContactUs() {
             >
               <Typography
                 variant="overline"
-                sx={{ display: 'block', color: theme.palette.terminal.textSecondary, mb: 1.5 }}
+                sx={{
+                  display: 'block',
+                  color: theme.palette.terminal.textSecondary,
+                  mb: 1.5,
+                }}
               >
                 {content.formTitle}
               </Typography>
@@ -268,72 +276,14 @@ export default function ContactUs() {
               </Box>
 
               {submitted ? (
-                <Typography variant="body2" sx={{ color: theme.palette.terminal.green, mt: 1.5 }}>
+                <Typography
+                  variant="body2"
+                  sx={{ color: theme.palette.terminal.green, mt: 1.5 }}
+                >
                   {content.success}
                 </Typography>
               ) : null}
             </Box>
-
-            <Stack
-              direction={{ xs: 'column', sm: 'row' }}
-              spacing={1.5}
-              justifyContent="center"
-              alignItems={{ xs: 'stretch', sm: 'center' }}
-              flexWrap="wrap"
-              sx={{
-                width: { xs: '100%', sm: 'auto' },
-                maxWidth: { xs: 420, sm: 'none' },
-                mx: 'auto',
-              }}
-            >
-              <Button
-                component="a"
-                href="https://www.linkedin.com/in/nemanja-radulovi%C4%87/"
-                target="_blank"
-                rel="noopener noreferrer"
-                startIcon={<LinkedIn />}
-                sx={{
-                  border: `1px solid ${theme.palette.terminal.border}`,
-                  color: theme.palette.terminal.text,
-                  backgroundColor: theme.palette.terminal.header,
-                  textTransform: 'none',
-                  px: 2.5,
-                  py: 1,
-                  width: { xs: '100%', sm: 'auto' },
-                  justifyContent: 'center',
-                  '&:hover': {
-                    backgroundColor: theme.palette.terminal.border,
-                    color: theme.palette.terminal.cyan,
-                  },
-                }}
-              >
-                LinkedIn
-              </Button>
-
-              <Button
-                component="a"
-                href="https://github.com/nemanjaradulovic"
-                target="_blank"
-                rel="noopener noreferrer"
-                startIcon={<GitHub />}
-                sx={{
-                  border: `1px solid ${theme.palette.terminal.border}`,
-                  color: theme.palette.terminal.text,
-                  backgroundColor: theme.palette.terminal.header,
-                  textTransform: 'none',
-                  px: 2.5,
-                  py: 1,
-                  width: { xs: '100%', sm: 'auto' },
-                  justifyContent: 'center',
-                  '&:hover': {
-                    backgroundColor: theme.palette.terminal.border,
-                    color: theme.palette.terminal.green,
-                  },
-                }}
-              >
-                GitHub
-              </Button>
-            </Stack>
           </CardContent>
         </Card>
       </Container>
