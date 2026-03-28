@@ -47,7 +47,7 @@ export default function Hero() {
     target.style.setProperty('--hero-tilt-y', '0deg');
   };
 
-  const handleCtaPointerMove = (event: React.PointerEvent<HTMLButtonElement>) => {
+  const handleCtaPointerMove = (event: React.PointerEvent<HTMLElement>) => {
     const target = event.currentTarget;
     const rect = target.getBoundingClientRect();
     const x = event.clientX - rect.left;
@@ -61,7 +61,7 @@ export default function Hero() {
     target.style.setProperty('--cta-glow-y', `${((y / rect.height) * 100).toFixed(2)}%`);
   };
 
-  const handleCtaPointerLeave = (event: React.PointerEvent<HTMLButtonElement>) => {
+  const handleCtaPointerLeave = (event: React.PointerEvent<HTMLElement>) => {
     const target = event.currentTarget;
     target.style.setProperty('--magnet-x', '0px');
     target.style.setProperty('--magnet-y', '0px');
@@ -273,7 +273,6 @@ export default function Hero() {
                   }}
                 >
                   <Button
-                    component="a"
                     href="mailto:contact@nemanzh.dev"
                     startIcon={<Email />}
                     onPointerMove={handleCtaPointerMove}
