@@ -35,7 +35,8 @@ export default function Header() {
           sx={{
             justifyContent: 'space-between',
             minHeight: { xs: '56px', sm: '64px' },
-            px: { xs: 1, sm: 2 },
+            px: { xs: 0.75, sm: 2 },
+            gap: 1,
           }}
         >
           <Box
@@ -43,6 +44,8 @@ export default function Header() {
               display: 'flex',
               alignItems: 'center',
               gap: { xs: 1, sm: 2 },
+              flex: 1,
+              minWidth: 0,
             }}
           >
             <Typography
@@ -51,10 +54,13 @@ export default function Header() {
               className="terminal-mono"
               sx={{
                 color: colors.cyan,
-                fontSize: { xs: '0.875rem', sm: '1rem', md: '1.125rem' },
+                fontSize: { xs: '0.74rem', sm: '1rem', md: '1.125rem' },
                 fontWeight: 'bold',
-                letterSpacing: '0.1em',
+                letterSpacing: { xs: '0.04em', sm: '0.1em' },
                 userSelect: 'none',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
               }}
             >
               <Typography
@@ -76,12 +82,13 @@ export default function Header() {
               >
                 @
               </Typography>
-              cv
+              softwarestudio
               <Typography
                 component="span"
                 sx={{
                   color: colors.yellow,
                   fontSize: 'inherit',
+                  display: { xs: 'none', sm: 'inline' },
                   animation: 'blink 1s infinite',
                   '@keyframes blink': {
                     '0%, 50%': { opacity: 1 },
@@ -98,7 +105,8 @@ export default function Header() {
             sx={{
               display: 'flex',
               alignItems: 'center',
-              gap: { xs: 1, sm: 2 },
+              gap: { xs: 0.5, sm: 2 },
+              flexShrink: 0,
             }}
           >
             <Box
@@ -137,7 +145,7 @@ export default function Header() {
                   fontSize: 'inherit',
                 }}
               >
-                online
+                accepting projects
               </Typography>
             </Box>
 

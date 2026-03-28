@@ -26,6 +26,22 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description: t('description'),
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+        { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      ],
+      apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+      other: [
+        {
+          rel: 'mask-icon',
+          url: '/nemanzh-logo-icon.svg',
+          color: '#6366f1',
+        },
+      ],
+    },
+    manifest: '/site.webmanifest',
   };
 }
 

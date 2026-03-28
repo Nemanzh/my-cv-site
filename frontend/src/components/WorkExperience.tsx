@@ -8,115 +8,113 @@ import {
   Card,
   CardContent,
   useTheme,
-  Stack,
-  Chip,
 } from '@mui/material';
 import HighlightedText, { highlightFirstLetters } from './HighlightedText';
-import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 
 export default function WorkExperience() {
   const theme = useTheme();
-  const t = useTranslations('WorkExperience');
+  const locale = useLocale();
+  const isSrCyrl = locale === 'sr-Cyrl';
+  const isSr = locale === 'sr' || isSrCyrl;
 
-  const experienceList = [
-    {
-      position: t('experiences.chainapp.position'),
-      company: t('experiences.chainapp.company'),
-      location: t('experiences.chainapp.location'),
-      period: t('experiences.chainapp.period'),
-      type: t('experiences.chainapp.type'),
-      description: t('experiences.chainapp.description'),
-      technologies: [
-        'Node.js',
-        'TypeScript',
-        'React',
-        'Cardano',
-        'Smart Contracts',
-        'Microservices',
-        'PostgreSQL',
-        'Docker',
-      ],
-      achievements: [
-        t('experiences.chainapp.achievements.0'),
-        t('experiences.chainapp.achievements.1'),
-        t('experiences.chainapp.achievements.2'),
-      ],
-    },
-    {
-      position: t('experiences.insicon.position'),
-      company: t('experiences.insicon.company'),
-      location: t('experiences.insicon.location'),
-      period: t('experiences.insicon.period'),
-      type: t('experiences.insicon.type'),
-      description: t('experiences.insicon.description'),
-      technologies: [
-        'React',
-        'Next.js',
-        'TypeScript',
-        'C# .NET',
-        'SQL Server',
-        'Azure',
-        'REST APIs',
-        'Git',
-      ],
-      achievements: [
-        t('experiences.insicon.achievements.0'),
-        t('experiences.insicon.achievements.1'),
-        t('experiences.insicon.achievements.2'),
-      ],
-    },
-    {
-      position: t('experiences.saga.position'),
-      company: t('experiences.saga.company'),
-      location: t('experiences.saga.location'),
-      period: t('experiences.saga.period'),
-      type: t('experiences.saga.type'),
-      description: t('experiences.saga.description'),
-      technologies: [
-        'C# .NET',
-        'Angular',
-        'TypeScript',
-        'SQL Server',
-        'Entity Framework',
-        'Azure DevOps',
-        'SCRUM',
-      ],
-      achievements: [
-        t('experiences.saga.achievements.0'),
-        t('experiences.saga.achievements.1'),
-        t('experiences.saga.achievements.2'),
-      ],
-    },
-    {
-      position: t('experiences.lansforsakringar.position'),
-      company: t('experiences.lansforsakringar.company'),
-      location: t('experiences.lansforsakringar.location'),
-      period: t('experiences.lansforsakringar.period'),
-      type: t('experiences.lansforsakringar.type'),
-      description: t('experiences.lansforsakringar.description'),
-      technologies: [
-        'C# .NET',
-        'JavaScript',
-        'SQL Server',
-        'HTML/CSS',
-        'TFS',
-        'Visual Studio',
-      ],
-      achievements: [
-        t('experiences.lansforsakringar.achievements.0'),
-        t('experiences.lansforsakringar.achievements.1'),
-        t('experiences.lansforsakringar.achievements.2'),
-      ],
-    },
-  ];
+  const content = isSr
+      ? {
+        title: isSrCyrl ? 'УСЛУГЕ СТУДИЈА' : 'USLUGE STUDIJA',
+        intro: isSrCyrl
+          ? 'Од идеје до production-а: испоручујемо јасне, мерљиве и одрживе софтверске системе са Microsoft технологијама у првом плану.'
+          : 'Od ideje do production-a: isporucujemo jasne, merljive i odrzive softverske sisteme sa Microsoft tehnologijama u prvom planu.',
+        cards: [
+          {
+            name: isSrCyrl ? 'МИЦРОСОФТ .НЕТ РАЗВОЈ' : 'MICROSOFT .NET RAZVOJ',
+            description: isSrCyrl
+              ? 'Развијамо backend системе, АПИ слојеве и пословну логику у C#/.NET екосистему.'
+              : 'Razvijamo backend sisteme, API slojeve i poslovnu logiku u C#/.NET ekosistemu.',
+            outcomes: isSrCyrl
+              ? ['Стабилни и тестабилни сервиси', 'Чист доменски модел', 'Спремност за даље скалирање']
+              : ['Stabilni i testabilni servisi', 'Cist domenski model', 'Spremnost za dalje skaliranje'],
+          },
+          {
+            name: isSrCyrl ? 'ВЕБ ПЛАТФОРМЕ И ФУЛЛ-СТАК' : 'WEB PLATFORME I FULL-STACK',
+            description: isSrCyrl
+              ? 'Градимо модерне веб апликације са Next.js фронтендом и .NET/Node.js backend-ом.'
+              : 'Gradimo moderne web aplikacije sa Next.js frontendom i .NET/Node.js backendom.',
+            outcomes: isSrCyrl
+              ? ['Бржи time-to-market', 'Стабилно скалирање', 'Лакше будуће одржавање']
+              : ['Brzi time-to-market', 'Stabilno skaliranje', 'Lakse buduce odrzavanje'],
+          },
+          {
+            name: isSrCyrl ? 'ПОСЛОВНИ СОФТВЕР И ИНТЕРНИ АЛАТИ' : 'POSLOVNI SOFTVER I INTERNI ALATI',
+            description: isSrCyrl
+              ? 'Развијамо прилагођене интерне системе који убрзавају операције и смањују ручни рад.'
+              : 'Razvijamo prilagodjene interne sisteme koji ubrzavaju operacije i smanjuju rucni rad.',
+            outcomes: isSrCyrl
+              ? ['Мање ручних корака', 'Јаснији увиди у податке', 'Већа оперативна ефикасност']
+              : ['Manje rucnih koraka', 'Jasniji uvidi u podatke', 'Veca operativna efikasnost'],
+          },
+          {
+            name: isSrCyrl ? 'ИНТЕГРАЦИЈЕ И МОДЕРНИЗАЦИЈА' : 'INTEGRACIJE I MODERNIZACIJA',
+            description: isSrCyrl
+              ? 'Повезујемо CRM, ERP, платежне и legacy системе кроз сигурне API интеграције.'
+              : 'Povezujemo CRM, ERP, platne i legacy sisteme kroz sigurne API integracije.',
+            outcomes: isSrCyrl
+              ? ['Стабилни интеграциони токови', 'Мање прекида у раду', 'Лакша еволуција система']
+              : ['Stabilni integracioni tokovi', 'Manje prekida u radu', 'Laksa evolucija sistema'],
+          },
+        ],
+        outcomesLabel: isSrCyrl ? 'Резултати:' : 'Rezultati:',
+      }
+    : {
+        title: 'STUDIO SERVICES',
+        intro:
+          'From idea to production: we deliver clear, measurable, and maintainable software systems with Microsoft technologies in the foreground.',
+        cards: [
+          {
+            name: 'MICROSOFT .NET DEVELOPMENT',
+            description:
+              'We build backend systems, API layers, and core business logic in the C#/.NET ecosystem.',
+            outcomes: [
+              'Stable and testable services',
+              'Clean domain modeling',
+              'Ready for long-term scaling',
+            ],
+          },
+          {
+            name: 'WEB PLATFORMS & FULL-STACK',
+            description:
+              'We deliver modern web applications with Next.js frontend and .NET/Node.js backend services.',
+            outcomes: [
+              'Faster time-to-market',
+              'Reliable scaling',
+              'Easier long-term maintenance',
+            ],
+          },
+          {
+            name: 'CUSTOM BUSINESS SOFTWARE & INTERNAL TOOLS',
+            description:
+              'We build internal systems that reduce manual work and support day-to-day operations.',
+            outcomes: [
+              'Less repetitive manual work',
+              'Better visibility over business data',
+              'Higher operational efficiency',
+            ],
+          },
+          {
+            name: 'INTEGRATIONS & MODERNIZATION',
+            description:
+              'We connect CRM, ERP, payment, and legacy systems through secure API integrations.',
+            outcomes: [
+              'Reliable integration flows',
+              'Fewer operational disruptions',
+              'Easier system evolution over time',
+            ],
+          },
+        ],
+        outcomesLabel: 'Outcomes:',
+      };
 
   return (
-    <Box
-      component="section"
-      sx={{
-        py: { xs: 2, sm: 3, md: 4 },
-      }}
-    >
+    <Box component="section" sx={{ py: { xs: 2, sm: 3, md: 4 } }}>
       <Container maxWidth="xl">
         <Card
           className="terminal-window"
@@ -124,7 +122,7 @@ export default function WorkExperience() {
             maxWidth: '1200px',
             mx: 'auto',
             backgroundColor: theme.palette.terminal.background,
-            overflow: 'hidden',
+            border: `1px solid ${theme.palette.terminal.border}`,
           }}
         >
           <CardContent
@@ -138,219 +136,93 @@ export default function WorkExperience() {
               variant="h3"
               component="h2"
               sx={{
-                mb: { xs: 3, sm: 4 },
+                mb: { xs: 1.5, sm: 2 },
                 color: theme.palette.terminal.text,
-                fontSize: {
-                  xs: '1.5rem',
-                  sm: '2rem',
-                  md: '2.5rem',
-                  lg: '3rem',
-                },
+                fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
                 textAlign: 'center',
-                wordBreak: 'break-word',
-                lineHeight: { xs: 1.2, md: 1.167 },
               }}
             >
               <HighlightedText
-                text={t('workExperience')}
-                highlightIndices={highlightFirstLetters(t('workExperience'))}
+                text={content.title}
+                highlightIndices={highlightFirstLetters(content.title)}
                 highlightColor={theme.palette.terminal.green}
               />
             </Typography>
 
-            <Stack spacing={{ xs: 3, sm: 4 }}>
-              {experienceList.map((exp, index) => (
+            <Typography
+              variant="body1"
+              sx={{
+                color: theme.palette.terminal.textSecondary,
+                textAlign: 'center',
+                mb: { xs: 3, sm: 4 },
+                maxWidth: '920px',
+                mx: 'auto',
+                lineHeight: 1.6,
+              }}
+            >
+              {content.intro}
+            </Typography>
+
+            <Box
+              sx={{
+                display: 'grid',
+                gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' },
+                gap: { xs: 2, sm: 3 },
+              }}
+            >
+              {content.cards.map((card) => (
                 <Box
-                  key={index}
+                  key={card.name}
                   sx={{
-                    p: { xs: 2, sm: 3, md: 4 },
+                    p: { xs: 2, sm: 3 },
                     backgroundColor: theme.palette.terminal.header,
                     border: `1px solid ${theme.palette.terminal.border}`,
                     borderRadius: 1,
-                    position: 'relative',
-                    '&::before': {
-                      content: '""',
-                      position: 'absolute',
-                      left: { xs: -2, sm: -3 },
-                      top: 0,
-                      bottom: 0,
-                      width: { xs: '3px', sm: '4px' },
-                      backgroundColor: theme.palette.terminal.cyan,
-                      borderRadius: '2px',
-                    },
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 1.5,
                   }}
                 >
-                  <Box
+                  <Typography
+                    variant="h5"
                     sx={{
-                      display: 'flex',
-                      flexDirection: { xs: 'column', sm: 'row' },
-                      justifyContent: 'space-between',
-                      alignItems: { xs: 'flex-start', sm: 'flex-start' },
-                      mb: { xs: 2, sm: 3 },
-                      gap: { xs: 1, sm: 2 },
+                      color: theme.palette.terminal.cyan,
+                      fontSize: { xs: '1rem', sm: '1.2rem', md: '1.35rem' },
                     }}
                   >
-                    <Box sx={{ flex: 1 }}>
-                      <Typography
-                        variant="h5"
-                        component="h3"
-                        sx={{
-                          color: theme.palette.terminal.cyan,
-                          fontSize: {
-                            xs: '1.1rem',
-                            sm: '1.25rem',
-                            md: '1.5rem',
-                          },
-                          fontWeight: 'bold',
-                          mb: { xs: 0.5, sm: 1 },
-                          wordBreak: 'break-word',
-                        }}
-                      >
-                        <HighlightedText
-                          text={exp.position}
-                          highlightIndices={highlightFirstLetters(exp.position)}
-                          highlightColor={theme.palette.terminal.magenta}
-                        />
-                      </Typography>
-
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          color: theme.palette.terminal.green,
-                          fontSize: { xs: '1rem', sm: '1.125rem' },
-                          mb: { xs: 0.5, sm: 1 },
-                          wordBreak: 'break-word',
-                        }}
-                      >
-                        {exp.company}
-                      </Typography>
-
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: theme.palette.terminal.textSecondary,
-                          fontSize: { xs: '0.875rem', sm: '1rem' },
-                          mb: { xs: 1, sm: 0 },
-                        }}
-                      >
-                        {exp.location} • {exp.type}
-                      </Typography>
-                    </Box>
-
-                    <Box
-                      sx={{
-                        display: 'flex',
-                        alignItems: { xs: 'flex-start', sm: 'center' },
-                        justifyContent: { xs: 'flex-start', sm: 'flex-end' },
-                      }}
-                    >
-                      <Chip
-                        label={exp.period}
-                        sx={{
-                          backgroundColor: theme.palette.terminal.background,
-                          color: theme.palette.terminal.yellow,
-                          border: `1px solid ${theme.palette.terminal.border}`,
-                          fontFamily:
-                            'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                          fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                          fontWeight: 'bold',
-                          height: { xs: 28, sm: 32 },
-                        }}
-                      />
-                    </Box>
-                  </Box>
+                    {card.name}
+                  </Typography>
 
                   <Typography
-                    variant="body1"
-                    sx={{
-                      color: theme.palette.terminal.text,
-                      mb: { xs: 2, sm: 3 },
-                      lineHeight: 1.6,
-                      fontSize: { xs: '0.875rem', sm: '1rem' },
-                    }}
+                    variant="body2"
+                    sx={{ color: theme.palette.terminal.textSecondary, lineHeight: 1.6 }}
                   >
-                    {exp.description}
+                    {card.description}
                   </Typography>
-                  <Box sx={{ mb: { xs: 2, sm: 3 } }}>
-                    <Typography
-                      variant="subtitle2"
-                      sx={{
-                        color: theme.palette.terminal.cyan,
-                        mb: 1,
-                        fontSize: { xs: '0.875rem', sm: '1rem' },
-                        fontWeight: 'bold',
-                      }}
-                    >
-                      {t('technologies')}
-                    </Typography>
-                    <Box
-                      sx={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        gap: { xs: 0.5, sm: 1 },
-                      }}
-                    >
-                      {exp.technologies.map((tech, techIndex) => (
-                        <Chip
-                          key={techIndex}
-                          label={tech}
-                          size="small"
-                          sx={{
-                            backgroundColor: theme.palette.terminal.background,
-                            color: theme.palette.terminal.green,
-                            border: `1px solid ${theme.palette.terminal.border}`,
-                            fontFamily:
-                              'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                            fontSize: { xs: '0.625rem', sm: '0.75rem' },
-                            height: { xs: 24, sm: 28 },
-                            '&:hover': {
-                              backgroundColor: theme.palette.terminal.border,
-                            },
-                          }}
-                        />
-                      ))}
-                    </Box>
+
+                  <Typography
+                    variant="subtitle2"
+                    sx={{ color: theme.palette.terminal.green, fontWeight: 'bold' }}
+                  >
+                    {content.outcomesLabel}
+                  </Typography>
+
+                  <Box component="ul" sx={{ m: 0, pl: 2, color: theme.palette.terminal.text }}>
+                    {card.outcomes.map((outcome) => (
+                      <Typography
+                        key={outcome}
+                        component="li"
+                        variant="body2"
+                        sx={{ color: theme.palette.terminal.text, mb: 0.5 }}
+                      >
+                        {outcome}
+                      </Typography>
+                    ))}
                   </Box>
 
-                  <Box>
-                    <Typography
-                      variant="subtitle2"
-                      sx={{
-                        color: theme.palette.terminal.cyan,
-                        mb: 1,
-                        fontSize: { xs: '0.875rem', sm: '1rem' },
-                        fontWeight: 'bold',
-                      }}
-                    >
-                      {t('keyAchievements')}
-                    </Typography>
-                    <Box
-                      component="ul"
-                      sx={{
-                        pl: { xs: 2, sm: 3 },
-                        m: 0,
-                      }}
-                    >
-                      {exp.achievements.map((achievement, achIndex) => (
-                        <Typography
-                          key={achIndex}
-                          component="li"
-                          variant="body2"
-                          sx={{
-                            color: theme.palette.terminal.textSecondary,
-                            mb: 0.5,
-                            fontSize: { xs: '0.875rem', sm: '1rem' },
-                            lineHeight: 1.5,
-                          }}
-                        >
-                          {achievement}
-                        </Typography>
-                      ))}
-                    </Box>
-                  </Box>
                 </Box>
               ))}
-            </Stack>
+            </Box>
           </CardContent>
         </Card>
       </Container>

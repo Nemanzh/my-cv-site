@@ -10,10 +10,10 @@ import {
   Card,
   CardContent,
   Stack,
+  Button,
 } from '@mui/material';
 import HighlightedText, { highlightFirstLetters } from './HighlightedText';
 import InteractiveTerminal from './InteractiveTerminal';
-import CVDownload from './CVDownload';
 import { Email, GitHub, LinkedIn, LocationOn } from '@mui/icons-material';
 import { useTranslations } from 'next-intl';
 
@@ -102,10 +102,10 @@ export default function Hero() {
                   mb: { xs: 1.5, sm: 2 },
                   color: theme.palette.terminal.text,
                   fontSize: {
-                    xs: '1.75rem',
-                    sm: '2.5rem',
-                    md: '3rem',
-                    lg: '3.5rem',
+                    xs: '1.5rem',
+                    sm: '2.2rem',
+                    md: '2.8rem',
+                    lg: '3.2rem',
                   },
                 }}
               >
@@ -124,7 +124,7 @@ export default function Hero() {
                   color: theme.palette.terminal.cyan,
                   fontFamily:
                     'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                  fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
+                  fontSize: { xs: '0.95rem', sm: '1.2rem', md: '1.4rem' },
                 }}
               >
                 {t('echo')}
@@ -161,7 +161,34 @@ export default function Hero() {
                     flex: { md: '0 0 auto' },
                   }}
                 >
-                  <CVDownload />
+                  <Button
+                    component="a"
+                    href="mailto:contact@nemanzh.dev"
+                    startIcon={<Email />}
+                    sx={{
+                      backgroundColor: theme.palette.terminal.header,
+                      border: `2px solid ${theme.palette.terminal.cyan}`,
+                      color: theme.palette.terminal.cyan,
+                      fontFamily:
+                        'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+                      textTransform: 'none',
+                      px: 3,
+                      py: 1.5,
+                      fontWeight: 'bold',
+                      width: 'fit-content',
+                      minWidth: 'auto',
+                      whiteSpace: 'nowrap',
+                      '&:hover': {
+                        backgroundColor: theme.palette.terminal.cyan,
+                        color: theme.palette.terminal.background,
+                        transform: 'translateY(-2px)',
+                        boxShadow: `0 4px 12px ${theme.palette.terminal.cyan}40`,
+                      },
+                      transition: 'all 0.3s ease-in-out',
+                    }}
+                  >
+                    {t('cta')}
+                  </Button>
                 </Box>
               </Stack>
 
@@ -345,7 +372,7 @@ export default function Hero() {
                     wordBreak: 'break-word',
                   }}
                 >
-                  whoami
+                  whoarewe
                 </code>
                 ,{' '}
                 <code
@@ -355,7 +382,7 @@ export default function Hero() {
                     wordBreak: 'break-word',
                   }}
                 >
-                  ls skills
+                  ls services
                 </code>
                 , {t('or')}{' '}
                 <code

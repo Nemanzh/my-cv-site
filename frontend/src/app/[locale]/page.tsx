@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import WorkExperience from '@/components/WorkExperience';
 import Education from '@/components/Education';
 import Skills from '@/components/Skills';
+import ContactUs from '@/components/ContactUs';
 import ClientPageWrapper from '@/components/ClientPageWrapper';
 
 export default async function Home({
@@ -19,6 +20,7 @@ export default async function Home({
       <WorkExperience />
       <Education />
       <Skills />
+      <ContactUs />
     </ClientPageWrapper>
   );
 }

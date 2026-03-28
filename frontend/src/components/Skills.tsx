@@ -8,141 +8,306 @@ import {
   Card,
   CardContent,
   useTheme,
+  Tooltip,
 } from '@mui/material';
 import HighlightedText, { highlightFirstLetters } from './HighlightedText';
-import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
+
+interface TechIcon {
+  name: string;
+  iconUrls?: string[];
+}
+
+interface CapabilityLane {
+  title: string;
+  color: string;
+  tech: TechIcon[];
+}
+
+function iconUrl(slug: string, color: string) {
+  return `https://cdn.simpleicons.org/${slug}/${color.replace('#', '')}`;
+}
+
+function deviconUrl(slug: string, variant: 'original' | 'plain' = 'original') {
+  return `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${slug}/${slug}-${variant}.svg`;
+}
+
+function tech(
+  name: string,
+  color: string,
+  options: {
+    customUrls?: string[];
+    simpleIconSlug?: string;
+    deviconSlug?: string;
+    deviconVariant?: 'original' | 'plain';
+  } = {}
+): TechIcon {
+  const urls: string[] = options.customUrls ? [...options.customUrls] : [];
+
+  if (options.simpleIconSlug) {
+    urls.push(iconUrl(options.simpleIconSlug, color));
+  }
+
+  if (options.deviconSlug) {
+    urls.push(deviconUrl(options.deviconSlug, options.deviconVariant));
+  }
+
+  return {
+    name,
+    iconUrls: urls.length > 0 ? urls : undefined,
+  };
+}
+
+function fallbackLabel(name: string) {
+  const cleaned = name.replace(/[^a-zA-Z0-9]/g, '');
+  return cleaned.slice(0, 3).toUpperCase() || 'APP';
+}
+
+function TechTile({
+  name,
+  iconUrls,
+  color,
+  border,
+  background,
+}: {
+  name: string;
+  iconUrls?: string[];
+  color: string;
+  border: string;
+  background: string;
+}) {
+  const [urlIndex, setUrlIndex] = React.useState(0);
+  const [imageFailed, setImageFailed] = React.useState(!iconUrls || iconUrls.length === 0);
+
+  React.useEffect(() => {
+    setUrlIndex(0);
+    setImageFailed(!iconUrls || iconUrls.length === 0);
+  }, [iconUrls, name]);
+
+  const currentIconUrl = iconUrls?.[urlIndex];
+
+  const handleImageError = () => {
+    if (!iconUrls || urlIndex >= iconUrls.length - 1) {
+      setImageFailed(true);
+      return;
+    }
+
+    setUrlIndex((prev) => prev + 1);
+  };
+
+  return (
+    <Box
+      sx={{
+        height: { xs: 46, sm: 52 },
+        border: `1px solid ${border}`,
+        borderRadius: 1,
+        backgroundColor: background,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        transition: 'transform 0.18s ease, border-color 0.18s ease',
+        '&:hover': {
+          transform: 'translateY(-2px)',
+          borderColor: color,
+        },
+      }}
+    >
+      {imageFailed ? (
+        <Typography
+          component="span"
+          sx={{
+            color,
+            fontSize: { xs: '0.65rem', sm: '0.7rem' },
+            fontWeight: 700,
+            letterSpacing: '0.06em',
+          }}
+        >
+          {fallbackLabel(name)}
+        </Typography>
+      ) : (
+        <Box
+          component="img"
+          src={currentIconUrl}
+          alt={name}
+          onError={handleImageError}
+          sx={{
+            width: { xs: 18, sm: 22 },
+            height: { xs: 18, sm: 22 },
+          }}
+        />
+      )}
+    </Box>
+  );
+}
 
 export default function Skills() {
   const theme = useTheme();
-  const t = useTranslations('Skills');
+  const locale = useLocale();
+  const isSrCyrl = locale === 'sr-Cyrl';
+  const isSr = locale === 'sr' || isSrCyrl;
+  const terminal = theme.palette.terminal;
+  const laneColors = {
+    frontend: terminal.cyan,
+    backend: terminal.green,
+    databases: terminal.yellow,
+    cloud: terminal.magenta,
+    integrations: terminal.textSecondary,
+  };
 
-  const skillCategories = [
+  const lanes: CapabilityLane[] = [
     {
-      category: t('categories.frontend.title'),
-      color: theme.palette.terminal.cyan,
-      skills: [
-        'Next.js',
-        'React',
-        'Angular',
-        'TypeScript',
-        'JavaScript',
-        'HTML5',
-        'CSS3',
-        'Material-UI',
-        t('categories.frontend.skills.responsiveDesign'),
-        t('categories.frontend.skills.spaDeployment'),
+      title: isSrCyrl ? 'ФРОНТЕНД' : 'FRONTEND',
+      color: laneColors.frontend,
+      tech: [
+        tech('Next.js', laneColors.frontend, {
+          simpleIconSlug: 'nextdotjs',
+          deviconSlug: 'nextjs',
+        }),
+        tech('React', laneColors.frontend, {
+          simpleIconSlug: 'react',
+          deviconSlug: 'react',
+        }),
+        tech('TypeScript', laneColors.frontend, {
+          simpleIconSlug: 'typescript',
+          deviconSlug: 'typescript',
+        }),
+        tech('JavaScript', laneColors.frontend, {
+          simpleIconSlug: 'javascript',
+          deviconSlug: 'javascript',
+        }),
+        tech('Angular', laneColors.frontend, {
+          simpleIconSlug: 'angular',
+          deviconSlug: 'angular',
+        }),
+        tech('HTML5', laneColors.frontend, {
+          simpleIconSlug: 'html5',
+          deviconSlug: 'html5',
+        }),
       ],
     },
     {
-      category: t('categories.backend.title'),
-      color: theme.palette.terminal.green,
-      skills: [
-        'C# .NET',
-        'ASP.NET',
-        'RESTful APIs',
-        'Node.js',
-        'Strapi CMS',
-        t('categories.backend.skills.monolithicArchitecture'),
-        t('categories.backend.skills.apiDesign'),
+      title: isSrCyrl ? 'БЕКЕНД' : 'BACKEND',
+      color: laneColors.backend,
+      tech: [
+        tech('C#', laneColors.backend, { deviconSlug: 'csharp' }),
+        tech('.NET', laneColors.backend, {
+          simpleIconSlug: 'dotnet',
+          deviconSlug: 'dot-net',
+        }),
+        tech('ASP.NET Core', laneColors.backend, {
+          deviconSlug: 'dot-net',
+        }),
+        tech('Clojure', laneColors.backend, {
+          simpleIconSlug: 'clojure',
+          deviconSlug: 'clojure',
+        }),
+        tech('Node.js', laneColors.backend, {
+          simpleIconSlug: 'nodedotjs',
+          deviconSlug: 'nodejs',
+        }),
+        tech('Express', laneColors.backend, {
+          simpleIconSlug: 'express',
+          deviconSlug: 'express',
+        }),
       ],
     },
     {
-      category: t('categories.databases.title'),
-      color: theme.palette.terminal.magenta,
-      skills: [
-        'MSSQL Server',
-        'PostgreSQL',
-        'MongoDB',
-        t('categories.databases.skills.databaseDesign'),
-        t('categories.databases.skills.schemaMigration'),
-        'Redis Cache',
-        'NoSQL',
-        t('categories.databases.skills.dataModeling'),
-        t('categories.databases.skills.queryOptimization'),
+      title: isSrCyrl ? 'БАЗЕ ПОДАТАКА' : 'DATABASES',
+      color: laneColors.databases,
+      tech: [
+        tech('SQL Server', laneColors.databases, {
+          deviconSlug: 'microsoftsqlserver',
+          deviconVariant: 'plain',
+        }),
+        tech('PostgreSQL', laneColors.databases, {
+          simpleIconSlug: 'postgresql',
+          deviconSlug: 'postgresql',
+        }),
+        tech('Redis', laneColors.databases, {
+          simpleIconSlug: 'redis',
+          deviconSlug: 'redis',
+        }),
+        tech('MongoDB', laneColors.databases, {
+          simpleIconSlug: 'mongodb',
+          deviconSlug: 'mongodb',
+        }),
+        tech('MySQL', laneColors.databases, {
+          simpleIconSlug: 'mysql',
+          deviconSlug: 'mysql',
+        }),
+        tech('Neo4j', laneColors.databases, {
+          simpleIconSlug: 'neo4j',
+          deviconSlug: 'neo4j',
+        }),
       ],
     },
     {
-      category: t('categories.blockchain.title'),
-      color: theme.palette.terminal.yellow,
-      skills: [
-        'Web3Auth',
-        'Cardano',
-        t('categories.blockchain.skills.nftMinting'),
-        'CIP-68 Standard',
-        t('categories.blockchain.skills.cryptoWallets'),
-        t('categories.blockchain.skills.blockchainIntegration'),
-        t('categories.blockchain.skills.decentralizedVoting'),
+      title: isSrCyrl ? 'CLOUD И DEVOPS' : 'CLOUD & DEVOPS',
+      color: laneColors.cloud,
+      tech: [
+        tech('Microsoft Azure', laneColors.cloud, {
+          deviconSlug: 'azure',
+        }),
+        tech('Docker', laneColors.cloud, {
+          simpleIconSlug: 'docker',
+          deviconSlug: 'docker',
+        }),
+        tech('GitHub Actions', laneColors.cloud, { simpleIconSlug: 'githubactions' }),
+        tech('Kubernetes', laneColors.cloud, {
+          simpleIconSlug: 'kubernetes',
+          deviconSlug: 'kubernetes',
+        }),
+        tech('AWS', laneColors.cloud, {
+          customUrls: ['/icons/aws.svg'],
+          deviconSlug: 'amazonwebservices',
+        }),
+        tech('OpenTelemetry', laneColors.cloud, {
+          simpleIconSlug: 'opentelemetry',
+        }),
       ],
     },
     {
-      category: t('categories.cloud.title'),
-      color: theme.palette.terminal.cyan,
-      skills: [
-        'Microsoft Azure',
-        'AWS',
-        'Docker/Docker Compose',
-        'Azure DevOps',
-        'CI/CD',
-        'Qovery',
-        'Azure Key Vault',
-        'Kafka',
-        t('categories.cloud.skills.deploymentAutomation'),
-      ],
-    },
-    {
-      category: t('categories.integration.title'),
-      color: theme.palette.terminal.green,
-      skills: [
-        'Hubspot CMS',
-        'Stripe Payments',
-        'SharePoint',
-        'Power BI',
-        'Power Automate',
-        'Microsoft Identity Manager',
-        'Azure AD',
-        t('categories.integration.skills.eventDrivenArchitecture'),
-        t('categories.integration.skills.apiIntegration'),
-      ],
-    },
-    {
-      category: t('categories.practices.title'),
-      color: theme.palette.terminal.magenta,
-      skills: [
-        t('categories.practices.skills.unitTesting'),
-        t('categories.practices.skills.testDrivenDevelopment'),
-        t('categories.practices.skills.agileMethodologies'),
-        t('categories.practices.skills.codeReviews'),
-        t('categories.practices.skills.gitVersionControl'),
-        t('categories.practices.skills.cleanCode'),
-        t('categories.practices.skills.solidPrinciples'),
-        t('categories.practices.skills.designPatterns'),
-        t('categories.practices.skills.documentation'),
-        t('categories.practices.skills.performanceOptimization'),
-      ],
-    },
-    {
-      category: t('categories.specialized.title'),
-      color: theme.palette.terminal.yellow,
-      skills: [
-        t('categories.specialized.skills.enterpriseSolutions'),
-        t('categories.specialized.skills.governmentApplications'),
-        t('categories.specialized.skills.insuranceSystems'),
-        t('categories.specialized.skills.multiTenantArchitecture'),
-        t('categories.specialized.skills.identityManagement'),
-        t('categories.specialized.skills.regulatoryCompliance'),
-        t('categories.specialized.skills.dataSecurity'),
-        t('categories.specialized.skills.legacySystemMigration'),
+      title: isSrCyrl ? 'ИНТЕГРАЦИЈЕ' : 'INTEGRATIONS',
+      color: laneColors.integrations,
+      tech: [
+        tech('API Integration', laneColors.integrations, { simpleIconSlug: 'fastapi' }),
+        tech('Payment Integrations', laneColors.integrations, {
+          simpleIconSlug: 'paypal',
+          deviconSlug: 'paypal',
+        }),
+        tech('Apache Kafka', laneColors.integrations, {
+          simpleIconSlug: 'apachekafka',
+          deviconSlug: 'apachekafka',
+        }),
+        tech('Swagger / OpenAPI', laneColors.integrations, {
+          simpleIconSlug: 'swagger',
+        }),
+        tech('Auth & RBAC', laneColors.integrations, { simpleIconSlug: 'auth0' }),
+        tech('CRM / ERP (Salesforce)', laneColors.integrations, {
+          deviconSlug: 'salesforce',
+        }),
       ],
     },
   ];
 
+  const content = isSr
+    ? {
+        title: isSrCyrl
+          ? 'ТЕХНОЛОГИЈЕ И СТУДИО КАПАЦИТЕТИ'
+          : 'TEHNOLOGIJE I STUDIO KAPACITETI',
+        subtitle: isSrCyrl
+          ? 'Frontend, backend, базе података, cloud/devops и интеграције.'
+          : 'Frontend, backend, baze podataka, cloud/devops i integracije.',
+        lanes,
+      }
+    : {
+        title: 'TECHNOLOGY & STUDIO CAPABILITIES',
+        subtitle: 'Frontend, backend, databases, cloud/devops, and integrations.',
+        lanes,
+      };
+
   return (
-    <Box
-      component="section"
-      sx={{
-        py: { xs: 2, sm: 3, md: 4 },
-      }}
-    >
+    <Box component="section" sx={{ py: { xs: 2, sm: 3, md: 4 } }}>
       <Container maxWidth="xl">
         <Card
           className="terminal-window"
@@ -165,7 +330,7 @@ export default function Skills() {
               variant="h3"
               component="h2"
               sx={{
-                mb: { xs: 3, sm: 4 },
+                mb: { xs: 1.5, sm: 2 },
                 color: theme.palette.terminal.text,
                 fontSize: {
                   xs: '1.5rem',
@@ -174,139 +339,90 @@ export default function Skills() {
                   lg: '3rem',
                 },
                 textAlign: 'center',
-                wordBreak: 'break-word',
-                lineHeight: { xs: 1.2, md: 1.167 },
               }}
             >
               <HighlightedText
-                text={t('skillsAndExpertise')}
-                highlightIndices={highlightFirstLetters(
-                  t('skillsAndExpertise')
-                )}
+                text={content.title}
+                highlightIndices={highlightFirstLetters(content.title)}
                 highlightColor={theme.palette.terminal.green}
               />
             </Typography>
-            <Box
+
+            <Typography
+              variant="body1"
               sx={{
-                display: 'grid',
-                gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' },
-                gap: { xs: 2, sm: 3 },
-                gridAutoRows: 'minmax(auto, 1fr)', // Make rows equal height
+                color: theme.palette.terminal.textSecondary,
+                textAlign: 'center',
+                mb: { xs: 3, sm: 4 },
+                maxWidth: '800px',
+                mx: 'auto',
               }}
             >
-              {skillCategories.map((category, index) => (
+              {content.subtitle}
+            </Typography>
+
+            <Box
+              sx={{
+                backgroundColor: theme.palette.terminal.header,
+                border: `1px solid ${theme.palette.terminal.border}`,
+                borderRadius: 1,
+                overflow: 'hidden',
+              }}
+            >
+              {content.lanes.map((lane, laneIndex) => (
                 <Box
-                  key={index}
+                  key={lane.title}
                   sx={{
-                    p: { xs: 2, sm: 3 },
-                    backgroundColor: theme.palette.terminal.header,
-                    border: `1px solid ${theme.palette.terminal.border}`,
-                    borderRadius: 1,
-                    display: 'flex',
-                    flexDirection: 'column',
+                    px: { xs: 1.5, sm: 2.5 },
+                    py: { xs: 1.5, sm: 2 },
+                    borderBottom:
+                      laneIndex !== content.lanes.length - 1
+                        ? `1px solid ${theme.palette.terminal.border}`
+                        : 'none',
+                    display: 'grid',
+                    gridTemplateColumns: { xs: '1fr', md: '240px 1fr' },
+                    gap: { xs: 1.5, md: 2 },
+                    alignItems: 'center',
                   }}
                 >
                   <Typography
-                    variant="h5"
-                    component="h3"
+                    variant="subtitle2"
                     sx={{
-                      mb: { xs: 1.5, sm: 2 },
-                      color: theme.palette.terminal.text,
-                      fontSize: { xs: '1rem', sm: '1.25rem', md: '1.5rem' },
-                      wordBreak: 'break-word',
+                      color: lane.color,
+                      fontWeight: 'bold',
+                      letterSpacing: '0.06em',
+                      fontSize: { xs: '0.75rem', sm: '0.85rem' },
                     }}
                   >
-                    <HighlightedText
-                      text={category.category}
-                      highlightIndices={highlightFirstLetters(
-                        category.category
-                      )}
-                      highlightColor={category.color}
-                    />
+                    {lane.title}
                   </Typography>
 
                   <Box
                     sx={{
-                      fontFamily:
-                        'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-                      fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                      flex: 1,
+                      display: 'grid',
+                      gridTemplateColumns: {
+                        xs: 'repeat(3, minmax(0, 1fr))',
+                        sm: 'repeat(6, minmax(0, 1fr))',
+                      },
+                      gap: { xs: 1, sm: 1.25 },
                     }}
                   >
-                    {category.skills.map((skill, skillIndex) => (
-                      <Box
-                        key={skillIndex}
-                        sx={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          mb: { xs: 0.25, sm: 0.5 },
-                          py: { xs: 0.25, sm: 0.5 },
-                          '&:hover': {
-                            backgroundColor: theme.palette.terminal.border,
-                            borderRadius: '4px',
-                            px: { xs: 0.5, sm: 1 },
-                            mx: { xs: -0.5, sm: -1 },
-                            transition: 'all 0.2s ease-in-out',
-                          },
-                        }}
-                      >
-                        <Typography
-                          component="span"
-                          sx={{
-                            color: category.color,
-                            mr: { xs: 0.5, sm: 1 },
-                            fontSize: { xs: '0.625rem', sm: '0.75rem' },
-                          }}
-                        >
-                          ▸
-                        </Typography>
-                        <Typography
-                          component="span"
-                          sx={{
-                            color: theme.palette.terminal.textSecondary,
-                            fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                            wordBreak: 'break-word',
-                          }}
-                        >
-                          {skill}
-                        </Typography>
-                      </Box>
+                    {lane.tech.map((item) => (
+                      <Tooltip key={item.name} title={item.name} arrow>
+                        <Box>
+                          <TechTile
+                            name={item.name}
+                            iconUrls={item.iconUrls}
+                            color={lane.color}
+                            border={theme.palette.terminal.border}
+                            background={theme.palette.terminal.background}
+                          />
+                        </Box>
+                      </Tooltip>
                     ))}
                   </Box>
                 </Box>
               ))}
-            </Box>
-            <Box
-              sx={{
-                mt: { xs: 2, sm: 3 },
-                p: { xs: 1.5, sm: 2 },
-                backgroundColor: theme.palette.terminal.header,
-                border: `1px solid ${theme.palette.terminal.border}`,
-                borderRadius: 1,
-                fontFamily:
-                  'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
-              }}
-            >
-              <Typography
-                variant="body2"
-                sx={{
-                  color: theme.palette.terminal.cyan,
-                  fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                  mb: { xs: 0.5, sm: 1 },
-                }}
-              >
-                $ echo &quot;Continuously learning and adapting to emerging
-                technologies&quot;
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={{
-                  color: theme.palette.terminal.green,
-                  fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                }}
-              >
-                &gt; Building scalable solutions from web2 to web3 ecosystems
-              </Typography>
             </Box>
           </CardContent>
         </Card>

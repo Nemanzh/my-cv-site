@@ -15,88 +15,144 @@ interface HistoryEntry {
 }
 
 const commands: Record<string, Command> = {
-  whoami: {
-    input: 'whoami',
+  whoarewe: {
+    input: 'whoarewe',
     output: [
-      'nemanja-radulovic',
-      'Full Stack Developer | Blockchain Enthusiast',
-      'Location: Stockholm, Sweden 🇸🇪',
+      'Nemanzh Software Studio',
+      'Company profile: custom software partner for SMEs and enterprise teams',
+      'Core stack: .NET / C# / Azure + Next.js frontends',
     ],
   },
-  'ls skills': {
-    input: 'ls skills',
+  'ls services': {
+    input: 'ls services',
     output: [
-      'frontend/',
-      'backend/',
-      'blockchain/',
-      'cloud/',
-      'databases/',
-      'devops/',
+      'product-engineering/',
+      'legacy-modernization/',
+      'system-integrations/',
+      'managed-delivery/',
       '',
-      'Use "cat skills/[folder]" to explore',
+      'Use "cat services/[folder]" to inspect scope',
     ],
   },
-  'cat skills/frontend': {
-    input: 'cat skills/frontend',
+  'cat services/product-engineering': {
+    input: 'cat services/product-engineering',
     output: [
-      '📦 Frontend Technologies:',
-      '  ⚛️  React & Next.js',
-      '  📘 TypeScript',
-      '  🎨 Material-UI',
-      '  📱 Responsive Design',
+      'Service: Product Engineering',
+      '  Discovery and technical planning',
+      '  Full-stack implementation (.NET + Next.js)',
+      '  QA automation and release pipelines',
+      '  SLA-backed post-launch support',
     ],
   },
-  'cat skills/backend': {
-    input: 'cat skills/backend',
+  'cat services/legacy-modernization': {
+    input: 'cat services/legacy-modernization',
     output: [
-      '🔧 Backend Technologies:',
-      '  🟢 Node.js',
-      '  🔷 C# .NET',
-      '  🌐 RESTful APIs',
-      '  🏗️  Microservices',
+      'Service: Legacy Modernization',
+      '  Monolith to modular architecture',
+      '  Incremental migration with zero-downtime strategy',
+      '  Performance, security and maintainability uplift',
+      '  Team onboarding + transition documentation',
     ],
   },
-  'cat skills/blockchain': {
-    input: 'cat skills/blockchain',
+  'cat services/system-integrations': {
+    input: 'cat services/system-integrations',
     output: [
-      '⛓️  Blockchain & Web3:',
-      '  ₳  Cardano Development',
-      '  🖼️  NFT Platforms',
-      '  🔐 Web3Auth',
-      '  🗳️  Decentralized Voting',
+      'Service: System Integrations',
+      '  ERP/CRM/Billing/API integration programs',
+      '  Event-driven workflows and webhooks',
+      '  RBAC, SSO and audit logging',
+      '  Integration observability and alerting',
     ],
   },
-  'git status': {
-    input: 'git status',
+  'cat services/managed-delivery': {
+    input: 'cat services/managed-delivery',
     output: [
-      'On branch main',
-      'Your portfolio is up to date.',
+      'Service: Managed Delivery',
+      '  Quarterly roadmap execution',
+      '  Dedicated delivery lead and weekly reporting',
+      '  Scope, risk and budget tracking',
+      '  Continuous optimization of delivery metrics',
+    ],
+  },
+  'ls case-studies': {
+    input: 'ls case-studies',
+    output: [
+      'nft-marketplace-platform/',
+      'enterprise-app-delivery/',
+      'insurance-system-modernization/',
+      'internal-reporting-tools/',
       '',
-      'nothing to commit, working tree clean ✅',
+      'Use "cat case-studies/[folder]" for outcomes',
     ],
   },
-  experience: {
-    input: 'experience',
+  'cat case-studies/nft-marketplace-platform': {
+    input: 'cat case-studies/nft-marketplace-platform',
     output: [
-      '💼 Professional Journey:',
+      'Client: Digital product company',
+      'Role: Full Stack Developer (Apr 2024 - Present)',
+      'Outcome: built NFT marketplace handling 10K+ transactions',
+      'Impact: reduced API response time by 40% and led 4-dev team',
+    ],
+  },
+  'cat case-studies/enterprise-app-delivery': {
+    input: 'cat case-studies/enterprise-app-delivery',
+    output: [
+      'Client: Enterprise consulting partner',
+      'Role: Full Stack Developer (2022 - 2024)',
+      'Scope: enterprise apps with React/Next.js and .NET services',
+      'Impact: delivered 15+ projects and cut bugs by 60% with test automation',
+    ],
+  },
+  'cat case-studies/insurance-system-modernization': {
+    input: 'cat case-studies/insurance-system-modernization',
+    output: [
+      'Client: Insurance organization',
+      'Role: Software Developer (2020 - 2022)',
+      'Goal: modernize insurance systems while delivering new features',
+      'Impact: improved system performance by 35%',
+    ],
+  },
+  'cat case-studies/internal-reporting-tools': {
+    input: 'cat case-studies/internal-reporting-tools',
+    output: [
+      'Client: Financial services branch office',
+      'Role: System Developer (2017 - 2020)',
+      'Scope: internal reporting tools and core system maintenance',
+      'Impact: reduced manual data processing time by 50%',
+    ],
+  },
+  'delivery status': {
+    input: 'delivery status',
+    output: [
+      'Delivery board snapshot:',
+      '  active_accounts: 8',
+      '  on_track: 7',
+      '  at_risk: 1',
+      '  sprint_velocity: +12% QoQ',
       '',
-      '2024-Present: Senior Developer @ Chainapp Technologies',
-      '2022-2024: Full Stack Developer @ Insicon AB',
-      '2020-2022: Software Developer @ Saga Länsförsäkringar',
-      '2017-2020: System Developer @ Länsförsäkringar Göteborg',
+      'All critical incidents resolved within SLA this quarter.',
+    ],
+  },
+  process: {
+    input: 'process',
+    output: [
+      'Company delivery process:',
       '',
-      'Total experience: 8+ years',
+      '1) Discovery workshop and architecture baseline',
+      '2) Milestone-based implementation (2-week sprints)',
+      '3) Quality gates: code review, tests, security checks',
+      '4) Managed rollout and measurable business KPIs',
     ],
   },
   contact: {
     input: 'contact',
     output: [
-      '📧 Email: jobs@nemanjaradulovic.dev',
-      '💼 LinkedIn: linkedin.com/in/nemanjaradulovic',
-      '🐙 GitHub: github.com/nemanjaradulovic',
-      '📍 Location: Belgrade, Serbia',
+      'Email: jobs@nemanjaradulovic.dev',
+      'LinkedIn: linkedin.com/in/nemanjaradulovic',
+      'GitHub: github.com/nemanjaradulovic',
+      'Location: Belgrade, Serbia',
       '',
-      'Available for new opportunities! 🚀',
+      'Open for new projects and long-term partnerships.',
     ],
   },
   help: {
@@ -104,16 +160,18 @@ const commands: Record<string, Command> = {
     output: [
       'Available commands:',
       '',
-      '  whoami           - About me',
-      '  ls skills        - List skill categories',
-      '  cat skills/[dir] - View specific skills',
-      '  experience       - Work history',
-      '  git status       - Current status',
+      '  whoarewe         - Company overview',
+      '  ls services      - List service lines',
+      '  cat services/[x] - View service details',
+      '  ls case-studies  - List project outcomes',
+      '  cat case-studies/[x] - View CV-based case study',
+      '  delivery status  - Operational snapshot',
+      '  process          - Delivery workflow',
       '  contact          - Contact information',
       '  clear            - Clear terminal',
       '  help             - Show this help',
       '',
-      'Try typing any command above! 💻',
+      'Try typing any command above.',
     ],
   },
 };
@@ -131,10 +189,10 @@ export default function InteractiveTerminal() {
       {
         input: '',
         output: [
-          "Welcome to Nemanzh's Terminal! 💻",
+          'Welcome to Nemanzh Software Studio Terminal.',
           '',
           'Type "help" to see available commands.',
-          'Try "whoami" or "ls skills" to get started!',
+          'Try "whoarewe" or "ls services" to get started.',
           '',
         ],
       },
@@ -230,7 +288,7 @@ export default function InteractiveTerminal() {
                   fontSize: { xs: '0.75rem', sm: '0.875rem' },
                 }}
               >
-                nemanja@cv:~$
+                nemanzh@softwarestudio:~$
               </Typography>
               <Typography
                 component="span"
@@ -279,7 +337,7 @@ export default function InteractiveTerminal() {
             fontSize: { xs: '0.75rem', sm: '0.875rem' },
           }}
         >
-          nemanzh@cv:~$
+          nemanzh@softwarestudio:~$
         </Typography>
 
         <Box

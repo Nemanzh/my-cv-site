@@ -1,20 +1,21 @@
 {
   "Metadata": {
-    "title": "Nemanzh - Portfolio programera",
-    "description": "Iskusan programer i kreativni rešavač problema specijalizovan za moderne web tehnologije"
+    "title": "Nemanzh",
+    "description": "Softverski studio za moderne web proizvode, poslovni softver i backend platforme sa Microsoft tehnologijama u fokusu"
   },
   "Hero": {
-    "name": "NEMANJA RADULOVIĆ",
-    "echo": "$ echo 'Modernizujem enterprise monolite i gradim robusne web aplikacije'",
-    "bio": "Full‑stack sam programer sa preko 6 godina iskustva u pretvaranju složenih problema u čist, održiv kod—bilo da se radi o pravljenju čvrstih API‑ja ili uglađenih front‑end‑ova. Kada ne kodiram, možete me naći na podlozi za borilačke veštine, dok bacam loptu u koš, ili igram najnovije igre. Tu istu ravnotežu i fokus unosim u svaki projekat.",
+    "name": "NEMANZH SOFTWARE STUDIO",
+    "echo": "$ echo 'Gradimo moderne softverske proizvode i poslovne sisteme'",
+    "bio": "Nemanzh Software Studio razvija enterprise web aplikacije i blockchain proizvode za rastuće i velike timove. Fokus nam je na najsavremenijim i pouzdanim digitalnim rešenjima koja unapređuju procese, otvaraju nove izvore prihoda i rastu zajedno sa biznisom.",
     "location": "BEOGRAD, SRBIJA",
-    "email": "NEMANJA.RADULOVIC1990@GMAIL.COM",
+    "email": "CONTACT@NEMANZH.DEV",
     "github": "NEMANZH",
-    "linkedin": "NEMANJA-RADULOVIĆ",
-    "explorePortfolio": "ISTRAŽITE MOJ RAD",
-    "readyToCollaborate": "Hajde da napravimo nešto sjajno.",
-    "availableForFreelance": "Otvoren za fridens i full‑time poslove • Povežimo se! 🚀",
-    "tryTyping": "💡 Probajte komande kao što su",
+    "linkedin": "NEMANJA-RADULOVIC",
+    "explorePortfolio": "ISTRAZITE USLUGE STUDIJA",
+    "cta": "Pokrenimo projekat",
+    "readyToCollaborate": "Spremni da izgradimo koristan softver za vas biznis?",
+    "availableForFreelance": "Dostupni za razvoj proizvoda, modernizaciju sistema, API integracije i dugorocna tehnicka partnerstva.",
+    "tryTyping": "Probajte komande kao sto su",
     "or": "ili"
   },
   "WorkExperience": {

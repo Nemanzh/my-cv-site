@@ -1,20 +1,21 @@
 {
   "Metadata": {
-    "title": "Nemanzh - Developer Portfolio",
-    "description": "Seasoned Developer and Creative Problem Solver specializing in modern web technologies"
+    "title": "Nemanzh",
+    "description": "Software studio building modern web products, custom business systems, and Microsoft-first backend platforms"
   },
   "Hero": {
-    "name": "NEMANJA RADULOVIC",
-    "echo": "$ echo 'Modernizing enterprise monoliths & building robust web apps'",
-    "bio": "I’m a full‑stack developer with 6+ years of experience turning complex problems into clean, maintainable code—whether that’s crafting rock‑solid APIs or polished front‑ends. When I’m not coding, you’ll catch me on the martial arts mat, shooting hoops, or diving into the latest game. I bring that same balance and focus to every project.",
+    "name": "NEMANZH SOFTWARE STUDIO",
+    "echo": "$ echo 'We build modern software products and custom business systems'",
+    "bio": "Nemanzh Software Studio builds enterprise web applications and blockchain products for growing and established teams. We focus on modern, reliable digital products that improve operations, launch new revenue streams, and scale with business growth.",
     "location": "BELGRADE, SERBIA",
-    "email": "NEMANJA.RADULOVIC1990@GMAIL.COM",
-    "github": "NEMANZH",
-    "linkedin": "NEMANJA-RADULOVIĆ",
-    "explorePortfolio": "DISCOVER MY WORK",
-    "readyToCollaborate": "Let’s build something great.",
-    "availableForFreelance": "Open to freelance and full‑time roles • Let’s connect! 🚀",
-    "tryTyping": "💡 Try commands like",
+    "email": "CONTACT@NEMANZH.DEV",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "explorePortfolio": "EXPLORE STUDIO SERVICES",
+    "cta": "Start a project",
+    "readyToCollaborate": "Ready to build useful software for your business?",
+    "availableForFreelance": "Available for product builds, modernization, API integrations, and long-term technical partnerships.",
+    "tryTyping": "Try commands like",
     "or": "or"
   },
   "WorkExperience": {
