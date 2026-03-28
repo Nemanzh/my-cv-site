@@ -9,15 +9,19 @@ import {
   Typography,
   IconButton,
   Tooltip,
+  Link as MuiLink,
 } from '@mui/material';
 import { LightMode, DarkMode } from '@mui/icons-material';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useThemeMode } from './ThemeProvider';
 import { useTerminalColors } from '@/hooks/userTerminalColors';
+import { useLocale } from 'next-intl';
 
 export default function Header() {
   const colors = useTerminalColors();
   const { mode, toggleTheme } = useThemeMode();
+  const locale = useLocale();
+  const isSerbian = locale === 'sr' || locale === 'sr-Cyrl';
 
   return (
     <AppBar
@@ -99,6 +103,28 @@ export default function Header() {
                 _
               </Typography>
             </Typography>
+          </Box>
+
+          <Box
+            sx={{
+              display: { xs: 'none', md: 'flex' },
+              alignItems: 'center',
+              gap: 2.5,
+              mr: 2,
+            }}
+          >
+            <MuiLink href="#services" underline="hover" sx={{ color: colors.textSecondary }}>
+              {isSerbian ? 'Usluge' : 'Services'}
+            </MuiLink>
+            <MuiLink href="#process" underline="hover" sx={{ color: colors.textSecondary }}>
+              {isSerbian ? 'Proces' : 'Process'}
+            </MuiLink>
+            <MuiLink href="#skills" underline="hover" sx={{ color: colors.textSecondary }}>
+              {isSerbian ? 'Tehnologije' : 'Tech Stack'}
+            </MuiLink>
+            <MuiLink href="#contact" underline="hover" sx={{ color: colors.textSecondary }}>
+              {isSerbian ? 'Kontakt' : 'Contact'}
+            </MuiLink>
           </Box>
 
           <Box

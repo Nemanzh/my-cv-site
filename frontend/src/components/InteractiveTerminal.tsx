@@ -178,26 +178,21 @@ const commands: Record<string, Command> = {
 
 export default function InteractiveTerminal() {
   const theme = useTheme();
-  const [history, setHistory] = useState<HistoryEntry[]>([]);
+  const [history, setHistory] = useState<HistoryEntry[]>([
+    {
+      input: '',
+      output: [
+        'Welcome to Nemanzh Software Studio Terminal.',
+        '',
+        'Type "help" to see available commands.',
+        'Try "whoarewe" or "ls services" to get started.',
+        '',
+      ],
+    },
+  ]);
   const [currentInput, setCurrentInput] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
   const terminalRef = useRef<HTMLDivElement>(null);
-
-  // Welcome message on mount
-  useEffect(() => {
-    setHistory([
-      {
-        input: '',
-        output: [
-          'Welcome to Nemanzh Software Studio Terminal.',
-          '',
-          'Type "help" to see available commands.',
-          'Try "whoarewe" or "ls services" to get started.',
-          '',
-        ],
-      },
-    ]);
-  }, []);
 
   useEffect(() => {
     if (terminalRef.current) {

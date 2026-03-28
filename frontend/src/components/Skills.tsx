@@ -129,6 +129,8 @@ function TechTile({
           component="img"
           src={currentIconUrl}
           alt={name}
+          loading="lazy"
+          decoding="async"
           onError={handleImageError}
           sx={{
             width: { xs: 18, sm: 22 },
@@ -307,7 +309,7 @@ export default function Skills() {
       };
 
   return (
-    <Box component="section" sx={{ py: { xs: 2, sm: 3, md: 4 } }}>
+    <Box component="section" id="skills" sx={{ py: { xs: 2, sm: 3, md: 4 } }}>
       <Container maxWidth="xl">
         <Card
           className="terminal-window"

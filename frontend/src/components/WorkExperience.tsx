@@ -114,7 +114,7 @@ export default function WorkExperience() {
       };
 
   return (
-    <Box component="section" sx={{ py: { xs: 2, sm: 3, md: 4 } }}>
+    <Box component="section" id="services" sx={{ py: { xs: 2, sm: 3, md: 4 } }}>
       <Container maxWidth="xl">
         <Card
           className="terminal-window"

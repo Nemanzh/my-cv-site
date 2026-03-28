@@ -124,7 +124,7 @@ export default function Education() {
       };
 
   return (
-    <Box component="section" sx={{ py: { xs: 2, sm: 3, md: 4 } }}>
+    <Box component="section" id="process" sx={{ py: { xs: 2, sm: 3, md: 4 } }}>
       <Container maxWidth="xl">
         <Card
           className="terminal-window"

@@ -39,6 +39,7 @@ export default function ContactUs() {
   return (
     <Box
       component="section"
+      id="contact"
       sx={{ py: { xs: 2, sm: 3, md: 4 }, pb: { xs: 4, sm: 6 } }}
     >
       <Container maxWidth="xl">

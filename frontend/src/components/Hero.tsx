@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import dynamic from 'next/dynamic';
 import {
   Box,
   Container,
@@ -13,9 +14,12 @@ import {
   Button,
 } from '@mui/material';
 import HighlightedText, { highlightFirstLetters } from './HighlightedText';
-import InteractiveTerminal from './InteractiveTerminal';
 import { Email, GitHub, LinkedIn, LocationOn } from '@mui/icons-material';
 import { useTranslations } from 'next-intl';
+
+const InteractiveTerminal = dynamic(() => import('./InteractiveTerminal'), {
+  ssr: false,
+});
 
 export default function Hero() {
   const theme = useTheme();
@@ -24,6 +28,7 @@ export default function Hero() {
   return (
     <Box
       component="section"
+      id="home"
       sx={{
         py: { xs: 2, sm: 3, md: 4 },
       }}
@@ -129,6 +134,25 @@ export default function Hero() {
               >
                 {t('echo')}
               </Typography>
+
+              <Stack
+                direction={{ xs: 'column', sm: 'row' }}
+                spacing={{ xs: 1, sm: 2 }}
+                sx={{ mb: { xs: 2, sm: 3 } }}
+              >
+                <MuiLink href="#services" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
+                  Services
+                </MuiLink>
+                <MuiLink href="#process" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
+                  Process
+                </MuiLink>
+                <MuiLink href="#skills" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
+                  Tech Stack
+                </MuiLink>
+                <MuiLink href="#contact" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
+                  Contact
+                </MuiLink>
+              </Stack>
 
               <Stack
                 direction={{ xs: 'column', md: 'row' }}

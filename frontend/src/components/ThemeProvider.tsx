@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import {
   ThemeProvider as MuiThemeProvider,
   createTheme,
@@ -110,18 +110,6 @@ export default function ThemeProvider({
   children: React.ReactNode;
 }) {
   const [mode, setMode] = useState<ThemeMode>('dark');
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as ThemeMode;
-    if (savedTheme) {
-      setMode(savedTheme);
-    } else {
-      const systemPrefersDark = window.matchMedia(
-        '(prefers-color-scheme: dark)'
-      ).matches;
-      setMode(systemPrefersDark ? 'dark' : 'light');
-    }
-  }, []);
 
   const toggleTheme = () => {
     const newMode = mode === 'dark' ? 'light' : 'dark';
