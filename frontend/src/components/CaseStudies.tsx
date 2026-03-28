@@ -161,7 +161,7 @@ export default function CaseStudies() {
             <Box
               sx={{
                 display: 'grid',
-                gridTemplateColumns: { xs: '1fr', md: '1fr 1fr', xl: '1fr 1fr 1fr' },
+                gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr 1fr' },
                 gap: { xs: 2, sm: 3 },
               }}
             >
