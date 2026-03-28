@@ -143,11 +143,17 @@ export default function Hero() {
                 <MuiLink href="#services" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
                   Services
                 </MuiLink>
+                <MuiLink href="#case-studies" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
+                  Case Studies
+                </MuiLink>
                 <MuiLink href="#process" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
                   Process
                 </MuiLink>
                 <MuiLink href="#skills" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
                   Tech Stack
+                </MuiLink>
+                <MuiLink href="#faq" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
+                  FAQ
                 </MuiLink>
                 <MuiLink href="#contact" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
                   Contact

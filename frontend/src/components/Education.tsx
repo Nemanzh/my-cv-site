@@ -7,6 +7,7 @@ import {
   Typography,
   Card,
   CardContent,
+  Button,
   useTheme,
 } from '@mui/material';
 import HighlightedText, { highlightFirstLetters } from './HighlightedText';
@@ -289,6 +290,27 @@ export default function Education() {
                   ))}
                 </Box>
               </Box>
+            </Box>
+
+            <Box sx={{ textAlign: 'center', mt: { xs: 3, sm: 4 } }}>
+              <Button
+                component="a"
+                href="#contact"
+                sx={{
+                  border: `1px solid ${theme.palette.terminal.magenta}`,
+                  color: theme.palette.terminal.magenta,
+                  backgroundColor: theme.palette.terminal.header,
+                  textTransform: 'none',
+                  px: 2.5,
+                  py: 1,
+                  '&:hover': {
+                    backgroundColor: theme.palette.terminal.magenta,
+                    color: theme.palette.terminal.background,
+                  },
+                }}
+              >
+                {isSr ? (isSrCyrl ? 'Резервишите intro позив' : 'Rezervisite intro poziv') : 'Book intro call'}
+              </Button>
             </Box>
           </CardContent>
         </Card>

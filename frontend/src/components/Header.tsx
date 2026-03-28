@@ -116,11 +116,17 @@ export default function Header() {
             <MuiLink href="#services" underline="hover" sx={{ color: colors.textSecondary }}>
               {isSerbian ? 'Usluge' : 'Services'}
             </MuiLink>
+            <MuiLink href="#case-studies" underline="hover" sx={{ color: colors.textSecondary }}>
+              {isSerbian ? 'Studije slucaja' : 'Case Studies'}
+            </MuiLink>
             <MuiLink href="#process" underline="hover" sx={{ color: colors.textSecondary }}>
               {isSerbian ? 'Proces' : 'Process'}
             </MuiLink>
             <MuiLink href="#skills" underline="hover" sx={{ color: colors.textSecondary }}>
               {isSerbian ? 'Tehnologije' : 'Tech Stack'}
+            </MuiLink>
+            <MuiLink href="#faq" underline="hover" sx={{ color: colors.textSecondary }}>
+              FAQ
             </MuiLink>
             <MuiLink href="#contact" underline="hover" sx={{ color: colors.textSecondary }}>
               {isSerbian ? 'Kontakt' : 'Contact'}

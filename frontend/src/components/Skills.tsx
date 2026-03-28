@@ -7,6 +7,7 @@ import {
   Typography,
   Card,
   CardContent,
+  Button,
   useTheme,
   Tooltip,
 } from '@mui/material';
@@ -425,6 +426,27 @@ export default function Skills() {
                   </Box>
                 </Box>
               ))}
+            </Box>
+
+            <Box sx={{ textAlign: 'center', mt: { xs: 3, sm: 4 } }}>
+              <Button
+                component="a"
+                href="#contact"
+                sx={{
+                  border: `1px solid ${theme.palette.terminal.green}`,
+                  color: theme.palette.terminal.green,
+                  backgroundColor: theme.palette.terminal.header,
+                  textTransform: 'none',
+                  px: 2.5,
+                  py: 1,
+                  '&:hover': {
+                    backgroundColor: theme.palette.terminal.green,
+                    color: theme.palette.terminal.background,
+                  },
+                }}
+              >
+                {isSr ? (isSrCyrl ? 'Планирајте технички discovery' : 'Planirajte tehnicki discovery') : 'Plan technical discovery'}
+              </Button>
             </Box>
           </CardContent>
         </Card>

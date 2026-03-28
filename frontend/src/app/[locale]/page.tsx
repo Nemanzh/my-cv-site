@@ -4,6 +4,10 @@ import Hero from '@/components/Hero';
 import WorkExperience from '@/components/WorkExperience';
 import Education from '@/components/Education';
 import Skills from '@/components/Skills';
+import CaseStudies from '@/components/CaseStudies';
+import Testimonials from '@/components/Testimonials';
+import EngagementModels from '@/components/EngagementModels';
+import FaqClient from '@/components/FaqClient';
 import ContactUs from '@/components/ContactUs';
 import ClientPageWrapper from '@/components/ClientPageWrapper';
 import { routing } from '@/i18n/routing';
@@ -140,8 +144,12 @@ export default async function Home({
       <ClientPageWrapper>
         <Hero />
         <WorkExperience />
+        <CaseStudies />
         <Education />
+        <EngagementModels />
         <Skills />
+        <Testimonials />
+        <FaqClient />
         <ContactUs />
       </ClientPageWrapper>
     </>
