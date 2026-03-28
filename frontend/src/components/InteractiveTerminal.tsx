@@ -346,6 +346,7 @@ export default function InteractiveTerminal() {
           <input
             ref={inputRef}
             type="text"
+            aria-label="Terminal command input"
             value={currentInput}
             onChange={handleInputChange}
             onKeyUp={handleKeyPress}

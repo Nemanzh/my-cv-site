@@ -9,7 +9,6 @@ import {
   CardContent,
   Button,
   useTheme,
-  Tooltip,
 } from '@mui/material';
 import type { IconType } from 'react-icons';
 import { DiDotnet, DiMsqlServer } from 'react-icons/di';
@@ -69,11 +68,13 @@ function tech(
 }
 
 function TechTile({
+  name,
   icon,
   color,
   border,
   background,
 }: {
+  name: string;
   icon: IconType;
   color: string;
   border: string;
@@ -81,6 +82,9 @@ function TechTile({
 }) {
   return (
     <Box
+      title={name}
+      aria-label={name}
+      role="img"
       sx={{
         height: { xs: 42, sm: 48, md: 52 },
         border: `1px solid ${border}`,
@@ -304,16 +308,14 @@ export default function Skills() {
                     }}
                   >
                     {lane.tech.map((item) => (
-                      <Tooltip key={item.name} title={item.name} arrow>
-                        <Box>
-                          <TechTile
-                            icon={item.icon}
-                            color={lane.color}
-                            border={theme.palette.terminal.border}
-                            background={theme.palette.terminal.background}
-                          />
-                        </Box>
-                      </Tooltip>
+                      <TechTile
+                        key={item.name}
+                        name={item.name}
+                        icon={item.icon}
+                        color={lane.color}
+                        border={theme.palette.terminal.border}
+                        background={theme.palette.terminal.background}
+                      />
                     ))}
                   </Box>
                 </Box>

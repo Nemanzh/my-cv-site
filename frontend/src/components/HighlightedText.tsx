@@ -20,19 +20,42 @@ export default function HighlightedText({
 }: HighlightedTextProps) {
   const theme = useTheme();
   const defaultHighlightColor = highlightColor || theme.palette.terminal.cyan;
+  const highlightSet = React.useMemo(() => new Set(highlightIndices), [highlightIndices]);
+
+  const segments = React.useMemo(() => {
+    if (text.length === 0) {
+      return [];
+    }
+
+    const result: Array<{ text: string; highlight: boolean }> = [];
+    let current = text[0];
+    let currentHighlight = highlightSet.has(0);
+
+    for (let i = 1; i < text.length; i++) {
+      const isHighlighted = highlightSet.has(i);
+      if (isHighlighted === currentHighlight) {
+        current += text[i];
+        continue;
+      }
+      result.push({ text: current, highlight: currentHighlight });
+      current = text[i];
+      currentHighlight = isHighlighted;
+    }
+
+    result.push({ text: current, highlight: currentHighlight });
+    return result;
+  }, [text, highlightSet]);
 
   return (
     <Component className={className}>
-      {text.split('').map((char, index) => (
+      {segments.map((segment, index) => (
         <span
           key={index}
           style={{
-            color: highlightIndices.includes(index)
-              ? defaultHighlightColor
-              : 'inherit',
+            color: segment.highlight ? defaultHighlightColor : 'inherit',
           }}
         >
-          {char}
+          {segment.text}
         </span>
       ))}
     </Component>
