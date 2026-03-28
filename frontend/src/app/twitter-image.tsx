@@ -28,10 +28,9 @@ export default function TwitterImage() {
           Nemanzh Software Studio
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-          <div style={{ fontSize: 56, fontWeight: 700, lineHeight: 1.08 }}>
-            Next.js and .NET
-            <br />
-            Product Engineering
+          <div style={{ display: 'flex', flexDirection: 'column', fontSize: 56, fontWeight: 700, lineHeight: 1.08 }}>
+            <div>Next.js and .NET</div>
+            <div>Product Engineering</div>
           </div>
           <div style={{ fontSize: 27, color: '#c4b5fd', lineHeight: 1.22 }}>
             From idea to production: full-stack apps, APIs, integrations, and long-term maintenance

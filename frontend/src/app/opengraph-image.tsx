@@ -38,10 +38,9 @@ export default function OpenGraphImage() {
           </div>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
-          <div style={{ fontSize: 66, fontWeight: 700, lineHeight: 1.06 }}>
-            Nemanzh Software
-            <br />
-            Studio
+          <div style={{ display: 'flex', flexDirection: 'column', fontSize: 66, fontWeight: 700, lineHeight: 1.06 }}>
+            <div>Nemanzh Software</div>
+            <div>Studio</div>
           </div>
           <div style={{ fontSize: 30, color: '#93c5fd', maxWidth: 950, lineHeight: 1.25 }}>
             Modern web products, custom business systems, and Microsoft-first backend platforms
