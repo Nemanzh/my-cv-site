@@ -254,6 +254,7 @@ export default function Hero() {
                       >
                         <Typography
                           variant="h6"
+                          component="p"
                           sx={{
                             color: theme.palette.terminal.cyan,
                             fontFamily:
@@ -402,7 +403,7 @@ export default function Hero() {
                       alignItems: 'center',
                       gap: 1,
                       textDecoration: 'none',
-                      color: theme.palette.terminal.green,
+                      color: theme.palette.terminal.text,
                       minWidth: 'fit-content',
                       '&:hover': {
                         color: theme.palette.terminal.cyan,
@@ -439,7 +440,7 @@ export default function Hero() {
                       alignItems: 'center',
                       gap: 1,
                       textDecoration: 'none',
-                      color: theme.palette.terminal.textSecondary,
+                      color: theme.palette.terminal.text,
                       minWidth: 'fit-content',
                       '&:hover': {
                         color: theme.palette.terminal.cyan,
@@ -471,7 +472,7 @@ export default function Hero() {
                       alignItems: 'center',
                       gap: 1,
                       textDecoration: 'none',
-                      color: theme.palette.terminal.textSecondary,
+                      color: theme.palette.terminal.text,
                       minWidth: 'fit-content',
                       '&:hover': {
                         color: theme.palette.terminal.cyan,

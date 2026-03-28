@@ -293,7 +293,7 @@ export default function Testimonials() {
                     >
                       {`"${item.quote}"`}
                     </Typography>
-                    <Typography variant="subtitle2" sx={{ color: theme.palette.terminal.cyan }}>
+                    <Typography variant="subtitle2" component="p" sx={{ color: theme.palette.terminal.cyan }}>
                       {item.author}
                     </Typography>
                     <Typography variant="caption" sx={{ color: theme.palette.terminal.textSecondary }}>

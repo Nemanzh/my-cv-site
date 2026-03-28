@@ -140,7 +140,7 @@ export default function Faq() {
 
             <Box>
               {content.items.map((item, index) => {
-                const panelId = `faq-panel-${locale}-${index}`;
+                const panelId = `faq-region-${locale}-${index}`;
                 const headerId = `faq-header-${locale}-${index}`;
 
                 return (
@@ -219,7 +219,6 @@ export default function Faq() {
                     </Box>
                   </AccordionSummary>
                   <AccordionDetails
-                    id={panelId}
                     sx={{
                       borderTop: `1px dashed ${theme.palette.terminal.border}`,
                       px: { xs: 1.5, sm: 2 },

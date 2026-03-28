@@ -185,6 +185,7 @@ export default function Education() {
                   </Typography>
                   <Typography
                     variant="h6"
+                    component="h3"
                     sx={{ color: phaseColors[index] ?? theme.palette.terminal.green, mb: 1 }}
                   >
                     {phase.title}

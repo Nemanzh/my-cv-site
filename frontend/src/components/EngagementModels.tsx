@@ -230,7 +230,7 @@ export default function EngagementModels() {
                     </Typography>
                     {card.icon}
                   </Box>
-                  <Typography variant="h6" sx={{ color: card.accent, mb: 1 }}>
+                  <Typography variant="h6" component="h3" sx={{ color: card.accent, mb: 1 }}>
                     {card.title}
                   </Typography>
                   <Typography variant="body2" sx={{ color: theme.palette.terminal.textSecondary, mb: 1.25 }}>
@@ -238,6 +238,7 @@ export default function EngagementModels() {
                   </Typography>
                   <Typography
                     variant="subtitle2"
+                    component="p"
                     sx={{ color: theme.palette.terminal.text, fontWeight: 700, mb: 0.6 }}
                   >
                     {content.labels.includes}
@@ -283,7 +284,7 @@ export default function EngagementModels() {
                       backgroundColor: theme.palette.terminal.header,
                     }}
                   >
-                    <Typography variant="subtitle2" sx={{ color: item.accent, fontWeight: 700, mb: 0.6 }}>
+                    <Typography variant="subtitle2" component="p" sx={{ color: item.accent, fontWeight: 700, mb: 0.6 }}>
                       {item.title}
                     </Typography>
                     <Typography variant="body2" sx={{ color: theme.palette.terminal.textSecondary }}>

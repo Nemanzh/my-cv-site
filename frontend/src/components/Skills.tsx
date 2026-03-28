@@ -286,6 +286,7 @@ export default function Skills() {
                 >
                   <Typography
                     variant="subtitle2"
+                    component="p"
                     sx={{
                       color: lane.color,
                       fontWeight: 'bold',

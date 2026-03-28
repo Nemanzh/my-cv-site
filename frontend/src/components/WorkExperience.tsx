@@ -184,6 +184,7 @@ export default function WorkExperience({ locale }: { locale: string }) {
                 >
                   <Typography
                     variant="h5"
+                    component="h3"
                     sx={{
                       color: theme.palette.terminal.cyan,
                       fontSize: { xs: '1rem', sm: '1.2rem', md: '1.35rem' },
@@ -201,6 +202,7 @@ export default function WorkExperience({ locale }: { locale: string }) {
 
                   <Typography
                     variant="subtitle2"
+                    component="p"
                     sx={{ color: theme.palette.terminal.green, fontWeight: 'bold' }}
                   >
                     {content.outcomesLabel}

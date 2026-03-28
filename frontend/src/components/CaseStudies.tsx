@@ -180,6 +180,7 @@ export default function CaseStudies() {
                 >
                   <Typography
                     variant="h6"
+                    component="h3"
                     sx={{ color: theme.palette.terminal.cyan, fontSize: { xs: '1rem', sm: '1.15rem' } }}
                   >
                     {item.title}
