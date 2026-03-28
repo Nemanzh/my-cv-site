@@ -7,6 +7,7 @@ import { routing } from '@/i18n/routing';
 import ThemeProvider from '@/components/ThemeProvider';
 import Header from '@/components/Header';
 import WebVitals from '@/components/WebVitals';
+import StickyCta from '@/components/StickyCta';
 import { Major_Mono_Display } from 'next/font/google';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v16-appRouter';
 
@@ -129,7 +130,7 @@ export default async function RootLayout({
         logo: `${SITE_URL}/android-chrome-512x512.png`,
         sameAs: [
           'https://github.com/nemanjaradulovic',
-          'https://www.linkedin.com/in/nemanja-radulovi%C4%87/',
+          'https://www.linkedin.com/in/nemanja-radulovic/',
         ],
       },
       {
@@ -158,10 +159,6 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
-        <link rel="preconnect" href="https://cdn.simpleicons.org" />
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-        <link rel="dns-prefetch" href="//cdn.simpleicons.org" />
-        <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
       </head>
       <body className={majorMonoDisplay.variable}>
         <AppRouterCacheProvider>
@@ -173,6 +170,7 @@ export default async function RootLayout({
           <ThemeProvider>
             <NextIntlClientProvider>
               <Header />
+              <StickyCta />
               {children}
             </NextIntlClientProvider>
           </ThemeProvider>

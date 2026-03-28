@@ -10,9 +10,10 @@ import {
   Button,
   Stack,
   TextField,
+  CircularProgress,
   useTheme,
 } from '@mui/material';
-import { Email, LinkedIn, GitHub } from '@mui/icons-material';
+import { Email, Event } from '@mui/icons-material';
 import HighlightedText, { highlightFirstLetters } from './HighlightedText';
 import { useLocale } from 'next-intl';
 
@@ -21,7 +22,9 @@ export default function ContactUs() {
   const locale = useLocale();
   const isSrCyrl = locale === 'sr-Cyrl';
   const isSr = locale === 'sr' || isSrCyrl;
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitted, setSubmitted] = React.useState(false);
+  const [error, setError] = React.useState('');
   const [form, setForm] = React.useState({
     name: '',
     email: '',
@@ -37,6 +40,7 @@ export default function ContactUs() {
         subtitle:
           'Imate ideju, postojeci proizvod za redizajn ili vam treba tehnicki partner? Posaljite kratak brief.',
         primary: 'Posaljite upit',
+        secondary: 'Zakazite intro poziv',
         formTitle: 'PROJECT BRIEF',
         placeholders: {
           name: 'Ime i prezime',
@@ -46,14 +50,16 @@ export default function ContactUs() {
           budget: 'Budzet (opseg)',
           timeline: 'Rok / zeljeni start',
         },
-        success:
-          'Upit je pripremljen. Otvoren je vas email klijent sa popunjenim podacima.',
+        success: 'Hvala! Upit je uspesno poslat. Javicemo se u roku od 1 radnog dana.',
+        error: 'Slanje nije uspelo. Pokusajte ponovo ili pisite na contact@nemanzh.dev.',
+        trust: 'Scope, rokovi i ownership su ugovorno definisani pre pocetka rada.',
       }
     : {
         title: 'CONTACT US',
         subtitle:
           'Have a new idea, an existing product to improve, or need a long-term technical partner? Send a short brief.',
         primary: 'Send inquiry',
+        secondary: 'Book intro call',
         formTitle: 'PROJECT BRIEF',
         placeholders: {
           name: 'Full name',
@@ -63,7 +69,9 @@ export default function ContactUs() {
           budget: 'Budget range',
           timeline: 'Timeline / preferred start',
         },
-        success: 'Your inquiry draft is ready in your email client.',
+        success: 'Thanks, your inquiry was sent successfully. We respond within 1 business day.',
+        error: 'Submission failed. Please try again or email contact@nemanzh.dev.',
+        trust: 'Scope, timeline, and ownership are contract-defined before delivery starts.',
       };
 
   const fieldSx = {
@@ -94,26 +102,39 @@ export default function ContactUs() {
       setForm((prev) => ({ ...prev, [key]: event.target.value }));
     };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const subject = encodeURIComponent(
-      `[Project Inquiry] ${form.company || form.name || 'New lead'}`,
-    );
-    const body = encodeURIComponent(
-      [
-        `Name: ${form.name}`,
-        `Email: ${form.email}`,
-        `Company: ${form.company}`,
-        `Budget: ${form.budget}`,
-        `Timeline: ${form.timeline}`,
-        '',
-        'Project brief:',
-        form.project,
-      ].join('\n'),
-    );
+    setIsSubmitting(true);
+    setSubmitted(false);
+    setError('');
 
-    window.location.href = `mailto:contact@nemanzh.dev?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        throw new Error('Contact request failed');
+      }
+
+      setSubmitted(true);
+      setForm({
+        name: '',
+        email: '',
+        company: '',
+        project: '',
+        budget: '',
+        timeline: '',
+      });
+    } catch {
+      setError(content.error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -201,7 +222,7 @@ export default function ContactUs() {
               <Box
                 sx={{
                   display: 'grid',
-                  gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
+                  gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' },
                   gap: { xs: 1.5, sm: 2 },
                 }}
               >
@@ -241,7 +262,7 @@ export default function ContactUs() {
                   value={form.timeline}
                   onChange={handleChange('timeline')}
                   size="small"
-                  sx={{ ...fieldSx, gridColumn: { xs: '1 / -1', md: '1 / 3' } }}
+                  sx={{ ...fieldSx, gridColumn: { xs: '1 / -1', sm: '1 / 3' } }}
                 />
                 <TextField
                   required
@@ -250,29 +271,58 @@ export default function ContactUs() {
                   label={content.placeholders.project}
                   value={form.project}
                   onChange={handleChange('project')}
-                  sx={{ ...fieldSx, gridColumn: { xs: '1 / -1', md: '1 / 3' } }}
+                  sx={{ ...fieldSx, gridColumn: { xs: '1 / -1', sm: '1 / 3' } }}
                 />
               </Box>
 
               <Box sx={{ textAlign: 'center', mt: 2 }}>
-                <Button
-                  type="submit"
-                  startIcon={<Email />}
-                  sx={{
-                    backgroundColor: theme.palette.terminal.cyan,
-                    color: theme.palette.terminal.background,
-                    border: `1px solid ${theme.palette.terminal.cyan}`,
-                    textTransform: 'none',
-                    px: 2.5,
-                    py: 1,
-                    '&:hover': {
-                      backgroundColor: theme.palette.terminal.header,
-                      color: theme.palette.terminal.cyan,
-                    },
-                  }}
+                <Stack
+                  direction={{ xs: 'column', sm: 'row' }}
+                  spacing={1.5}
+                  justifyContent="center"
+                  alignItems="center"
                 >
-                  {content.primary}
-                </Button>
+                  <Button
+                    type="submit"
+                    startIcon={isSubmitting ? <CircularProgress size={14} color="inherit" /> : <Email />}
+                    disabled={isSubmitting}
+                    sx={{
+                      backgroundColor: theme.palette.terminal.cyan,
+                      color: theme.palette.terminal.background,
+                      border: `1px solid ${theme.palette.terminal.cyan}`,
+                      textTransform: 'none',
+                      px: 2.5,
+                      py: 1,
+                      width: { xs: '100%', sm: 220 },
+                      '&:hover': {
+                        backgroundColor: theme.palette.terminal.header,
+                        color: theme.palette.terminal.cyan,
+                      },
+                    }}
+                  >
+                    {content.primary}
+                  </Button>
+                  <Button
+                    component="a"
+                    href="mailto:contact@nemanzh.dev?subject=Intro%20Call"
+                    startIcon={<Event />}
+                    sx={{
+                      color: theme.palette.terminal.green,
+                      border: `1px solid ${theme.palette.terminal.green}`,
+                      backgroundColor: theme.palette.terminal.header,
+                      textTransform: 'none',
+                      px: 2.5,
+                      py: 1,
+                      width: { xs: '100%', sm: 220 },
+                      '&:hover': {
+                        backgroundColor: theme.palette.terminal.green,
+                        color: theme.palette.terminal.background,
+                      },
+                    }}
+                  >
+                    {content.secondary}
+                  </Button>
+                </Stack>
               </Box>
 
               {submitted ? (
@@ -283,7 +333,18 @@ export default function ContactUs() {
                   {content.success}
                 </Typography>
               ) : null}
+              {error ? (
+                <Typography
+                  variant="body2"
+                  sx={{ color: theme.palette.terminal.red, mt: 1.5 }}
+                >
+                  {error}
+                </Typography>
+              ) : null}
             </Box>
+            <Typography variant="body2" sx={{ color: theme.palette.terminal.textSecondary }}>
+              {content.trust}
+            </Typography>
           </CardContent>
         </Card>
       </Container>

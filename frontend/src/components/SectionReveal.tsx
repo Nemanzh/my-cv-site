@@ -28,8 +28,8 @@ export default function SectionReveal({
         }
       },
       {
-        threshold: 0.16,
-        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.08,
+        rootMargin: '0px 0px -6% 0px',
       },
     );
 

@@ -201,7 +201,7 @@ export default function EngagementModels() {
             <Box
               sx={{
                 display: 'grid',
-                gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr 1fr' },
+                gridTemplateColumns: { xs: '1fr', md: '1fr 1fr', xl: '1fr 1fr 1fr' },
                 gap: { xs: 2, sm: 2.5 },
               }}
             >
@@ -268,7 +268,7 @@ export default function EngagementModels() {
               <Box
                 sx={{
                   display: 'grid',
-                  gridTemplateColumns: { xs: '1fr', md: '1fr 1fr 1fr' },
+                  gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', lg: '1fr 1fr 1fr' },
                   gap: { xs: 1.5, sm: 2 },
                 }}
               >
@@ -303,6 +303,7 @@ export default function EngagementModels() {
                   color: theme.palette.terminal.green,
                   backgroundColor: theme.palette.terminal.header,
                   textTransform: 'none',
+                  width: { xs: '100%', sm: 220 },
                   px: 2.5,
                   py: 1,
                   '&:hover': {

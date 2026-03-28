@@ -189,7 +189,8 @@ export default function Testimonials() {
                 aria-label="Scroll testimonials left"
                 sx={{
                   position: 'absolute',
-                  left: { xs: -10, sm: -14 },
+                  display: { xs: 'none', md: 'inline-flex' },
+                  left: { md: -12, lg: -14 },
                   top: '50%',
                   transform: 'translateY(-50%)',
                   zIndex: 3,
@@ -208,7 +209,8 @@ export default function Testimonials() {
                 aria-label="Scroll testimonials right"
                 sx={{
                   position: 'absolute',
-                  right: { xs: -10, sm: -14 },
+                  display: { xs: 'none', md: 'inline-flex' },
+                  right: { md: -12, lg: -14 },
                   top: '50%',
                   transform: 'translateY(-50%)',
                   zIndex: 3,
@@ -225,6 +227,7 @@ export default function Testimonials() {
               <Box
                 sx={{
                   pointerEvents: 'none',
+                  display: { xs: 'none', md: 'block' },
                   position: 'absolute',
                   left: 0,
                   top: 0,
@@ -237,6 +240,7 @@ export default function Testimonials() {
               <Box
                 sx={{
                   pointerEvents: 'none',
+                  display: { xs: 'none', md: 'block' },
                   position: 'absolute',
                   right: 0,
                   top: 0,
@@ -274,7 +278,7 @@ export default function Testimonials() {
                   <Box
                     key={`${item.author}-${index}`}
                     sx={{
-                      minWidth: { xs: '88%', sm: '62%', lg: '38%' },
+                      minWidth: { xs: '92%', sm: '70%', md: '56%', lg: '38%' },
                       scrollSnapAlign: 'start',
                       p: { xs: 2, sm: 2.5 },
                       background: `linear-gradient(180deg, ${theme.palette.terminal.header} 0%, ${theme.palette.terminal.background} 100%)`,

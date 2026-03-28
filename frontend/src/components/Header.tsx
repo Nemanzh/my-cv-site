@@ -107,7 +107,7 @@ export default function Header() {
 
           <Box
             sx={{
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: 'none', lg: 'flex' },
               alignItems: 'center',
               gap: 2.5,
               mr: 2,
@@ -137,13 +137,13 @@ export default function Header() {
             sx={{
               display: 'flex',
               alignItems: 'center',
-              gap: { xs: 0.5, sm: 2 },
+              gap: { xs: 0.5, sm: 1, md: 1.25, lg: 2 },
               flexShrink: 0,
             }}
           >
             <Box
               sx={{
-                display: { xs: 'none', sm: 'flex' },
+                display: { xs: 'none', lg: 'flex' },
                 alignItems: 'center',
                 gap: 0.5,
                 px: 1.5,

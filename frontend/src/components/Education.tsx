@@ -205,6 +205,7 @@ export default function Education() {
                   color: theme.palette.terminal.magenta,
                   backgroundColor: theme.palette.terminal.header,
                   textTransform: 'none',
+                  width: { xs: '100%', sm: 220 },
                   px: 2.5,
                   py: 1,
                   '&:hover': {

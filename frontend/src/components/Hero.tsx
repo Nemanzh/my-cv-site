@@ -24,28 +24,11 @@ const InteractiveTerminal = dynamic(() => import('./InteractiveTerminal'), {
 export default function Hero() {
   const theme = useTheme();
   const t = useTranslations('Hero');
-
-  const handleHeroPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
-    const target = event.currentTarget;
-    const rect = target.getBoundingClientRect();
-    const x = ((event.clientX - rect.left) / rect.width) * 100;
-    const y = ((event.clientY - rect.top) / rect.height) * 100;
-    const tiltY = (x - 50) / 18;
-    const tiltX = (50 - y) / 24;
-
-    target.style.setProperty('--hero-x', `${x}%`);
-    target.style.setProperty('--hero-y', `${y}%`);
-    target.style.setProperty('--hero-tilt-x', `${tiltX.toFixed(2)}deg`);
-    target.style.setProperty('--hero-tilt-y', `${tiltY.toFixed(2)}deg`);
-  };
-
-  const handleHeroPointerLeave = (event: React.PointerEvent<HTMLDivElement>) => {
-    const target = event.currentTarget;
-    target.style.setProperty('--hero-x', '50%');
-    target.style.setProperty('--hero-y', '35%');
-    target.style.setProperty('--hero-tilt-x', '0deg');
-    target.style.setProperty('--hero-tilt-y', '0deg');
-  };
+  const heroMetrics = [
+    { value: '15+', label: 'projects delivered' },
+    { value: '40%', label: 'faster APIs' },
+    { value: '60%', label: 'fewer bugs' },
+  ];
 
   const handleCtaPointerMove = (event: React.PointerEvent<HTMLElement>) => {
     const target = event.currentTarget;
@@ -79,14 +62,9 @@ export default function Hero() {
     >
       <Container maxWidth="xl">
         <Box
-          onPointerMove={handleHeroPointerMove}
-          onPointerLeave={handleHeroPointerLeave}
           sx={{
             '--hero-x': '50%',
             '--hero-y': '35%',
-            '--hero-tilt-x': '0deg',
-            '--hero-tilt-y': '0deg',
-            perspective: '1200px',
           }}
         >
           <Card
@@ -98,10 +76,9 @@ export default function Hero() {
               border: `1px solid ${theme.palette.terminal.border}`,
               position: 'relative',
               overflow: 'hidden',
-              transform:
-                'translate3d(0, 0, 0) rotateX(var(--hero-tilt-x)) rotateY(var(--hero-tilt-y))',
+              transform: 'translate3d(0, 0, 0)',
               transition:
-                'transform 0.28s cubic-bezier(0.2, 0.7, 0, 1), box-shadow 0.35s cubic-bezier(0.2, 0.7, 0, 1)',
+                'box-shadow 0.35s cubic-bezier(0.2, 0.7, 0, 1)',
               '&::before': {
                 content: '""',
                 position: 'absolute',
@@ -117,7 +94,6 @@ export default function Hero() {
                 zIndex: 1,
               },
               '@media (hover: none), (pointer: coarse)': {
-                transform: 'none',
                 '&::before': {
                   background: 'none',
                 },
@@ -217,63 +193,110 @@ export default function Hero() {
               </Typography>
 
               <Stack
-                direction={{ xs: 'column', sm: 'row' }}
-                spacing={{ xs: 1, sm: 2 }}
-                sx={{ mb: { xs: 2, sm: 3 } }}
-              >
-                <MuiLink href="#services" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
-                  Services
-                </MuiLink>
-                <MuiLink href="#case-studies" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
-                  Case Studies
-                </MuiLink>
-                <MuiLink href="#process" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
-                  Process
-                </MuiLink>
-                <MuiLink href="#skills" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
-                  Tech Stack
-                </MuiLink>
-                <MuiLink href="#faq" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
-                  FAQ
-                </MuiLink>
-                <MuiLink href="#contact" underline="hover" sx={{ color: theme.palette.terminal.cyan }}>
-                  Contact
-                </MuiLink>
-              </Stack>
-
-              <Stack
-                direction={{ xs: 'column', md: 'row' }}
-                spacing={{ xs: 2, md: 4 }}
+                direction={{ xs: 'column', lg: 'row' }}
+                spacing={{ xs: 2, md: 2.5, lg: 4 }}
                 sx={{
-                  mt: { xs: 3, sm: 4 },
-                  mb: { xs: 1.5, sm: 2 },
+                  mt: { xs: 2, sm: 2.5 },
+                  mb: { xs: 2, sm: 2.5 },
                 }}
-                alignItems={{ xs: 'stretch', md: 'center' }}
-                justifyContent={{ md: 'space-between' }}
+                alignItems={{ xs: 'stretch', lg: 'flex-start' }}
+                justifyContent={{ lg: 'space-between' }}
               >
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: theme.palette.terminal.textSecondary,
-                    fontSize: { xs: '0.875rem', sm: '1rem', md: '1.1rem' },
-                    lineHeight: { xs: 1.5, sm: 1.6 },
-                    maxWidth: { xs: '100%', md: '800px' },
-                    flex: { md: '1 1 auto' },
-                  }}
-                >
-                  {t('bio')}
-                </Typography>
+                <Box sx={{ flex: { lg: '1 1 auto' }, maxWidth: { xs: '100%', lg: '760px' } }}>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      color: theme.palette.terminal.textSecondary,
+                      fontSize: { xs: '0.875rem', sm: '1rem', md: '1.1rem' },
+                      lineHeight: { xs: 1.5, sm: 1.6 },
+                    }}
+                  >
+                    {t('bio')}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: theme.palette.terminal.textSecondary,
+                      fontSize: { xs: '0.75rem', sm: '0.82rem' },
+                      mt: { xs: 1.5, sm: 2 },
+                      maxWidth: { lg: '92%' },
+                    }}
+                  >
+                    Best for SME and enterprise teams shipping business-critical products. Typical kickoff: 3-10
+                    business days.
+                  </Typography>
+                </Box>
 
-                <Box
-                  sx={{
-                    display: 'flex',
-                    justifyContent: { xs: 'center', md: 'flex-end' },
-                    alignItems: 'center',
-                    flex: { md: '0 0 auto' },
-                  }}
-                >
+                <Box sx={{ width: { xs: '100%', lg: 420 }, flex: { lg: '0 0 420px' } }}>
+                  <Box
+                    sx={{
+                      display: 'grid',
+                      gridTemplateColumns: { xs: '1fr', sm: 'repeat(3, minmax(0, 1fr))' },
+                      gap: { xs: 0.9, sm: 1 },
+                    }}
+                  >
+                    {heroMetrics.map((item) => (
+                      <Box
+                        key={item.label}
+                        sx={{
+                          px: { xs: 1, sm: 1.25 },
+                          py: { xs: 1, sm: 1.2 },
+                          border: `1px solid ${theme.palette.terminal.border}`,
+                          backgroundColor: theme.palette.terminal.header,
+                          borderRadius: 1,
+                          minHeight: { xs: 72, sm: 96 },
+                          display: 'flex',
+                          flexDirection: 'column',
+                          justifyContent: 'center',
+                          gap: 0.35,
+                          transition: 'transform 0.18s ease, border-color 0.18s ease',
+                          '&:hover': {
+                            transform: 'translateY(-2px)',
+                            borderColor: theme.palette.terminal.cyan,
+                          },
+                        }}
+                      >
+                        <Typography
+                          variant="h6"
+                          sx={{
+                            color: theme.palette.terminal.cyan,
+                            fontFamily:
+                              'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
+                            fontWeight: 700,
+                            letterSpacing: '0.02em',
+                            lineHeight: 1.1,
+                            fontSize: { xs: '1rem', sm: '1.2rem' },
+                          }}
+                        >
+                          {item.value}
+                        </Typography>
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            color: theme.palette.terminal.textSecondary,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.06em',
+                            fontSize: { xs: '0.56rem', sm: '0.62rem' },
+                            lineHeight: 1.35,
+                          }}
+                        >
+                          {item.label}
+                        </Typography>
+                      </Box>
+                    ))}
+                  </Box>
+
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      justifyContent: { xs: 'stretch', sm: 'center', lg: 'flex-end' },
+                      alignItems: 'center',
+                      mt: { xs: 1.5, sm: 2 },
+                      pr: { lg: 0.5 },
+                    }}
+                  >
                   <Button
-                    href="mailto:contact@nemanzh.dev"
+                    href="#contact"
                     startIcon={<Email />}
                     onPointerMove={handleCtaPointerMove}
                     onPointerLeave={handleCtaPointerLeave}
@@ -288,11 +311,10 @@ export default function Hero() {
                       fontFamily:
                         'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace',
                       textTransform: 'none',
-                      px: 3,
-                      py: 1.5,
+                      px: { xs: 2, sm: 3 },
+                      py: { xs: 1.1, sm: 1.5 },
                       fontWeight: 'bold',
-                      width: 'fit-content',
-                      minWidth: 'auto',
+                      width: { xs: '100%', sm: 220 },
                       whiteSpace: 'nowrap',
                       position: 'relative',
                       overflow: 'hidden',
@@ -340,6 +362,7 @@ export default function Hero() {
                     {t('cta')}
                   </Button>
                 </Box>
+                </Box>
               </Stack>
 
               <Box
@@ -377,7 +400,7 @@ export default function Hero() {
                   </Stack>
 
                   <MuiLink
-                    href="mailto:jobs@nemanjaradulovic.dev"
+                    href="mailto:contact@nemanzh.dev"
                     sx={{
                       display: 'flex',
                       alignItems: 'center',
@@ -444,7 +467,7 @@ export default function Hero() {
                   </MuiLink>
 
                   <MuiLink
-                    href="https://linkedin.com/in/nemanjaradulovic"
+                    href="https://www.linkedin.com/in/nemanja-radulovic/"
                     target="_blank"
                     rel="noopener noreferrer"
                     sx={{

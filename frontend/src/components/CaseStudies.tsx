@@ -161,7 +161,7 @@ export default function CaseStudies() {
             <Box
               sx={{
                 display: 'grid',
-                gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr 1fr' },
+                gridTemplateColumns: { xs: '1fr', md: '1fr 1fr', xl: '1fr 1fr 1fr' },
                 gap: { xs: 2, sm: 3 },
               }}
             >
@@ -178,7 +178,10 @@ export default function CaseStudies() {
                     gap: 1,
                   }}
                 >
-                  <Typography variant="h6" sx={{ color: theme.palette.terminal.cyan }}>
+                  <Typography
+                    variant="h6"
+                    sx={{ color: theme.palette.terminal.cyan, fontSize: { xs: '1rem', sm: '1.15rem' } }}
+                  >
                     {item.title}
                   </Typography>
 
@@ -207,6 +210,7 @@ export default function CaseStudies() {
                   color: theme.palette.terminal.cyan,
                   backgroundColor: theme.palette.terminal.header,
                   textTransform: 'none',
+                  width: { xs: '100%', sm: 220 },
                   px: 2.5,
                   py: 1,
                   '&:hover': {

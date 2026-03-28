@@ -72,9 +72,25 @@ export default function Faq() {
           },
         ] as FaqItem[],
       };
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: content.items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  };
 
   return (
     <Box component="section" id="faq" sx={{ py: { xs: 2, sm: 3, md: 4 } }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Container maxWidth="xl">
         <Card
           className="terminal-window"
@@ -185,7 +201,8 @@ export default function Faq() {
                           color: theme.palette.terminal.green,
                           letterSpacing: '0.08em',
                           fontWeight: 700,
-                          minWidth: 42,
+                          minWidth: { xs: 34, sm: 42 },
+                          fontSize: { xs: '0.62rem', sm: '0.72rem' },
                         }}
                       >
                         {`Q${String(index + 1).padStart(2, '0')}`}

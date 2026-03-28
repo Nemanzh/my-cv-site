@@ -11,12 +11,44 @@ import {
   useTheme,
   Tooltip,
 } from '@mui/material';
+import type { IconType } from 'react-icons';
+import { DiDotnet, DiMsqlServer } from 'react-icons/di';
+import { FaAws } from 'react-icons/fa';
+import {
+  SiAngular,
+  SiApachekafka,
+  SiAuth0,
+  SiClojure,
+  SiDocker,
+  SiDotnet,
+  SiExpress,
+  SiFastapi,
+  SiGithubactions,
+  SiHtml5,
+  SiJavascript,
+  SiKubernetes,
+  SiMongodb,
+  SiMysql,
+  SiNeo4J,
+  SiNodedotjs,
+  SiOpentelemetry,
+  SiPaypal,
+  SiPostgresql,
+  SiReact,
+  SiRedis,
+  SiSalesforce,
+  SiSwagger,
+  SiTypescript,
+  SiNextdotjs,
+} from 'react-icons/si';
+import { TbBrandCSharp } from 'react-icons/tb';
+import { VscAzure } from 'react-icons/vsc';
 import HighlightedText, { highlightFirstLetters } from './HighlightedText';
 import { useLocale } from 'next-intl';
 
 interface TechIcon {
   name: string;
-  iconUrls?: string[];
+  icon: IconType;
 }
 
 interface CapabilityLane {
@@ -25,81 +57,32 @@ interface CapabilityLane {
   tech: TechIcon[];
 }
 
-function iconUrl(slug: string, color: string) {
-  return `https://cdn.simpleicons.org/${slug}/${color.replace('#', '')}`;
-}
-
-function deviconUrl(slug: string, variant: 'original' | 'plain' = 'original') {
-  return `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${slug}/${slug}-${variant}.svg`;
-}
-
 function tech(
   name: string,
-  color: string,
-  options: {
-    customUrls?: string[];
-    simpleIconSlug?: string;
-    deviconSlug?: string;
-    deviconVariant?: 'original' | 'plain';
-  } = {}
+  _color: string,
+  icon: IconType
 ): TechIcon {
-  const urls: string[] = options.customUrls ? [...options.customUrls] : [];
-
-  if (options.simpleIconSlug) {
-    urls.push(iconUrl(options.simpleIconSlug, color));
-  }
-
-  if (options.deviconSlug) {
-    urls.push(deviconUrl(options.deviconSlug, options.deviconVariant));
-  }
-
   return {
     name,
-    iconUrls: urls.length > 0 ? urls : undefined,
+    icon,
   };
 }
 
-function fallbackLabel(name: string) {
-  const cleaned = name.replace(/[^a-zA-Z0-9]/g, '');
-  return cleaned.slice(0, 3).toUpperCase() || 'APP';
-}
-
 function TechTile({
-  name,
-  iconUrls,
+  icon,
   color,
   border,
   background,
 }: {
-  name: string;
-  iconUrls?: string[];
+  icon: IconType;
   color: string;
   border: string;
   background: string;
 }) {
-  const [urlIndex, setUrlIndex] = React.useState(0);
-  const [imageFailed, setImageFailed] = React.useState(!iconUrls || iconUrls.length === 0);
-
-  React.useEffect(() => {
-    setUrlIndex(0);
-    setImageFailed(!iconUrls || iconUrls.length === 0);
-  }, [iconUrls, name]);
-
-  const currentIconUrl = iconUrls?.[urlIndex];
-
-  const handleImageError = () => {
-    if (!iconUrls || urlIndex >= iconUrls.length - 1) {
-      setImageFailed(true);
-      return;
-    }
-
-    setUrlIndex((prev) => prev + 1);
-  };
-
   return (
     <Box
       sx={{
-        height: { xs: 46, sm: 52 },
+        height: { xs: 42, sm: 48, md: 52 },
         border: `1px solid ${border}`,
         borderRadius: 1,
         backgroundColor: background,
@@ -113,32 +96,14 @@ function TechTile({
         },
       }}
     >
-      {imageFailed ? (
-        <Typography
-          component="span"
-          sx={{
-            color,
-            fontSize: { xs: '0.65rem', sm: '0.7rem' },
-            fontWeight: 700,
-            letterSpacing: '0.06em',
-          }}
-        >
-          {fallbackLabel(name)}
-        </Typography>
-      ) : (
-        <Box
-          component="img"
-          src={currentIconUrl}
-          alt={name}
-          loading="lazy"
-          decoding="async"
-          onError={handleImageError}
-          sx={{
-            width: { xs: 18, sm: 22 },
-            height: { xs: 18, sm: 22 },
-          }}
-        />
-      )}
+      <Box
+        component={icon}
+        aria-hidden
+        sx={{
+          fontSize: { xs: 17, sm: 20, md: 22 },
+          color,
+        }}
+      />
     </Box>
   );
 }
@@ -162,133 +127,60 @@ export default function Skills() {
       title: isSrCyrl ? 'ФРОНТЕНД' : 'FRONTEND',
       color: laneColors.frontend,
       tech: [
-        tech('Next.js', laneColors.frontend, {
-          simpleIconSlug: 'nextdotjs',
-          deviconSlug: 'nextjs',
-        }),
-        tech('React', laneColors.frontend, {
-          simpleIconSlug: 'react',
-          deviconSlug: 'react',
-        }),
-        tech('TypeScript', laneColors.frontend, {
-          simpleIconSlug: 'typescript',
-          deviconSlug: 'typescript',
-        }),
-        tech('JavaScript', laneColors.frontend, {
-          simpleIconSlug: 'javascript',
-          deviconSlug: 'javascript',
-        }),
-        tech('Angular', laneColors.frontend, {
-          simpleIconSlug: 'angular',
-          deviconSlug: 'angular',
-        }),
-        tech('HTML5', laneColors.frontend, {
-          simpleIconSlug: 'html5',
-          deviconSlug: 'html5',
-        }),
+        tech('Next.js', laneColors.frontend, SiNextdotjs),
+        tech('React', laneColors.frontend, SiReact),
+        tech('TypeScript', laneColors.frontend, SiTypescript),
+        tech('JavaScript', laneColors.frontend, SiJavascript),
+        tech('Angular', laneColors.frontend, SiAngular),
+        tech('HTML5', laneColors.frontend, SiHtml5),
       ],
     },
     {
       title: isSrCyrl ? 'БЕКЕНД' : 'BACKEND',
       color: laneColors.backend,
       tech: [
-        tech('C#', laneColors.backend, { deviconSlug: 'csharp' }),
-        tech('.NET', laneColors.backend, {
-          simpleIconSlug: 'dotnet',
-          deviconSlug: 'dot-net',
-        }),
-        tech('ASP.NET Core', laneColors.backend, {
-          deviconSlug: 'dot-net',
-        }),
-        tech('Clojure', laneColors.backend, {
-          simpleIconSlug: 'clojure',
-          deviconSlug: 'clojure',
-        }),
-        tech('Node.js', laneColors.backend, {
-          simpleIconSlug: 'nodedotjs',
-          deviconSlug: 'nodejs',
-        }),
-        tech('Express', laneColors.backend, {
-          simpleIconSlug: 'express',
-          deviconSlug: 'express',
-        }),
+        tech('C#', laneColors.backend, TbBrandCSharp),
+        tech('.NET', laneColors.backend, SiDotnet),
+        tech('ASP.NET Core', laneColors.backend, DiDotnet),
+        tech('Clojure', laneColors.backend, SiClojure),
+        tech('Node.js', laneColors.backend, SiNodedotjs),
+        tech('Express', laneColors.backend, SiExpress),
       ],
     },
     {
       title: isSrCyrl ? 'БАЗЕ ПОДАТАКА' : 'DATABASES',
       color: laneColors.databases,
       tech: [
-        tech('SQL Server', laneColors.databases, {
-          deviconSlug: 'microsoftsqlserver',
-          deviconVariant: 'plain',
-        }),
-        tech('PostgreSQL', laneColors.databases, {
-          simpleIconSlug: 'postgresql',
-          deviconSlug: 'postgresql',
-        }),
-        tech('Redis', laneColors.databases, {
-          simpleIconSlug: 'redis',
-          deviconSlug: 'redis',
-        }),
-        tech('MongoDB', laneColors.databases, {
-          simpleIconSlug: 'mongodb',
-          deviconSlug: 'mongodb',
-        }),
-        tech('MySQL', laneColors.databases, {
-          simpleIconSlug: 'mysql',
-          deviconSlug: 'mysql',
-        }),
-        tech('Neo4j', laneColors.databases, {
-          simpleIconSlug: 'neo4j',
-          deviconSlug: 'neo4j',
-        }),
+        tech('SQL Server', laneColors.databases, DiMsqlServer),
+        tech('PostgreSQL', laneColors.databases, SiPostgresql),
+        tech('Redis', laneColors.databases, SiRedis),
+        tech('MongoDB', laneColors.databases, SiMongodb),
+        tech('MySQL', laneColors.databases, SiMysql),
+        tech('Neo4j', laneColors.databases, SiNeo4J),
       ],
     },
     {
       title: isSrCyrl ? 'CLOUD И DEVOPS' : 'CLOUD & DEVOPS',
       color: laneColors.cloud,
       tech: [
-        tech('Microsoft Azure', laneColors.cloud, {
-          deviconSlug: 'azure',
-        }),
-        tech('Docker', laneColors.cloud, {
-          simpleIconSlug: 'docker',
-          deviconSlug: 'docker',
-        }),
-        tech('GitHub Actions', laneColors.cloud, { simpleIconSlug: 'githubactions' }),
-        tech('Kubernetes', laneColors.cloud, {
-          simpleIconSlug: 'kubernetes',
-          deviconSlug: 'kubernetes',
-        }),
-        tech('AWS', laneColors.cloud, {
-          customUrls: ['/icons/aws.svg'],
-          deviconSlug: 'amazonwebservices',
-        }),
-        tech('OpenTelemetry', laneColors.cloud, {
-          simpleIconSlug: 'opentelemetry',
-        }),
+        tech('Microsoft Azure', laneColors.cloud, VscAzure),
+        tech('Docker', laneColors.cloud, SiDocker),
+        tech('GitHub Actions', laneColors.cloud, SiGithubactions),
+        tech('Kubernetes', laneColors.cloud, SiKubernetes),
+        tech('AWS', laneColors.cloud, FaAws),
+        tech('OpenTelemetry', laneColors.cloud, SiOpentelemetry),
       ],
     },
     {
       title: isSrCyrl ? 'ИНТЕГРАЦИЈЕ' : 'INTEGRATIONS',
       color: laneColors.integrations,
       tech: [
-        tech('API Integration', laneColors.integrations, { simpleIconSlug: 'fastapi' }),
-        tech('Payment Integrations', laneColors.integrations, {
-          simpleIconSlug: 'paypal',
-          deviconSlug: 'paypal',
-        }),
-        tech('Apache Kafka', laneColors.integrations, {
-          simpleIconSlug: 'apachekafka',
-          deviconSlug: 'apachekafka',
-        }),
-        tech('Swagger / OpenAPI', laneColors.integrations, {
-          simpleIconSlug: 'swagger',
-        }),
-        tech('Auth & RBAC', laneColors.integrations, { simpleIconSlug: 'auth0' }),
-        tech('CRM / ERP (Salesforce)', laneColors.integrations, {
-          deviconSlug: 'salesforce',
-        }),
+        tech('API Integration', laneColors.integrations, SiFastapi),
+        tech('Payment Integrations', laneColors.integrations, SiPaypal),
+        tech('Apache Kafka', laneColors.integrations, SiApachekafka),
+        tech('Swagger / OpenAPI', laneColors.integrations, SiSwagger),
+        tech('Auth & RBAC', laneColors.integrations, SiAuth0),
+        tech('CRM / ERP (Salesforce)', laneColors.integrations, SiSalesforce),
       ],
     },
   ];
@@ -383,8 +275,8 @@ export default function Skills() {
                         ? `1px solid ${theme.palette.terminal.border}`
                         : 'none',
                     display: 'grid',
-                    gridTemplateColumns: { xs: '1fr', md: '240px 1fr' },
-                    gap: { xs: 1.5, md: 2 },
+                    gridTemplateColumns: { xs: '1fr', lg: '220px 1fr' },
+                    gap: { xs: 1.25, md: 1.75 },
                     alignItems: 'center',
                   }}
                 >
@@ -405,7 +297,8 @@ export default function Skills() {
                       display: 'grid',
                       gridTemplateColumns: {
                         xs: 'repeat(3, minmax(0, 1fr))',
-                        sm: 'repeat(6, minmax(0, 1fr))',
+                        sm: 'repeat(4, minmax(0, 1fr))',
+                        md: 'repeat(6, minmax(0, 1fr))',
                       },
                       gap: { xs: 1, sm: 1.25 },
                     }}
@@ -414,8 +307,7 @@ export default function Skills() {
                       <Tooltip key={item.name} title={item.name} arrow>
                         <Box>
                           <TechTile
-                            name={item.name}
-                            iconUrls={item.iconUrls}
+                            icon={item.icon}
                             color={lane.color}
                             border={theme.palette.terminal.border}
                             background={theme.palette.terminal.background}
@@ -437,6 +329,7 @@ export default function Skills() {
                   color: theme.palette.terminal.green,
                   backgroundColor: theme.palette.terminal.header,
                   textTransform: 'none',
+                  width: { xs: '100%', sm: 220 },
                   px: 2.5,
                   py: 1,
                   '&:hover': {

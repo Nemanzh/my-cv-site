@@ -147,8 +147,8 @@ const commands: Record<string, Command> = {
   contact: {
     input: 'contact',
     output: [
-      'Email: jobs@nemanjaradulovic.dev',
-      'LinkedIn: linkedin.com/in/nemanjaradulovic',
+      'Email: contact@nemanzh.dev',
+      'LinkedIn: linkedin.com/in/nemanja-radulovic',
       'GitHub: github.com/nemanjaradulovic',
       'Location: Belgrade, Serbia',
       '',

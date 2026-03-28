@@ -11,11 +11,9 @@ import {
   useTheme,
 } from '@mui/material';
 import HighlightedText, { highlightFirstLetters } from './HighlightedText';
-import { useLocale } from 'next-intl';
 
-export default function WorkExperience() {
+export default function WorkExperience({ locale }: { locale: string }) {
   const theme = useTheme();
-  const locale = useLocale();
   const isSrCyrl = locale === 'sr-Cyrl';
   const isSr = locale === 'sr' || isSrCyrl;
 
@@ -167,7 +165,7 @@ export default function WorkExperience() {
             <Box
               sx={{
                 display: 'grid',
-                gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' },
+                gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
                 gap: { xs: 2, sm: 3 },
               }}
             >
@@ -234,6 +232,7 @@ export default function WorkExperience() {
                   color: theme.palette.terminal.cyan,
                   backgroundColor: theme.palette.terminal.header,
                   textTransform: 'none',
+                  width: { xs: '100%', sm: 220 },
                   px: 2.5,
                   py: 1,
                   '&:hover': {
