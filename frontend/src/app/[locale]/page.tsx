@@ -5,11 +5,11 @@ import WorkExperience from '@/components/WorkExperience';
 import Education from '@/components/Education';
 import Skills from '@/components/Skills';
 import CaseStudies from '@/components/CaseStudies';
-import TestimonialsClient from '@/components/TestimonialsClient';
 import EngagementModels from '@/components/EngagementModels';
 import FaqClient from '@/components/FaqClient';
 import ContactUs from '@/components/ContactUs';
 import ClientPageWrapper from '@/components/ClientPageWrapper';
+import SectionReveal from '@/components/SectionReveal';
 import { routing } from '@/i18n/routing';
 
 const SITE_URL =
@@ -142,15 +142,30 @@ export default async function Home({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <ClientPageWrapper>
-        <Hero />
-        <WorkExperience />
-        <CaseStudies />
-        <Education />
-        <EngagementModels />
-        <Skills />
-        <TestimonialsClient />
-        <FaqClient />
-        <ContactUs />
+        <SectionReveal>
+          <Hero />
+        </SectionReveal>
+        <SectionReveal delayMs={70}>
+          <WorkExperience />
+        </SectionReveal>
+        <SectionReveal delayMs={90}>
+          <CaseStudies />
+        </SectionReveal>
+        <SectionReveal delayMs={110}>
+          <Education />
+        </SectionReveal>
+        <SectionReveal delayMs={130}>
+          <EngagementModels />
+        </SectionReveal>
+        <SectionReveal delayMs={150}>
+          <Skills />
+        </SectionReveal>
+        <SectionReveal delayMs={190}>
+          <FaqClient />
+        </SectionReveal>
+        <SectionReveal delayMs={210}>
+          <ContactUs />
+        </SectionReveal>
       </ClientPageWrapper>
     </>
   );

@@ -25,6 +25,50 @@ export default function Hero() {
   const theme = useTheme();
   const t = useTranslations('Hero');
 
+  const handleHeroPointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
+    const target = event.currentTarget;
+    const rect = target.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+    const tiltY = (x - 50) / 18;
+    const tiltX = (50 - y) / 24;
+
+    target.style.setProperty('--hero-x', `${x}%`);
+    target.style.setProperty('--hero-y', `${y}%`);
+    target.style.setProperty('--hero-tilt-x', `${tiltX.toFixed(2)}deg`);
+    target.style.setProperty('--hero-tilt-y', `${tiltY.toFixed(2)}deg`);
+  };
+
+  const handleHeroPointerLeave = (event: React.PointerEvent<HTMLDivElement>) => {
+    const target = event.currentTarget;
+    target.style.setProperty('--hero-x', '50%');
+    target.style.setProperty('--hero-y', '35%');
+    target.style.setProperty('--hero-tilt-x', '0deg');
+    target.style.setProperty('--hero-tilt-y', '0deg');
+  };
+
+  const handleCtaPointerMove = (event: React.PointerEvent<HTMLButtonElement>) => {
+    const target = event.currentTarget;
+    const rect = target.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const moveX = ((x / rect.width) - 0.5) * 10;
+    const moveY = ((y / rect.height) - 0.5) * 8;
+
+    target.style.setProperty('--magnet-x', `${moveX.toFixed(2)}px`);
+    target.style.setProperty('--magnet-y', `${moveY.toFixed(2)}px`);
+    target.style.setProperty('--cta-glow-x', `${((x / rect.width) * 100).toFixed(2)}%`);
+    target.style.setProperty('--cta-glow-y', `${((y / rect.height) * 100).toFixed(2)}%`);
+  };
+
+  const handleCtaPointerLeave = (event: React.PointerEvent<HTMLButtonElement>) => {
+    const target = event.currentTarget;
+    target.style.setProperty('--magnet-x', '0px');
+    target.style.setProperty('--magnet-y', '0px');
+    target.style.setProperty('--cta-glow-x', '50%');
+    target.style.setProperty('--cta-glow-y', '50%');
+  };
+
   return (
     <Box
       component="section"
@@ -34,15 +78,52 @@ export default function Hero() {
       }}
     >
       <Container maxWidth="xl">
-        <Card
-          className="terminal-window"
+        <Box
+          onPointerMove={handleHeroPointerMove}
+          onPointerLeave={handleHeroPointerLeave}
           sx={{
-            maxWidth: '1200px',
-            mx: 'auto',
-            backgroundColor: theme.palette.terminal.background,
-            border: `1px solid ${theme.palette.terminal.border}`,
+            '--hero-x': '50%',
+            '--hero-y': '35%',
+            '--hero-tilt-x': '0deg',
+            '--hero-tilt-y': '0deg',
+            perspective: '1200px',
           }}
         >
+          <Card
+            className="terminal-window"
+            sx={{
+              maxWidth: '1200px',
+              mx: 'auto',
+              backgroundColor: theme.palette.terminal.background,
+              border: `1px solid ${theme.palette.terminal.border}`,
+              position: 'relative',
+              overflow: 'hidden',
+              transform:
+                'translate3d(0, 0, 0) rotateX(var(--hero-tilt-x)) rotateY(var(--hero-tilt-y))',
+              transition:
+                'transform 0.28s cubic-bezier(0.2, 0.7, 0, 1), box-shadow 0.35s cubic-bezier(0.2, 0.7, 0, 1)',
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                inset: 0,
+                pointerEvents: 'none',
+                background: `radial-gradient(500px circle at var(--hero-x) var(--hero-y), ${theme.palette.terminal.cyan}33 0%, ${theme.palette.terminal.cyan}08 32%, transparent 60%)`,
+                mixBlendMode: 'screen',
+                transition: 'background-position 0.2s ease',
+                zIndex: 0,
+              },
+              '& > *': {
+                position: 'relative',
+                zIndex: 1,
+              },
+              '@media (hover: none), (pointer: coarse)': {
+                transform: 'none',
+                '&::before': {
+                  background: 'none',
+                },
+              },
+            }}
+          >
           <Box
             sx={{
               backgroundColor: theme.palette.terminal.header,
@@ -195,7 +276,13 @@ export default function Hero() {
                     component="a"
                     href="mailto:contact@nemanzh.dev"
                     startIcon={<Email />}
+                    onPointerMove={handleCtaPointerMove}
+                    onPointerLeave={handleCtaPointerLeave}
                     sx={{
+                      '--magnet-x': '0px',
+                      '--magnet-y': '0px',
+                      '--cta-glow-x': '50%',
+                      '--cta-glow-y': '50%',
                       backgroundColor: theme.palette.terminal.header,
                       border: `2px solid ${theme.palette.terminal.cyan}`,
                       color: theme.palette.terminal.cyan,
@@ -208,13 +295,47 @@ export default function Hero() {
                       width: 'fit-content',
                       minWidth: 'auto',
                       whiteSpace: 'nowrap',
+                      position: 'relative',
+                      overflow: 'hidden',
+                      transform:
+                        'translate3d(var(--magnet-x), var(--magnet-y), 0)',
+                      transition:
+                        'transform 0.18s ease-out, box-shadow 0.24s ease, background-color 0.24s ease, color 0.24s ease',
+                      '&::before': {
+                        content: '""',
+                        position: 'absolute',
+                        inset: 0,
+                        pointerEvents: 'none',
+                        background: `radial-gradient(140px circle at var(--cta-glow-x) var(--cta-glow-y), ${theme.palette.terminal.cyan}55 0%, transparent 62%)`,
+                        opacity: 0,
+                        transition: 'opacity 0.22s ease',
+                      },
                       '&:hover': {
                         backgroundColor: theme.palette.terminal.cyan,
                         color: theme.palette.terminal.background,
-                        transform: 'translateY(-2px)',
+                        transform:
+                          'translate3d(var(--magnet-x), calc(var(--magnet-y) - 2px), 0)',
                         boxShadow: `0 4px 12px ${theme.palette.terminal.cyan}40`,
+                        animation: 'ctaPulse 1.45s ease-in-out infinite',
+                        '&::before': {
+                          opacity: 0.45,
+                        },
                       },
-                      transition: 'all 0.3s ease-in-out',
+                      '&:active': {
+                        animation: 'none',
+                        transform:
+                          'translate3d(calc(var(--magnet-x) * 0.4), calc(var(--magnet-y) * 0.4), 0)',
+                      },
+                      '@media (hover: none), (pointer: coarse)': {
+                        transform: 'none',
+                        '&::before': {
+                          display: 'none',
+                        },
+                        '&:hover': {
+                          transform: 'translateY(-2px)',
+                          animation: 'none',
+                        },
+                      },
                     }}
                   >
                     {t('cta')}
@@ -463,7 +584,8 @@ export default function Hero() {
               </Typography>
             </Box>
           </CardContent>
-        </Card>
+          </Card>
+        </Box>
       </Container>
     </Box>
   );

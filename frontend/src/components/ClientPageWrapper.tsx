@@ -44,6 +44,8 @@ export default function ClientPageWrapper({
             )
           `,
         position: 'relative',
+        isolation: 'isolate',
+        overflow: 'hidden',
         '&::before': {
           content: '""',
           position: 'fixed',
@@ -83,12 +85,42 @@ export default function ClientPageWrapper({
           pointerEvents: 'none',
           zIndex: 0,
         },
+        '& .ambient-orb': {
+          position: 'fixed',
+          borderRadius: '50%',
+          pointerEvents: 'none',
+          zIndex: 0,
+          filter: 'blur(20px)',
+          animation: 'orbFloat 16s ease-in-out infinite',
+        },
+        '& .ambient-orb.orb-one': {
+          width: { xs: '180px', md: '320px' },
+          height: { xs: '180px', md: '320px' },
+          top: '8%',
+          left: '6%',
+          background: isDark
+            ? 'radial-gradient(circle, rgba(88, 166, 255, 0.22) 0%, rgba(88, 166, 255, 0.02) 62%, transparent 72%)'
+            : 'radial-gradient(circle, rgba(16, 185, 129, 0.18) 0%, rgba(16, 185, 129, 0.03) 62%, transparent 72%)',
+          animationDelay: '0s',
+        },
+        '& .ambient-orb.orb-two': {
+          width: { xs: '140px', md: '260px' },
+          height: { xs: '140px', md: '260px' },
+          right: '8%',
+          top: { xs: '58%', md: '48%' },
+          background: isDark
+            ? 'radial-gradient(circle, rgba(163, 113, 247, 0.2) 0%, rgba(163, 113, 247, 0.01) 65%, transparent 75%)'
+            : 'radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.02) 65%, transparent 75%)',
+          animationDelay: '-6s',
+        },
         '& > *': {
           position: 'relative',
           zIndex: 1,
         },
       }}
     >
+      <Box className="ambient-orb orb-one" />
+      <Box className="ambient-orb orb-two" />
       {children}
     </Box>
   );

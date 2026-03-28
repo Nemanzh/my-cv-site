@@ -8,6 +8,7 @@ import ThemeProvider from '@/components/ThemeProvider';
 import Header from '@/components/Header';
 import WebVitals from '@/components/WebVitals';
 import { Major_Mono_Display } from 'next/font/google';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v16-appRouter';
 
 const majorMonoDisplay = Major_Mono_Display({
   weight: '400',
@@ -163,17 +164,19 @@ export default async function RootLayout({
         <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
       </head>
       <body className={majorMonoDisplay.variable}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <WebVitals />
-        <ThemeProvider>
-          <NextIntlClientProvider>
-            <Header />
-            {children}
-          </NextIntlClientProvider>
-        </ThemeProvider>
+        <AppRouterCacheProvider>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
+          <WebVitals />
+          <ThemeProvider>
+            <NextIntlClientProvider>
+              <Header />
+              {children}
+            </NextIntlClientProvider>
+          </ThemeProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
