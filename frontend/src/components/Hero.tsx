@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import dynamic from 'next/dynamic';
 import {
   Box,
   Container,
@@ -16,10 +15,7 @@ import {
 import HighlightedText, { highlightFirstLetters } from './HighlightedText';
 import { Email, GitHub, LinkedIn, LocationOn } from '@mui/icons-material';
 import { useTranslations } from 'next-intl';
-
-const InteractiveTerminal = dynamic(() => import('./InteractiveTerminal'), {
-  ssr: false,
-});
+import InteractiveTerminal from './InteractiveTerminal';
 
 export default function Hero() {
   const theme = useTheme();

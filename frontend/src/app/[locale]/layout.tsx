@@ -14,7 +14,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v16-appRouter';
 const majorMonoDisplay = Major_Mono_Display({
   weight: '400',
   subsets: ['latin'],
-  display: 'swap',
+  display: 'optional',
   variable: '--font-major-mono-display',
 });
 
