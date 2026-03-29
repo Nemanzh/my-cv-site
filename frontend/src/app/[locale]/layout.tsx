@@ -8,15 +8,7 @@ import ThemeProvider from '@/components/ThemeProvider';
 import Header from '@/components/Header';
 import WebVitals from '@/components/WebVitals';
 import StickyCta from '@/components/StickyCta';
-import { Major_Mono_Display } from 'next/font/google';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v16-appRouter';
-
-const majorMonoDisplay = Major_Mono_Display({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'optional',
-  variable: '--font-major-mono-display',
-});
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ?? 'https://nemanzh.dev';
@@ -84,6 +76,7 @@ export async function generateMetadata({
     },
     icons: {
       icon: [
+        { url: '/favicon.svg', type: 'image/svg+xml', sizes: 'any' },
         { url: '/favicon.ico', sizes: 'any' },
         { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
         { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
@@ -92,8 +85,8 @@ export async function generateMetadata({
       other: [
         {
           rel: 'mask-icon',
-          url: '/nemanzh-logo-icon.svg',
-          color: '#6366f1',
+          url: '/favicon.svg',
+          color: '#20E0FF',
         },
       ],
     },
@@ -158,9 +151,8 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <head>
-      </head>
-      <body className={majorMonoDisplay.variable}>
+      <head></head>
+      <body>
         <AppRouterCacheProvider>
           <script
             type="application/ld+json"

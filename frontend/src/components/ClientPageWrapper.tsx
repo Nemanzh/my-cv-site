@@ -11,41 +11,27 @@ export default function ClientPageWrapper({
   children,
 }: ClientPageWrapperProps) {
   const theme = useTheme();
-  const isDark = theme.palette.mode === 'dark';
+  const colors = theme.palette.terminal;
 
   return (
     <Box
       component="main"
       sx={{
         minHeight: '100vh',
-        background: isDark
-          ? `
-            radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.08) 0%, transparent 50%),
-            linear-gradient(135deg, 
-              rgba(13, 17, 23, 1) 0%, 
-              rgba(22, 27, 34, 1) 25%, 
-              rgba(13, 17, 23, 1) 50%, 
-              rgba(22, 27, 34, 1) 75%, 
-              rgba(13, 17, 23, 1) 100%
-            )
-          `
-          : `
-            radial-gradient(circle at 20% 80%, rgba(124, 58, 237, 0.08) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.05) 0%, transparent 50%),
-            radial-gradient(circle at 40% 40%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
-            linear-gradient(135deg, 
-              rgba(255, 255, 255, 1) 0%, 
-              rgba(248, 250, 252, 1) 25%, 
-              rgba(255, 255, 255, 1) 50%, 
-              rgba(248, 250, 252, 1) 75%, 
-              rgba(255, 255, 255, 1) 100%
-            )
-          `,
+        background: `
+          radial-gradient(circle at 20% 80%, ${colors.cyan}18 0%, transparent 42%),
+          radial-gradient(circle at 80% 20%, ${colors.text}10 0%, transparent 34%),
+          radial-gradient(circle at 42% 38%, ${colors.magenta}0e 0%, transparent 34%),
+          linear-gradient(
+            135deg,
+            ${theme.palette.background.default} 0%,
+            ${colors.background} 40%,
+            ${theme.palette.background.default} 100%
+          )
+        `,
         position: 'relative',
         isolation: 'isolate',
-        overflow: 'hidden',
+        overflowX: 'hidden',
         '&::before': {
           content: '""',
           position: 'fixed',
@@ -53,37 +39,24 @@ export default function ClientPageWrapper({
           left: 0,
           right: 0,
           bottom: 0,
-          background: isDark
-            ? `
-              repeating-linear-gradient(
-                90deg,
-                transparent,
-                transparent 98px,
-                rgba(120, 119, 198, 0.03) 100px
-              ),
-              repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 98px,
-                rgba(120, 119, 198, 0.03) 100px
-              )
-            `
-            : `
-              repeating-linear-gradient(
-                90deg,
-                transparent,
-                transparent 98px,
-                rgba(124, 58, 237, 0.02) 100px
-              ),
-              repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 98px,
-                rgba(124, 58, 237, 0.02) 100px
-              )
-            `,
+          background: `
+            linear-gradient(180deg, ${colors.border}00 0%, ${colors.border}30 100%),
+            repeating-linear-gradient(
+              90deg,
+              transparent,
+              transparent 98px,
+              ${colors.cyan}14 100px
+            ),
+            repeating-linear-gradient(
+              0deg,
+              transparent,
+              transparent 98px,
+              ${colors.cyan}10 100px
+            )
+          `,
           pointerEvents: 'none',
           zIndex: 0,
+          opacity: 0.34,
         },
         '& .ambient-orb': {
           position: 'fixed',
@@ -97,18 +70,14 @@ export default function ClientPageWrapper({
           height: { xs: '180px', md: '320px' },
           top: '8%',
           left: '6%',
-          background: isDark
-            ? 'radial-gradient(circle, rgba(88, 166, 255, 0.22) 0%, rgba(88, 166, 255, 0.02) 62%, transparent 72%)'
-            : 'radial-gradient(circle, rgba(16, 185, 129, 0.18) 0%, rgba(16, 185, 129, 0.03) 62%, transparent 72%)',
+          background: `radial-gradient(circle, ${colors.cyan}18 0%, ${colors.cyan}04 54%, transparent 72%)`,
         },
         '& .ambient-orb.orb-two': {
           width: { xs: '140px', md: '260px' },
           height: { xs: '140px', md: '260px' },
           right: '8%',
           top: { xs: '58%', md: '48%' },
-          background: isDark
-            ? 'radial-gradient(circle, rgba(163, 113, 247, 0.2) 0%, rgba(163, 113, 247, 0.01) 65%, transparent 75%)'
-            : 'radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.02) 65%, transparent 75%)',
+          background: `radial-gradient(circle, ${colors.green}14 0%, ${colors.green}03 58%, transparent 76%)`,
         },
         '& > *': {
           position: 'relative',

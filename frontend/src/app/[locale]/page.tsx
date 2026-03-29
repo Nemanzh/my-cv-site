@@ -1,16 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
-import Hero from '@/components/Hero';
-import WorkExperience from '@/components/WorkExperience';
-import Education from '@/components/Education';
-import Skills from '@/components/Skills';
-import CaseStudies from '@/components/CaseStudies';
-import EngagementModels from '@/components/EngagementModels';
-import Faq from '@/components/Faq';
-import ContactUs from '@/components/ContactUs';
 import ClientPageWrapper from '@/components/ClientPageWrapper';
-import SectionReveal from '@/components/SectionReveal';
-import Testimonials from '@/components/Testimonials';
+import StudioPage from '@/components/StudioPage';
 import { routing } from '@/i18n/routing';
 
 const SITE_URL =
@@ -48,6 +39,7 @@ export async function generateMetadata({
   const pageMeta = PAGE_META[locale] ?? PAGE_META.en;
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: pageMeta.title,
     description: pageMeta.description,
     alternates: {
@@ -143,31 +135,7 @@ export default async function Home({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <ClientPageWrapper>
-        <Hero />
-        <SectionReveal>
-          <WorkExperience locale={locale} />
-        </SectionReveal>
-        <SectionReveal>
-          <CaseStudies />
-        </SectionReveal>
-        <SectionReveal>
-          <Testimonials />
-        </SectionReveal>
-        <SectionReveal>
-          <Education />
-        </SectionReveal>
-        <SectionReveal>
-          <EngagementModels />
-        </SectionReveal>
-        <SectionReveal>
-          <Skills />
-        </SectionReveal>
-        <SectionReveal>
-          <Faq />
-        </SectionReveal>
-        <SectionReveal>
-          <ContactUs />
-        </SectionReveal>
+        <StudioPage />
       </ClientPageWrapper>
     </>
   );

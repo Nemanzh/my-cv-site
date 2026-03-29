@@ -1,0 +1,47 @@
+<svg width="64" height="64" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+  <linearGradient id="gradLeft" x1="0%" y1="0%" x2="80%" y2="100%">
+    <stop offset="0%" stop-color="#20E0FF"/>
+    <stop offset="55%" stop-color="#158CFF"/>
+    <stop offset="100%" stop-color="#1544FF"/>
+  </linearGradient>
+  <linearGradient id="gradRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#4CE6FF"/>
+    <stop offset="30%" stop-color="#1CAEFF"/>
+    <stop offset="68%" stop-color="#4E4BFF"/>
+    <stop offset="100%" stop-color="#8E2CFF"/>
+  </linearGradient>
+  <linearGradient id="gradRight" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#F58FFF"/>
+    <stop offset="55%" stop-color="#A34BFF"/>
+    <stop offset="100%" stop-color="#5F1FE3"/>
+  </linearGradient>
+  <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="2.5" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</defs>
+
+<rect width="256" height="256" rx="52" fill="#040816"/>
+<g transform="translate(24, 45) scale(1.12)">
+  
+<g filter="url(#softGlow)">
+  <!-- left blade -->
+  <path d="M24 104 L40 32 L76 22 L60 93 Z" fill="url(#gradLeft)"/>
+  <path d="M40 32 L71 51 L60 93 L24 104 Z" fill="#248CFF" opacity="0.20"/>
+
+  <!-- ribbon diagonal -->
+  <path d="M44 23 L90 18 L160 88 L113 95 Z" fill="url(#gradRibbon)"/>
+  <path d="M44 23 L62 49 L113 95 L90 18 Z" fill="#FFFFFF" opacity="0.10"/>
+
+  <!-- right pillar -->
+  <path d="M125 30 L163 18 L158 93 L119 104 Z" fill="url(#gradRight)"/>
+  <path d="M125 30 L157 47 L158 93 L119 104 Z" fill="#FFFFFF" opacity="0.08"/>
+</g>
+
+</g>
+</svg>

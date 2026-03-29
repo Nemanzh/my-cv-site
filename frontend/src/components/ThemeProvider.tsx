@@ -124,26 +124,26 @@ export default function ThemeProvider({
       ...colors,
     },
     typography: {
-      fontFamily: '"Inter", "Segoe UI", "Roboto", sans-serif',
+      fontFamily: 'var(--font-sans)',
       h1: {
-        fontFamily: '"Major Mono Display", monospace',
-        fontWeight: 400,
+        fontFamily: 'var(--font-sans)',
+        fontWeight: 600,
       },
       h2: {
-        fontFamily: '"Major Mono Display", monospace',
-        fontWeight: 400,
+        fontFamily: 'var(--font-sans)',
+        fontWeight: 600,
       },
       h3: {
-        fontFamily: '"Major Mono Display", monospace',
-        fontWeight: 400,
+        fontFamily: 'var(--font-sans)',
+        fontWeight: 600,
       },
       h4: {
-        fontFamily: '"Major Mono Display", monospace',
-        fontWeight: 400,
+        fontFamily: 'var(--font-sans)',
+        fontWeight: 600,
       },
       h5: {
-        fontFamily: '"Major Mono Display", monospace',
-        fontWeight: 400,
+        fontFamily: 'var(--font-sans)',
+        fontWeight: 600,
       },
     },
   });

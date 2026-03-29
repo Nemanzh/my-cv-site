@@ -60,19 +60,19 @@ export default function LanguageSwitcher() {
   const currentLanguage = languages[locale as keyof typeof languages];
 
   return (
-    <Box>
+    <>
       <IconButton
         onClick={handleClick}
         size="small"
         sx={{
-          backgroundColor: theme.palette.terminal.header,
+          backgroundColor: 'transparent',
           border: `1px solid ${theme.palette.terminal.border}`,
-          borderRadius: 1,
+          borderRadius: 999,
           color: theme.palette.terminal.text,
-          minWidth: { xs: '44px', sm: '56px' },
+          minWidth: { xs: '36px', sm: '40px' },
           height: { xs: '36px', sm: '40px' },
           '&:hover': {
-            backgroundColor: theme.palette.terminal.border,
+            backgroundColor: `${theme.palette.terminal.header}cc`,
           },
           '&:focus': {
             outline: `2px solid ${theme.palette.terminal.cyan}`,
@@ -83,41 +83,14 @@ export default function LanguageSwitcher() {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         aria-label="Change language"
+        title={currentLanguage.name}
       >
-        <Box
+        <LanguageIcon
           sx={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: { xs: 0.5, sm: 1 },
+            fontSize: { xs: '0.95rem', sm: '1rem' },
+            opacity: 0.9,
           }}
-        >
-          <Typography
-            component="span"
-            className="terminal-mono"
-            sx={{
-              fontSize: { xs: '0.75rem', sm: '0.875rem' },
-              display: { xs: 'none', sm: 'block' },
-            }}
-          >
-            {currentLanguage.flag}
-          </Typography>
-          <Typography
-            component="span"
-            className="terminal-mono"
-            sx={{
-              fontSize: { xs: '0.75rem', sm: '0.875rem' },
-              fontWeight: 'bold',
-            }}
-          >
-            {currentLanguage.short}
-          </Typography>
-          <LanguageIcon
-            sx={{
-              fontSize: { xs: '0.875rem', sm: '1rem' },
-              opacity: 0.7,
-            }}
-          />
-        </Box>
+        />
       </IconButton>
 
       <Menu
@@ -220,6 +193,6 @@ export default function LanguageSwitcher() {
           );
         })}
       </Menu>
-    </Box>
+    </>
   );
 }

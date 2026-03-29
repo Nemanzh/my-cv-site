@@ -1,208 +1,298 @@
 {
   "Metadata": {
-    "title": "Nemanzh",
-    "description": "Softverski studio za moderne web proizvode, poslovni softver i backend platforme sa Microsoft tehnologijama u fokusu"
+    "title": "Nemanzh Software Studio",
+    "description": "Nemanzh Software Studio projektuje i razvija pouzdane web proizvode, poslovne platforme i moderne backend sisteme za timove kojima je važna ozbiljna isporuka."
   },
-  "Hero": {
-    "name": "NEMANZH SOFTWARE STUDIO",
-    "echo": "$ echo 'Gradimo moderne softverske proizvode i poslovne sisteme'",
-    "bio": "Nemanzh Software Studio razvija enterprise web aplikacije i blockchain proizvode za rastuće i velike timove. Fokus nam je na najsavremenijim i pouzdanim digitalnim rešenjima koja unapređuju procese, otvaraju nove izvore prihoda i rastu zajedno sa biznisom.",
-    "location": "BEOGRAD, SRBIJA",
-    "email": "CONTACT@NEMANZH.DEV",
-    "github": "NEMANZH",
-    "linkedin": "NEMANJA-RADULOVIC",
-    "explorePortfolio": "ISTRAZITE USLUGE STUDIJA",
-    "cta": "Pokrenimo projekat",
-    "readyToCollaborate": "Spremni da izgradimo koristan softver za vas biznis?",
-    "availableForFreelance": "Dostupni za razvoj proizvoda, modernizaciju sistema, API integracije i dugorocna tehnicka partnerstva.",
-    "tryTyping": "Probajte komande kao sto su",
-    "or": "ili"
-  },
-  "WorkExperience": {
-    "workExperience": "RADNO ISKUSTVO",
-    "technologies": "Tehnologije:",
-    "keyAchievements": "Ključna dostignuća:",
-    "experiences": {
-      "chainapp": {
-        "position": "Full Stack programer",
-        "company": "Chainapp Technologies",
-        "location": "Beograd, Srbija",
-        "period": "Apr 2024 - Sadašnje",
-        "type": "Puno radno vreme",
-        "description": "Vodim razvoj najsavremenijih NFT marketplace-a i blockchain rešenja. Arhitektiram skalabilne mikroservise koristeći Node.js i implementiram pametne ugovore na Cardano blockchain-u.",
-        "achievements": [
-          "Dizajnirao i implementirao NFT marketplace koji obrađuje 10K+ transakcija",
-          "Skratio vreme odgovora API-ja za 40% kroz optimizaciju",
-          "Vodio tim od 4 programera u agile okruženju"
-        ]
-      },
-      "insicon": {
-        "position": "Full Stack programer",
-        "company": "Insicon AB",
-        "location": "Stokholm, Švedska",
-        "period": "2022 - 2024",
-        "type": "Puno radno vreme",
-        "description": "Razvijao enterprise aplikacije i digitalna rešenja za klijente iz različitih industrija. Specijalizovao sam se za React/Next.js frontend razvoj i .NET backend servise.",
-        "achievements": [
-          "Isporučio 15+ klijentskih projekata na vreme i u okviru budžeta",
-          "Implementirao automatsko testiranje smanjevši broj grešaka za 60%",
-          "Mentorisao junior programere i vodio code review-e"
-        ]
-      },
-      "saga": {
-        "position": "Software programer",
-        "company": "Saga Länsförsäkringar",
-        "location": "Stokholm, Švedska",
-        "period": "2020 - 2022",
-        "type": "Puno radno vreme",
-        "description": "Razvijao i održavao sisteme za upravljanje osiguranjem. Radio na modernizaciji legacy sistema i razvoju novih funkcionalnosti koristeći moderne web tehnologije.",
-        "achievements": [
-          "Modernizovao legacy engine za kalkulaciju osiguranja",
-          "Poboljšao performanse sistema za 35%",
-          "Implementirao sveobuhvatnu strategiju unit testiranja"
-        ]
-      },
-      "lansforsakringar": {
-        "position": "Sistem programer",
-        "company": "Länsförsäkringar Göteborg",
-        "location": "Göteborg, Švedska",
-        "period": "2017 - 2020",
-        "type": "Puno radno vreme",
-        "description": "Početna pozicija gde sam razvijao interne alate i održavao postojeće sisteme. Stekao iskustvo u enterprise software razvoju i agile metodologijama.",
-        "achievements": [
-          "Razvio interne reporting alate koje koristi 100+ zaposlenih",
-          "Skratio vreme manuelne obrade podataka za 50%",
-          "Uspešno završio .NET sertifikacioni program"
-        ]
-      }
-    }
-  },
-  "Education": {
-    "education": "OBRAZOVANJE",
-    "certifications": "SERTIFIKATI",
-    "publications": "PUBLIKACIJE",
-    "educationList": {
-      "masters": {
-        "degree": "Master nauka u oblasti Softverskog inženjerstva i Računarskih nauka",
-        "institution": "Fakultet organizacionih nauka, Univerzitet u Beogradu",
-        "location": "Srbija",
-        "period": "2021 - 2022"
-      },
-      "bachelor": {
-        "degree": "Diplomirani inženjer Informacionih sistema i tehnologija",
-        "institution": "Fakultet organizacionih nauka, Univerzitet u Beogradu",
-        "location": "Srbija",
-        "period": "2009 - 2018"
-      },
-      "secondary": {
-        "degree": "Diploma srednje škole, Matematika",
-        "institution": "Gimnazija Kruševac",
-        "location": "Srbija",
-        "period": "2005 - 2009"
-      }
+  "StudioPage": {
+    "nav": {
+      "home": "Početna",
+      "about": "O studiju",
+      "services": "Usluge",
+      "experience": "Iskustvo",
+      "projects": "Radovi",
+      "credentials": "Reference",
+      "stack": "Tehnologije",
+      "contact": "Kontakt"
     },
-    "certificationsList": {
-      "azure": {
-        "title": "Microsoft Certified: Azure Fundamentals",
-        "issuer": "Microsoft",
-        "date": "Feb 2021",
-        "description": "Osnovno razumevanje cloud servisa i kako se ti servisi pružaju preko Microsoft Azure platforme."
-      }
+    "hero": {
+      "eyebrow": "Nemanzh Software Studio",
+      "availability": "Dostupan za pažljivo odabrane klijentske projekte i dugoročnu tehničku saradnju.",
+      "title": "Full-stack softverski studio za timove kojima treba pouzdana isporuka, a ne prazna priča.",
+      "lead": "Gradim moderne web proizvode, backend sisteme i integracije uz miran, inženjerski pristup radu.",
+      "body": "Nemanzh Software Studio je način na koji predstavljam svoj rad: senior full-stack isporuka oblikovana iskustvom iz enterprise okruženja, product razmišljanjem i fokusom na održive sisteme.",
+      "primaryCta": "Hajde da gradimo",
+      "secondaryCta": "Pogledaj radove",
+      "locationLabel": "Lokacija",
+      "locationValue": "Beograd, Srbija",
+      "emailLabel": "Email",
+      "emailValue": "contact@nemanzh.dev",
+      "socials": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn"
+      },
+      "stats": [
+        {
+          "value": "15+",
+          "label": "isporučenih projekata i proizvoda"
+        },
+        {
+          "value": "40%",
+          "label": "brži API odziv na ključnim tokovima"
+        },
+        {
+          "value": "60%",
+          "label": "manje bagova kroz bolje testiranje"
+        }
+      ]
     },
-    "publicationsList": {
-      "mongodb": {
-        "title": "TRANSFORMACIJA LOGIČKE ŠEME BAZE PODATAKA: OD RELACIONOG (T-SQL) MODELA DO DOKUMENT-ORIJENTISANE MONGODB",
-        "conference": "Proceedings of SYM-OP-IS 2022 Vrnjačka Banja",
-        "date": "Sep 22, 2022",
-        "abstract": "Pošto ne postoji jedinstven način predstavljanja dela podataka korisniku, ne postoji ni jedan način modelovanja baza podataka. Potrebno je razumeti problem koji aplikacija rešava i kako će proizvoditi, konzumirati i obrađivati podatke. Ovaj rad će predstaviti transformaciju logičkih šema iz relacionih baza podataka u schema-less dokument-orijentisane baze podataka."
-      },
-      "unittesting": {
-        "title": "NAJBOLJE PRAKSE U PISANJU UNIT TESTOVA ZA .NET FRAMEWORK",
-        "conference": "SYM-OP-IS Banja Koviljača",
-        "date": "Sep 23, 2021",
-        "abstract": "Unit testovi su osnovni alat za svakog programera, a cilj unit testiranja je da izoluje svaki deo programa i pokaže da su pojedinačni delovi ispravni. Unit test pruža pisani ugovor koji deo koda mora da ispuni, pored pružanja nekoliko drugih benefita."
-      }
-    }
-  },
-  "Skills": {
-    "skillsAndExpertise": "VEŠTINE && EKSPERTIZA",
-    "echo": "$ echo Kontinuirano učim i prilagođavam se novim tehnologijama",
-    "buildingScalableSolutions": "< Gradim skalabilna rešenja od web2 do web3 ekosistema",
-    "categories": {
-      "frontend": {
-        "title": "FRONTEND RAZVOJ",
-        "skills": {
-          "responsiveDesign": "Responzivni dizajn",
-          "spaDeployment": "SPA razvoj"
+    "about": {
+      "kicker": "O studiju",
+      "title": "Lični studio brend iza kog stoji ozbiljno iskustvo u enterprise inženjeringu.",
+      "intro": "Ovo nije freelancerska landing stranica i nije CV stranica. Ovo je fokusirana prezentacija načina rada i problema koje rešavam.",
+      "paragraphs": [
+        "Moja pozadina obuhvata full-stack isporuku kroz osiguranje, enterprise softver, interne poslovne platforme i blockchain proizvode. Ta kombinacija me je naučila kako da spojim potrebe proizvoda, tehnička ograničenja i dugoročnu održivost bez haotične isporuke.",
+        "Najviše vrednosti donosim timovima kojima treba praktičan inženjer koji može da postavi arhitekturu, implementira kritične delove sistema, podigne kvalitet i ostavi kod razumljivim i posle isporuke.",
+        "Pozicioniranje studija je jednostavno: pouzdan softver, direktna komunikacija i rešenja napravljena za stvarnu poslovnu upotrebu."
+      ],
+      "highlights": [
+        {
+          "label": "Fokus",
+          "value": "Web platforme, API-jevi, integracije, modernizacija"
+        },
+        {
+          "label": "Pristup",
+          "value": "Čista arhitektura, stabilna isporuka, bez drame"
+        },
+        {
+          "label": "Za koga",
+          "value": "Klijenti, regruteri i product timovi kojima je važna izvedba"
         }
-      },
-      "backend": {
-        "title": "BACKEND RAZVOJ",
-        "skills": {
-          "monolithicArchitecture": "Monolitna arhitektura",
-          "apiDesign": "API dizajn"
+      ]
+    },
+    "services": {
+      "kicker": "Usluge",
+      "title": "Razvoj softvera usmeren na poslovni efekat i tehničku jasnoću.",
+      "intro": "Ponuda je namerno fokusirana: napraviti pravu stvar, održati sistem pouzdanim i izbeći nepotrebnu kompleksnost.",
+      "items": [
+        {
+          "title": "Full-Stack Web Development",
+          "description": "Kompletna isporuka proizvoda kroz frontend, backend, podatke i deployment za moderne web aplikacije.",
+          "outcomes": [
+            "Production-ready arhitektura",
+            "Jasno vlasništvo kroz ceo stack",
+            "Predvidiv release proces"
+          ]
+        },
+        {
+          "title": "Backend i API razvoj",
+          "description": "Pouzdani servisi, čist domen i API sloj koji podržava rast umesto da stvara operativni teret.",
+          "outcomes": [
+            "Stabilan dizajn servisa",
+            "Bolje performanse na kritičnim tokovima",
+            "Lakše održavanje"
+          ]
+        },
+        {
+          "title": "Frontend razvoj",
+          "description": "Brzi i pristupačni interfejsi sa dobrim informacijskim tokom, doslednim stanjima i ozbiljnom implementacijom.",
+          "outcomes": [
+            "Responzivni UI sistemi",
+            "Pristupačna korisnička iskustva",
+            "Bolji UX bez vizuelne buke"
+          ]
+        },
+        {
+          "title": "Cloud i integracije",
+          "description": "Praktična cloud isporuka, integracije sa trećim sistemima i povezivanje servisa koje smanjuje ručni rad.",
+          "outcomes": [
+            "Pouzdanije integracije",
+            "Automatizacija ključnih tokova",
+            "Bolja operativna vidljivost"
+          ]
+        },
+        {
+          "title": "Optimizacija performansi",
+          "description": "Analiza i unapređenje sporih API-ja, neefikasnih upita i nestabilnog frontend ponašanja.",
+          "outcomes": [
+            "Brži endpointi",
+            "Efikasniji pristup podacima",
+            "Bolji utisak kvaliteta proizvoda"
+          ]
+        },
+        {
+          "title": "Tehnički consulting",
+          "description": "Senior inženjerski input za arhitekturu, planiranje isporuke, kvalitet koda i odluke o modernizaciji.",
+          "outcomes": [
+            "Jasniji tehnički smer",
+            "Manji rizik isporuke",
+            "Bolji inženjerski kompromisi"
+          ]
         }
-      },
-      "databases": {
-        "title": "BAZE PODATAKA I SKLADIŠTENJE",
-        "skills": {
-          "databaseDesign": "Dizajn baza podataka",
-          "schemaMigration": "Migracija šema",
-          "dataModeling": "Modelovanje podataka",
-          "queryOptimization": "Optimizacija upita"
+      ]
+    },
+    "experience": {
+      "kicker": "Iskustvo",
+      "title": "Iskustvo predstavljeno kroz uticaj, odgovornost i poslovni kontekst.",
+      "intro": "Zajednička nit kroz ove uloge je ista: preuzeti vlasništvo, unaprediti sistem i isporučiti rad koji traje.",
+      "items": [
+        {
+          "period": "2024 - danas",
+          "role": "Full-Stack Developer",
+          "company": "Chainapp Technologies",
+          "summary": "Rad na blockchain proizvodnoj infrastrukturi, marketplace tokovima i pratećim servisima za platforme sa većim obimom korišćenja.",
+          "impact": "Doprinos platformi koja je obradila 10K+ transakcija uz oko 40% bolje API performanse na ključnim delovima.",
+          "stack": ["Node.js", "TypeScript", "Cardano", "Microservices"]
+        },
+        {
+          "period": "2022 - 2024",
+          "role": "Full-Stack Developer",
+          "company": "Insicon AB",
+          "summary": "Isporuka enterprise aplikacija za klijente uz kombinaciju React ili Next.js frontenda i .NET backend servisa.",
+          "impact": "Isporučeno 15+ projekata, uvedene jače test prakse i smanjen broj grešaka za oko 60%.",
+          "stack": ["Next.js", "React", ".NET", "Azure"]
+        },
+        {
+          "period": "2020 - 2022",
+          "role": "Software Developer",
+          "company": "Saga",
+          "summary": "Rad u sistemima osiguranja gde je modernizacija morala da se radi bez narušavanja ključnih poslovnih procesa.",
+          "impact": "Poboljšane performanse sistema za oko 35% uz podršku migraciji i razvoju novih funkcionalnosti.",
+          "stack": ["C#", ".NET", "SQL Server", "Legacy modernization"]
+        },
+        {
+          "period": "2017 - 2020",
+          "role": "Backend Developer",
+          "company": "SAGA",
+          "summary": "Razvoj internih alata i poslovnih sistema u enterprise okruženju sa visokim zahtevima za pouzdanost.",
+          "impact": "Smanjeno ručno procesiranje za oko 50% i podržani interni alati koje koristi širi operativni tim.",
+          "stack": [".NET", "SQL Server", "Internal platforms"]
         }
-      },
-      "blockchain": {
-        "title": "BLOCKCHAIN I WEB3",
-        "skills": {
-          "nftMinting": "NFT kreiranje",
-          "cryptoWallets": "Kripto novčanici",
-          "blockchainIntegration": "Blockchain integracija",
-          "decentralizedVoting": "Decentralizovano glasanje"
+      ]
+    },
+    "projects": {
+      "kicker": "Odabrani radovi",
+      "title": "Reprezentativni projekti pretvoreni u jasne i pregledne case study kartice.",
+      "intro": "Ovi primeri prikazuju tip problema koje najčešće rešavam: skala, modernizacija, kvalitet i jasnija isporuka.",
+      "items": [
+        {
+          "title": "NFT Marketplace Platforma",
+          "description": "Product rad oko marketplace logike, backend servisa i transakcionih tokova u blockchain okruženju.",
+          "impact": "Građeno za veći throughput, pouzdanost i operativnu stabilnost dok je platforma prelazila 10K transakcija.",
+          "stack": [
+            "Node.js",
+            "TypeScript",
+            "Next.js",
+            "PostgreSQL",
+            "Cardano"
+          ],
+          "primaryLabel": "Pričajmo o sličnom projektu",
+          "primaryHref": "#contact",
+          "secondaryLabel": "GitHub",
+          "secondaryHref": "https://github.com/nemanjaradulovic"
+        },
+        {
+          "title": "Enterprise Delivery Systems",
+          "description": "Klijentske i interne poslovne aplikacije isporučene kroz full-stack pristup sa fokusom na kvalitet release procesa.",
+          "impact": "Fokus na bržem ritmu isporuke, manjem broju grešaka i čistijoj osnovi za naredne promene.",
+          "stack": ["Next.js", "React", ".NET", "Azure", "Testing"],
+          "primaryLabel": "Saradnja",
+          "primaryHref": "#contact",
+          "secondaryLabel": "LinkedIn",
+          "secondaryHref": "https://www.linkedin.com/in/nemanja-radulovic/"
+        },
+        {
+          "title": "Modernizacija platformi osiguranja",
+          "description": "Postepena modernizacija poslovnih sistema gde su performanse, tačnost i kontinuitet bili važniji od trenda.",
+          "impact": "Poboljšane brzina i održivost sistema, uz manje ručnog rada i jasniju osnovu za dalje širenje.",
+          "stack": ["C#", ".NET", "SQL Server", "Architecture"],
+          "primaryLabel": "Pokreni razgovor",
+          "primaryHref": "#contact",
+          "secondaryLabel": "Email",
+          "secondaryHref": "mailto:contact@nemanzh.dev"
+        },
+        {
+          "title": "IntersectMBO",
+          "description": "Rad na blockchain-oriented platformi sa fokusom na product logiku, backend servise i stabilno izvršavanje ključnih tokova.",
+          "impact": "Fokus je bio na pouzdanosti transakcija, jasnijem product ponašanju i sistemu spremnom za rast opterećenja.",
+          "stack": ["Node.js", "TypeScript", "Next.js", "Cardano"],
+          "primaryLabel": "Pričajmo o sličnom projektu",
+          "primaryHref": "#contact",
+          "secondaryLabel": "Poseti sajt",
+          "secondaryHref": "https://intersectmbo.org/"
+        },
+        {
+          "title": "Centralni registar / One Stop Shop",
+          "description": "Optimizacija web aplikacije za brži, stabilniji i precizniji rad sa centralnim registrom živorođenih i umrlih.",
+          "impact": "Naglasak je bio na tačnosti podataka, pouzdanosti administrativnih tokova i radu sa jednim od najvažnijih državnih skupova podataka.",
+          "stack": ["ASP.NET", "C#", "SQL Server", "Public sector"],
+          "primaryLabel": "Pokreni razgovor",
+          "primaryHref": "#contact",
+          "secondaryLabel": "Poseti sajt",
+          "secondaryHref": "https://www.croso.gov.rs/cir/index.php"
         }
-      },
-      "cloud": {
-        "title": "CLOUD I DEVOPS",
-        "skills": {
-          "deploymentAutomation": "Automatizacija deployment-a"
+      ]
+    },
+    "credentials": {
+      "kicker": "Certifikati i publikacije",
+      "title": "Formalne potvrde i konferencijski radovi povezani sa praktičnim inženjerskim radom.",
+      "intro": "Jedan Microsoft sertifikat i dva objavljena rada iz oblasti testiranja, modelovanja baza podataka i backend inženjeringa.",
+      "items": [
+        {
+          "category": "Microsoft sertifikat",
+          "title": "Azure Fundamentals - AZ-900",
+          "meta": "februar 2021",
+          "description": "Osnovni Microsoft Azure sertifikat koji pokriva cloud koncepte i ključne platformske servise."
+        },
+        {
+          "category": "Publikacija",
+          "title": "Best Practices in Writing Unit Tests for the .NET Framework",
+          "meta": "SYM-OP-IS · Banja Koviljača, Srbija · 20-23. septembar 2021.",
+          "description": "Rad je predstavljen na konferenciji i objavljen u SYM-OP-IS zborniku 23. septembra 2021."
+        },
+        {
+          "category": "Publikacija",
+          "title": "Transformation of the Database Logical Schema: From a Relational (T-SQL) Model to a Document-Oriented MongoDB",
+          "meta": "SYM-OP-IS 2022 · Vrnjačka Banja, Srbija · 19-22. septembar 2022.",
+          "description": "Rad je predstavljen na konferenciji i objavljen u zborniku 22. septembra 2022."
         }
-      },
-      "integration": {
-        "title": "INTEGRACIJA I MESSAGING",
-        "skills": {
-          "eventDrivenArchitecture": "Event-Driven arhitektura",
-          "apiIntegration": "API integracija"
+      ]
+    },
+    "stack": {
+      "kicker": "Tehnologije",
+      "title": "Tehnološki izbori zasnovani na iskustvu iz realne isporuke.",
+      "intro": "Radim pouzdano kroz Microsoft-first backend sisteme, moderni JavaScript ekosistem, cloud infrastrukturu i relacione baze podataka.",
+      "groups": [
+        {
+          "title": "Backend",
+          "items": [".NET", "C#", "Node.js", "REST APIs"]
+        },
+        {
+          "title": "Frontend",
+          "items": ["Next.js", "React", "Angular", "TypeScript"]
+        },
+        {
+          "title": "Cloud i DevOps",
+          "items": ["Azure", "AWS", "Docker", "CI/CD"]
+        },
+        {
+          "title": "Podaci",
+          "items": [
+            "PostgreSQL",
+            "SQL Server",
+            "Database design",
+            "Optimization"
+          ]
         }
-      },
-      "practices": {
-        "title": "RAZVOJNE PRAKSE",
-        "skills": {
-          "unitTesting": "Unit testiranje",
-          "testDrivenDevelopment": "Test-Driven razvoj",
-          "agileMethodologies": "Agile metodologije",
-          "codeReviews": "Code review-i",
-          "gitVersionControl": "Git verzioniranje",
-          "cleanCode": "Čist kod",
-          "solidPrinciples": "SOLID principi",
-          "designPatterns": "Dizajn paterni",
-          "documentation": "Dokumentacija",
-          "performanceOptimization": "Optimizacija performansi"
-        }
-      },
-      "specialized": {
-        "title": "SPECIJALIZOVANE OBLASTI",
-        "skills": {
-          "governmentApplications": "Vladine aplikacije",
-          "insuranceSystems": "Sistemi osiguranja",
-          "multiTenantArchitecture": "Multi-tenant arhitektura",
-          "socialInsurance": "Socijalno osiguranje",
-          "identityManagement": "Upravljanje identitetom",
-          "enterpriseSolutions": "Enterprise rešenja",
-          "regulatoryCompliance": "Regulatorna usklađenost",
-          "dataSecurity": "Bezbednost podataka",
-          "legacySystemMigration": "Migracija legacy sistema"
-        }
-      }
+      ]
+    },
+    "contact": {
+      "kicker": "Kontakt",
+      "title": "Treba vam pouzdan inženjer ili studio-style tehnički partner?",
+      "body": "Ako gradite proizvod, modernizujete postojeći sistem ili vam je potreban senior full-stack inženjer koji može brzo da preuzme odgovornost, javite se.",
+      "primaryCta": "Kontaktiraj me",
+      "secondaryCta": "Pogledaj LinkedIn",
+      "email": "contact@nemanzh.dev",
+      "closing": "Direktna komunikacija, jasan scope i softver napravljen da traje."
     }
   }
 }

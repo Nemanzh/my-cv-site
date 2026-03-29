@@ -1,208 +1,304 @@
 {
   "Metadata": {
-    "title": "Nemanzh",
-    "description": "Software studio building modern web products, custom business systems, and Microsoft-first backend platforms"
+    "title": "Nemanzh Software Studio | Enterprise .NET and Full-Stack Development",
+    "description": "Nemanzh Software Studio is my independent software practice focused on enterprise applications, scalable .NET backends, cloud solutions, and modern web platforms."
   },
-  "Hero": {
-    "name": "NEMANZH SOFTWARE STUDIO",
-    "echo": "$ echo 'We build modern software products and custom business systems'",
-    "bio": "Nemanzh Software Studio builds enterprise web applications and blockchain products for growing and established teams. We focus on modern, reliable digital products that improve operations, launch new revenue streams, and scale with business growth.",
-    "location": "BELGRADE, SERBIA",
-    "email": "CONTACT@NEMANZH.DEV",
-    "github": "GitHub",
-    "linkedin": "LinkedIn",
-    "explorePortfolio": "EXPLORE STUDIO SERVICES",
-    "cta": "Start a project",
-    "readyToCollaborate": "Ready to build useful software for your business?",
-    "availableForFreelance": "Available for product builds, modernization, API integrations, and long-term technical partnerships.",
-    "tryTyping": "Try commands like",
-    "or": "or"
-  },
-  "WorkExperience": {
-    "workExperience": "WORK_EXPERIENCE",
-    "technologies": "Technologies:",
-    "keyAchievements": "Key Achievements:",
-    "experiences": {
-      "chainapp": {
-        "position": "Full Stack Developer",
-        "company": "Chainapp Technologies",
-        "location": "Belgrade, Serbia",
-        "period": "Apr 2024 - Present",
-        "type": "Full-time",
-        "description": "Leading development of cutting-edge NFT marketplace and blockchain solutions. Architecting scalable microservices using Node.js and implementing smart contracts on Cardano blockchain.",
-        "achievements": [
-          "Designed and implemented NFT marketplace handling 10K+ transactions",
-          "Reduced API response time by 40% through optimization",
-          "Led team of 4 developers in agile environment"
-        ]
-      },
-      "insicon": {
-        "position": "Full Stack Developer",
-        "company": "Insicon AB",
-        "location": "Stockholm, Sweden",
-        "period": "2022 - 2024",
-        "type": "Full-time",
-        "description": "Developed enterprise applications and digital solutions for clients across various industries. Specialized in React/Next.js frontend development and .NET backend services.",
-        "achievements": [
-          "Delivered 15+ client projects on time and within budget",
-          "Implemented automated testing reducing bugs by 60%",
-          "Mentored junior developers and conducted code reviews"
-        ]
-      },
-      "saga": {
-        "position": "Software Developer",
-        "company": "Saga Länsförsäkringar",
-        "location": "Stockholm, Sweden",
-        "period": "2020 - 2022",
-        "type": "Full-time",
-        "description": "Developed and maintained insurance management systems. Worked on both legacy system modernization and new feature development using modern web technologies.",
-        "achievements": [
-          "Modernized legacy insurance calculation engine",
-          "Improved system performance by 35%",
-          "Implemented comprehensive unit testing strategy"
-        ]
-      },
-      "lansforsakringar": {
-        "position": "System Developer",
-        "company": "Länsförsäkringar Göteborg",
-        "location": "Gothenburg, Sweden",
-        "period": "2017 - 2020",
-        "type": "Full-time",
-        "description": "Entry-level position developing internal tools and maintaining existing systems. Gained experience in enterprise software development and agile methodologies.",
-        "achievements": [
-          "Developed internal reporting tools used by 100+ employees",
-          "Reduced manual data processing time by 50%",
-          "Successfully completed .NET certification program"
-        ]
-      }
-    }
-  },
-  "Education": {
-    "education": "EDUCATION",
-    "certifications": "CERTIFICATIONS",
-    "publications": "PUBLICATIONS",
-    "educationList": {
-      "masters": {
-        "degree": "Master of Science in Software Engineering and Computer Science",
-        "institution": "Faculty of Organizational Sciences, University of Belgrade",
-        "location": "Serbia",
-        "period": "2021 - 2022"
-      },
-      "bachelor": {
-        "degree": "Bachelor of Science in Information Systems and Technology",
-        "institution": "Faculty of Organizational Sciences, University of Belgrade",
-        "location": "Serbia",
-        "period": "2009 - 2018"
-      },
-      "secondary": {
-        "degree": "Secondary Education Degree, Mathematics",
-        "institution": "Grammar school Kruševac",
-        "location": "Serbia",
-        "period": "2005 - 2009"
-      }
+  "StudioPage": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "experience": "Experience",
+      "projects": "Projects",
+      "credentials": "Certifications & Publications",
+      "stack": "Tech Stack",
+      "contact": "Contact"
     },
-    "certificationsList": {
-      "azure": {
-        "title": "Microsoft Certified: Azure Fundamentals",
-        "issuer": "Microsoft",
-        "date": "Feb 2021",
-        "description": "Foundational level understanding of cloud services and how those services are provided with Microsoft Azure."
-      }
+    "hero": {
+      "eyebrow": "Nemanzh Software Studio",
+      "availability": "Open to selected enterprise projects and long-term technical partnerships.",
+      "title": ".NET-led enterprise software for teams that need stable delivery and clean systems.",
+      "lead": "I build enterprise applications, scalable .NET backends, and cloud-connected web platforms for teams that need dependable execution.",
+      "body": "Nemanzh Software Studio is how I present my work: senior delivery across insurance software, public sector systems, internal business platforms, and modern web products, with a focus on maintainable systems and direct communication.",
+      "primaryCta": "Work with me",
+      "secondaryCta": "See experience",
+      "locationLabel": "Based in",
+      "locationValue": "Belgrade, Serbia",
+      "emailLabel": "Email",
+      "emailValue": "contact@nemanzh.dev",
+      "socials": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn"
+      },
+      "stats": [
+        {
+          "value": "7+",
+          "label": "years across enterprise and product systems"
+        },
+        {
+          "value": ".NET 4.8 -> 8",
+          "label": "framework modernization delivered"
+        },
+        {
+          "value": "Azure + AWS",
+          "label": "cloud solutions and integration work"
+        }
+      ]
     },
-    "publicationsList": {
-      "mongodb": {
-        "title": "DATABASE LOGICAL SCHEMA TRANSFORMATION: FROM RELATIONAL (T-SQL) MODEL TO DOCUMENT-ORIENTED MONGODB",
-        "conference": "Proceedings of SYM-OP-IS 2022 Vrnjačka Banja",
-        "date": "Sep 22, 2022",
-        "abstract": "Since there is no unique way to present part of the data to the user, there is no one way to model databases. It is necessary to understand the problem that the application solves and how it will produce, consume and process data. This paper will present the transformation of logical schemas from relational databases to schema-less document-oriented databases."
-      },
-      "unittesting": {
-        "title": "BEST PRACTICES IN WRITING UNIT TESTS FOR .NET FRAMEWORK",
-        "conference": "SYM-OP-IS Banja Koviljača",
-        "date": "Sep 23, 2021",
-        "abstract": "Unit tests are a basic tool for every programmer, and the goal of unit testing is to isolate each part of the program and show that individual parts are correct. A unit test provides a written contract that a piece of code must satisfy, in addition to providing several other benefits."
-      }
-    }
-  },
-  "Skills": {
-    "skillsAndExpertise": "SKILLS && EXPERTISE",
-    "echo": "$ echo Continuously learning and adapting to emerging technologies",
-    "buildingScalableSolutions": "< Building scalable solutions from web2 to web3 ecosystems",
-    "categories": {
-      "frontend": {
-        "title": "FRONTEND DEVELOPMENT",
-        "skills": {
-          "responsiveDesign": "Responsive Design",
-          "spaDeployment": "SPA Development"
+    "about": {
+      "kicker": "About",
+      "title": "An independent software studio built around senior enterprise delivery.",
+      "intro": "I am not trying to look larger than I am. The value is direct senior execution, strong backend engineering, and systems that stay understandable after release.",
+      "paragraphs": [
+        "I build enterprise applications and internal business platforms for teams that need solid architecture, reliable delivery, and backend engineering that does not collapse under day-to-day business use.",
+        "My background spans Nordic insurance software, public sector systems, identity and integration-heavy enterprise environments, and payment-enabled web products. That range helps me move between product work, operational constraints, and long-term maintenance without unnecessary complexity.",
+        "I am strongest when .NET is at the core and the rest of the stack needs to work with it cleanly: Next.js or Angular frontends, SQL-heavy systems, cloud services, integrations, upgrades, and production ownership."
+      ],
+      "highlights": [
+        {
+          "label": "Focus",
+          "value": "Enterprise applications, backend engineering, cloud solutions"
+        },
+        {
+          "label": "Approach",
+          "value": "Clear ownership, measured delivery, maintainable systems"
+        },
+        {
+          "label": "Fit",
+          "value": "Insurance, SaaS, internal platforms, modernization work"
         }
-      },
-      "backend": {
-        "title": "BACKEND DEVELOPMENT",
-        "skills": {
-          "monolithicArchitecture": "Monolithic Architecture",
-          "apiDesign": "API Design"
+      ]
+    },
+    "services": {
+      "kicker": "Services",
+      "title": "Enterprise application development with .NET in the foreground.",
+      "intro": "My services center on fullstack development, scalable systems, cloud solutions, and backend engineering that support real business operations.",
+      "items": [
+        {
+          "title": "Enterprise Application Development",
+          "description": "Business-critical web applications built around clear architecture, dependable delivery, and maintainable code paths.",
+          "outcomes": [
+            "Better structure across the application",
+            "Safer release flow",
+            "Long-term maintainability"
+          ]
+        },
+        {
+          "title": ".NET Backend Engineering",
+          "description": "C#, ASP.NET, APIs, and core business logic designed for reliability, change, and steady system growth.",
+          "outcomes": [
+            "Stronger backend foundations",
+            "Cleaner domain modeling",
+            "Scalable service layers"
+          ]
+        },
+        {
+          "title": "Cloud and Multi-Tenant Solutions",
+          "description": "Cloud-ready architecture, tenant-aware systems, caching, secrets management, and deployment workflows across Azure and AWS.",
+          "outcomes": [
+            "Multi-tenant readiness",
+            "Improved operational control",
+            "Less manual infrastructure work"
+          ]
+        },
+        {
+          "title": "System Integrations and Identity",
+          "description": "Payments, federated login, identity lifecycle automation, and message-driven synchronization between business systems.",
+          "outcomes": [
+            "Reliable integration flows",
+            "Secure authentication paths",
+            "Reduced operational friction"
+          ]
+        },
+        {
+          "title": "Modernization and Upgrades",
+          "description": "Incremental upgrades across .NET, Angular, databases, and legacy enterprise systems without risky rewrites.",
+          "outcomes": [
+            "Version upgrades with continuity",
+            "Better performance on existing systems",
+            "Lower migration risk"
+          ]
+        },
+        {
+          "title": "Internal Tools and Automation",
+          "description": "Operational software, reporting flows, and automation that reduce repetitive work and improve visibility.",
+          "outcomes": [
+            "Faster internal workflows",
+            "Better process visibility",
+            "Higher team efficiency"
+          ]
         }
-      },
-      "databases": {
-        "title": "DATABASES & STORAGE",
-        "skills": {
-          "databaseDesign": "Database Design",
-          "schemaMigration": "Schema Migration",
-          "dataModeling": "Data Modeling",
-          "queryOptimization": "Query Optimization"
+      ]
+    },
+    "experience": {
+      "kicker": "Experience",
+      "title": "Experience presented as actual roles, with enterprise delivery in the foreground.",
+      "intro": "The pattern across these roles is consistent: backend responsibility, modernization work, integrations, and business software that has to stay stable while it evolves.",
+      "items": [
+        {
+          "period": "2024 - Present",
+          "role": "Full-Stack Developer",
+          "company": "Chainapp Technologies",
+          "summary": "Building web applications with Node.js, Strapi, Next.js, PostgreSQL, and AWS services, with payments, identity, and event-driven integrations in production.",
+          "impact": "I shipped Stripe and crypto wallet flows, Web3Auth onboarding, Cardano key generation and encryption, CIP-68 badge functionality, AWS SQS synchronization, Cognito-based federated login, and Docker Compose delivery on AWS and Qovery.",
+          "stack": ["Node.js", "Next.js", "PostgreSQL", "AWS", "Strapi"]
+        },
+        {
+          "period": "2022 - 2024",
+          "role": "Full-Stack Developer",
+          "company": "Insicon",
+          "summary": "Worked on insurance software used across the Nordic market, with .NET, Angular, SQL Server, and cloud-oriented multi-tenant delivery.",
+          "impact": "I delivered invoicing and notification flows, helped move the stack from .NET 4.8 to 8 and Angular 8 to 16, optimized T-SQL, and strengthened operations with Azure Redis Cache, Azure Key Vault, and Azure DevOps deployment automation.",
+          "stack": [".NET 8", "C#", "Angular", "SQL Server", "Azure"]
+        },
+        {
+          "period": "2020 - 2022",
+          "role": "Backend Software Developer",
+          "company": "SAGA",
+          "summary": "Worked on identity, integration, and modernization tasks across enterprise and public-sector systems built on Microsoft technologies.",
+          "impact": "I implemented Microsoft Identity Manager across Azure Active Directory and on-prem Active Directory, optimized C#/.NET integrations for Navision and Primavera, and extended SharePoint-based workflows with React, Power BI, and Power Automate.",
+          "stack": ["C#", ".NET", "Azure AD", "Active Directory", "SharePoint"]
+        },
+        {
+          "period": "2018 - 2020",
+          "role": "Backend Developer",
+          "company": "SAGA",
+          "summary": "Built and maintained REST APIs and backend modules for public-sector platforms including the National Employment Service and dual education systems.",
+          "impact": "I built and maintained ASP.NET services for national institutions, improved authorization flows, added code generators, and expanded an in-house framework with stored-procedure-driven database work in SQL Server.",
+          "stack": ["ASP.NET", "C#", "REST APIs", "SQL Server", "T-SQL"]
         }
-      },
-      "blockchain": {
-        "title": "BLOCKCHAIN & WEB3",
-        "skills": {
-          "nftMinting": "NFT minting",
-          "cryptoWallets": "Crypto Wallets",
-          "blockchainIntegration": "Blockchain Integration",
-          "decentralizedVoting": "Decentralized Voting"
+      ]
+    },
+    "projects": {
+      "kicker": "Projects",
+      "title": "Selected platforms and client projects.",
+      "intro": "A few recognizable systems and organizations I have worked on, shown as straightforward project cards.",
+      "items": [
+        {
+          "title": "National Employment Service",
+          "client": "SAGA",
+          "context": "Backend Developer",
+          "description": "Backend work for a public-sector platform with REST APIs, authorization logic, and SQL Server-backed business workflows.",
+          "impact": "The focus was reliability, structured domain logic, and maintainable delivery inside an in-house ASP.NET framework.",
+          "stack": ["ASP.NET", "C#", "REST APIs", "SQL Server"],
+          "linkLabel": "Visit site",
+          "href": "https://www.nsz.gov.rs/"
+        },
+        {
+          "title": "Dual Education",
+          "client": "SAGA",
+          "context": "Backend Developer",
+          "description": "Backend support for the Serbian dual education platform, covering API logic, data workflows, and public-sector delivery constraints.",
+          "impact": "The work centered on stable backend behavior, clear data handling, and software that could support administrative processes without unnecessary complexity.",
+          "stack": ["ASP.NET", "C#", "SQL Server", "Public-sector systems"],
+          "linkLabel": "Visit site",
+          "href": "https://dualnok.gov.rs/en/pocetna-english/"
+        },
+        {
+          "title": "Unionen",
+          "client": "Insicon",
+          "context": "Full-Stack Developer",
+          "description": "Enterprise platform work delivered through Insicon for the Swedish market, with .NET, Angular, SQL Server, and long-lived business workflows.",
+          "impact": "The emphasis was on maintainability, feature delivery, and modernization inside a production system rather than one-off implementation work.",
+          "stack": [".NET", "Angular", "SQL Server", "Azure"],
+          "linkLabel": "Visit site",
+          "href": "https://www.unionen.se/"
+        },
+        {
+          "title": "ICA Forsakring",
+          "client": "Insicon",
+          "context": "Full-Stack Developer",
+          "description": "Insurance platform work in the Swedish market, spanning enterprise application delivery, backend changes, frontend work, and cloud-oriented modernization.",
+          "impact": "I contributed across the stack in a production insurance environment where continuity, upgrades, and long-term maintainability mattered more than fast cosmetic change.",
+          "stack": [".NET", "Angular", "SQL Server", "Azure"],
+          "linkLabel": "Visit site",
+          "href": "https://www.icaforsakring.se/"
+        },
+        {
+          "title": "IntersectMBO",
+          "context": "Full-Stack / Product Engineering",
+          "description": "Work on a blockchain-oriented platform focused on product logic, backend services, and stable execution of key user and transaction flows.",
+          "impact": "The emphasis was on transaction reliability, clearer product behavior, and a system that could support growing demand without losing operational stability.",
+          "stack": ["Node.js", "TypeScript", "Next.js", "Cardano"],
+          "linkLabel": "Visit site",
+          "href": "https://intersectmbo.org/"
+        },
+        {
+          "title": "Central Registry / One Stop Shop",
+          "client": "Public Sector",
+          "context": "Backend Developer",
+          "description": "Optimization of a web application for faster, more stable, and more accurate work with the central registry of live births and deceased persons.",
+          "impact": "The work required data accuracy, reliable administrative flows, and careful handling of one of the country's most important state data sets.",
+          "stack": ["ASP.NET", "C#", "SQL Server", "Public-sector systems"],
+          "linkLabel": "Visit site",
+          "href": "https://www.croso.gov.rs/cir/index.php"
         }
-      },
-      "cloud": {
-        "title": "CLOUD & DEVOPS",
-        "skills": {
-          "deploymentAutomation": "Deployment Automation"
+      ]
+    },
+    "credentials": {
+      "kicker": "Certifications & Publications",
+      "title": "Formal credentials and conference publications connected to practical engineering work.",
+      "intro": "A Microsoft certification and two conference papers focused on testing, database modeling, and backend-oriented engineering practice.",
+      "items": [
+        {
+          "category": "Microsoft Certification",
+          "title": "Azure Fundamentals - AZ-900",
+          "meta": "February 2021",
+          "description": "Foundation certification covering Azure cloud concepts and core platform services."
+        },
+        {
+          "category": "Publication",
+          "title": "Best Practices in Writing Unit Tests for the .NET Framework",
+          "meta": "SYM-OP-IS · Banja Koviljaca, Serbia · September 20-23, 2021",
+          "description": "Presented at the conference and published in the SYM-OP-IS Proceedings on September 23, 2021."
+        },
+        {
+          "category": "Publication",
+          "title": "Transformation of the Database Logical Schema: From a Relational (T-SQL) Model to a Document-Oriented MongoDB",
+          "meta": "SYM-OP-IS 2022 · Vrnjacka Banja, Serbia · September 19-22, 2022",
+          "description": "Presented at the conference and published in the proceedings on September 22, 2022."
         }
-      },
-      "integration": {
-        "title": "INTEGRATION & MESSAGING",
-        "skills": {
-          "eventDrivenArchitecture": "Event-Driven Architecture",
-          "apiIntegration": "API Integration"
+      ]
+    },
+    "stack": {
+      "kicker": "Tech Stack",
+      "title": "Technologies I use to build enterprise applications and scalable systems.",
+      "intro": "My strongest delivery work sits around the Microsoft stack, modern frontend frameworks, cloud infrastructure, and integration-heavy business platforms.",
+      "groups": [
+        {
+          "title": "Backend",
+          "items": [".NET", "C#", "ASP.NET", "Node.js", "Strapi", "REST APIs"]
+        },
+        {
+          "title": "Frontend",
+          "items": ["Next.js", "React", "Angular", "WPF"]
+        },
+        {
+          "title": "Cloud and DevOps",
+          "items": ["Azure", "AWS", "Azure DevOps", "Docker Compose", "Qovery"]
+        },
+        {
+          "title": "Databases and Messaging",
+          "items": ["SQL Server", "PostgreSQL", "T-SQL", "Azure Redis Cache", "AWS SQS"]
+        },
+        {
+          "title": "Identity and Security",
+          "items": ["Azure Active Directory", "Active Directory", "Microsoft Identity Manager", "AWS Cognito", "Web3Auth", "Azure Key Vault"]
+        },
+        {
+          "title": "Integrations and Platforms",
+          "items": ["Stripe", "SharePoint", "Power Automate", "Power BI", "Navision", "Primavera", "Cardano"]
         }
-      },
-      "practices": {
-        "title": "DEVELOPMENT PRACTICES",
-        "skills": {
-          "unitTesting": "Unit Testing",
-          "testDrivenDevelopment": "Test-Driven Development",
-          "agileMethodologies": "Agile Methodologies",
-          "codeReviews": "Code Reviews",
-          "gitVersionControl": "Git Version Control",
-          "cleanCode": "Clean Code",
-          "solidPrinciples": "SOLID Principles",
-          "designPatterns": "Design Patterns",
-          "documentation": "Documentation",
-          "performanceOptimization": "Performance Optimization"
-        }
-      },
-      "specialized": {
-        "title": "SPECIALIZED DOMAINS",
-        "skills": {
-          "governmentApplications": "Government Applications",
-          "insuranceSystems": "Insurance Systems",
-          "multiTenantArchitecture": "Multi-tenant Architecture",
-          "socialInsurance": "Social Insurance",
-          "identityManagement": "Identity Management",
-          "enterpriseSolutions": "Enterprise Solutions",
-          "regulatoryCompliance": "Regulatory Compliance",
-          "dataSecurity": "Data Security",
-          "legacySystemMigration": "Legacy System Migration"
-        }
-      }
+      ]
+    },
+    "contact": {
+      "kicker": "Contact",
+      "title": "Need an enterprise app, a backend rebuild, or modernization support?",
+      "body": "I work with teams building business platforms, upgrading legacy systems, and shipping cloud-connected products. If you need senior .NET and full-stack delivery with clear ownership, get in touch.",
+      "primaryCta": "Contact me",
+      "secondaryCta": "Discuss your project",
+      "email": "contact@nemanzh.dev",
+      "closing": "Clear scope, senior engineering ownership, and systems built to stay maintainable."
     }
   }
 }
