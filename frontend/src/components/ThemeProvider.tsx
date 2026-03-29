@@ -73,7 +73,7 @@ const getColors = (mode: ThemeMode) => {
         text: '#cccccc', // VS Code main text (light gray)
         textSecondary: '#969696', // VS Code muted text
         cyan: '#9cdcfe', // VS Code light blue (types, properties)
-        green: '#6a9955', // VS Code green (comments, strings)
+        green: '#7fb069', // Accessible green on dark surfaces
         greenDark: '#4ec9b0', // VS Code teal (interfaces, classes)
         red: '#f44747', // VS Code red (errors, keywords)
         yellow: '#dcdcaa', // VS Code yellow (functions, methods)
@@ -92,12 +92,12 @@ const getColors = (mode: ThemeMode) => {
         header: '#f3f3f3', // VS Code light tab background
         border: '#e5e5e5', // VS Code light border
         text: '#383a42', // VS Code dark text
-        textSecondary: '#7f848e', // VS Code muted text
-        cyan: '#0184bc', // VS Code light blue
-        green: '#50a14f', // VS Code light green
-        greenDark: '#0997b3', // VS Code light teal
-        red: '#e45649', // VS Code light red
-        yellow: '#c18401', // VS Code light yellow/orange
+        textSecondary: '#5f6672', // Accessible muted text on light surfaces
+        cyan: '#006494', // Accessible blue on light surfaces
+        green: '#2d7a31', // Accessible green on light surfaces
+        greenDark: '#146c63', // Accessible teal on light surfaces
+        red: '#b42318', // Accessible red on light surfaces
+        yellow: '#8a5a00', // Accessible yellow/orange on light surfaces
         magenta: '#a626a4', // VS Code light purple
       },
     };

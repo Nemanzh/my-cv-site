@@ -128,6 +128,11 @@ function SidebarNavLink({
             backgroundColor: theme.palette.terminal.cyan,
           },
         },
+        '&:focus-visible': {
+          outline: `2px solid ${theme.palette.terminal.cyan}`,
+          outlineOffset: 4,
+          borderRadius: 6,
+        },
       }}
     >
       {label}
@@ -313,6 +318,8 @@ export default function StudioPage() {
                 </Typography>
 
                 <Stack
+                  component="nav"
+                  aria-label="Section navigation"
                   spacing={2}
                   sx={{
                     display: { xs: 'none', lg: 'flex' },
@@ -345,7 +352,12 @@ export default function StudioPage() {
                   aria-label={content.hero.socials.github}
                   sx={{
                     display: 'inline-flex',
+                    borderRadius: 999,
                     '&:hover': { color: theme.palette.terminal.cyan },
+                    '&:focus-visible': {
+                      outline: `2px solid ${theme.palette.terminal.cyan}`,
+                      outlineOffset: 4,
+                    },
                   }}
                 >
                   <GitHub sx={{ fontSize: '1.55rem' }} />
@@ -357,7 +369,12 @@ export default function StudioPage() {
                   aria-label={content.hero.socials.linkedin}
                   sx={{
                     display: 'inline-flex',
+                    borderRadius: 999,
                     '&:hover': { color: theme.palette.terminal.cyan },
+                    '&:focus-visible': {
+                      outline: `2px solid ${theme.palette.terminal.cyan}`,
+                      outlineOffset: 4,
+                    },
                   }}
                 >
                   <LinkedIn sx={{ fontSize: '1.55rem' }} />
@@ -367,7 +384,12 @@ export default function StudioPage() {
                   aria-label={content.hero.emailValue}
                   sx={{
                     display: 'inline-flex',
+                    borderRadius: 999,
                     '&:hover': { color: theme.palette.terminal.cyan },
+                    '&:focus-visible': {
+                      outline: `2px solid ${theme.palette.terminal.cyan}`,
+                      outlineOffset: 4,
+                    },
                   }}
                 >
                   <Email sx={{ fontSize: '1.55rem' }} />
@@ -581,6 +603,10 @@ export default function StudioPage() {
                           transform: 'translateY(-2px)',
                           backgroundColor: `${theme.palette.terminal.header}DD`,
                         },
+                        '&:focus-visible': {
+                          outline: `2px solid ${theme.palette.terminal.cyan}`,
+                          outlineOffset: 4,
+                        },
                       }}
                     >
                       {supportingLabel ? (
@@ -717,6 +743,10 @@ export default function StudioPage() {
                           borderColor: theme.palette.terminal.cyan,
                           transform: 'translateY(-2px)',
                           backgroundColor: `${theme.palette.terminal.header}DD`,
+                        },
+                        '&:focus-visible': {
+                          outline: `2px solid ${theme.palette.terminal.cyan}`,
+                          outlineOffset: 4,
                         },
                       }
                     : cardBaseSx;
