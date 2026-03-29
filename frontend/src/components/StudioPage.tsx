@@ -698,7 +698,7 @@ export default function StudioPage() {
               >
                 {content.credentials.items.map((item) => {
                   const isExternalHref = Boolean(item.href?.startsWith('http'));
-                  const cardSx = {
+                  const cardBaseSx = {
                     display: 'flex',
                     flexDirection: 'column',
                     height: '100%',
@@ -709,14 +709,17 @@ export default function StudioPage() {
                     textDecoration: 'none',
                     transition:
                       'border-color 0.18s ease, transform 0.18s ease, background-color 0.18s ease',
-                    '&:hover': item.href
-                      ? {
+                  };
+                  const cardSx = item.href
+                    ? {
+                        ...cardBaseSx,
+                        '&:hover': {
                           borderColor: theme.palette.terminal.cyan,
                           transform: 'translateY(-2px)',
                           backgroundColor: `${theme.palette.terminal.header}DD`,
-                        }
-                      : undefined,
-                  };
+                        },
+                      }
+                    : cardBaseSx;
 
                   const cardContent = (
                     <>
