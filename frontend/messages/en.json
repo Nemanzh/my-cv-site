@@ -136,35 +136,43 @@
       "intro": "The pattern across these roles is consistent: backend responsibility, modernization work, integrations, and business software that has to stay stable while it evolves.",
       "items": [
         {
+          "period": "2026 - Present",
+          "role": "Full Stack Developer",
+          "company": "Quadro Consulting",
+          "summary": "Working on enterprise modernization projects focused on Single Sign-On across multiple applications, backend services, frontend applications, and cloud-based environments.",
+          "impact": "I am implementing SSO across multiple enterprise applications, supporting .NET, Angular, React, TypeScript, SQL Server, Redis, RabbitMQ, and Azure migration work inside a 50-person Kanban delivery team.",
+          "stack": [".NET", "Angular", "React", "Azure", "SQL Server"]
+        },
+        {
           "period": "2024 - Present",
-          "role": "Full-Stack Developer",
-          "company": "Chainapp Technologies",
-          "summary": "Building web applications with Node.js, Strapi, Next.js, PostgreSQL, and AWS services, with payments, identity, and event-driven integrations in production.",
-          "impact": "I shipped Stripe and crypto wallet flows, Web3Auth onboarding, Cardano key generation and encryption, CIP-68 badge functionality, AWS SQS synchronization, Cognito-based federated login, and Docker Compose delivery on AWS and Qovery.",
-          "stack": ["Node.js", "Next.js", "PostgreSQL", "AWS", "Strapi"]
+          "role": "Full Stack Developer",
+          "company": "IntersectMBO",
+          "summary": "Worked on governance, membership, payment, and blockchain-related products within the Cardano ecosystem.",
+          "impact": "I built Next.js and Strapi-based application flows, integrated Stripe and crypto wallet payments, implemented Web3Auth, generated and encrypted Cardano keys, added AWS SQS communication, and supported Docker Compose delivery on AWS and Qovery.",
+          "stack": ["Next.js", "Strapi", "Node.js", "PostgreSQL", "AWS"]
         },
         {
           "period": "2022 - 2024",
-          "role": "Full-Stack Developer",
+          "role": "Full Stack Developer",
           "company": "Insicon",
-          "summary": "Worked on insurance software used across the Nordic market, with .NET, Angular, SQL Server, and cloud-oriented multi-tenant delivery.",
-          "impact": "I delivered invoicing and notification flows, helped move the stack from .NET 4.8 to 8 and Angular 8 to 16, optimized T-SQL, and strengthened operations with Azure Redis Cache, Azure Key Vault, and Azure DevOps deployment automation.",
-          "stack": [".NET 8", "C#", "Angular", "SQL Server", "Azure"]
+          "summary": "Worked on a large in-house insurance platform used by Nordic insurance companies across backend, frontend, database, cloud, and DevOps areas.",
+          "impact": "I developed insurance software with C#/.NET, Angular, SQL Server, and T-SQL, improved core business modules, helped modernize the stack toward .NET 8 and Angular 16, optimized stored procedures, and supported Azure Redis Cache, Azure Key Vault, and deployment workflows.",
+          "stack": [".NET", "Angular", "SQL Server", "Azure", "T-SQL"]
         },
         {
           "period": "2020 - 2022",
-          "role": "Backend Software Developer",
-          "company": "SAGA",
-          "summary": "Worked on identity, integration, and modernization tasks across enterprise and public-sector systems built on Microsoft technologies.",
-          "impact": "I implemented Microsoft Identity Manager across Azure Active Directory and on-prem Active Directory, optimized C#/.NET integrations for Navision and Primavera, and extended SharePoint-based workflows with React, Power BI, and Power Automate.",
-          "stack": ["C#", ".NET", "Azure AD", "Active Directory", "SharePoint"]
+          "role": "Full Stack Developer, Public Cloud Sector",
+          "company": "Saga",
+          "summary": "Worked on Microsoft-based enterprise and public sector solutions, including identity management, SharePoint modernization, cloud migration, automation, and application maintenance.",
+          "impact": "I implemented Microsoft Identity Manager across Azure Active Directory and on-prem Active Directory, maintained the WPF-based One Stop Shop application for the Central Registry of Compulsory Social Insurance, supported SharePoint Online migration, and extended workflows with React, Power BI, and Power Automate.",
+          "stack": ["C#", ".NET", "SharePoint", "Azure AD", "Power Platform"]
         },
         {
           "period": "2018 - 2020",
-          "role": "Backend Developer",
-          "company": "SAGA",
-          "summary": "Built and maintained REST APIs and backend modules for public-sector platforms including the National Employment Service and dual education systems.",
-          "impact": "I built and maintained ASP.NET services for national institutions, improved authorization flows, added code generators, and expanded an in-house framework with stored-procedure-driven database work in SQL Server.",
+          "role": "Junior .NET Backend Software Developer",
+          "company": "Saga",
+          "summary": "Started as a backend-focused .NET developer working on REST APIs, database-driven systems, public sector applications, and internal development tooling.",
+          "impact": "I developed ASP.NET services for public-sector clients, improved authorization workflows, built code generators to reduce repetitive work, and created SQL Server tables, stored procedures, and schema updates for business-critical systems.",
           "stack": ["ASP.NET", "C#", "REST APIs", "SQL Server", "T-SQL"]
         }
       ]
@@ -213,6 +221,15 @@
           "stack": [".NET", "Angular", "SQL Server", "Azure"],
           "linkLabel": "Visit site",
           "href": "https://www.icaforsakring.se/"
+        },
+        {
+          "title": "Deluxe Corporation",
+          "context": "Enterprise Payments & Data Technology",
+          "description": "Work connected to a US-based payments and data technology company that supports businesses, financial institutions, and enterprise clients with digital financial solutions.",
+          "impact": "The focus was on systems that help organizations manage payments, process transactions, and use data-driven services to improve operations and support growth.",
+          "stack": ["Payments", "Data Platforms", "Enterprise Systems", "Financial Technology"],
+          "linkLabel": "Visit site",
+          "href": "https://www.deluxe.com/"
         },
         {
           "title": "IntersectMBO",

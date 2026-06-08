@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
-import './globals.css';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { setRequestLocale, getMessages, getTranslations } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import ThemeProvider from '@/components/ThemeProvider';
 import Header from '@/components/Header';
@@ -111,6 +110,7 @@ export default async function RootLayout({
   }
 
   setRequestLocale(locale);
+  const messages = await getMessages();
   const canonical = getCanonicalUrl(locale);
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -150,24 +150,19 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={locale}>
-      <head></head>
-      <body>
-        <AppRouterCacheProvider>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          />
-          <WebVitals />
-          <ThemeProvider>
-            <NextIntlClientProvider>
-              <Header />
-              <StickyCta />
-              {children}
-            </NextIntlClientProvider>
-          </ThemeProvider>
-        </AppRouterCacheProvider>
-      </body>
-    </html>
+    <AppRouterCacheProvider>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <WebVitals />
+      <ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          <StickyCta />
+          {children}
+        </NextIntlClientProvider>
+      </ThemeProvider>
+    </AppRouterCacheProvider>
   );
 }

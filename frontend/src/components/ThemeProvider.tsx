@@ -90,7 +90,7 @@ const getColors = (mode: ThemeMode) => {
       terminal: {
         background: '#ffffff', // VS Code light editor background
         header: '#f3f3f3', // VS Code light tab background
-        border: '#e5e5e5', // VS Code light border
+        border: '#787777', // VS Code light border
         text: '#383a42', // VS Code dark text
         textSecondary: '#5f6672', // Accessible muted text on light surfaces
         cyan: '#006494', // Accessible blue on light surfaces

@@ -132,40 +132,48 @@
     },
     "experience": {
       "kicker": "Iskustvo",
-      "title": "Iskustvo predstavljeno kroz uticaj, odgovornost i poslovni kontekst.",
-      "intro": "Zajednička nit kroz ove uloge je ista: preuzeti vlasništvo, unaprediti sistem i isporučiti rad koji traje.",
+      "title": "Iskustvo predstavljeno kroz konkretne uloge i enterprise isporuku.",
+      "intro": "Zajednička nit kroz ove uloge je backend odgovornost, modernizacija, integracije i poslovni softver koji mora da ostane stabilan dok se menja.",
       "items": [
         {
+          "period": "2026 - danas",
+          "role": "Full Stack Developer",
+          "company": "Quadro Consulting",
+          "summary": "Rad na enterprise modernizaciji sa fokusom na Single Sign-On kroz više aplikacija, backend servise, frontend aplikacije i cloud okruženja.",
+          "impact": "Implementiram SSO kroz više enterprise aplikacija, uz podršku za .NET, Angular, React, TypeScript, SQL Server, Redis, RabbitMQ i Azure migracioni rad u Kanban timu od 50 ljudi.",
+          "stack": [".NET", "Angular", "React", "Azure", "SQL Server"]
+        },
+        {
           "period": "2024 - danas",
-          "role": "Full-Stack Developer",
-          "company": "Chainapp Technologies",
-          "summary": "Rad na blockchain proizvodnoj infrastrukturi, marketplace tokovima i pratećim servisima za platforme sa većim obimom korišćenja.",
-          "impact": "Doprinos platformi koja je obradila 10K+ transakcija uz oko 40% bolje API performanse na ključnim delovima.",
-          "stack": ["Node.js", "TypeScript", "Cardano", "Microservices"]
+          "role": "Full Stack Developer",
+          "company": "IntersectMBO",
+          "summary": "Rad na governance, membership, payment i blockchain proizvodima unutar Cardano ekosistema.",
+          "impact": "Izgradio sam tokove aplikacije u Next.js i Strapi-u, integrisao Stripe i crypto wallet plaćanja, implementirao Web3Auth, generisao i enkriptovao Cardano ključeve, dodao AWS SQS komunikaciju i podržao isporuku preko Docker Compose-a na AWS-u i Qovery-u.",
+          "stack": ["Next.js", "Strapi", "Node.js", "PostgreSQL", "AWS"]
         },
         {
           "period": "2022 - 2024",
-          "role": "Full-Stack Developer",
-          "company": "Insicon AB",
-          "summary": "Isporuka enterprise aplikacija za klijente uz kombinaciju React ili Next.js frontenda i .NET backend servisa.",
-          "impact": "Isporučeno 15+ projekata, uvedene jače test prakse i smanjen broj grešaka za oko 60%.",
-          "stack": ["Next.js", "React", ".NET", "Azure"]
+          "role": "Full Stack Developer",
+          "company": "Insicon",
+          "summary": "Rad na velikoj internoj platformi za osiguranje koju koriste nordijske osiguravajuće kuće, kroz backend, frontend, bazu podataka, cloud i DevOps oblasti.",
+          "impact": "Razvio sam insurance softver sa C#/.NET, Angular, SQL Server i T-SQL tehnologijama, unapredio ključne poslovne module, pomogao modernizaciju ka .NET 8 i Angular 16, optimizovao stored procedure i podržao Azure Redis Cache, Azure Key Vault i deployment tokove.",
+          "stack": [".NET", "Angular", "SQL Server", "Azure", "T-SQL"]
         },
         {
           "period": "2020 - 2022",
-          "role": "Software Developer",
+          "role": "Full Stack Developer, Public Cloud Sector",
           "company": "Saga",
-          "summary": "Rad u sistemima osiguranja gde je modernizacija morala da se radi bez narušavanja ključnih poslovnih procesa.",
-          "impact": "Poboljšane performanse sistema za oko 35% uz podršku migraciji i razvoju novih funkcionalnosti.",
-          "stack": ["C#", ".NET", "SQL Server", "Legacy modernization"]
+          "summary": "Rad na Microsoft baziranim enterprise i public sector rešenjima, uključujući identity management, SharePoint modernizaciju, cloud migraciju, automatizaciju i održavanje aplikacija.",
+          "impact": "Implementirao sam Microsoft Identity Manager kroz Azure Active Directory i on-prem Active Directory, održavao WPF aplikaciju One Stop Shop za Centralni registar obaveznog socijalnog osiguranja, podržao SharePoint Online migraciju i proširio tokove rada uz React, Power BI i Power Automate.",
+          "stack": ["C#", ".NET", "SharePoint", "Azure AD", "Power Platform"]
         },
         {
-          "period": "2017 - 2020",
-          "role": "Backend Developer",
-          "company": "SAGA",
-          "summary": "Razvoj internih alata i poslovnih sistema u enterprise okruženju sa visokim zahtevima za pouzdanost.",
-          "impact": "Smanjeno ručno procesiranje za oko 50% i podržani interni alati koje koristi širi operativni tim.",
-          "stack": [".NET", "SQL Server", "Internal platforms"]
+          "period": "2018 - 2020",
+          "role": "Junior .NET Backend Software Developer",
+          "company": "Saga",
+          "summary": "Početak karijere kao backend-orijentisan .NET developer na REST API-jevima, bazama podataka, public sector aplikacijama i internim alatima za razvoj.",
+          "impact": "Razvio sam ASP.NET servise za javni sektor, unapredio authorization tokove, napravio code generatore za smanjenje ponavljajućeg rada i kreirao SQL Server tabele, stored procedure i schema izmene za poslovno kritične sisteme.",
+          "stack": ["ASP.NET", "C#", "REST APIs", "SQL Server", "T-SQL"]
         }
       ]
     },
@@ -209,6 +217,16 @@
           "primaryHref": "#contact",
           "secondaryLabel": "Email",
           "secondaryHref": "mailto:contact@nemanzh.dev"
+        },
+        {
+          "title": "Deluxe Corporation",
+          "description": "Rad povezan sa američkom kompanijom za payments i data tehnologije koja podržava preduzeća, finansijske institucije i enterprise klijente kroz digitalna finansijska rešenja.",
+          "impact": "Fokus je bio na sistemima koji pomažu organizacijama da upravljaju plaćanjima, obrađuju transakcije i koriste data-driven usluge za bolje poslovanje i rast.",
+          "stack": ["Payments", "Data Platforms", "Enterprise Systems", "Financial Technology"],
+          "primaryLabel": "Poseti sajt",
+          "primaryHref": "https://www.deluxe.com/",
+          "secondaryLabel": "Slični projekti",
+          "secondaryHref": "#contact"
         },
         {
           "title": "IntersectMBO",

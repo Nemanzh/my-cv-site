@@ -18,9 +18,9 @@ export default function ClientPageWrapper({
       component="main"
       sx={{
         minHeight: '100vh',
-        background: `
-          radial-gradient(circle at 20% 80%, ${colors.cyan}18 0%, transparent 42%),
-          radial-gradient(circle at 80% 20%, ${colors.text}10 0%, transparent 34%),
+          background: `
+            radial-gradient(circle at 20% 80%, ${colors.cyan}18 0%, transparent 42%),
+            radial-gradient(circle at 80% 20%, ${colors.text}10 0%, transparent 34%),
           radial-gradient(circle at 42% 38%, ${colors.magenta}0e 0%, transparent 34%),
           linear-gradient(
             135deg,
