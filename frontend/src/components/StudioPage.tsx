@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import { useMessages } from 'next-intl';
 import { useEffect, useState } from 'react';
+import RoleFitChecker, { type RoleFitCheckerContent } from './RoleFitChecker';
 import VisualStudioWidget from './VisualStudioWidget';
 
 type ExperienceItem = {
@@ -70,6 +71,7 @@ type StudioContent = {
     intro: string;
     items: ProjectItem[];
   };
+  roleFit: RoleFitCheckerContent;
   credentials: {
     kicker: string;
     title: string;
@@ -82,6 +84,7 @@ const NAV_ITEMS = [
   { key: 'about', href: '#about' },
   { key: 'experience', href: '#experience' },
   { key: 'projects', href: '#projects' },
+  { key: 'roleFit', href: '#role-fit' },
   { key: 'credentials', href: '#credentials' },
 ] as const;
 
@@ -683,6 +686,8 @@ export default function StudioPage() {
                 })}
               </Box>
             </Box>
+
+            <RoleFitChecker content={content.roleFit} />
 
             <Box
               component="section"

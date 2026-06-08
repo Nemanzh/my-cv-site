@@ -10,6 +10,7 @@
       "services": "Usluge",
       "experience": "Iskustvo",
       "projects": "Radovi",
+      "roleFit": "Role Fit",
       "credentials": "Reference",
       "stack": "Tehnologije",
       "contact": "Kontakt"
@@ -249,6 +250,53 @@
           "secondaryHref": "https://www.croso.gov.rs/cir/index.php"
         }
       ]
+    },
+    "roleFit": {
+      "kicker": "Role Fit Checker",
+      "title": "Nalepi opis pozicije i proveri kako se profil poklapa sa ulogom.",
+      "intro": "Ovo koristi AI da uporedi zahteve iz oglasa sa stvarnim iskustvom, skillovima i projektima prikazanim na sajtu. Ne izmišlja iskustvo koje nije navedeno.",
+      "textareaLabel": "Opis pozicije",
+      "textareaPlaceholder": "Nalepi ceo opis posla. Uključi odgovornosti, zahteve, stack i domain detalje koje želiš da proveriš.",
+      "helperText": "Minimum 50 karaktera.",
+      "validationRequired": "Opis pozicije je obavezan.",
+      "validationTooShort": "Opis pozicije je prekratak. Dodaj više detalja.",
+      "validationTooLong": "Opis pozicije je predugačak. Skrati unos.",
+      "genericError": "Provera fit-a nije uspela.",
+      "submitLabel": "Proveri fit",
+      "sampleLabel": "Primer oglasa",
+      "resetLabel": "Obriši",
+      "cancelLabel": "Prekini",
+      "cancelledMessage": "Analiza je prekinuta.",
+      "loadingLabel": "Analiziram fit...",
+      "processingStatuses": [
+        "Čitam opis pozicije...",
+        "Upoređujem zahteve sa profilom...",
+        "Proveravam relevantne tehnologije...",
+        "Tražim potencijalne gapove...",
+        "Pripremam recruiter sažetak..."
+      ],
+      "sampleJobDescription": "Tražimo Full Stack Developera sa jakim C#/.NET, ASP.NET Core, React, TypeScript, SQL Server, Azure, REST API, authentication, SSO i cloud deployment iskustvom. Uloga uključuje razvoj enterprise web aplikacija, integracije sa trećim sistemima, unapređenje performansi, rad u Agile timovima i saradnju sa product ownerima, dizajnerima i QA inženjerima.",
+      "emptyTitle": "Još nema analize uloge.",
+      "emptyBody": "Nalepi stvaran job description i dobićeš recruiter-style sažetak, match score, jake strane, potencijalne gapove i relevantne tehnologije.",
+      "matchScoreLabel": "Match score",
+      "confidenceLabel": "Pouzdanost",
+      "confidenceLevels": {
+        "high": "Visoka",
+        "medium": "Srednja",
+        "low": "Niska"
+      },
+      "recruiterViewLabel": "Recruiter pogled",
+      "overallSummaryLabel": "Ukupan sažetak",
+      "strongMatchesLabel": "Jake strane",
+      "potentialGapsLabel": "Potencijalni gapovi",
+      "missingContextLabel": "Kontekst koji nedostaje",
+      "recruiterSummaryLabel": "Predlog recruiter sažetka",
+      "copySummaryLabel": "Kopiraj sažetak",
+      "copiedLabel": "Kopirano",
+      "relevantTechnologiesLabel": "Relevantne tehnologije",
+      "matchedTechnologiesLabel": "Poklapanje",
+      "adjacentTechnologiesLabel": "Srodno",
+      "missingTechnologiesLabel": "Nedostaje"
     },
     "credentials": {
       "kicker": "Certifikati i publikacije",

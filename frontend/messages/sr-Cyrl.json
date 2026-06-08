@@ -10,6 +10,7 @@
       "services": "Услуге",
       "experience": "Искуство",
       "projects": "Радови",
+      "roleFit": "Role Fit",
       "credentials": "Референце",
       "stack": "Технологије",
       "contact": "Контакт"
@@ -249,6 +250,53 @@
           "secondaryHref": "https://www.croso.gov.rs/cir/index.php"
         }
       ]
+    },
+    "roleFit": {
+      "kicker": "Role Fit Checker",
+      "title": "Налепи опис позиције и провери како се профил поклапа са улогом.",
+      "intro": "Ово користи AI да упореди захтеве из огласа са стварним искуством, skill-овима и пројектима приказаним на сајту. Не измишља искуство које није наведено.",
+      "textareaLabel": "Опис позиције",
+      "textareaPlaceholder": "Налепи цео опис посла. Укључи одговорности, захтеве, stack и domain детаље које желиш да провериш.",
+      "helperText": "Минимум 50 карактера.",
+      "validationRequired": "Опис позиције је обавезан.",
+      "validationTooShort": "Опис позиције је прекратак. Додај више детаља.",
+      "validationTooLong": "Опис позиције је предугачак. Скрати унос.",
+      "genericError": "Провера fit-а није успела.",
+      "submitLabel": "Провери fit",
+      "sampleLabel": "Пример огласа",
+      "resetLabel": "Обриши",
+      "cancelLabel": "Прекини",
+      "cancelledMessage": "Анализа је прекинута.",
+      "loadingLabel": "Анализирам fit...",
+      "processingStatuses": [
+        "Читам опис позиције...",
+        "Упоређујем захтеве са профилом...",
+        "Проверавам релевантне технологије...",
+        "Тражим потенцијалне gap-ове...",
+        "Припремам recruiter сажетак..."
+      ],
+      "sampleJobDescription": "Тражимо Full Stack Developera са јаким C#/.NET, ASP.NET Core, React, TypeScript, SQL Server, Azure, REST API, authentication, SSO и cloud deployment искуством. Улога укључује развој enterprise web апликација, интеграције са трећим системима, унапређење перформанси, рад у Agile тимовима и сарадњу са product owner-има, дизајнерима и QA инжењерима.",
+      "emptyTitle": "Још нема анализе улоге.",
+      "emptyBody": "Налепи стваран job description и добићеш recruiter-style сажетак, match score, јаке стране, потенцијалне gap-ове и релевантне технологије.",
+      "matchScoreLabel": "Match score",
+      "confidenceLabel": "Поузданост",
+      "confidenceLevels": {
+        "high": "Висока",
+        "medium": "Средња",
+        "low": "Ниска"
+      },
+      "recruiterViewLabel": "Recruiter поглед",
+      "overallSummaryLabel": "Укупан сажетак",
+      "strongMatchesLabel": "Јаке стране",
+      "potentialGapsLabel": "Потенцијални gap-ови",
+      "missingContextLabel": "Контекст који недостаје",
+      "recruiterSummaryLabel": "Предлог recruiter сажетка",
+      "copySummaryLabel": "Копирај сажетак",
+      "copiedLabel": "Копирано",
+      "relevantTechnologiesLabel": "Релевантне технологије",
+      "matchedTechnologiesLabel": "Поклапање",
+      "adjacentTechnologiesLabel": "Сродно",
+      "missingTechnologiesLabel": "Недостаје"
     },
     "credentials": {
       "kicker": "Сертификати и публикације",

@@ -10,6 +10,7 @@
       "services": "Services",
       "experience": "Experience",
       "projects": "Projects",
+      "roleFit": "Role Fit",
       "credentials": "Certifications & Publications",
       "stack": "Tech Stack",
       "contact": "Contact"
@@ -251,6 +252,53 @@
           "href": "https://www.croso.gov.rs/cir/index.php"
         }
       ]
+    },
+    "roleFit": {
+      "kicker": "Role Fit Checker",
+      "title": "Paste a job description and see how the profile maps to the role.",
+      "intro": "This uses AI to compare the pasted role requirements against the actual experience, skills, and projects shown on this site. It does not invent missing experience.",
+      "textareaLabel": "Job description",
+      "textareaPlaceholder": "Paste the full job description here. Include responsibilities, requirements, stack, and any domain details you want checked.",
+      "helperText": "Minimum 50 characters.",
+      "validationRequired": "Job description is required.",
+      "validationTooShort": "Job description is too short. Please add more detail.",
+      "validationTooLong": "Job description is too long. Please shorten it.",
+      "genericError": "Role fit check failed.",
+      "submitLabel": "Check Fit",
+      "sampleLabel": "Use sample",
+      "resetLabel": "Clear",
+      "cancelLabel": "Cancel",
+      "cancelledMessage": "Analysis cancelled.",
+      "loadingLabel": "Checking fit...",
+      "processingStatuses": [
+        "Reading the job description...",
+        "Comparing requirements with profile data...",
+        "Checking matching technologies...",
+        "Identifying potential gaps...",
+        "Preparing recruiter summary..."
+      ],
+      "sampleJobDescription": "We are hiring a Full Stack Developer with strong C#/.NET, ASP.NET Core, React, TypeScript, SQL Server, Azure, REST APIs, authentication, SSO, and cloud deployment experience. The role involves building enterprise web applications, integrating third-party systems, improving performance, working in Agile teams, and collaborating with product owners, designers, and QA engineers.",
+      "emptyTitle": "No role checked yet.",
+      "emptyBody": "Paste a real job description to get a recruiter-style summary, match score, strengths, potential gaps, and relevant technologies.",
+      "matchScoreLabel": "Match Score",
+      "confidenceLabel": "Confidence",
+      "confidenceLevels": {
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low"
+      },
+      "recruiterViewLabel": "Recruiter View",
+      "overallSummaryLabel": "Overall Summary",
+      "strongMatchesLabel": "Strong Matches",
+      "potentialGapsLabel": "Potential Gaps",
+      "missingContextLabel": "Missing Context",
+      "recruiterSummaryLabel": "Suggested Recruiter Summary",
+      "copySummaryLabel": "Copy summary",
+      "copiedLabel": "Copied",
+      "relevantTechnologiesLabel": "Relevant Technologies",
+      "matchedTechnologiesLabel": "Matched",
+      "adjacentTechnologiesLabel": "Adjacent",
+      "missingTechnologiesLabel": "Missing"
     },
     "credentials": {
       "kicker": "Certifications & Publications",
