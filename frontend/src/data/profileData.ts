@@ -82,13 +82,6 @@ export const profileData = {
         'American company providing business services, payments, marketing, checks, cloud solutions, and financial technology services for small businesses, enterprises, and financial institutions',
       ],
     },
-    {
-      name: 'Gov.Tools',
-      summary: [
-        'Digital public-service / government tooling project',
-        'Helps users interact with public-sector or government-related tools and services',
-      ],
-    },
   ],
   skills: {
     backend: [

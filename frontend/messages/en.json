@@ -10,6 +10,7 @@
       "services": "Services",
       "experience": "Experience",
       "projects": "Projects",
+      "whereHelp": "Where I Can Help",
       "roleFit": "Role Fit",
       "credentials": "Certifications & Publications",
       "stack": "Tech Stack",
@@ -250,6 +251,92 @@
           "stack": ["ASP.NET", "C#", "SQL Server", "Public-sector systems"],
           "linkLabel": "Visit site",
           "href": "https://www.croso.gov.rs/cir/index.php"
+        }
+      ]
+    },
+    "whereHelp": {
+      "kicker": "Where I Can Help",
+      "title": "Choose a challenge and see how my experience maps to real product and engineering problems.",
+      "intro": "Select the type of problem you are trying to solve. Each view connects the challenge to practical delivery experience, relevant technologies, and real project context.",
+      "labels": {
+        "technologies": "Technologies",
+        "projects": "Project examples",
+        "impact": "Impact",
+        "ctaPrompt": "Want to discuss a similar challenge?",
+        "ctaLabel": "Contact me"
+      },
+      "items": [
+        {
+          "id": "authentication-sso",
+          "label": "Authentication & SSO",
+          "title": "Secure login flows, SSO, and identity integration",
+          "description": "I can help implement and improve authentication flows across frontend and backend applications. My experience includes Azure AD SSO, MSAL frontend integration, token exchange flows, environment-specific configuration, and QA/UAT validation.",
+          "technologies": ["Azure AD", "MSAL", "React", ".NET", "Integration APIs", "JWT", "OAuth-style flows"],
+          "projects": ["Quadro Consulting", "Deluxe"],
+          "impact": "Helped connect secure enterprise authentication flows across multiple application layers."
+        },
+        {
+          "id": "full-stack-web-apps",
+          "label": "Full-Stack Web Apps",
+          "title": "From frontend UI to backend APIs",
+          "description": "I build full-stack web applications with clean frontend structure, reliable backend APIs, and practical database design. I focus on building features that are maintainable, understandable, and ready for real business usage.",
+          "technologies": ["React", "Next.js", "TypeScript", ".NET", "Node.js", "Strapi", "SQL Server", "PostgreSQL"],
+          "projects": ["IntersectMBO", "Insicon", "Saga"],
+          "impact": "Delivered business-facing features across both frontend and backend systems."
+        },
+        {
+          "id": "api-integrations",
+          "label": "API Integrations",
+          "title": "Connecting systems, services, and data",
+          "description": "I work on integrations between frontend apps, backend services, third-party APIs, payment providers, CMS platforms, and internal business systems. I pay attention to error handling, data mapping, environment configuration, and edge cases.",
+          "technologies": ["REST APIs", ".NET APIs", "Node.js", "Strapi", "AWS SQS", "Stripe", "HubSpot", "Integration Services"],
+          "projects": ["Intersect", "Quadro Consulting", "Deluxe"],
+          "impact": "Helped connect multiple systems into smoother product workflows."
+        },
+        {
+          "id": "admin-dashboards",
+          "label": "Admin Dashboards",
+          "title": "Internal tools that make business operations easier",
+          "description": "I can build admin dashboards and internal panels that help teams manage users, content, data, workflows, and business processes. I focus on clear UX, useful filtering, role-based behavior, and practical data presentation.",
+          "technologies": ["React", "Angular", "Next.js", "MUI", "Strapi Admin", "SQL Server", "PostgreSQL"],
+          "projects": ["IntersectMBO", "Insicon", "Central Registry / One Stop Shop"],
+          "impact": "Built and improved tools used by teams to manage real operational workflows."
+        },
+        {
+          "id": "performance-improvements",
+          "label": "Performance Improvements",
+          "title": "Cleaner, faster, and more reliable applications",
+          "description": "I can help identify slow parts of an application and improve frontend rendering, backend queries, API usage, and overall user experience. My experience includes working on performance improvements in insurance and business systems.",
+          "technologies": [".NET", "Angular", "React", "SQL Server", "API optimization", "frontend rendering improvements"],
+          "projects": ["Insicon", "Quadro Consulting"],
+          "impact": "Improved application behavior and reduced unnecessary friction in user workflows."
+        },
+        {
+          "id": "ai-features",
+          "label": "AI Features",
+          "title": "Practical AI features that add real value",
+          "description": "I can add AI-assisted features that support users instead of just looking flashy. Examples include role fit checking, content generation, smart recommendations, and guided product flows using affordable or free AI models.",
+          "technologies": ["OpenRouter", "OpenAI-compatible APIs", "Next.js", "Node.js", "prompt engineering", "structured outputs"],
+          "projects": ["nemanzh.dev AI Role Fit Checker", "micro-SaaS experiments"],
+          "impact": "Added AI functionality focused on practical user value and simple UX."
+        },
+        {
+          "id": "cloud-deployments",
+          "label": "Cloud & Deployments",
+          "title": "Shipping features safely across environments",
+          "description": "I have experience working with QA, UAT, and production deployment flows, environment variables, CI/CD processes, and coordination with different teams. I understand that delivery is not just code, but also configuration, testing, and release process.",
+          "technologies": ["Azure", "AWS", "Harness", "Bitbucket", "GitHub", "Jira", "Docker", "IIS", "environment configuration"],
+          "projects": ["Quadro Consulting", "Intersect", "Deluxe"],
+          "impact": "Supported delivery workflows across multiple environments and release stages."
+        },
+        {
+          "id": "business-platforms",
+          "label": "Business Platforms",
+          "title": "Software built around real business processes",
+          "description": "I have worked on platforms for insurance, public-sector systems, voting/member areas, identity management, and enterprise business workflows. I focus on understanding the process behind the feature, not just implementing isolated tickets.",
+          "technologies": [".NET", "Angular", "React", "Next.js", "SQL Server", "Strapi", "Azure", "AWS"],
+          "projects": ["Insicon", "IntersectMBO", "Saga", "National Employment Service"],
+          "impact": "Worked on systems where reliability, clarity, and business rules matter."
         }
       ]
     },

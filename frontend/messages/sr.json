@@ -10,6 +10,7 @@
       "services": "Usluge",
       "experience": "Iskustvo",
       "projects": "Radovi",
+      "whereHelp": "Gde mogu da pomognem",
       "roleFit": "Role Fit",
       "credentials": "Reference",
       "stack": "Tehnologije",
@@ -248,6 +249,92 @@
           "primaryHref": "#contact",
           "secondaryLabel": "Poseti sajt",
           "secondaryHref": "https://www.croso.gov.rs/cir/index.php"
+        }
+      ]
+    },
+    "whereHelp": {
+      "kicker": "Gde mogu da pomognem",
+      "title": "Izaberite izazov i pogledajte kako se moje iskustvo mapira na stvarne product i inženjerske probleme.",
+      "intro": "Izaberite tip problema koji rešavate. Svaki prikaz povezuje izazov sa praktičnim iskustvom, relevantnim tehnologijama i realnim projektnim kontekstom.",
+      "labels": {
+        "technologies": "Tehnologije",
+        "projects": "Primeri projekata",
+        "impact": "Efekat",
+        "ctaPrompt": "Želite da razgovaramo o sličnom izazovu?",
+        "ctaLabel": "Kontaktiraj me"
+      },
+      "items": [
+        {
+          "id": "authentication-sso",
+          "label": "Authentication & SSO",
+          "title": "Sigurni login tokovi, SSO i identity integracije",
+          "description": "Mogu da pomognem u implementaciji i unapređenju authentication tokova kroz frontend i backend aplikacije. Iskustvo uključuje Azure AD SSO, MSAL frontend integraciju, token exchange tokove, konfiguraciju po okruženjima i QA/UAT validaciju.",
+          "technologies": ["Azure AD", "MSAL", "React", ".NET", "Integration APIs", "JWT", "OAuth-style flows"],
+          "projects": ["Quadro Consulting", "Deluxe"],
+          "impact": "Pomogao sam u povezivanju sigurnih enterprise authentication tokova kroz više slojeva aplikacije."
+        },
+        {
+          "id": "full-stack-web-apps",
+          "label": "Full-Stack Web Apps",
+          "title": "Od frontend UI-ja do backend API-ja",
+          "description": "Gradim full-stack web aplikacije sa čistom frontend strukturom, pouzdanim backend API-jima i praktičnim dizajnom baze. Fokus mi je na funkcionalnostima koje su održive, razumljive i spremne za realnu poslovnu upotrebu.",
+          "technologies": ["React", "Next.js", "TypeScript", ".NET", "Node.js", "Strapi", "SQL Server", "PostgreSQL"],
+          "projects": ["IntersectMBO", "Insicon", "Saga"],
+          "impact": "Isporučivao sam poslovne funkcionalnosti kroz frontend i backend sisteme."
+        },
+        {
+          "id": "api-integrations",
+          "label": "API Integrations",
+          "title": "Povezivanje sistema, servisa i podataka",
+          "description": "Radim na integracijama između frontend aplikacija, backend servisa, third-party API-ja, payment providera, CMS platformi i internih poslovnih sistema. Vodim računa o error handling-u, mapiranju podataka, konfiguraciji okruženja i edge case-ovima.",
+          "technologies": ["REST APIs", ".NET APIs", "Node.js", "Strapi", "AWS SQS", "Stripe", "HubSpot", "Integration Services"],
+          "projects": ["Intersect", "Quadro Consulting", "Deluxe"],
+          "impact": "Pomogao sam da se više sistema poveže u jasnije i stabilnije product tokove."
+        },
+        {
+          "id": "admin-dashboards",
+          "label": "Admin Dashboards",
+          "title": "Interni alati koji olakšavaju poslovne operacije",
+          "description": "Mogu da izgradim admin dashboard-e i interne panele koji timovima pomažu da upravljaju korisnicima, sadržajem, podacima, workflow-ima i poslovnim procesima. Fokusiram se na jasan UX, korisno filtriranje, role-based ponašanje i praktičan prikaz podataka.",
+          "technologies": ["React", "Angular", "Next.js", "MUI", "Strapi Admin", "SQL Server", "PostgreSQL"],
+          "projects": ["IntersectMBO", "Insicon", "Centralni registar / One Stop Shop"],
+          "impact": "Gradio sam i unapređivao alate koje timovi koriste za realne operativne tokove."
+        },
+        {
+          "id": "performance-improvements",
+          "label": "Performance Improvements",
+          "title": "Čistije, brže i pouzdanije aplikacije",
+          "description": "Mogu da pomognem u pronalaženju sporih delova aplikacije i unapređenju frontend renderovanja, backend upita, API korišćenja i ukupnog korisničkog iskustva. Iskustvo uključuje performance rad u insurance i poslovnim sistemima.",
+          "technologies": [".NET", "Angular", "React", "SQL Server", "API optimization", "frontend rendering improvements"],
+          "projects": ["Insicon", "Quadro Consulting"],
+          "impact": "Unapređivao sam ponašanje aplikacija i smanjivao nepotrebno trenje u korisničkim tokovima."
+        },
+        {
+          "id": "ai-features",
+          "label": "AI Features",
+          "title": "Praktične AI funkcionalnosti koje donose stvarnu vrednost",
+          "description": "Mogu da dodam AI-assisted funkcionalnosti koje podržavaju korisnike, a ne postoje samo da izgledaju atraktivno. Primeri uključuju role fit proveru, generisanje sadržaja, pametne preporuke i vođene product tokove uz pristupačne ili besplatne AI modele.",
+          "technologies": ["OpenRouter", "OpenAI-compatible APIs", "Next.js", "Node.js", "prompt engineering", "structured outputs"],
+          "projects": ["nemanzh.dev AI Role Fit Checker", "micro-SaaS eksperimenti"],
+          "impact": "Dodao sam AI funkcionalnost fokusiranu na praktičnu korisničku vrednost i jednostavan UX."
+        },
+        {
+          "id": "cloud-deployments",
+          "label": "Cloud & Deployments",
+          "title": "Sigurna isporuka kroz različita okruženja",
+          "description": "Imam iskustvo sa QA, UAT i production deployment tokovima, environment varijablama, CI/CD procesima i koordinacijom sa različitim timovima. Razumem da isporuka nije samo kod, već i konfiguracija, testiranje i release proces.",
+          "technologies": ["Azure", "AWS", "Harness", "Bitbucket", "GitHub", "Jira", "Docker", "IIS", "environment configuration"],
+          "projects": ["Quadro Consulting", "Intersect", "Deluxe"],
+          "impact": "Podržavao sam delivery tokove kroz više okruženja i release faza."
+        },
+        {
+          "id": "business-platforms",
+          "label": "Business Platforms",
+          "title": "Softver izgrađen oko stvarnih poslovnih procesa",
+          "description": "Radio sam na platformama za osiguranje, public-sector sistemima, voting/member oblastima, identity management-u i enterprise poslovnim tokovima. Fokusiram se na razumevanje procesa iza funkcionalnosti, a ne samo na implementaciju izolovanih tiketa.",
+          "technologies": [".NET", "Angular", "React", "Next.js", "SQL Server", "Strapi", "Azure", "AWS"],
+          "projects": ["Insicon", "IntersectMBO", "Saga", "National Employment Service"],
+          "impact": "Radio sam na sistemima gde su pouzdanost, jasnoća i poslovna pravila ključni."
         }
       ]
     },

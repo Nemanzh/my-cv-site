@@ -13,6 +13,7 @@ import { useMessages } from 'next-intl';
 import { useEffect, useState } from 'react';
 import RoleFitChecker, { type RoleFitCheckerContent } from './RoleFitChecker';
 import VisualStudioWidget from './VisualStudioWidget';
+import WhereICanHelp, { type WhereICanHelpContent } from './WhereICanHelp';
 
 type ExperienceItem = {
   period: string;
@@ -71,6 +72,7 @@ type StudioContent = {
     intro: string;
     items: ProjectItem[];
   };
+  whereHelp: WhereICanHelpContent;
   roleFit: RoleFitCheckerContent;
   credentials: {
     kicker: string;
@@ -84,6 +86,7 @@ const NAV_ITEMS = [
   { key: 'about', href: '#about' },
   { key: 'experience', href: '#experience' },
   { key: 'projects', href: '#projects' },
+  { key: 'whereHelp', href: '#where-help' },
   { key: 'roleFit', href: '#role-fit' },
   { key: 'credentials', href: '#credentials' },
 ] as const;
@@ -686,6 +689,8 @@ export default function StudioPage() {
                 })}
               </Box>
             </Box>
+
+            <WhereICanHelp content={content.whereHelp} />
 
             <RoleFitChecker content={content.roleFit} />
 
