@@ -11,6 +11,7 @@
       "experience": "Experience",
       "projects": "Projects",
       "whereHelp": "Where I Can Help",
+      "deliveryFlow": "Delivery Flow",
       "roleFit": "Role Fit",
       "credentials": "Certifications & Publications",
       "stack": "Tech Stack",
@@ -374,6 +375,134 @@
           "technologies": [".NET", "Angular", "React", "Next.js", "SQL Server", "Strapi", "Azure", "AWS"],
           "projects": ["Insicon", "IntersectMBO", "Saga", "National Employment Service"],
           "impact": "Worked on systems where reliability, clarity, and business rules matter."
+        }
+      ]
+    },
+    "deliveryFlow": {
+      "kicker": "From Requirement to Release",
+      "title": "From Requirement to Release",
+      "intro": "A visual breakdown of how I approach features, from the first requirement to tested delivery.",
+      "labels": {
+        "focus": "What I focus on",
+        "tools": "Tools / context",
+        "example": "Example",
+        "phase": "Phase"
+      },
+      "steps": [
+        {
+          "id": "understand",
+          "label": "Understand",
+          "title": "Understand the real requirement",
+          "description": "Before writing code, I try to understand the real problem behind the ticket or feature request. I look at the business goal, user flow, existing system behavior, dependencies, and possible edge cases.",
+          "focusPoints": [
+            "What problem are we actually solving?",
+            "Who will use this feature?",
+            "What systems or teams are involved?",
+            "Are there hidden dependencies or blockers?"
+          ],
+          "tools": "Jira, Teams, Confluence, existing codebase, API contracts, product notes",
+          "example": "For enterprise SSO work, this meant understanding not just the login screen, but the full flow between Azure AD, frontend routing, backend token exchange, environment config, and QA/UAT validation.",
+          "icon": "understand"
+        },
+        {
+          "id": "break-down",
+          "label": "Break Down",
+          "title": "Break the work into clear technical pieces",
+          "description": "Once the requirement is clear, I split the work into frontend, backend, API, data, authentication, configuration, and deployment concerns. This helps reduce surprises during implementation and makes the delivery easier to coordinate.",
+          "focusPoints": [
+            "Frontend changes",
+            "Backend/API changes",
+            "Data model or database impact",
+            "Environment variables and configuration",
+            "Testing and deployment risks"
+          ],
+          "tools": "Jira, technical notes, Git branches, API documentation, environment configs",
+          "example": "For SSO, the work was split into MSAL setup, frontend route handling, token exchange with backend API, environment-specific config, and deployment validation.",
+          "icon": "break-down"
+        },
+        {
+          "id": "build",
+          "label": "Build",
+          "title": "Build clean, maintainable features",
+          "description": "During implementation, I focus on writing code that is clear, practical, and easy to maintain. I prefer simple architecture, reusable components, typed data structures, and predictable API communication.",
+          "focusPoints": [
+            "Clean component structure",
+            "Typed and reusable logic",
+            "Reliable API calls",
+            "Error handling",
+            "Keeping changes focused and reviewable"
+          ],
+          "tools": "React, Next.js, TypeScript, .NET, Angular, Strapi, SQL Server, PostgreSQL",
+          "example": "On full-stack platforms, this often means connecting UI flows with backend APIs, validating data, handling loading/error states, and keeping business logic understandable.",
+          "icon": "build"
+        },
+        {
+          "id": "review",
+          "label": "Review",
+          "title": "Review, refine, and align with the team",
+          "description": "I treat code review as part of delivery, not just a formality. I use feedback to improve the implementation, align with team standards, and catch issues before they reach QA or production.",
+          "focusPoints": [
+            "Pull request clarity",
+            "Small and understandable changes",
+            "Team feedback",
+            "UI behavior",
+            "Security/authentication details",
+            "Edge cases"
+          ],
+          "tools": "Bitbucket, GitHub, pull requests, Copilot review, team feedback, code comments",
+          "example": "For enterprise work, review often includes not only code quality, but also checking environment-specific behavior, authentication flow, and deployment readiness.",
+          "icon": "review"
+        },
+        {
+          "id": "test",
+          "label": "Test",
+          "title": "Validate the feature across real flows",
+          "description": "I test the feature through realistic user flows, not only isolated happy paths. I check that the feature works with real configuration, real API responses, and expected edge cases.",
+          "focusPoints": [
+            "Manual QA checks",
+            "API response validation",
+            "Browser behavior",
+            "Auth/session behavior",
+            "Edge cases and error states",
+            "QA/UAT readiness"
+          ],
+          "tools": "QA, UAT, browser dev tools, Postman-like API checks, logs, test users",
+          "example": "For SSO work, testing included checking login redirects, token handling, protected routes, backend API exchange, and environment-specific behavior on QA/UAT.",
+          "icon": "test"
+        },
+        {
+          "id": "release",
+          "label": "Release",
+          "title": "Support delivery across environments",
+          "description": "I understand that shipping is not only merging code. Release also includes configuration, environment variables, deployment pipelines, approvals, coordination, and final validation.",
+          "focusPoints": [
+            "Environment configuration",
+            "Deployment flow",
+            "CI/CD status",
+            "Release approvals",
+            "QA/UAT validation",
+            "Communication with other teams"
+          ],
+          "tools": "Harness, Jira, Bitbucket, GitHub, Azure, AWS, IIS, environment variables",
+          "example": "In enterprise delivery, I worked with QA/UAT deployments, Harness pipeline checks, environment variables, and coordination with different people involved in the release process.",
+          "icon": "release"
+        },
+        {
+          "id": "improve",
+          "label": "Improve",
+          "title": "Improve after feedback and real usage",
+          "description": "After delivery, I look for feedback, small improvements, performance issues, unclear UX, and technical cleanup opportunities. Good delivery does not stop when the feature is merged.",
+          "focusPoints": [
+            "User feedback",
+            "Performance improvements",
+            "UX adjustments",
+            "Bug fixes",
+            "Code cleanup",
+            "Better documentation"
+          ],
+          "tools": "Jira feedback, QA comments, team messages, logs, browser testing, performance checks",
+          "example": "In business and insurance systems, this often meant improving existing flows, reducing friction, optimizing behavior, and making features easier for users and teams to work with.",
+          "icon": "improve"
         }
       ]
     },

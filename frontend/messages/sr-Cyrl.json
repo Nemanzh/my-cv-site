@@ -11,6 +11,7 @@
       "experience": "Искуство",
       "projects": "Радови",
       "whereHelp": "Где могу да помогнем",
+      "deliveryFlow": "Ток испоруке",
       "roleFit": "Role Fit",
       "credentials": "Референце",
       "stack": "Технологије",
@@ -372,6 +373,89 @@
           "technologies": [".NET", "Angular", "React", "Next.js", "SQL Server", "Strapi", "Azure", "AWS"],
           "projects": ["Insicon", "IntersectMBO", "Saga", "National Employment Service"],
           "impact": "Радио сам на системима где су поузданост, јасноћа и пословна правила кључни."
+        }
+      ]
+    },
+    "deliveryFlow": {
+      "kicker": "Од захтева до release-а",
+      "title": "From Requirement to Release",
+      "intro": "Визуелни приказ како приступам функционалностима, од првог захтева до тестиране испоруке.",
+      "labels": {
+        "focus": "На шта се фокусирам",
+        "tools": "Алати / контекст",
+        "example": "Пример",
+        "phase": "Фаза"
+      },
+      "steps": [
+        {
+          "id": "understand",
+          "label": "Understand",
+          "title": "Разумем прави захтев",
+          "description": "Пре писања кода покушавам да разумем стварни проблем иза тикета или захтева. Гледам пословни циљ, кориснички ток, постојеће понашање система, зависности и могуће edge case-ове.",
+          "focusPoints": ["Који проблем заиста решавамо?", "Ко користи ову функционалност?", "Који системи или тимови су укључени?", "Постоје ли скривене зависности или блокатори?"],
+          "tools": "Jira, Teams, Confluence, постојећи codebase, API уговори, product notes",
+          "example": "Код enterprise SSO рада то је значило разумевање не само login екрана, већ целог тока између Azure AD-а, frontend routing-а, backend token exchange-а, конфигурације окружења и QA/UAT валидације.",
+          "icon": "understand"
+        },
+        {
+          "id": "break-down",
+          "label": "Break Down",
+          "title": "Делим посао на јасне техничке целине",
+          "description": "Када је захтев јасан, делим посао на frontend, backend, API, податке, аутентикацију, конфигурацију и deployment теме. То смањује изненађења током имплементације и олакшава координацију испоруке.",
+          "focusPoints": ["Frontend измене", "Backend/API измене", "Утицај на модел података или базу", "Environment варијабле и конфигурација", "Ризици за тестирање и deployment"],
+          "tools": "Jira, техничке белешке, Git гране, API документација, environment конфигурације",
+          "example": "Код SSO-а је посао био подељен на MSAL setup, frontend route handling, token exchange са backend API-јем, environment-specific конфигурацију и deployment валидацију.",
+          "icon": "break-down"
+        },
+        {
+          "id": "build",
+          "label": "Build",
+          "title": "Градим чисте и одрживе функционалности",
+          "description": "Током имплементације фокусирам се на код који је јасан, практичан и лак за одржавање. Преферирам једноставну архитектуру, reusable компоненте, типизоване структуре података и предвидиву API комуникацију.",
+          "focusPoints": ["Чиста структура компоненти", "Типизована и reusable логика", "Поуздани API позиви", "Error handling", "Фокусиране и reviewable измене"],
+          "tools": "React, Next.js, TypeScript, .NET, Angular, Strapi, SQL Server, PostgreSQL",
+          "example": "На full-stack платформама то често значи повезивање UI токова са backend API-јима, валидацију података, loading/error стања и пословну логику која остаје разумљива.",
+          "icon": "build"
+        },
+        {
+          "id": "review",
+          "label": "Review",
+          "title": "Review, дорада и усклађивање са тимом",
+          "description": "Code review третирам као део испоруке, не као формалност. Feedback користим да побољшам имплементацију, ускладим се са тимским стандардима и ухватим проблеме пре QA или продукције.",
+          "focusPoints": ["Јасан pull request", "Мале и разумљиве измене", "Тимски feedback", "UI понашање", "Security/authentication детаљи", "Edge case-ови"],
+          "tools": "Bitbucket, GitHub, pull request-ови, Copilot review, тимски feedback, code comments",
+          "example": "У enterprise раду review често укључује не само квалитет кода, већ и проверу понашања по окружењима, authentication flow-а и спремности за deployment.",
+          "icon": "review"
+        },
+        {
+          "id": "test",
+          "label": "Test",
+          "title": "Валидирам функционалност кроз реалне токове",
+          "description": "Тестирам функционалност кроз реалистичне корисничке токове, не само изоловане happy path сценарије. Проверавам рад са реалном конфигурацијом, реалним API одговорима и очекиваним edge case-овима.",
+          "focusPoints": ["Manual QA провере", "Валидација API одговора", "Browser понашање", "Auth/session понашање", "Edge case-ови и error стања", "QA/UAT спремност"],
+          "tools": "QA, UAT, browser dev tools, Postman-like API провере, логови, test корисници",
+          "example": "Код SSO рада тестирање је укључивало login redirect-е, token handling, заштићене руте, backend API exchange и environment-specific понашање на QA/UAT окружењима.",
+          "icon": "test"
+        },
+        {
+          "id": "release",
+          "label": "Release",
+          "title": "Подржавам испоруку кроз окружења",
+          "description": "Разумем да shipping није само merge кода. Release укључује конфигурацију, environment варијабле, deployment pipeline-ове, approval-е, координацију и финалну валидацију.",
+          "focusPoints": ["Конфигурација окружења", "Deployment ток", "CI/CD статус", "Release approvals", "QA/UAT валидација", "Комуникација са другим тимовима"],
+          "tools": "Harness, Jira, Bitbucket, GitHub, Azure, AWS, IIS, environment варијабле",
+          "example": "У enterprise испоруци радио сам са QA/UAT deployment-има, Harness pipeline проверама, environment варијаблама и координацијом са различитим људима укљученим у release процес.",
+          "icon": "release"
+        },
+        {
+          "id": "improve",
+          "label": "Improve",
+          "title": "Унапређујем после feedback-а и реалне употребе",
+          "description": "После испоруке тражим feedback, мале измене, performance проблеме, нејасан UX и прилике за технички cleanup. Добра испорука се не завршава када је функционалност merge-ована.",
+          "focusPoints": ["Кориснички feedback", "Performance унапређења", "UX корекције", "Bug fix-еви", "Code cleanup", "Боља документација"],
+          "tools": "Jira feedback, QA коментари, тимске поруке, логови, browser testing, performance провере",
+          "example": "У пословним и insurance системима то је често значило унапређење постојећих токова, смањење трења, оптимизацију понашања и лакши рад са функционалностима за кориснике и тимове.",
+          "icon": "improve"
         }
       ]
     },

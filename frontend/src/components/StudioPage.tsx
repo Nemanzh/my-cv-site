@@ -16,6 +16,9 @@ import { useEffect, useState } from 'react';
 import RoleFitChecker, { type RoleFitCheckerContent } from './RoleFitChecker';
 import VisualStudioWidget from './VisualStudioWidget';
 import WhereICanHelp, { type WhereICanHelpContent } from './WhereICanHelp';
+import RequirementToReleaseFlow, {
+  type RequirementToReleaseFlowContent,
+} from './RequirementToReleaseFlow';
 import ProjectCaseNote, {
   type ProjectCaseNoteLabels,
   type ProjectCaseStudy,
@@ -86,6 +89,7 @@ type StudioContent = {
     items: ProjectItem[];
   };
   whereHelp: WhereICanHelpContent;
+  deliveryFlow: RequirementToReleaseFlowContent;
   roleFit: RoleFitCheckerContent;
   credentials: {
     kicker: string;
@@ -100,6 +104,7 @@ const NAV_ITEMS = [
   { key: 'experience', href: '#experience' },
   { key: 'projects', href: '#projects' },
   { key: 'whereHelp', href: '#where-help' },
+  { key: 'deliveryFlow', href: '#delivery-flow' },
   { key: 'roleFit', href: '#role-fit' },
   { key: 'credentials', href: '#credentials' },
 ] as const;
@@ -787,6 +792,8 @@ export default function StudioPage() {
             </Box>
 
             <WhereICanHelp content={content.whereHelp} />
+
+            <RequirementToReleaseFlow content={content.deliveryFlow} />
 
             <RoleFitChecker content={content.roleFit} />
 
