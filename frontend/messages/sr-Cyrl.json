@@ -11,7 +11,7 @@
       "experience": "Искуство",
       "projects": "Радови",
       "whereHelp": "Где могу да помогнем",
-      "deliveryFlow": "Ток испоруке",
+      "deliveryFlow": "Процес",
       "roleFit": "Role Fit",
       "credentials": "Референце",
       "stack": "Технологије",
@@ -21,7 +21,7 @@
       "eyebrow": "Nemanzh Software Studio",
       "availability": "Доступан за пажљиво одабране клијентске пројекте и дугорочну техничку сарадњу.",
       "title": "Фулл-стак софтверски студио за тимове којима треба поуздана испорука, а не празна прича.",
-      "lead": "Градим модерне веб производе, backend системе и интеграције уз миран, инжењерски приступ раду.",
+      "lead": "Full-Stack Developer фокусиран на .NET, React, Next.js, TypeScript, enterprise SSO, API-је и пословне платформе.",
       "body": "Nemanzh Software Studio је начин на који представљам свој рад: senior full-stack испорука обликована искуством из enterprise окружења, product размишљањем и фокусом на одрживе системе.",
       "primaryCta": "Хајде да градимо",
       "secondaryCta": "Погледај радове",
@@ -53,9 +53,8 @@
       "title": "Лични студио бренд иза ког стоји озбиљно искуство у enterprise инжењерингу.",
       "intro": "Ово није freelancerska landing страница и није CV страница. Ово је фокусирана презентација начина рада и проблема које решавам.",
       "paragraphs": [
-        "Моја позадина обухвата full-stack испоруку кроз осигурање, enterprise софтвер, интерне пословне платформе и blockchain производе. Та комбинација ме је научила како да спојим потребе производа, техничка ограничења и дугорочну одрживост без хаотичне испоруке.",
-        "Највише вредности доносим тимовима којима треба практичан инжењер који може да постави архитектуру, имплементира критичне делове система, подигне квалитет и остави код разумљивим и после испоруке.",
-        "Позиционирање студија је једноставно: поуздан софтвер, директна комуникација и решења направљена за стварну пословну употребу."
+        "Градим enterprise апликације, интерне платформе и системе са доста интеграција, уз јак фокус на .NET, frontend испоруку и одрживу архитектуру.",
+        "Моје искуство обухвата insurance софтвер, public-sector системе, SSO/authentication, производе са плаћањима и cloud-connected веб платформе. Комфорно радим кроз frontend, backend, API-је, окружења и delivery токове."
       ],
       "highlights": [
         {
@@ -144,6 +143,7 @@
           "company": "Quadro Consulting",
           "summary": "Рад на enterprise модернизацији са фокусом на Single Sign-On кроз више апликација, backend сервисе, frontend апликације и cloud окружења.",
           "impact": "Имплементирам SSO кроз више enterprise апликација, уз подршку за .NET, Angular, React, TypeScript, SQL Server, Redis, RabbitMQ и Azure миграциони рад у Kanban тиму од 50 људи.",
+          "contextBadges": ["50-person delivery team", "Kanban", "Full-Stack / SSO implementation", "QA / UAT / Enterprise delivery"],
           "stack": [".NET", "Angular", "React", "Azure", "SQL Server"]
         },
         {
@@ -152,6 +152,7 @@
           "company": "IntersectMBO",
           "summary": "Рад на governance, membership, payment и blockchain производима унутар Cardano екосистема.",
           "impact": "Изградио сам токове апликације у Next.js и Strapi-ју, интегрисао Stripe и crypto wallet плаћања, имплементирао Web3Auth, генерисао и енкриптовао Cardano кључеве, додао AWS SQS комуникацију и подржао испоруку преко Docker Compose-а на AWS-у и Qovery-у.",
+          "contextBadges": ["10-person product team", "Scrum / Agile", "Full-Stack Developer", "Product platform / Members area"],
           "stack": ["Next.js", "Strapi", "Node.js", "PostgreSQL", "AWS"]
         },
         {
@@ -160,6 +161,7 @@
           "company": "Insicon",
           "summary": "Рад на великој интерној платформи за осигурање коју користе нордијске осигуравајуће куће, кроз backend, frontend, базу података, cloud и DevOps области.",
           "impact": "Развио сам insurance софтвер са C#/.NET, Angular, SQL Server и T-SQL технологијама, унапредио кључне пословне модуле, помогао модернизацију ка .NET 8 и Angular 16, оптимизовао stored procedure и подржао Azure Redis Cache, Azure Key Vault и deployment токове.",
+          "contextBadges": ["5-30 people depending on project", "Scrum / Agile", "Full-Stack Developer", "Insurance / Business systems"],
           "stack": [".NET", "Angular", "SQL Server", "Azure", "T-SQL"]
         },
         {
@@ -168,6 +170,7 @@
           "company": "Saga",
           "summary": "Рад на Microsoft базираним enterprise и public sector решењима, укључујући identity management, SharePoint модернизацију, cloud миграцију, аутоматизацију и одржавање апликација.",
           "impact": "Имплементирао сам Microsoft Identity Manager кроз Azure Active Directory и on-prem Active Directory, одржавао WPF апликацију One Stop Shop за Centralni registar obaveznog socijalnog osiguranja, подржао SharePoint Online миграцију и проширио токове рада уз React, Power BI и Power Automate.",
+          "contextBadges": ["7-person core team with cross-team cooperation", "Scrum / Agile", "Software Developer", "Enterprise / Internal systems"],
           "stack": ["C#", ".NET", "SharePoint", "Azure AD", "Power Platform"]
         },
         {
@@ -244,7 +247,7 @@
         },
         {
           "id": "deluxe-enterprise-sso",
-          "title": "Deluxe Corporation",
+          "title": "Deluxe via Quadro Consulting",
           "description": "Рад повезан са америчком компанијом за payments и data технологије која подржава предузећа, финансијске институције и enterprise клијенте кроз дигитална финансијска решења.",
           "impact": "Фокус је био на системима који помажу организацијама да управљају плаћањима, обрађују трансакције и користе data-driven услуге за боље пословање и раст.",
           "stack": ["Payments", "Data Platforms", "Enterprise Systems", "Financial Technology"],
@@ -561,10 +564,10 @@
     },
     "contact": {
       "kicker": "Контакт",
-      "title": "Треба вам поуздан инжењер или studio-style технички партнер?",
-      "body": "Ако градите производ, модернизујете постојећи систем или вам је потребан senior full-stack инжењер који може брзо да преузме одговорност, јавите се.",
+      "title": "Хајде да изградимо нешто поуздано.",
+      "body": "Доступан сам за full-stack развој, enterprise веб апликације, .NET/React пројекте, SSO/authentication рад и product-focused инжењеринг.",
       "primaryCta": "Контактирај ме",
-      "secondaryCta": "Погледај LinkedIn",
+      "secondaryCta": "LinkedIn",
       "email": "contact@nemanzh.dev",
       "closing": "Директна комуникација, јасан scope и софтвер направљен да траје."
     }

@@ -31,6 +31,7 @@ type ExperienceItem = {
   summary: string;
   impact: string;
   stack: string[];
+  contextBadges?: string[];
 };
 
 type ProjectItem = {
@@ -97,16 +98,24 @@ type StudioContent = {
     intro: string;
     items: CredentialItem[];
   };
+  contact: {
+    kicker: string;
+    title: string;
+    body: string;
+    primaryCta: string;
+    secondaryCta: string;
+    email: string;
+    closing: string;
+  };
 };
 
 const NAV_ITEMS = [
   { key: 'about', href: '#about' },
   { key: 'experience', href: '#experience' },
   { key: 'projects', href: '#projects' },
-  { key: 'whereHelp', href: '#where-help' },
   { key: 'deliveryFlow', href: '#delivery-flow' },
   { key: 'roleFit', href: '#role-fit' },
-  { key: 'credentials', href: '#credentials' },
+  { key: 'contact', href: '#contact' },
 ] as const;
 
 function SidebarNavLink({
@@ -191,9 +200,9 @@ export default function StudioPage() {
   const [expandedProjectId, setExpandedProjectId] = useState<string | null>(null);
 
   useEffect(() => {
-    const sections = NAV_ITEMS.map((item) => document.getElementById(item.href.slice(1))).filter(
-      (section): section is HTMLElement => section !== null,
-    );
+    const sections = NAV_ITEMS.map((item) => document.getElementById(item.href.slice(1)))
+      .filter((section): section is HTMLElement => section !== null)
+      .sort((first, second) => first.offsetTop - second.offsetTop);
 
     if (sections.length === 0) {
       return;
@@ -455,6 +464,10 @@ export default function StudioPage() {
               </Stack>
             </Box>
 
+            <RoleFitChecker content={content.roleFit} />
+
+            <WhereICanHelp content={content.whereHelp} />
+
             <Box
               component="section"
               id="experience"
@@ -527,6 +540,35 @@ export default function StudioPage() {
                       >
                         {item.impact}
                       </Typography>
+
+                      {item.contextBadges?.length ? (
+                        <Stack
+                          direction="row"
+                          spacing={0.8}
+                          useFlexGap
+                          flexWrap="wrap"
+                          sx={{ mt: 1.35 }}
+                        >
+                          {item.contextBadges.map((label) => (
+                            <Box
+                              key={label}
+                              sx={{
+                                border: `1px solid ${theme.palette.terminal.border}`,
+                                borderRadius: 999,
+                                px: 0.95,
+                                py: 0.38,
+                                color: theme.palette.terminal.textSecondary,
+                                backgroundColor: `${theme.palette.terminal.background}55`,
+                                fontFamily: 'var(--font-mono)',
+                                fontSize: '0.72rem',
+                                lineHeight: 1.2,
+                              }}
+                            >
+                              {label}
+                            </Box>
+                          ))}
+                        </Stack>
+                      ) : null}
 
                       <Stack
                         direction="row"
@@ -791,11 +833,7 @@ export default function StudioPage() {
               </Box>
             </Box>
 
-            <WhereICanHelp content={content.whereHelp} />
-
             <RequirementToReleaseFlow content={content.deliveryFlow} />
-
-            <RoleFitChecker content={content.roleFit} />
 
             <Box
               component="section"
@@ -959,6 +997,143 @@ export default function StudioPage() {
                   );
                 })}
               </Box>
+            </Box>
+
+            <Box
+              component="section"
+              id="contact"
+              sx={{
+                scrollMarginTop: { xs: 88, lg: 100 },
+                p: { xs: 2.4, sm: 3, md: 3.4 },
+                border: `1px solid ${theme.palette.terminal.border}`,
+                borderRadius: 3,
+                background: `linear-gradient(150deg, ${theme.palette.terminal.header} 0%, ${theme.palette.terminal.background} 100%)`,
+                boxShadow: `0 0 0 1px ${theme.palette.terminal.border}33 inset`,
+              }}
+            >
+              <SectionLabel>{content.contact.kicker}</SectionLabel>
+
+              <Typography
+                sx={{
+                  color: theme.palette.terminal.text,
+                  fontSize: { xs: '1.35rem', md: '1.7rem' },
+                  fontWeight: 700,
+                  lineHeight: 1.25,
+                }}
+              >
+                {content.contact.title}
+              </Typography>
+
+              <Typography
+                sx={{
+                  mt: 1.5,
+                  color: theme.palette.terminal.textSecondary,
+                  lineHeight: 1.8,
+                  maxWidth: '62ch',
+                }}
+              >
+                {content.contact.body}
+              </Typography>
+
+              <Stack
+                direction={{ xs: 'column', sm: 'row' }}
+                spacing={1.3}
+                useFlexGap
+                flexWrap="wrap"
+                sx={{ mt: 3 }}
+              >
+                <Button
+                  href={`mailto:${content.contact.email}`}
+                  startIcon={<Email />}
+                  sx={{
+                    alignSelf: { xs: 'stretch', sm: 'flex-start' },
+                    border: `1px solid ${theme.palette.terminal.cyan}`,
+                    borderRadius: 999,
+                    color: theme.palette.terminal.background,
+                    backgroundColor: theme.palette.terminal.cyan,
+                    px: 2.2,
+                    py: 1,
+                    fontWeight: 700,
+                    textTransform: 'none',
+                    '&:hover': {
+                      backgroundColor: theme.palette.terminal.green,
+                      borderColor: theme.palette.terminal.green,
+                    },
+                    '&:focus-visible': {
+                      outline: `2px solid ${theme.palette.terminal.cyan}`,
+                      outlineOffset: 4,
+                    },
+                  }}
+                >
+                  {content.contact.primaryCta}
+                </Button>
+
+                <Button
+                  href="https://www.linkedin.com/in/nemanja-radulovic/"
+                  target="_blank"
+                  rel="noreferrer"
+                  startIcon={<LinkedIn />}
+                  sx={{
+                    alignSelf: { xs: 'stretch', sm: 'flex-start' },
+                    border: `1px solid ${theme.palette.terminal.border}`,
+                    borderRadius: 999,
+                    color: theme.palette.terminal.text,
+                    px: 2,
+                    py: 1,
+                    textTransform: 'none',
+                    '&:hover': {
+                      borderColor: theme.palette.terminal.cyan,
+                      color: theme.palette.terminal.cyan,
+                      backgroundColor: `${theme.palette.terminal.cyan}10`,
+                    },
+                    '&:focus-visible': {
+                      outline: `2px solid ${theme.palette.terminal.cyan}`,
+                      outlineOffset: 4,
+                    },
+                  }}
+                >
+                  {content.contact.secondaryCta}
+                </Button>
+
+                <Button
+                  href="https://github.com/nemanjaradulovic"
+                  target="_blank"
+                  rel="noreferrer"
+                  startIcon={<GitHub />}
+                  sx={{
+                    alignSelf: { xs: 'stretch', sm: 'flex-start' },
+                    border: `1px solid ${theme.palette.terminal.border}`,
+                    borderRadius: 999,
+                    color: theme.palette.terminal.text,
+                    px: 2,
+                    py: 1,
+                    textTransform: 'none',
+                    '&:hover': {
+                      borderColor: theme.palette.terminal.cyan,
+                      color: theme.palette.terminal.cyan,
+                      backgroundColor: `${theme.palette.terminal.cyan}10`,
+                    },
+                    '&:focus-visible': {
+                      outline: `2px solid ${theme.palette.terminal.cyan}`,
+                      outlineOffset: 4,
+                    },
+                  }}
+                >
+                  {content.hero.socials.github}
+                </Button>
+              </Stack>
+
+              <Typography
+                sx={{
+                  mt: 2.8,
+                  color: theme.palette.terminal.green,
+                  fontFamily: 'var(--font-mono)',
+                  fontSize: '0.82rem',
+                  lineHeight: 1.7,
+                }}
+              >
+                {content.contact.closing}
+              </Typography>
             </Box>
           </Box>
         </Box>

@@ -11,7 +11,7 @@
       "experience": "Experience",
       "projects": "Projects",
       "whereHelp": "Where I Can Help",
-      "deliveryFlow": "Delivery Flow",
+      "deliveryFlow": "Process",
       "roleFit": "Role Fit",
       "credentials": "Certifications & Publications",
       "stack": "Tech Stack",
@@ -21,7 +21,7 @@
       "eyebrow": "Nemanzh Software Studio",
       "availability": "Open to selected enterprise projects and long-term technical partnerships.",
       "title": ".NET-led enterprise software for teams that need stable delivery and clean systems.",
-      "lead": "I build enterprise applications, scalable .NET backends, and cloud-connected web platforms for teams that need dependable execution.",
+      "lead": "Full-Stack Developer focused on .NET, React, Next.js, TypeScript, enterprise SSO, APIs, and business platforms.",
       "body": "Nemanzh Software Studio is how I present my work: senior delivery across insurance software, public sector systems, internal business platforms, and modern web products, with a focus on maintainable systems and direct communication.",
       "primaryCta": "Work with me",
       "secondaryCta": "See experience",
@@ -53,9 +53,8 @@
       "title": "An independent software studio built around senior enterprise delivery.",
       "intro": "I am not trying to look larger than I am. The value is direct senior execution, strong backend engineering, and systems that stay understandable after release.",
       "paragraphs": [
-        "I build enterprise applications and internal business platforms for teams that need solid architecture, reliable delivery, and backend engineering that does not collapse under day-to-day business use.",
-        "My background spans Nordic insurance software, public sector systems, identity and integration-heavy enterprise environments, and payment-enabled web products. That range helps me move between product work, operational constraints, and long-term maintenance without unnecessary complexity.",
-        "I am strongest when .NET is at the core and the rest of the stack needs to work with it cleanly: Next.js or Angular frontends, SQL-heavy systems, cloud services, integrations, upgrades, and production ownership."
+        "I build enterprise applications, internal platforms, and integration-heavy systems with a strong focus on .NET, frontend delivery, and maintainable architecture.",
+        "My background covers insurance software, public-sector systems, SSO/authentication, payment-enabled products, and cloud-connected web platforms. I am comfortable working across frontend, backend, APIs, environments, and delivery workflows."
       ],
       "highlights": [
         {
@@ -144,6 +143,7 @@
           "company": "Quadro Consulting",
           "summary": "Working on enterprise modernization projects focused on Single Sign-On across multiple applications, backend services, frontend applications, and cloud-based environments.",
           "impact": "I am implementing SSO across multiple enterprise applications, supporting .NET, Angular, React, TypeScript, SQL Server, Redis, RabbitMQ, and Azure migration work inside a 50-person Kanban delivery team.",
+          "contextBadges": ["50-person delivery team", "Kanban", "Full-Stack / SSO implementation", "QA / UAT / Enterprise delivery"],
           "stack": [".NET", "Angular", "React", "Azure", "SQL Server"]
         },
         {
@@ -152,6 +152,7 @@
           "company": "IntersectMBO",
           "summary": "Worked on governance, membership, payment, and blockchain-related products within the Cardano ecosystem.",
           "impact": "I built Next.js and Strapi-based application flows, integrated Stripe and crypto wallet payments, implemented Web3Auth, generated and encrypted Cardano keys, added AWS SQS communication, and supported Docker Compose delivery on AWS and Qovery.",
+          "contextBadges": ["10-person product team", "Scrum / Agile", "Full-Stack Developer", "Product platform / Members area"],
           "stack": ["Next.js", "Strapi", "Node.js", "PostgreSQL", "AWS"]
         },
         {
@@ -160,6 +161,7 @@
           "company": "Insicon",
           "summary": "Worked on a large in-house insurance platform used by Nordic insurance companies across backend, frontend, database, cloud, and DevOps areas.",
           "impact": "I developed insurance software with C#/.NET, Angular, SQL Server, and T-SQL, improved core business modules, helped modernize the stack toward .NET 8 and Angular 16, optimized stored procedures, and supported Azure Redis Cache, Azure Key Vault, and deployment workflows.",
+          "contextBadges": ["5-30 people depending on project", "Scrum / Agile", "Full-Stack Developer", "Insurance / Business systems"],
           "stack": [".NET", "Angular", "SQL Server", "Azure", "T-SQL"]
         },
         {
@@ -168,6 +170,7 @@
           "company": "Saga",
           "summary": "Worked on Microsoft-based enterprise and public sector solutions, including identity management, SharePoint modernization, cloud migration, automation, and application maintenance.",
           "impact": "I implemented Microsoft Identity Manager across Azure Active Directory and on-prem Active Directory, maintained the WPF-based One Stop Shop application for the Central Registry of Compulsory Social Insurance, supported SharePoint Online migration, and extended workflows with React, Power BI, and Power Automate.",
+          "contextBadges": ["7-person core team with cross-team cooperation", "Scrum / Agile", "Software Developer", "Enterprise / Internal systems"],
           "stack": ["C#", ".NET", "SharePoint", "Azure AD", "Power Platform"]
         },
         {
@@ -202,8 +205,8 @@
           "title": "National Employment Service",
           "client": "SAGA",
           "context": "Backend Developer",
-          "description": "Backend work for a public-sector platform with REST APIs, authorization logic, and SQL Server-backed business workflows.",
-          "impact": "The focus was reliability, structured domain logic, and maintainable delivery inside an in-house ASP.NET framework.",
+          "description": "Backend work for a public-sector platform with REST APIs, authorization logic, and SQL Server-backed citizen and administrative workflows.",
+          "impact": "The focus was dependable backend behavior, structured domain logic, and careful delivery inside an in-house ASP.NET framework.",
           "stack": ["ASP.NET", "C#", "REST APIs", "SQL Server"],
           "linkLabel": "Visit site",
           "href": "https://www.nsz.gov.rs/"
@@ -212,8 +215,8 @@
           "title": "Dual Education",
           "client": "SAGA",
           "context": "Backend Developer",
-          "description": "Backend support for the Serbian dual education platform, covering API logic, data workflows, and public-sector delivery constraints.",
-          "impact": "The work centered on stable backend behavior, clear data handling, and software that could support administrative processes without unnecessary complexity.",
+          "description": "Backend support for the Serbian dual education platform, covering API logic, structured data handling, and administrative workflow support.",
+          "impact": "The work centered on clear process handling and software that could support public-sector administration without unnecessary complexity.",
           "stack": ["ASP.NET", "C#", "SQL Server", "Public-sector systems"],
           "linkLabel": "Visit site",
           "href": "https://dualnok.gov.rs/en/pocetna-english/"
@@ -223,8 +226,8 @@
           "title": "Unionen",
           "client": "Insicon",
           "context": "Full-Stack Developer",
-          "description": "Enterprise platform work delivered through Insicon for the Swedish market, with .NET, Angular, SQL Server, and long-lived business workflows.",
-          "impact": "The emphasis was on maintainability, feature delivery, and modernization inside a production system rather than one-off implementation work.",
+          "description": "Enterprise insurance platform work delivered through Insicon for the Swedish market with .NET, Angular, SQL Server, and long-lived production workflows.",
+          "impact": "The emphasis was continuity, careful feature delivery, and modernization inside a system expected to keep running while it evolved.",
           "stack": [".NET", "Angular", "SQL Server", "Azure"],
           "caseStudy": {
             "problem": "Business and insurance-related applications needed stable functionality, better performance, and maintainable feature development across different team sizes.",
@@ -240,18 +243,18 @@
           "title": "ICA Forsakring",
           "client": "Insicon",
           "context": "Full-Stack Developer",
-          "description": "Insurance platform work in the Swedish market, spanning enterprise application delivery, backend changes, frontend work, and cloud-oriented modernization.",
-          "impact": "I contributed across the stack in a production insurance environment where continuity, upgrades, and long-term maintainability mattered more than fast cosmetic change.",
+          "description": "Insurance modernization work in the Swedish market across backend changes, frontend delivery, and cloud-oriented platform improvement.",
+          "impact": "I contributed across the stack in a production insurance environment where continuity, upgrades, and steady improvement mattered more than cosmetic change.",
           "stack": [".NET", "Angular", "SQL Server", "Azure"],
           "linkLabel": "Visit site",
           "href": "https://www.icaforsakring.se/"
         },
         {
           "id": "deluxe-enterprise-sso",
-          "title": "Deluxe Corporation",
+          "title": "Deluxe via Quadro Consulting",
           "context": "Enterprise Payments & Data Technology",
-          "description": "Work connected to a US-based payments and data technology company that supports businesses, financial institutions, and enterprise clients with digital financial solutions.",
-          "impact": "The focus was on systems that help organizations manage payments, process transactions, and use data-driven services to improve operations and support growth.",
+          "description": "Enterprise SSO work for a US-based payments and data technology company, delivered through Quadro Consulting across frontend authentication and environment-specific setup.",
+          "impact": "The focus was aligning authentication flows, API handoff, configuration, and QA/UAT validation across enterprise delivery environments.",
           "stack": ["Payments", "Data Platforms", "Enterprise Systems", "Financial Technology"],
           "caseStudy": {
             "problem": "The application needed a secure enterprise SSO flow that worked consistently across frontend, backend, and multiple environments such as QA and UAT.",
@@ -267,8 +270,8 @@
           "id": "intersect-members-voting",
           "title": "IntersectMBO",
           "context": "Full-Stack / Product Engineering",
-          "description": "Work on a blockchain-oriented platform focused on product logic, backend services, and stable execution of key user and transaction flows.",
-          "impact": "The emphasis was on transaction reliability, clearer product behavior, and a system that could support growing demand without losing operational stability.",
+          "description": "Membership platform work across product-facing features, voting workflows, payments, integrations, and backend service behavior.",
+          "impact": "The emphasis was clearer member flows, reliable integrations, and product functionality that could support real operational use.",
           "stack": ["Node.js", "TypeScript", "Next.js", "Cardano"],
           "caseStudy": {
             "problem": "The platform needed reliable member-facing features, voting workflows, admin functionality, and integrations with external systems.",
@@ -284,8 +287,8 @@
           "title": "Central Registry / One Stop Shop",
           "client": "Public Sector",
           "context": "Backend Developer",
-          "description": "Optimization of a web application for faster, more stable, and more accurate work with the central registry of live births and deceased persons.",
-          "impact": "The work required data accuracy, reliable administrative flows, and careful handling of one of the country's most important state data sets.",
+          "description": "Optimization and maintenance work for a state-critical administrative system tied to central registry workflows and structured business rules.",
+          "impact": "The work required data accuracy, careful validation, and disciplined handling of one of the country's most important state data sets.",
           "stack": ["ASP.NET", "C#", "SQL Server", "Public-sector systems"],
           "linkLabel": "Visit site",
           "href": "https://www.croso.gov.rs/cir/index.php"
@@ -308,34 +311,34 @@
           "id": "authentication-sso",
           "label": "Authentication & SSO",
           "title": "Secure login flows, SSO, and identity integration",
-          "description": "I can help implement and improve authentication flows across frontend and backend applications. My experience includes Azure AD SSO, MSAL frontend integration, token exchange flows, environment-specific configuration, and QA/UAT validation.",
+          "description": "I implement and improve authentication flows across frontend and backend applications. My experience includes Azure AD SSO, MSAL integration, token exchange, environment configuration, and QA/UAT validation.",
           "technologies": ["Azure AD", "MSAL", "React", ".NET", "Integration APIs", "JWT", "OAuth-style flows"],
-          "projects": ["Quadro Consulting", "Deluxe"],
+          "projects": ["Deluxe via Quadro Consulting"],
           "impact": "Helped connect secure enterprise authentication flows across multiple application layers."
         },
         {
           "id": "full-stack-web-apps",
           "label": "Full-Stack Web Apps",
           "title": "From frontend UI to backend APIs",
-          "description": "I build full-stack web applications with clean frontend structure, reliable backend APIs, and practical database design. I focus on building features that are maintainable, understandable, and ready for real business usage.",
+          "description": "I build full-stack web applications with clean frontend structure, backend APIs, and practical database design. I focus on features that are understandable and ready for real business usage.",
           "technologies": ["React", "Next.js", "TypeScript", ".NET", "Node.js", "Strapi", "SQL Server", "PostgreSQL"],
-          "projects": ["IntersectMBO", "Insicon", "Saga"],
+          "projects": ["IntersectMBO", "Insicon"],
           "impact": "Delivered business-facing features across both frontend and backend systems."
         },
         {
           "id": "api-integrations",
           "label": "API Integrations",
           "title": "Connecting systems, services, and data",
-          "description": "I work on integrations between frontend apps, backend services, third-party APIs, payment providers, CMS platforms, and internal business systems. I pay attention to error handling, data mapping, environment configuration, and edge cases.",
+          "description": "I connect frontend apps, backend services, third-party APIs, payment providers, CMS platforms, and internal systems. I pay attention to error handling, data mapping, configuration, and edge cases.",
           "technologies": ["REST APIs", ".NET APIs", "Node.js", "Strapi", "AWS SQS", "Stripe", "HubSpot", "Integration Services"],
-          "projects": ["Intersect", "Quadro Consulting", "Deluxe"],
+          "projects": ["IntersectMBO", "Deluxe via Quadro Consulting"],
           "impact": "Helped connect multiple systems into smoother product workflows."
         },
         {
           "id": "admin-dashboards",
           "label": "Admin Dashboards",
           "title": "Internal tools that make business operations easier",
-          "description": "I can build admin dashboards and internal panels that help teams manage users, content, data, workflows, and business processes. I focus on clear UX, useful filtering, role-based behavior, and practical data presentation.",
+          "description": "I build admin dashboards and internal panels for managing users, content, data, workflows, and business processes. I focus on clear UX, filtering, role-based behavior, and practical data presentation.",
           "technologies": ["React", "Angular", "Next.js", "MUI", "Strapi Admin", "SQL Server", "PostgreSQL"],
           "projects": ["IntersectMBO", "Insicon", "Central Registry / One Stop Shop"],
           "impact": "Built and improved tools used by teams to manage real operational workflows."
@@ -344,7 +347,7 @@
           "id": "performance-improvements",
           "label": "Performance Improvements",
           "title": "Cleaner, faster, and more reliable applications",
-          "description": "I can help identify slow parts of an application and improve frontend rendering, backend queries, API usage, and overall user experience. My experience includes working on performance improvements in insurance and business systems.",
+          "description": "I identify slow parts of an application and improve frontend rendering, backend queries, API usage, and user experience. My experience includes performance work in insurance and business systems.",
           "technologies": [".NET", "Angular", "React", "SQL Server", "API optimization", "frontend rendering improvements"],
           "projects": ["Insicon", "Quadro Consulting"],
           "impact": "Improved application behavior and reduced unnecessary friction in user workflows."
@@ -353,7 +356,7 @@
           "id": "ai-features",
           "label": "AI Features",
           "title": "Practical AI features that add real value",
-          "description": "I can add AI-assisted features that support users instead of just looking flashy. Examples include role fit checking, content generation, smart recommendations, and guided product flows using affordable or free AI models.",
+          "description": "I add AI-assisted features that support users instead of just looking flashy. Examples include role fit checking, content generation, recommendations, and guided product flows.",
           "technologies": ["OpenRouter", "OpenAI-compatible APIs", "Next.js", "Node.js", "prompt engineering", "structured outputs"],
           "projects": ["nemanzh.dev AI Role Fit Checker", "micro-SaaS experiments"],
           "impact": "Added AI functionality focused on practical user value and simple UX."
@@ -362,16 +365,16 @@
           "id": "cloud-deployments",
           "label": "Cloud & Deployments",
           "title": "Shipping features safely across environments",
-          "description": "I have experience working with QA, UAT, and production deployment flows, environment variables, CI/CD processes, and coordination with different teams. I understand that delivery is not just code, but also configuration, testing, and release process.",
+          "description": "I work with QA, UAT, production deployment flows, environment variables, CI/CD processes, and team coordination. Delivery is code, configuration, testing, and release process together.",
           "technologies": ["Azure", "AWS", "Harness", "Bitbucket", "GitHub", "Jira", "Docker", "IIS", "environment configuration"],
-          "projects": ["Quadro Consulting", "Intersect", "Deluxe"],
+          "projects": ["Deluxe via Quadro Consulting", "IntersectMBO"],
           "impact": "Supported delivery workflows across multiple environments and release stages."
         },
         {
           "id": "business-platforms",
           "label": "Business Platforms",
           "title": "Software built around real business processes",
-          "description": "I have worked on platforms for insurance, public-sector systems, voting/member areas, identity management, and enterprise business workflows. I focus on understanding the process behind the feature, not just implementing isolated tickets.",
+          "description": "I have worked on insurance platforms, public-sector systems, voting/member areas, identity management, and enterprise workflows. I focus on the process behind the feature, not isolated ticket execution.",
           "technologies": [".NET", "Angular", "React", "Next.js", "SQL Server", "Strapi", "Azure", "AWS"],
           "projects": ["Insicon", "IntersectMBO", "Saga", "National Employment Service"],
           "impact": "Worked on systems where reliability, clarity, and business rules matter."
@@ -611,10 +614,10 @@
     },
     "contact": {
       "kicker": "Contact",
-      "title": "Need an enterprise app, a backend rebuild, or modernization support?",
-      "body": "I work with teams building business platforms, upgrading legacy systems, and shipping cloud-connected products. If you need senior .NET and full-stack delivery with clear ownership, get in touch.",
+      "title": "Let's build something reliable.",
+      "body": "Available for full-stack development, enterprise web applications, .NET/React projects, SSO/authentication work, and product-focused engineering.",
       "primaryCta": "Contact me",
-      "secondaryCta": "Discuss your project",
+      "secondaryCta": "LinkedIn",
       "email": "contact@nemanzh.dev",
       "closing": "Clear scope, senior engineering ownership, and systems built to stay maintainable."
     }
