@@ -1,8 +1,10 @@
 'use client';
 
-import { ArrowOutward, Email, GitHub, LinkedIn } from '@mui/icons-material';
+import { ArrowOutward, Email, ExpandMore, GitHub, LinkedIn } from '@mui/icons-material';
 import {
   Box,
+  Button,
+  Collapse,
   Container,
   Link as MuiLink,
   Stack,
@@ -14,6 +16,10 @@ import { useEffect, useState } from 'react';
 import RoleFitChecker, { type RoleFitCheckerContent } from './RoleFitChecker';
 import VisualStudioWidget from './VisualStudioWidget';
 import WhereICanHelp, { type WhereICanHelpContent } from './WhereICanHelp';
+import ProjectCaseNote, {
+  type ProjectCaseNoteLabels,
+  type ProjectCaseStudy,
+} from './ProjectCaseNote';
 
 type ExperienceItem = {
   period: string;
@@ -25,12 +31,14 @@ type ExperienceItem = {
 };
 
 type ProjectItem = {
+  id?: string;
   title: string;
   client?: string;
   context?: string;
   description: string;
   impact?: string;
   stack?: string[];
+  caseStudy?: ProjectCaseStudy;
   href?: string;
   linkLabel?: string;
   primaryHref?: string;
@@ -70,6 +78,11 @@ type StudioContent = {
     kicker: string;
     title: string;
     intro: string;
+    caseNote: {
+      viewLabel: string;
+      hideLabel: string;
+      labels: ProjectCaseNoteLabels;
+    };
     items: ProjectItem[];
   };
   whereHelp: WhereICanHelpContent;
@@ -170,6 +183,7 @@ export default function StudioPage() {
   const messages = useMessages() as { StudioPage: StudioContent };
   const content = messages.StudioPage;
   const [activeSection, setActiveSection] = useState('about');
+  const [expandedProjectId, setExpandedProjectId] = useState<string | null>(null);
 
   useEffect(() => {
     const sections = NAV_ITEMS.map((item) => document.getElementById(item.href.slice(1))).filter(
@@ -573,11 +587,13 @@ export default function StudioPage() {
                 sx={{
                   mt: 3.5,
                   display: 'grid',
-                  gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
+                  gridTemplateColumns: '1fr',
                   gap: { xs: 2, md: 2.4 },
+                  maxWidth: 860,
                 }}
               >
                 {content.projects.items.map((item) => {
+                  const projectId = item.id ?? item.title;
                   const href =
                     item.href ??
                     (item.secondaryHref?.startsWith('http') ? item.secondaryHref : item.primaryHref);
@@ -587,13 +603,13 @@ export default function StudioPage() {
                     'View site';
                   const supportingLabel = [item.context, item.client].filter(Boolean).join(' · ');
                   const isExternalHref = Boolean(href?.startsWith('http'));
+                  const caseNoteId = `project-case-note-${projectId}`;
+                  const isCaseNoteExpanded = expandedProjectId === projectId;
 
                   return (
-                    <MuiLink
+                    <Box
                       key={`${item.title}-${href ?? item.description}`}
-                      href={href}
-                      target={isExternalHref ? '_blank' : undefined}
-                      rel={isExternalHref ? 'noreferrer' : undefined}
+                      component="article"
                       sx={{
                         display: 'flex',
                         flexDirection: 'column',
@@ -602,7 +618,6 @@ export default function StudioPage() {
                         border: `1px solid ${theme.palette.terminal.border}`,
                         borderRadius: 3,
                         backgroundColor: theme.palette.terminal.header,
-                        textDecoration: 'none',
                         transition: 'border-color 0.18s ease, transform 0.18s ease, background-color 0.18s ease',
                         '&:hover': {
                           borderColor: theme.palette.terminal.cyan,
@@ -663,28 +678,109 @@ export default function StudioPage() {
                         </Typography>
                       ) : null}
 
-                      {href ? (
-                        <Stack
-                          direction="row"
-                          spacing={0.8}
-                          alignItems="center"
-                          sx={{
-                            mt: 'auto',
-                            pt: 2,
-                            color: theme.palette.terminal.cyan,
-                            fontFamily: 'var(--font-mono)',
-                            fontSize: '0.82rem',
-                            letterSpacing: '0.06em',
-                            textTransform: 'uppercase',
-                          }}
-                        >
-                          <Typography component="span" sx={{ font: 'inherit' }}>
-                            {linkLabel}
-                          </Typography>
-                          <ArrowOutward sx={{ fontSize: '1rem' }} />
-                        </Stack>
+                      <Stack
+                        direction={{ xs: 'column', sm: 'row' }}
+                        spacing={1.2}
+                        alignItems={{ xs: 'stretch', sm: 'center' }}
+                        justifyContent="space-between"
+                        sx={{ mt: 'auto', pt: 2 }}
+                      >
+                        {href ? (
+                          <MuiLink
+                            href={href}
+                            target={isExternalHref ? '_blank' : undefined}
+                            rel={isExternalHref ? 'noreferrer' : undefined}
+                            sx={{
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: 0.8,
+                              width: 'fit-content',
+                              color: theme.palette.terminal.cyan,
+                              fontFamily: 'var(--font-mono)',
+                              fontSize: '0.82rem',
+                              fontWeight: 700,
+                              letterSpacing: '0.06em',
+                              textDecoration: 'none',
+                              textTransform: 'uppercase',
+                              '&:hover': {
+                                textDecoration: 'underline',
+                                textUnderlineOffset: 4,
+                              },
+                              '&:focus-visible': {
+                                outline: `2px solid ${theme.palette.terminal.cyan}`,
+                                outlineOffset: 4,
+                                borderRadius: 1,
+                              },
+                            }}
+                          >
+                            <Typography component="span" sx={{ font: 'inherit' }}>
+                              {linkLabel}
+                            </Typography>
+                            <ArrowOutward sx={{ fontSize: '1rem' }} />
+                          </MuiLink>
+                        ) : (
+                          <Box />
+                        )}
+
+                        {item.caseStudy ? (
+                          <Button
+                            type="button"
+                            aria-expanded={isCaseNoteExpanded}
+                            aria-controls={caseNoteId}
+                            endIcon={
+                              <ExpandMore
+                                sx={{
+                                  fontSize: '1.05rem',
+                                  transform: isCaseNoteExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
+                                  transition: 'transform 0.18s ease',
+                                }}
+                              />
+                            }
+                            onClick={() =>
+                              setExpandedProjectId(isCaseNoteExpanded ? null : projectId)
+                            }
+                            sx={{
+                              alignSelf: { xs: 'stretch', sm: 'center' },
+                              justifyContent: 'center',
+                              border: `1px solid ${theme.palette.terminal.border}`,
+                              borderRadius: 2,
+                              color: theme.palette.terminal.text,
+                              backgroundColor: `${theme.palette.terminal.background}66`,
+                              fontFamily: 'var(--font-mono)',
+                              fontSize: '0.78rem',
+                              fontWeight: 700,
+                              letterSpacing: '0.04em',
+                              textTransform: 'none',
+                              px: 1.25,
+                              py: 0.7,
+                              '&:hover': {
+                                borderColor: theme.palette.terminal.cyan,
+                                backgroundColor: `${theme.palette.terminal.cyan}14`,
+                              },
+                              '&:focus-visible': {
+                                outline: `2px solid ${theme.palette.terminal.cyan}`,
+                                outlineOffset: 4,
+                              },
+                            }}
+                          >
+                            {isCaseNoteExpanded
+                              ? content.projects.caseNote.hideLabel
+                              : content.projects.caseNote.viewLabel}
+                          </Button>
+                        ) : null}
+                      </Stack>
+
+                      {item.caseStudy ? (
+                        <Collapse in={isCaseNoteExpanded} timeout={240} unmountOnExit>
+                          <ProjectCaseNote
+                            id={caseNoteId}
+                            caseStudy={item.caseStudy}
+                            labels={content.projects.caseNote.labels}
+                          />
+                        </Collapse>
                       ) : null}
-                    </MuiLink>
+
+                    </Box>
                   );
                 })}
               </Box>

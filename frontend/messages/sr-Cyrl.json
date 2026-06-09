@@ -183,6 +183,19 @@
       "kicker": "Одабрани радови",
       "title": "Репрезентативни пројекти претворени у јасне и прегледне case study картице.",
       "intro": "Ови примери приказују тип проблема које најчешће решавам: скала, модернизација, квалитет и јаснија испорука.",
+      "caseNote": {
+        "viewLabel": "Прикажи case note",
+        "hideLabel": "Сакриј case note",
+        "labels": {
+          "title": "Како сам испоручио",
+          "intro": "Кратак преглед проблема, моје улоге и инжењерског приступа иза овог рада.",
+          "problem": "Проблем",
+          "role": "Моја улога",
+          "solution": "Решење",
+          "impact": "Ефекат",
+          "techStack": "Tech stack"
+        }
+      },
       "items": [
         {
           "title": "NFT Marketplace платформа",
@@ -211,30 +224,54 @@
           "secondaryHref": "https://www.linkedin.com/in/nemanja-radulovic/"
         },
         {
+          "id": "insicon-insurance-systems",
           "title": "Модернизација платформи осигурања",
           "description": "Постепена модернизација пословних система где су перформансе, тачност и континуитет били важнији од тренда.",
           "impact": "Побољшане брзина и одрживост система, уз мање ручног рада и јаснију основу за даље ширење.",
           "stack": ["C#", ".NET", "SQL Server", "Architecture"],
+          "caseStudy": {
+            "problem": "Business и insurance апликације захтевале су стабилну функционалност, боље перформансе и одржив развој функционалности кроз различите величине тимова.",
+            "role": "Радио сам као full-stack developer на .NET, Angular и SQL Server системима, уз допринос развоју функционалности, performance унапређењима и одржавању.",
+            "solution": "Имплементирао сам и унапређивао апликативне функционалности, оптимизовао data access када је било потребно, побољшавао frontend понашање и радио са тимовима кроз Agile/Scrum delivery процесе.",
+            "impact": "Помогао сам унапређењу поузданости система, корисничких токова и одрживости пословних апликација.",
+            "techStack": [".NET", "C#", "Angular", "SQL Server", "REST APIs", "TFS", "Agile/Scrum"]
+          },
           "primaryLabel": "Покрени разговор",
           "primaryHref": "#contact",
           "secondaryLabel": "Емаил",
           "secondaryHref": "mailto:contact@nemanzh.dev"
         },
         {
+          "id": "deluxe-enterprise-sso",
           "title": "Deluxe Corporation",
           "description": "Рад повезан са америчком компанијом за payments и data технологије која подржава предузећа, финансијске институције и enterprise клијенте кроз дигитална финансијска решења.",
           "impact": "Фокус је био на системима који помажу организацијама да управљају плаћањима, обрађују трансакције и користе data-driven услуге за боље пословање и раст.",
           "stack": ["Payments", "Data Platforms", "Enterprise Systems", "Financial Technology"],
+          "caseStudy": {
+            "problem": "Апликацији је био потребан сигуран enterprise SSO ток који ради доследно кроз frontend, backend и више окружења као што су QA и UAT.",
+            "role": "Радио сам на frontend authentication току, MSAL setup-у, конфигурацији по окружењима и координацији са backend/API и deployment тимовима. Рад је реализован кроз Quadro Consulting за Deluxe.",
+            "solution": "Имплементирао сам frontend Azure AD authentication ток, повезао га са backend token exchange процесом кроз IntegrationService API, решавао конфигурацију за различита окружења и подржавао QA/UAT валидацију.",
+            "impact": "Помогао сам испоруци јаснијег и поузданијег authentication тока за enterprise апликацију, уз боље усклађивање frontend-а, backend-а и deployment процеса.",
+            "techStack": ["React", "MSAL", "Azure AD", ".NET API", "Harness", "Jira", "Bitbucket", "IIS", "Kanban"]
+          },
           "primaryLabel": "Посети сајт",
           "primaryHref": "https://www.deluxe.com/",
           "secondaryLabel": "Слични пројекти",
           "secondaryHref": "#contact"
         },
         {
+          "id": "intersect-members-voting",
           "title": "IntersectMBO",
           "description": "Рад на blockchain-oriented платформи са фокусом на product логику, backend сервисе и стабилно извршавање кључних токова.",
           "impact": "Фокус је био на поузданости трансакција, јаснијем product понашању и систему спремном за раст оптерећења.",
           "stack": ["Node.js", "TypeScript", "Next.js", "Cardano"],
+          "caseStudy": {
+            "problem": "Платформи су биле потребне поуздане member-facing функционалности, voting токови, admin функционалност и интеграције са екстерним системима.",
+            "role": "Радио сам на frontend и backend функционалностима, помагао у изградњи и унапређењу корисничких токова, повезивао API-је и подржавао платформу коју користе чланови и интерни тимови.",
+            "solution": "Градио сам и унапређивао full-stack функционалности користећи Next.js, Strapi, PostgreSQL и екстерне интеграције. Радио сам на voting токовима, admin/dashboard функционалности, API комуникацији и business логици.",
+            "impact": "Подржао сам испоруку пословно критичне платформе са комплексним токовима, интеракцијом чланова и интерним управљањем.",
+            "techStack": ["Next.js", "React", "TypeScript", "Strapi", "PostgreSQL", "REST APIs", "AWS SQS", "HubSpot", "Stripe"]
+          },
           "primaryLabel": "Причајмо о сличном пројекту",
           "primaryHref": "#contact",
           "secondaryLabel": "Посети сајт",

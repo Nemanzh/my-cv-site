@@ -183,6 +183,19 @@
       "kicker": "Projects",
       "title": "Selected platforms and client projects.",
       "intro": "A few recognizable systems and organizations I have worked on, shown as straightforward project cards.",
+      "caseNote": {
+        "viewLabel": "View case note",
+        "hideLabel": "Hide case note",
+        "labels": {
+          "title": "How I Delivered",
+          "intro": "A short breakdown of the problem, my role, and the engineering approach behind this work.",
+          "problem": "Problem",
+          "role": "My Role",
+          "solution": "Solution",
+          "impact": "Impact",
+          "techStack": "Tech Stack"
+        }
+      },
       "items": [
         {
           "title": "National Employment Service",
@@ -205,12 +218,20 @@
           "href": "https://dualnok.gov.rs/en/pocetna-english/"
         },
         {
+          "id": "unionen-insicon",
           "title": "Unionen",
           "client": "Insicon",
           "context": "Full-Stack Developer",
           "description": "Enterprise platform work delivered through Insicon for the Swedish market, with .NET, Angular, SQL Server, and long-lived business workflows.",
           "impact": "The emphasis was on maintainability, feature delivery, and modernization inside a production system rather than one-off implementation work.",
           "stack": [".NET", "Angular", "SQL Server", "Azure"],
+          "caseStudy": {
+            "problem": "Business and insurance-related applications needed stable functionality, better performance, and maintainable feature development across different team sizes.",
+            "role": "I worked as a full-stack developer on .NET, Angular, and SQL Server systems, contributing to feature development, performance improvements, and maintenance.",
+            "solution": "Implemented and improved application features, optimized data access where needed, improved frontend behavior, and worked with teams in Agile/Scrum delivery processes.",
+            "impact": "Helped improve system reliability, user workflows, and maintainability in business-facing applications.",
+            "techStack": [".NET", "C#", "Angular", "SQL Server", "REST APIs", "TFS", "Agile/Scrum"]
+          },
           "linkLabel": "Visit site",
           "href": "https://www.unionen.se/"
         },
@@ -225,20 +246,36 @@
           "href": "https://www.icaforsakring.se/"
         },
         {
+          "id": "deluxe-enterprise-sso",
           "title": "Deluxe Corporation",
           "context": "Enterprise Payments & Data Technology",
           "description": "Work connected to a US-based payments and data technology company that supports businesses, financial institutions, and enterprise clients with digital financial solutions.",
           "impact": "The focus was on systems that help organizations manage payments, process transactions, and use data-driven services to improve operations and support growth.",
           "stack": ["Payments", "Data Platforms", "Enterprise Systems", "Financial Technology"],
+          "caseStudy": {
+            "problem": "The application needed a secure enterprise SSO flow that worked consistently across frontend, backend, and multiple environments such as QA and UAT.",
+            "role": "I worked on the frontend authentication flow, MSAL setup, environment-specific configuration, and coordination with backend/API and deployment teams. The work was done through Quadro Consulting for Deluxe.",
+            "solution": "Implemented the frontend Azure AD authentication flow, connected it with backend token exchange through IntegrationService API, handled configuration for different environments, and supported QA/UAT validation.",
+            "impact": "Helped deliver a clearer and more reliable authentication flow for an enterprise application, with better alignment between frontend, backend, and deployment process.",
+            "techStack": ["React", "MSAL", "Azure AD", ".NET API", "Harness", "Jira", "Bitbucket", "IIS", "Kanban"]
+          },
           "linkLabel": "Visit site",
           "href": "https://www.deluxe.com/"
         },
         {
+          "id": "intersect-members-voting",
           "title": "IntersectMBO",
           "context": "Full-Stack / Product Engineering",
           "description": "Work on a blockchain-oriented platform focused on product logic, backend services, and stable execution of key user and transaction flows.",
           "impact": "The emphasis was on transaction reliability, clearer product behavior, and a system that could support growing demand without losing operational stability.",
           "stack": ["Node.js", "TypeScript", "Next.js", "Cardano"],
+          "caseStudy": {
+            "problem": "The platform needed reliable member-facing features, voting workflows, admin functionality, and integrations with external systems.",
+            "role": "I worked across frontend and backend features, helped build and improve user flows, connected APIs, and supported platform functionality used by members and internal teams.",
+            "solution": "Built and improved full-stack features using Next.js, Strapi, PostgreSQL, and external integrations. Worked on voting-related flows, admin/dashboard functionality, API communication, and business logic.",
+            "impact": "Supported the delivery of a business-critical platform with complex workflows, member interaction, and internal management features.",
+            "techStack": ["Next.js", "React", "TypeScript", "Strapi", "PostgreSQL", "REST APIs", "AWS SQS", "HubSpot", "Stripe"]
+          },
           "linkLabel": "Visit site",
           "href": "https://intersectmbo.org/"
         },
