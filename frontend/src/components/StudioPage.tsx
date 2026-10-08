@@ -111,10 +111,10 @@ type StudioContent = {
 
 const NAV_ITEMS = [
   { key: 'about', href: '#about' },
+  { key: 'roleFit', href: '#role-fit' },
   { key: 'experience', href: '#experience' },
   { key: 'projects', href: '#projects' },
   { key: 'deliveryFlow', href: '#delivery-flow' },
-  { key: 'roleFit', href: '#role-fit' },
   { key: 'contact', href: '#contact' },
 ] as const;
 
@@ -1044,6 +1044,7 @@ export default function StudioPage() {
               >
                 <Button
                   href={`mailto:${content.contact.email}`}
+                  data-umami-event="contact-email-click"
                   startIcon={<Email />}
                   sx={{
                     alignSelf: { xs: 'stretch', sm: 'flex-start' },
@@ -1072,6 +1073,7 @@ export default function StudioPage() {
                   href="https://www.linkedin.com/in/nemanja-radulovic/"
                   target="_blank"
                   rel="noreferrer"
+                  data-umami-event="contact-linkedin-click"
                   startIcon={<LinkedIn />}
                   sx={{
                     alignSelf: { xs: 'stretch', sm: 'flex-start' },
@@ -1099,6 +1101,7 @@ export default function StudioPage() {
                   href="https://github.com/nemanjaradulovic"
                   target="_blank"
                   rel="noreferrer"
+                  data-umami-event="contact-github-click"
                   startIcon={<GitHub />}
                   sx={{
                     alignSelf: { xs: 'stretch', sm: 'flex-start' },
